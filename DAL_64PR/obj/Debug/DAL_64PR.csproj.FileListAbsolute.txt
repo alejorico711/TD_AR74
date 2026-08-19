@@ -1,0 +1,11 @@
+C:\Users\Alejo\source\repos\IS_64PR3\DAL_64PR\bin\Debug\DAL_64PR.dll
+C:\Users\Alejo\source\repos\IS_64PR3\DAL_64PR\bin\Debug\DAL_64PR.pdb
+C:\Users\Alejo\source\repos\IS_64PR3\DAL_64PR\bin\Debug\BE.dll
+C:\Users\Alejo\source\repos\IS_64PR3\DAL_64PR\bin\Debug\Servicios_64PR.dll
+C:\Users\Alejo\source\repos\IS_64PR3\DAL_64PR\bin\Debug\BE.pdb
+C:\Users\Alejo\source\repos\IS_64PR3\DAL_64PR\bin\Debug\Servicios_64PR.pdb
+C:\Users\Alejo\source\repos\IS_64PR3\DAL_64PR\obj\Debug\DAL_64PR.csproj.AssemblyReference.cache
+C:\Users\Alejo\source\repos\IS_64PR3\DAL_64PR\obj\Debug\DAL_64PR.csproj.CoreCompileInputs.cache
+C:\Users\Alejo\source\repos\IS_64PR3\DAL_64PR\obj\Debug\DAL_64PR.csproj.Up2Date
+C:\Users\Alejo\source\repos\IS_64PR3\DAL_64PR\obj\Debug\DAL_64PR.dll
+C:\Users\Alejo\source\repos\IS_64PR3\DAL_64PR\obj\Debug\DAL_64PR.pdb

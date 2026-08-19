@@ -1,0 +1,6 @@
+C:\Users\Alejo\source\repos\IS_64PR3\BE\bin\Debug\BE.dll
+C:\Users\Alejo\source\repos\IS_64PR3\BE\bin\Debug\BE.pdb
+C:\Users\Alejo\source\repos\IS_64PR3\BE\obj\Debug\BE_64PR.csproj.AssemblyReference.cache
+C:\Users\Alejo\source\repos\IS_64PR3\BE\obj\Debug\BE_64PR.csproj.CoreCompileInputs.cache
+C:\Users\Alejo\source\repos\IS_64PR3\BE\obj\Debug\BE.dll
+C:\Users\Alejo\source\repos\IS_64PR3\BE\obj\Debug\BE.pdb

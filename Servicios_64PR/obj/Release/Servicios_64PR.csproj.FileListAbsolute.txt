@@ -1,0 +1,9 @@
+C:\Users\Alejo\source\repos\IS_64PR3\Servicios_64PR\bin\Release\Servicios_64PR.dll
+C:\Users\Alejo\source\repos\IS_64PR3\Servicios_64PR\bin\Release\Servicios_64PR.pdb
+C:\Users\Alejo\source\repos\IS_64PR3\Servicios_64PR\bin\Release\BE.dll
+C:\Users\Alejo\source\repos\IS_64PR3\Servicios_64PR\bin\Release\BE.pdb
+C:\Users\Alejo\source\repos\IS_64PR3\Servicios_64PR\obj\Release\Servicios_64PR.csproj.AssemblyReference.cache
+C:\Users\Alejo\source\repos\IS_64PR3\Servicios_64PR\obj\Release\Servicios_64PR.csproj.CoreCompileInputs.cache
+C:\Users\Alejo\source\repos\IS_64PR3\Servicios_64PR\obj\Release\Servicio.7821C180.Up2Date
+C:\Users\Alejo\source\repos\IS_64PR3\Servicios_64PR\obj\Release\Servicios_64PR.dll
+C:\Users\Alejo\source\repos\IS_64PR3\Servicios_64PR\obj\Release\Servicios_64PR.pdb

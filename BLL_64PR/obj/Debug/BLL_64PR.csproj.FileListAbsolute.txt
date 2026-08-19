@@ -1,0 +1,13 @@
+C:\Users\Alejo\source\repos\IS_64PR3\BLL_64PR\bin\Debug\BLL_64PR.dll
+C:\Users\Alejo\source\repos\IS_64PR3\BLL_64PR\bin\Debug\BLL_64PR.pdb
+C:\Users\Alejo\source\repos\IS_64PR3\BLL_64PR\bin\Debug\BE.dll
+C:\Users\Alejo\source\repos\IS_64PR3\BLL_64PR\bin\Debug\DAL_64PR.dll
+C:\Users\Alejo\source\repos\IS_64PR3\BLL_64PR\bin\Debug\Servicios_64PR.dll
+C:\Users\Alejo\source\repos\IS_64PR3\BLL_64PR\bin\Debug\BE.pdb
+C:\Users\Alejo\source\repos\IS_64PR3\BLL_64PR\bin\Debug\DAL_64PR.pdb
+C:\Users\Alejo\source\repos\IS_64PR3\BLL_64PR\bin\Debug\Servicios_64PR.pdb
+C:\Users\Alejo\source\repos\IS_64PR3\BLL_64PR\obj\Debug\BLL_64PR.csproj.AssemblyReference.cache
+C:\Users\Alejo\source\repos\IS_64PR3\BLL_64PR\obj\Debug\BLL_64PR.csproj.CoreCompileInputs.cache
+C:\Users\Alejo\source\repos\IS_64PR3\BLL_64PR\obj\Debug\BLL_64PR.csproj.Up2Date
+C:\Users\Alejo\source\repos\IS_64PR3\BLL_64PR\obj\Debug\BLL_64PR.dll
+C:\Users\Alejo\source\repos\IS_64PR3\BLL_64PR\obj\Debug\BLL_64PR.pdb

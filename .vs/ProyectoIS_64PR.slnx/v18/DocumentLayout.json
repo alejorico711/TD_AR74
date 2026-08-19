@@ -1,0 +1,187 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Alejo\\source\\repos\\IS_64PR3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DAB0E4E6-15E9-47F7-8D2E-BAFF06BF4876}|Servicios_64PR\\Servicios_64PR.csproj|c:\\users\\alejo\\source\\repos\\is_64pr3\\servicios_64pr\\patentes_64pr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAB0E4E6-15E9-47F7-8D2E-BAFF06BF4876}|Servicios_64PR\\Servicios_64PR.csproj|solutionrelative:servicios_64pr\\patentes_64pr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAB0E4E6-15E9-47F7-8D2E-BAFF06BF4876}|Servicios_64PR\\Servicios_64PR.csproj|C:\\Users\\Alejo\\source\\repos\\IS_64PR3\\servicios_64pr\\tipoanomalia_64pr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAB0E4E6-15E9-47F7-8D2E-BAFF06BF4876}|Servicios_64PR\\Servicios_64PR.csproj|solutionrelative:servicios_64pr\\tipoanomalia_64pr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A744F8D5-C890-4362-89E0-B603579A601C}|BLL_64PR\\BLL_64PR.csproj|C:\\Users\\Alejo\\source\\repos\\IS_64PR3\\bll_64pr\\bitacora_64pr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A744F8D5-C890-4362-89E0-B603579A601C}|BLL_64PR\\BLL_64PR.csproj|solutionrelative:bll_64pr\\bitacora_64pr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|C:\\Users\\Alejo\\source\\repos\\IS_64PR3\\proyectois_64pr\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|solutionrelative:proyectois_64pr\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E990023A-FD21-4606-8FBE-E91EE7E8FD96}|DAL_64PR\\DAL_64PR.csproj|C:\\Users\\Alejo\\source\\repos\\IS_64PR3\\dal_64pr\\acceso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E990023A-FD21-4606-8FBE-E91EE7E8FD96}|DAL_64PR\\DAL_64PR.csproj|solutionrelative:dal_64pr\\acceso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|C:\\Users\\Alejo\\source\\repos\\IS_64PR3\\proyectois_64pr\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|solutionrelative:proyectois_64pr\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|C:\\Users\\Alejo\\source\\repos\\IS_64PR3\\proyectois_64pr\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|solutionrelative:proyectois_64pr\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|C:\\Users\\Alejo\\source\\repos\\IS_64PR3\\proyectois_64pr\\frmgestionfamilias_64pr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|solutionrelative:proyectois_64pr\\frmgestionfamilias_64pr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|C:\\Users\\Alejo\\source\\repos\\IS_64PR3\\proyectois_64pr\\frmgestionfamilias_64pr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|solutionrelative:proyectois_64pr\\frmgestionfamilias_64pr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E990023A-FD21-4606-8FBE-E91EE7E8FD96}|DAL_64PR\\DAL_64PR.csproj|C:\\Users\\Alejo\\source\\repos\\IS_64PR3\\dal_64pr\\mpp_bitacora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E990023A-FD21-4606-8FBE-E91EE7E8FD96}|DAL_64PR\\DAL_64PR.csproj|solutionrelative:dal_64pr\\mpp_bitacora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Patentes_64PR.cs",
+              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\IS_64PR3\\Servicios_64PR\\Patentes_64PR.cs",
+              "RelativeDocumentMoniker": "Servicios_64PR\\Patentes_64PR.cs",
+              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\IS_64PR3\\Servicios_64PR\\Patentes_64PR.cs",
+              "RelativeToolTip": "Servicios_64PR\\Patentes_64PR.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T02:31:39.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TipoAnomalia_64PR.cs",
+              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\IS_64PR3\\Servicios_64PR\\TipoAnomalia_64PR.cs",
+              "RelativeDocumentMoniker": "Servicios_64PR\\TipoAnomalia_64PR.cs",
+              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\IS_64PR3\\Servicios_64PR\\TipoAnomalia_64PR.cs",
+              "RelativeToolTip": "Servicios_64PR\\TipoAnomalia_64PR.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T02:31:27.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Bitacora_64PR.cs",
+              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\IS_64PR3\\BLL_64PR\\Bitacora_64PR.cs",
+              "RelativeDocumentMoniker": "BLL_64PR\\Bitacora_64PR.cs",
+              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\IS_64PR3\\BLL_64PR\\Bitacora_64PR.cs",
+              "RelativeToolTip": "BLL_64PR\\Bitacora_64PR.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T02:30:50.861Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\IS_64PR3\\ProyectoIS_64PR\\App.config",
+              "RelativeDocumentMoniker": "ProyectoIS_64PR\\App.config",
+              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\IS_64PR3\\ProyectoIS_64PR\\App.config",
+              "RelativeToolTip": "ProyectoIS_64PR\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-07-11T18:23:43.663Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FrmMenu.cs",
+              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\IS_64PR3\\ProyectoIS_64PR\\FrmMenu.cs",
+              "RelativeDocumentMoniker": "ProyectoIS_64PR\\FrmMenu.cs",
+              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\IS_64PR3\\ProyectoIS_64PR\\FrmMenu.cs",
+              "RelativeToolTip": "ProyectoIS_64PR\\FrmMenu.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-07T16:01:45.689Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FrmMenu.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\IS_64PR3\\ProyectoIS_64PR\\FrmMenu.cs",
+              "RelativeDocumentMoniker": "ProyectoIS_64PR\\FrmMenu.cs",
+              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\IS_64PR3\\ProyectoIS_64PR\\FrmMenu.cs [Dise\u00F1o]",
+              "RelativeToolTip": "ProyectoIS_64PR\\FrmMenu.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-07T16:01:45.261Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Acceso.cs",
+              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\IS_64PR3\\DAL_64PR\\Acceso.cs",
+              "RelativeDocumentMoniker": "DAL_64PR\\Acceso.cs",
+              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\IS_64PR3\\DAL_64PR\\Acceso.cs",
+              "RelativeToolTip": "DAL_64PR\\Acceso.cs",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAIwOcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-07T03:02:58.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "mpp_bitacora.cs",
+              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\IS_64PR3\\DAL_64PR\\mpp_bitacora.cs",
+              "RelativeDocumentMoniker": "DAL_64PR\\mpp_bitacora.cs",
+              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\IS_64PR3\\DAL_64PR\\mpp_bitacora.cs",
+              "RelativeToolTip": "DAL_64PR\\mpp_bitacora.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-07T02:36:13.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FrmGestionFamilias_64PR.cs",
+              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\IS_64PR3\\ProyectoIS_64PR\\FrmGestionFamilias_64PR.cs",
+              "RelativeDocumentMoniker": "ProyectoIS_64PR\\FrmGestionFamilias_64PR.cs",
+              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\IS_64PR3\\ProyectoIS_64PR\\FrmGestionFamilias_64PR.cs",
+              "RelativeToolTip": "ProyectoIS_64PR\\FrmGestionFamilias_64PR.cs",
+              "ViewState": "AgIAAL8AAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-07T02:12:30.65Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FrmGestionFamilias_64PR.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\IS_64PR3\\ProyectoIS_64PR\\FrmGestionFamilias_64PR.cs",
+              "RelativeDocumentMoniker": "ProyectoIS_64PR\\FrmGestionFamilias_64PR.cs",
+              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\IS_64PR3\\ProyectoIS_64PR\\FrmGestionFamilias_64PR.cs [Dise\u00F1o]",
+              "RelativeToolTip": "ProyectoIS_64PR\\FrmGestionFamilias_64PR.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-07T02:12:29.14Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
