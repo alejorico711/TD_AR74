@@ -1,0 +1,17 @@
+C:\Users\Alejo\source\repos\TD_AR74\Mapper\bin\Debug\Mapper.dll
+C:\Users\Alejo\source\repos\TD_AR74\Mapper\bin\Debug\Mapper.pdb
+C:\Users\Alejo\source\repos\TD_AR74\Mapper\obj\Debug\Mapper.csproj.AssemblyReference.cache
+C:\Users\Alejo\source\repos\TD_AR74\Mapper\obj\Debug\Mapper.csproj.CoreCompileInputs.cache
+C:\Users\Alejo\source\repos\TD_AR74\Mapper\obj\Debug\Mapper.dll
+C:\Users\Alejo\source\repos\TD_AR74\Mapper\obj\Debug\Mapper.pdb
+C:\Users\Alejo\source\repos\TD_AR74\Mapper\bin\Debug\Bitacora.dll
+C:\Users\Alejo\source\repos\TD_AR74\Mapper\bin\Debug\DAL_64PR.dll
+C:\Users\Alejo\source\repos\TD_AR74\Mapper\bin\Debug\DV.dll
+C:\Users\Alejo\source\repos\TD_AR74\Mapper\bin\Debug\Encriptacion.dll
+C:\Users\Alejo\source\repos\TD_AR74\Mapper\bin\Debug\Sesion.dll
+C:\Users\Alejo\source\repos\TD_AR74\Mapper\bin\Debug\Bitacora.pdb
+C:\Users\Alejo\source\repos\TD_AR74\Mapper\bin\Debug\DAL_64PR.pdb
+C:\Users\Alejo\source\repos\TD_AR74\Mapper\bin\Debug\DV.pdb
+C:\Users\Alejo\source\repos\TD_AR74\Mapper\bin\Debug\Encriptacion.pdb
+C:\Users\Alejo\source\repos\TD_AR74\Mapper\bin\Debug\Sesion.pdb
+C:\Users\Alejo\source\repos\TD_AR74\Mapper\obj\Debug\Mapper.csproj.Up2Date

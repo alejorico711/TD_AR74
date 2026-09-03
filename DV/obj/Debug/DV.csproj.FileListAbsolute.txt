@@ -1,0 +1,6 @@
+C:\Users\Alejo\source\repos\TD_AR74\DV\bin\Debug\DV.dll
+C:\Users\Alejo\source\repos\TD_AR74\DV\bin\Debug\DV.pdb
+C:\Users\Alejo\source\repos\TD_AR74\DV\obj\Debug\DV.csproj.AssemblyReference.cache
+C:\Users\Alejo\source\repos\TD_AR74\DV\obj\Debug\DV.csproj.CoreCompileInputs.cache
+C:\Users\Alejo\source\repos\TD_AR74\DV\obj\Debug\DV.dll
+C:\Users\Alejo\source\repos\TD_AR74\DV\obj\Debug\DV.pdb

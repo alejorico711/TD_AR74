@@ -1,5 +1,4 @@
-﻿using Servicios_64PR;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -37,8 +36,8 @@ namespace BLL_64PR
             GestionFamilias = 4
         }
 
-        DAL_64PR.mpp_bitacora mpp = new DAL_64PR.mpp_bitacora();
-        public List<Evento_64PR> ListarEventos()
+        Mapper.mpp_bitacora mpp = new Mapper.mpp_bitacora();
+        public List<Bitacora.Evento_64PR> ListarEventos()
         {
             return mpp.ListarEventos();
         }
@@ -58,7 +57,7 @@ namespace BLL_64PR
             return mpp.ListarTipos();
         }
 
-        public void RegistrarEvento(Evento_64PR e)
+        public void RegistrarEvento(Bitacora.Evento_64PR e)
         {
             mpp.RegistrarEvento(e);
         }

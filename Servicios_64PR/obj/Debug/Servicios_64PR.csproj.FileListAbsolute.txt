@@ -7,3 +7,12 @@ C:\Users\Alejo\source\repos\IS_64PR3\Servicios_64PR\obj\Debug\Servicios_64PR.csp
 C:\Users\Alejo\source\repos\IS_64PR3\Servicios_64PR\obj\Debug\Servicio.7821C180.Up2Date
 C:\Users\Alejo\source\repos\IS_64PR3\Servicios_64PR\obj\Debug\Servicios_64PR.dll
 C:\Users\Alejo\source\repos\IS_64PR3\Servicios_64PR\obj\Debug\Servicios_64PR.pdb
+C:\Users\Alejo\source\repos\TD_AR74\Servicios_64PR\bin\Debug\Servicios_64PR.dll
+C:\Users\Alejo\source\repos\TD_AR74\Servicios_64PR\bin\Debug\Servicios_64PR.pdb
+C:\Users\Alejo\source\repos\TD_AR74\Servicios_64PR\bin\Debug\BE.dll
+C:\Users\Alejo\source\repos\TD_AR74\Servicios_64PR\bin\Debug\BE.pdb
+C:\Users\Alejo\source\repos\TD_AR74\Servicios_64PR\obj\Debug\Servicios_64PR.csproj.AssemblyReference.cache
+C:\Users\Alejo\source\repos\TD_AR74\Servicios_64PR\obj\Debug\Servicios_64PR.csproj.CoreCompileInputs.cache
+C:\Users\Alejo\source\repos\TD_AR74\Servicios_64PR\obj\Debug\Servicio.7821C180.Up2Date
+C:\Users\Alejo\source\repos\TD_AR74\Servicios_64PR\obj\Debug\Servicios_64PR.dll
+C:\Users\Alejo\source\repos\TD_AR74\Servicios_64PR\obj\Debug\Servicios_64PR.pdb

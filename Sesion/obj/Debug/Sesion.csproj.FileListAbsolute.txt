@@ -1,0 +1,6 @@
+C:\Users\Alejo\source\repos\TD_AR74\Sesion\bin\Debug\Sesion.dll
+C:\Users\Alejo\source\repos\TD_AR74\Sesion\bin\Debug\Sesion.pdb
+C:\Users\Alejo\source\repos\TD_AR74\Sesion\obj\Debug\Sesion.csproj.AssemblyReference.cache
+C:\Users\Alejo\source\repos\TD_AR74\Sesion\obj\Debug\Sesion.csproj.CoreCompileInputs.cache
+C:\Users\Alejo\source\repos\TD_AR74\Sesion\obj\Debug\Sesion.dll
+C:\Users\Alejo\source\repos\TD_AR74\Sesion\obj\Debug\Sesion.pdb

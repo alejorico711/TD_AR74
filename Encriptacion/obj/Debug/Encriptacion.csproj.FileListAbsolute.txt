@@ -1,0 +1,6 @@
+C:\Users\Alejo\source\repos\TD_AR74\Encriptacion\bin\Debug\Encriptacion.dll
+C:\Users\Alejo\source\repos\TD_AR74\Encriptacion\bin\Debug\Encriptacion.pdb
+C:\Users\Alejo\source\repos\TD_AR74\Encriptacion\obj\Debug\Encriptacion.csproj.AssemblyReference.cache
+C:\Users\Alejo\source\repos\TD_AR74\Encriptacion\obj\Debug\Encriptacion.csproj.CoreCompileInputs.cache
+C:\Users\Alejo\source\repos\TD_AR74\Encriptacion\obj\Debug\Encriptacion.dll
+C:\Users\Alejo\source\repos\TD_AR74\Encriptacion\obj\Debug\Encriptacion.pdb

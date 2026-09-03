@@ -1,5 +1,4 @@
-﻿using Servicios_64PR;
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
@@ -13,9 +12,9 @@ namespace BLL_64PR
 {
     public class Usuario
     {
-        DAL_64PR.mpp_usuario mpp = new DAL_64PR.mpp_usuario();
+        Mapper.mpp_usuario mpp = new Mapper.mpp_usuario();
         private static readonly DV_64PR recalculador = new DV_64PR();
-        public void Actdesact(Servicios_64PR.Usuario u)
+        public void Actdesact(Sesion.Usuario u)
         {
             mpp.Actdesact(u);
             recalculador.RecalcularTabla("USUARIO_64PR");
@@ -26,24 +25,24 @@ namespace BLL_64PR
             return mpp.BloqueadoInactivo(login);
         }
 
-        public void Crear(Servicios_64PR.Usuario u)
+        public void Crear(Sesion.Usuario u)
         {
             mpp.Crear(u);
             recalculador.RecalcularTabla("USUARIO_64PR");
         }
 
-        public void Desbloquear(Servicios_64PR.Usuario u)
+        public void Desbloquear(Sesion.Usuario u)
         {
             mpp.Desbloquear(u);
             recalculador.RecalcularTabla("USUARIO_64PR");
         }
 
-        public List<Servicios_64PR.Usuario> Listar()
+        public List<Sesion.Usuario> Listar()
         {
             return mpp.Listar();
         }
 
-        public void Modificar(Servicios_64PR.Usuario u)
+        public void Modificar(Sesion.Usuario u)
         {
             mpp.Modificar(u);
             recalculador.RecalcularTabla("USUARIO_64PR");
@@ -76,7 +75,7 @@ namespace BLL_64PR
             recalculador.RecalcularTabla("USUARIO_64PR");
         }
 
-        public Servicios_64PR.Usuario ObtenerUsuario(string login)
+        public Sesion.Usuario ObtenerUsuario(string login)
         {
             return mpp.ObtenerUsuario(login);
         }

@@ -1,5 +1,4 @@
-﻿using Servicios_64PR;
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,10 +17,10 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 namespace ProyectoIS_64PR
 {
 
-    public partial class FrmGestionarUsuarios_64PR : Form, IObservadorIdioma_64PR
+    public partial class FrmGestionarUsuarios_64PR : Form, Idioma.IObservadorIdioma_64PR
     {
         BLL_64PR.Bitacora_64PR bita = new BLL_64PR.Bitacora_64PR();
-        Servicios_64PR.Evento_64PR ev;
+        Bitacora.Evento_64PR ev;
 
         BLL_64PR.Usuario gusuarios = new BLL_64PR.Usuario();
         public Dictionary<string, string> textos;
@@ -30,7 +29,7 @@ namespace ProyectoIS_64PR
         ///El uc generico para poder intanciar mis 2 UC, sin tener que crear 2 especificos
         string modo = "consulta";
         UserControl uc;
-        List<Usuario> lst;
+        List<Sesion.Usuario> lst;
         public FrmGestionarUsuarios_64PR()
         {
             InitializeComponent(); 
@@ -47,10 +46,10 @@ namespace ProyectoIS_64PR
 
             btnGuardar.Enabled = false;
 
-            GestorIdioma_64PR.GetInstance.Suscribir(this); ///Observer del cambio de idioma
+            Idioma.GestorIdioma_64PR.GetInstance.Suscribir(this); ///Observer del cambio de idioma
 
             ///Aplico el idioma que ya está cargado
-            textos = GestorIdioma_64PR.GetInstance.ObtenerTextos();
+            textos = Idioma.GestorIdioma_64PR.GetInstance.ObtenerTextos();
             if (textos.Count > 0)
                 ActualizarIdioma(textos);
             lblModo.Text = textos["frmGestionUsuarios_lblModoConsulta"];
@@ -105,7 +104,7 @@ namespace ProyectoIS_64PR
 
         protected override void OnFormClosed(FormClosedEventArgs e)
         {
-            GestorIdioma_64PR.GetInstance.Desuscribir(this);
+            Idioma.GestorIdioma_64PR.GetInstance.Desuscribir(this);
             base.OnFormClosed(e);
         }
 
@@ -169,13 +168,13 @@ namespace ProyectoIS_64PR
                         }
                         try
                         {
-                            Servicios_64PR.Usuario u = new Servicios_64PR.Usuario()
+                            Sesion.Usuario u = new Sesion.Usuario()
                             {
                                 DNI = ucc.DNI(),
                                 Apellido = ucc.Apellido(),
                                 Nombre = ucc.Nombre(),
                                 Login = ucc.Nombre() + "." + ucc.Apellido(),
-                                Rol = new Servicios_64PR.Rol_64PR(),
+                                Rol = new Sesion.Rol_64PR(),
                                 Email = ucc.Email(),
                             };
                             u.Rol.Id = ucc.Rol();
@@ -184,7 +183,7 @@ namespace ProyectoIS_64PR
                             gusuarios.Crear(u);
 
                             ///Registro el evento en bitacora
-                            Servicios_64PR.Evento_64PR ev = new Evento_64PR(SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.GestionUsuarios).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.AltaUsuario).ToString(), 4);
+                            Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.GestionUsuarios).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.AltaUsuario).ToString(), 4);
                             MessageBox.Show(textos["usuario_creado"] + u.Login);
                             bita.RegistrarEvento(ev);
 
@@ -225,7 +224,7 @@ namespace ProyectoIS_64PR
                         try
                         {
                             ///Obtengo el usuario del DGV
-                            Servicios_64PR.Usuario u = dgvUsuarios.SelectedRows[0].DataBoundItem as Servicios_64PR.Usuario;
+                            Sesion.Usuario u = dgvUsuarios.SelectedRows[0].DataBoundItem as Sesion.Usuario;
                             u.Rol.Id = ucm.Rol();
                             u.Email = ucm.Email();
 
@@ -233,7 +232,7 @@ namespace ProyectoIS_64PR
                             gusuarios.Modificar(u);
 
                             ///Registro el evento en bitacora
-                            ev = new Evento_64PR(SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.GestionUsuarios).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.ModificacionUsuario).ToString(), 4);
+                            ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.GestionUsuarios).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.ModificacionUsuario).ToString(), 4);
                             MessageBox.Show(textos["usuario_modificado"]);
                             bita.RegistrarEvento(ev);
 
@@ -264,7 +263,7 @@ namespace ProyectoIS_64PR
         private void btnDesbloquear_Click(object sender, EventArgs e)
         {
             ///Obtengo el usuario del DGV
-            Servicios_64PR.Usuario u = dgvUsuarios.SelectedRows[0].DataBoundItem as Servicios_64PR.Usuario;
+            Sesion.Usuario u = dgvUsuarios.SelectedRows[0].DataBoundItem as Sesion.Usuario;
 
             if (u.Bloqueado == true)
             {
@@ -272,7 +271,7 @@ namespace ProyectoIS_64PR
                 gusuarios.Desbloquear(u);
 
                 ///Registro el evento en bitacora
-                ev = new Evento_64PR(SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.GestionUsuarios).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.UsuarioBloqueado).ToString(), 4);
+                ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.GestionUsuarios).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.UsuarioBloqueado).ToString(), 4);
                 MessageBox.Show(textos["usuario_desbloqueado"]);
                 bita.RegistrarEvento(ev);
 
@@ -287,8 +286,8 @@ namespace ProyectoIS_64PR
         private void btnActDesact_Click(object sender, EventArgs e)
         {
             ///Obtengo el usuario del DGV
-            Servicios_64PR.Usuario u = dgvUsuarios.SelectedRows[0].DataBoundItem as Servicios_64PR.Usuario;
-            if (u.Login == SessionManager.GetInstance.Usuario.Login)
+            Sesion.Usuario u = dgvUsuarios.SelectedRows[0].DataBoundItem as Sesion.Usuario;
+            if (u.Login == Sesion.SessionManager.GetInstance.Usuario.Login)
             {
                 MessageBox.Show(textos["usuario_en_sesion"]);
                 return;
@@ -296,7 +295,7 @@ namespace ProyectoIS_64PR
 
             ///Linea que me cambia el estado del usuario
             gusuarios.Actdesact(u);
-            ev = new Evento_64PR(SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.GestionUsuarios).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.ModificacionUsuario).ToString(), 4);
+            ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.GestionUsuarios).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.ModificacionUsuario).ToString(), 4);
             bita.RegistrarEvento(ev);
             MessageBox.Show(textos["operacion exitosa"]);
             CargaData();
@@ -318,7 +317,7 @@ namespace ProyectoIS_64PR
             if (e.RowIndex >= 0)
             {
                 ///Obtengo el usuario del DGV
-                Usuario u = dgvUsuarios.SelectedRows[0].DataBoundItem as Servicios_64PR.Usuario;
+                Sesion.Usuario u = dgvUsuarios.SelectedRows[0].DataBoundItem as Sesion.Usuario;
                 if (uc is ucModificarUsuario ucm) ///esta validacion creo que no es necesaria, pero me sirve para acceder a los metodos del UC
                 {
                     ucm.EscribirControles(u);
@@ -373,16 +372,16 @@ namespace ProyectoIS_64PR
         }
         private void ConfigurarPermisos()
         {
-            Servicios_64PR.Rol_64PR rolUsuario = Servicios_64PR.SessionManager.GetInstance.Usuario.Rol;
+            Sesion.Rol_64PR rolUsuario = Sesion.SessionManager.GetInstance.Usuario.Rol;
 
-            btnCrear.Visible = rolUsuario.TienePermiso(Patentes_64PR.CrearUsuario);
-            btnModificar.Visible = rolUsuario.TienePermiso(Patentes_64PR.ModificarUsuario);
-            btnActDesact.Visible = rolUsuario.TienePermiso(Patentes_64PR.ActivarDesactivarUsuarios);
-            btnDesbloquear.Visible = rolUsuario.TienePermiso(Patentes_64PR.DesbloquearUsuario);
+            btnCrear.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.CrearUsuario);
+            btnModificar.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.ModificarUsuario);
+            btnActDesact.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.ActivarDesactivarUsuarios);
+            btnDesbloquear.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.DesbloquearUsuario);
         }
         private void FrmGestionarUsuarios_64PR_FormClosed(object sender, FormClosedEventArgs e)
         {
-            GestorIdioma_64PR.GetInstance.Desuscribir(this); ///observer del cambio de idioma
+            Idioma.GestorIdioma_64PR.GetInstance.Desuscribir(this); ///observer del cambio de idioma
         }
     }
 }

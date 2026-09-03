@@ -1,5 +1,4 @@
-﻿using Servicios_64PR;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,20 +11,20 @@ using System.Windows.Forms;
 
 namespace ProyectoIS_64PR
 {
-    public partial class FrmReparacionDV_64PR : Form, IObservadorIdioma_64PR
+    public partial class FrmReparacionDV_64PR : Form, Idioma.IObservadorIdioma_64PR
     {
-        private Dictionary<string, List<FilaInconsistente_64PR>> _tablasInconsistentes;
+        private Dictionary<string, List<DV.FilaInconsistente_64PR>> _tablasInconsistentes;
         Dictionary<string, string> textos;
 
-        public FrmReparacionDV_64PR(Dictionary<string, List<FilaInconsistente_64PR>> tablasInconsistentes)
+        public FrmReparacionDV_64PR(Dictionary<string, List<DV.FilaInconsistente_64PR>> tablasInconsistentes)
         {
             InitializeComponent();
 
-            GestorIdioma_64PR.GetInstance.Suscribir(this);
+            Idioma.GestorIdioma_64PR.GetInstance.Suscribir(this);
 
             CargarComboIdiomas();
             ///Aplico idioma actual al abrir
-            var textos = GestorIdioma_64PR.GetInstance.ObtenerTextos();
+            var textos = Idioma.GestorIdioma_64PR.GetInstance.ObtenerTextos();
             if (textos.Count > 0)
                 ActualizarIdioma(textos);
 
@@ -37,11 +36,11 @@ namespace ProyectoIS_64PR
         {
             cmbIdioma.Items.Clear();
 
-            foreach (string codigo in GestorIdioma_64PR.GetInstance.IdiomasDisponibles())
+            foreach (string codigo in Idioma.GestorIdioma_64PR.GetInstance.IdiomasDisponibles())
                 cmbIdioma.Items.Add(codigo.ToUpper()); /// "ES", "EN"
 
             ///Seleccionar el idioma actual
-            string actual = GestorIdioma_64PR.GetInstance.IdiomaActual.ToUpper();
+            string actual = Idioma.GestorIdioma_64PR.GetInstance.IdiomaActual.ToUpper();
             int index = cmbIdioma.Items.IndexOf(actual);
             if (index >= 0)
                 cmbIdioma.SelectedIndex = index;
@@ -57,22 +56,22 @@ namespace ProyectoIS_64PR
                 TreeNode nodoTabla = new TreeNode($"{entrada.Key}  ({entrada.Value.Count})");
                 nodoTabla.ForeColor = Color.DarkRed;
 
-                foreach (FilaInconsistente_64PR fila in entrada.Value)
+                foreach (DV.FilaInconsistente_64PR fila in entrada.Value)
                 {
                     string etiqueta;
                     Color color;
 
                     switch (fila.Tipo)
                     {
-                        case TipoAnomalia_64PR.Insercion:
+                        case DV.TipoAnomalia_64PR.Insercion:
                             etiqueta = "(INSERT)";
                             color = Color.DarkGreen;
                             break;
-                        case TipoAnomalia_64PR.Modificacion:
+                        case DV.TipoAnomalia_64PR.Modificacion:
                             etiqueta = "(UPDATE)";
                             color = Color.DarkOrange;
                             break;
-                        case TipoAnomalia_64PR.Eliminacion:
+                        case DV.TipoAnomalia_64PR.Eliminacion:
                             etiqueta = "(DELETE)";
                             color = Color.Firebrick;
                             break;
@@ -112,10 +111,10 @@ namespace ProyectoIS_64PR
                 this.DialogResult = DialogResult.OK;
 
                 BLL_64PR.Bitacora_64PR bita = new BLL_64PR.Bitacora_64PR();
-                Servicios_64PR.Evento_64PR ev = new Evento_64PR(SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.Logout).ToString(), 5);
+                Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.Logout).ToString(), 5);
                 bita.RegistrarEvento(ev);
 
-                Servicios_64PR.SessionManager.GetInstance.Logout();
+                Sesion.SessionManager.GetInstance.Logout();
                 FrmContenedor_64PR.Instancia.MostrarHijo(new FrmLogin_64PR());
             }
             catch (Exception ex)
@@ -164,7 +163,7 @@ namespace ProyectoIS_64PR
                         gBackup.RestaurarBackup(rutaBackup, logicalData, logicalLog, rutaDestinoMdf, rutaDestinoLdf);
 
                         BLL_64PR.Bitacora_64PR bita = new BLL_64PR.Bitacora_64PR();
-                        Servicios_64PR.Evento_64PR ev = new Evento_64PR(SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.Restore).ToString(), 1);
+                        Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.Restore).ToString(), 1);
                         bita.RegistrarEvento(ev);
 
                         MessageBox.Show(textos["msg_restauracion"],
@@ -189,10 +188,10 @@ namespace ProyectoIS_64PR
             this.DialogResult = DialogResult.Cancel;
 
             BLL_64PR.Bitacora_64PR bita = new BLL_64PR.Bitacora_64PR();
-            Servicios_64PR.Evento_64PR ev = new Evento_64PR(SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.Logout).ToString(), 5);
+            Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.Logout).ToString(), 5);
             bita.RegistrarEvento(ev);
 
-            Servicios_64PR.SessionManager.GetInstance.Logout();
+            Sesion.SessionManager.GetInstance.Logout();
             FrmContenedor_64PR.Instancia.MostrarHijo(new FrmLogin_64PR());
         }
 
@@ -210,7 +209,7 @@ namespace ProyectoIS_64PR
             if (cmbIdioma.SelectedItem == null) return;
 
             string seleccionado = cmbIdioma.SelectedItem.ToString().ToLower(); ///"es" o "en"
-            GestorIdioma_64PR.GetInstance.SetIdioma(seleccionado);
+            Idioma.GestorIdioma_64PR.GetInstance.SetIdioma(seleccionado);
             ///El Observer se encarga de actualizar el formulario automáticamente
         }
     }

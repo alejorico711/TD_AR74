@@ -1,0 +1,6 @@
+C:\Users\Alejo\source\repos\TD_AR74\Bitacora\bin\Debug\Bitacora.dll
+C:\Users\Alejo\source\repos\TD_AR74\Bitacora\bin\Debug\Bitacora.pdb
+C:\Users\Alejo\source\repos\TD_AR74\Bitacora\obj\Debug\Bitacora.csproj.AssemblyReference.cache
+C:\Users\Alejo\source\repos\TD_AR74\Bitacora\obj\Debug\Bitacora.csproj.CoreCompileInputs.cache
+C:\Users\Alejo\source\repos\TD_AR74\Bitacora\obj\Debug\Bitacora.dll
+C:\Users\Alejo\source\repos\TD_AR74\Bitacora\obj\Debug\Bitacora.pdb

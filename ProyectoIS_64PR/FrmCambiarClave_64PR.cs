@@ -1,5 +1,4 @@
 ﻿using BLL_64PR;
-using Servicios_64PR;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +11,7 @@ using System.Windows.Forms;
 
 namespace ProyectoIS_64PR
 {
-    public partial class FrmCambiarClave_64PR : Form, IObservadorIdioma_64PR
+    public partial class FrmCambiarClave_64PR : Form, Idioma.IObservadorIdioma_64PR
     {
         Dictionary<string, string> textos;
         public FrmCambiarClave_64PR()
@@ -22,10 +21,10 @@ namespace ProyectoIS_64PR
             txtConfirmar.UseSystemPasswordChar = true;
             txtNueva.UseSystemPasswordChar = true;
 
-            GestorIdioma_64PR.GetInstance.Suscribir(this); ///observer del cambio de idioma
+            Idioma.GestorIdioma_64PR.GetInstance.Suscribir(this); ///observer del cambio de idioma
 
             ///Aplico el idioma que ya está cargado
-            textos = GestorIdioma_64PR.GetInstance.ObtenerTextos();
+            textos = Idioma.GestorIdioma_64PR.GetInstance.ObtenerTextos();
             if (textos.Count > 0)
                 ActualizarIdioma(textos);
         }
@@ -47,8 +46,8 @@ namespace ProyectoIS_64PR
                 BLL_64PR.Usuario gusuario = new BLL_64PR.Usuario();
 
                 ///Obtengo el hash en BD y comparo con la contraseña ingresada
-                byte[] hashalmacenado = gusuario.ObtenerHashAlmacenado(SessionManager.GetInstance.Usuario.Login);
-                if (Encriptación.Instancia.VerifyPassword(txtContra.Text.Trim(), hashalmacenado))
+                byte[] hashalmacenado = gusuario.ObtenerHashAlmacenado(Sesion.SessionManager.GetInstance.Usuario.Login);
+                if (Encriptacion.Encriptación.Instancia.VerifyPassword(txtContra.Text.Trim(), hashalmacenado))
                 {
                     if(txtContra.Text.Trim() == txtNueva.Text.Trim() && txtNueva.Text.Trim() == txtConfirmar.Text.Trim())
                     {
@@ -62,7 +61,7 @@ namespace ProyectoIS_64PR
 
                         ///registro el evento en bitacora
                         BLL_64PR.Bitacora_64PR bita2 = new BLL_64PR.Bitacora_64PR();
-                        Servicios_64PR.Evento_64PR ev2 = new Evento_64PR(SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.CambioClave).ToString(), 4);
+                        Bitacora.Evento_64PR ev2 = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.CambioClave).ToString(), 4);
                         bita2.RegistrarEvento(ev2);
 
                         MessageBox.Show(textos["msg_cambio_exitoso"], "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -70,10 +69,10 @@ namespace ProyectoIS_64PR
 
                         FrmContenedor_64PR.Instancia.MostrarHijo(new FrmLogin_64PR());
 
-                        ev2 = new Evento_64PR(SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.Logout).ToString(), 5);
+                        ev2 = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.Logout).ToString(), 5);
                         bita2.RegistrarEvento(ev2);
 
-                        SessionManager.GetInstance.Logout();
+                        Sesion.SessionManager.GetInstance.Logout();
                     }
                 }
                 else
@@ -92,7 +91,7 @@ namespace ProyectoIS_64PR
 
         private void FrmCambiarClave_64PR_FormClosed(object sender, FormClosedEventArgs e)
         {
-            GestorIdioma_64PR.GetInstance.Desuscribir(this);
+            Idioma.GestorIdioma_64PR.GetInstance.Desuscribir(this);
         }
     }
 }

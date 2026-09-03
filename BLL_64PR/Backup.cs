@@ -1,5 +1,4 @@
-﻿using DAL_64PR;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -10,7 +9,7 @@ namespace BLL_64PR
 {
     public class Backup
     {
-        mpp_backup mpp = new mpp_backup();
+        Mapper.mpp_backup mpp = new Mapper.mpp_backup();
 
         public void CrearCarpetaSiNoExiste(string ruta)
         {

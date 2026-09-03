@@ -1,7 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Alejo\\source\\repos\\IS_64PR3\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1FD8BD37-3015-407C-BDA8-14195A6416C5}|Idioma\\Idioma.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\idioma\\gestoridioma_64pr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FD8BD37-3015-407C-BDA8-14195A6416C5}|Idioma\\Idioma.csproj|solutionrelative:idioma\\gestoridioma_64pr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +23,33 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GestorIdioma_64PR.cs",
+              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\Idioma\\GestorIdioma_64PR.cs",
+              "RelativeDocumentMoniker": "Idioma\\GestorIdioma_64PR.cs",
+              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\Idioma\\GestorIdioma_64PR.cs",
+              "RelativeToolTip": "Idioma\\GestorIdioma_64PR.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAUAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-03T21:30:21.746Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1146,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             }
           ]
         }

@@ -8,13 +8,13 @@ namespace BLL_64PR
 {
     public class Rol_64PR
     {
-        DAL_64PR.mpp_roles mpp = new DAL_64PR.mpp_roles();
+        Mapper.mpp_roles mpp = new Mapper.mpp_roles();
         private static readonly DV_64PR recalculador = new DV_64PR();
-        public List<Servicios_64PR.Rol_64PR> ListarRoles()
+        public List<Sesion.Rol_64PR> ListarRoles()
         {
             return mpp.ListarRoles();
         }
-        public void CrearRol(string nombre, List<Servicios_64PR.Rol_64PR> hijos)
+        public void CrearRol(string nombre, List<Sesion.Rol_64PR> hijos)
         {
             mpp.CrearRol(nombre, hijos);
             recalculador.RecalcularTabla("Roles_64PR");
@@ -22,7 +22,7 @@ namespace BLL_64PR
             recalculador.RecalcularTabla("RolPatente_64PR");
         }
 
-        public void ModificarRol(int id, string nombre, List<Servicios_64PR.Rol_64PR> hijos)
+        public void ModificarRol(int id, string nombre, List<Sesion.Rol_64PR> hijos)
         {
             mpp.ModificarRol(id, nombre, hijos);
             recalculador.RecalcularTabla("Roles_64PR");
@@ -44,7 +44,7 @@ namespace BLL_64PR
             return mpp.ContarUsuariosConRol(idRol);
         }
 
-        public Servicios_64PR.Rol_64PR ObtenerRolCompleto(int idRol)
+        public Sesion.Rol_64PR ObtenerRolCompleto(int idRol)
         {
             return mpp.ObtenerRolCompleto(idRol);
         }

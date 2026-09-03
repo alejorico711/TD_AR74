@@ -1,0 +1,6 @@
+C:\Users\Alejo\source\repos\TD_AR74\Idioma\bin\Debug\Idioma.dll
+C:\Users\Alejo\source\repos\TD_AR74\Idioma\bin\Debug\Idioma.pdb
+C:\Users\Alejo\source\repos\TD_AR74\Idioma\obj\Debug\Idioma.csproj.AssemblyReference.cache
+C:\Users\Alejo\source\repos\TD_AR74\Idioma\obj\Debug\Idioma.csproj.CoreCompileInputs.cache
+C:\Users\Alejo\source\repos\TD_AR74\Idioma\obj\Debug\Idioma.dll
+C:\Users\Alejo\source\repos\TD_AR74\Idioma\obj\Debug\Idioma.pdb

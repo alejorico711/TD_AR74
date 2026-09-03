@@ -1,5 +1,4 @@
-﻿using Servicios_64PR;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,7 +20,7 @@ namespace BLL_64PR
             { "USUARIO_64PR",       new string[] { "DNI" } }
         };
 
-        DAL_64PR.mpp_DV mpp = new DAL_64PR.mpp_DV();
+        Mapper.mpp_DV mpp = new Mapper.mpp_DV();
 
         /// Compara el DV recalculado contra el DV guardado para UNA tabla
         public bool VerificarTabla(string nombreTabla, string[] columnasPK)
@@ -32,9 +31,9 @@ namespace BLL_64PR
         }
 
         /// Recorre TODO el catálogo y devuelve la lista de tablas inconsistentes
-        public Dictionary<string, List<FilaInconsistente_64PR>> VerificarIntegridadCompleta()
+        public Dictionary<string, List<DV.FilaInconsistente_64PR>> VerificarIntegridadCompleta()
         {
-            Dictionary<string, List<FilaInconsistente_64PR>> resultado = new Dictionary<string, List<FilaInconsistente_64PR>>();
+            Dictionary<string, List<DV.FilaInconsistente_64PR>> resultado = new Dictionary<string, List<DV.FilaInconsistente_64PR>>();
 
             foreach (var entrada in Tablas)
             {
@@ -43,7 +42,7 @@ namespace BLL_64PR
 
                 if (!VerificarTabla(nombreTabla, columnasPK))
                 {
-                    List<FilaInconsistente_64PR> filasAfectadas = mpp.ObtenerFilasInconsistentes(nombreTabla, columnasPK);
+                    List<DV.FilaInconsistente_64PR> filasAfectadas = mpp.ObtenerFilasInconsistentes(nombreTabla, columnasPK);
                     resultado[nombreTabla] = filasAfectadas;
                 }
             }

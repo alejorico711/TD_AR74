@@ -1,5 +1,4 @@
 ﻿using BLL_64PR;
-using Servicios_64PR;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +12,7 @@ using System.Windows.Forms;
 
 namespace ProyectoIS_64PR
 {
-    public partial class FrmMenu : Form, IObservadorIdioma_64PR
+    public partial class FrmMenu : Form, Idioma.IObservadorIdioma_64PR
     {
         public Form formularioactual = null;
         BLL_64PR.Usuario gusuarios = new BLL_64PR.Usuario();
@@ -21,10 +20,10 @@ namespace ProyectoIS_64PR
         public FrmMenu()
         {
             InitializeComponent();
-            GestorIdioma_64PR.GetInstance.Suscribir(this);
+            Idioma.GestorIdioma_64PR.GetInstance.Suscribir(this);
 
             ///Aplico idioma actual al abrir
-            var textos = GestorIdioma_64PR.GetInstance.ObtenerTextos();
+            var textos = Idioma.GestorIdioma_64PR.GetInstance.ObtenerTextos();
             if (textos.Count > 0)
                 ActualizarIdioma(textos);
 
@@ -52,7 +51,7 @@ namespace ProyectoIS_64PR
         {
             var itemIdioma = idiomaToolStripMenuItem1;
 
-            foreach (string codigo in GestorIdioma_64PR.GetInstance.IdiomasDisponibles())
+            foreach (string codigo in Idioma.GestorIdioma_64PR.GetInstance.IdiomasDisponibles())
             {
                 string codigoLocal = codigo; ///Captura para el delegado de abajo
                 string etiqueta = codigo.ToUpper(); /// Tipo "ES" / "EN"
@@ -61,7 +60,7 @@ namespace ProyectoIS_64PR
                 subItem.Click += (s, e) =>
                 {
                     ///No guardamos en BD aca, ya que se guarda al hacer logout
-                    GestorIdioma_64PR.GetInstance.SetIdioma(codigoLocal);
+                    Idioma.GestorIdioma_64PR.GetInstance.SetIdioma(codigoLocal);
                 };
                 itemIdioma.DropDownItems.Add(subItem);
             }
@@ -122,7 +121,7 @@ namespace ProyectoIS_64PR
             {
                 formularioactual.Close();
             }
-            var textos = GestorIdioma_64PR.GetInstance.ObtenerTextos();
+            var textos = Idioma.GestorIdioma_64PR.GetInstance.ObtenerTextos();
             string msg = textos.ContainsKey("msg_cerrarSesion") ? textos["msg_cerrarSesion"] : "¿Está seguro de que desea cerrar la sesión?";
             string titulo = textos.ContainsKey("msg_cerrarSesion_titulo") ? textos["msg_cerrarSesion_titulo"] : "Cerrar Sesión";
 
@@ -131,20 +130,20 @@ namespace ProyectoIS_64PR
             if (resultado == DialogResult.Yes)
             {
                 ///Guardamos el idioma en BD antes de cerrar sesión
-                string loginActual = SessionManager.GetInstance.Usuario.Login;
-                string idiomaActual = GestorIdioma_64PR.GetInstance.IdiomaActual;
+                string loginActual = Sesion.SessionManager.GetInstance.Usuario.Login;
+                string idiomaActual = Idioma.GestorIdioma_64PR.GetInstance.IdiomaActual;
                 gusuarios.GuardarIdioma(loginActual, idiomaActual);
 
                 ///Registrasmo ele vento en bitacora
 
                 BLL_64PR.Bitacora_64PR bita3 = new BLL_64PR.Bitacora_64PR();
-                Servicios_64PR.Evento_64PR ev3 = new Evento_64PR(loginActual, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.Logout).ToString(), 5);
+                Bitacora.Evento_64PR ev3 = new Bitacora.Evento_64PR(loginActual, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.Logout).ToString(), 5);
                 bita3.RegistrarEvento(ev3);
 
                 FrmContenedor_64PR.Instancia.MostrarHijo(new FrmLogin_64PR());
                 ///aca lo idea seria usar el metodo .Close(), pero ese metodo me llama al metodo de abajo
                 ///que contiene el application.exit y me detiene la ejecucion del programa
-                SessionManager.GetInstance.Logout();
+                Sesion.SessionManager.GetInstance.Logout();
             }
         }
 
@@ -154,7 +153,7 @@ namespace ProyectoIS_64PR
         }
         private void FrmMenu_FormClosed(object sender, FormClosedEventArgs e)
         {
-            GestorIdioma_64PR.GetInstance.Desuscribir(this); ///observer del cambio de idioma
+            Idioma.GestorIdioma_64PR.GetInstance.Desuscribir(this); ///observer del cambio de idioma
         }
         private void FrmMenu_Load(object sender, EventArgs e)
         {
@@ -162,33 +161,33 @@ namespace ProyectoIS_64PR
         }
         private void ConfigurarPermisos()
         {
-            Servicios_64PR.Rol_64PR rolUsuario = Servicios_64PR.SessionManager.GetInstance.Usuario.Rol;
+            Sesion.Rol_64PR rolUsuario = Sesion.SessionManager.GetInstance.Usuario.Rol;
 
-            bool puedeGestionarUsuarios = rolUsuario.TienePermiso(Patentes_64PR.CrearUsuario) ||
-                                          rolUsuario.TienePermiso(Patentes_64PR.ModificarUsuario) ||
-                                          rolUsuario.TienePermiso(Patentes_64PR.ActivarDesactivarUsuarios) ||
-                                          rolUsuario.TienePermiso(Patentes_64PR.DesbloquearUsuario);
+            bool puedeGestionarUsuarios = rolUsuario.TienePermiso(Sesion.Patentes_64PR.CrearUsuario) ||
+                                          rolUsuario.TienePermiso(Sesion.Patentes_64PR.ModificarUsuario) ||
+                                          rolUsuario.TienePermiso(Sesion.Patentes_64PR.ActivarDesactivarUsuarios) ||
+                                          rolUsuario.TienePermiso(Sesion.Patentes_64PR.DesbloquearUsuario);
             gestionarUsuariosToolStripMenuItem.Visible = puedeGestionarUsuarios;
 
-            bool puedeGestionarFamilias = rolUsuario.TienePermiso(Patentes_64PR.CrearFamilias) ||
-                                          rolUsuario.TienePermiso(Patentes_64PR.EliminarFamilias) ||
-                                          rolUsuario.TienePermiso(Patentes_64PR.ModificarFamilias);
+            bool puedeGestionarFamilias = rolUsuario.TienePermiso(Sesion.Patentes_64PR.CrearFamilias) ||
+                                          rolUsuario.TienePermiso(Sesion.Patentes_64PR.EliminarFamilias) ||
+                                          rolUsuario.TienePermiso(Sesion.Patentes_64PR.ModificarFamilias);
             gestionarPermisosToolStripMenuItem.Visible = puedeGestionarFamilias;
 
-            bool puedeGestionarRoles = rolUsuario.TienePermiso(Patentes_64PR.CrearRoles) ||
-                                       rolUsuario.TienePermiso(Patentes_64PR.EliminarRoles) ||
-                                       rolUsuario.TienePermiso(Patentes_64PR.ModificarRoles);
+            bool puedeGestionarRoles = rolUsuario.TienePermiso(Sesion.Patentes_64PR.CrearRoles) ||
+                                       rolUsuario.TienePermiso(Sesion.Patentes_64PR.EliminarRoles) ||
+                                       rolUsuario.TienePermiso(Sesion.Patentes_64PR.ModificarRoles);
             gestionarRolesToolStripMenuItem.Visible = puedeGestionarRoles;
 
-            eventosToolStripMenuItem.Visible = rolUsuario.TienePermiso(Patentes_64PR.Bitacora);
+            eventosToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.Bitacora);
 
-            cambiarContraseñaToolStripMenuItem1.Visible = rolUsuario.TienePermiso(Patentes_64PR.CambiarContra);
+            cambiarContraseñaToolStripMenuItem1.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.CambiarContra);
 
-            idiomaToolStripMenuItem1.Visible = rolUsuario.TienePermiso(Patentes_64PR.CambiarIdioma);
+            idiomaToolStripMenuItem1.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.CambiarIdioma);
 
-            respaldoBaseDeDatosToolStripMenuItem.Visible = rolUsuario.TienePermiso(Patentes_64PR.Respaldos);
+            respaldoBaseDeDatosToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.Respaldos);
 
-            restaurarBaseDeDatosToolStripMenuItem.Visible = rolUsuario.TienePermiso(Patentes_64PR.Restauraciones);
+            restaurarBaseDeDatosToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.Restauraciones);
         }
 
         private void respaldoBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -206,7 +205,7 @@ namespace ProyectoIS_64PR
                 gBackup.GenerarBackup(rutaCompleta);
 
                 BLL_64PR.Bitacora_64PR bita = new BLL_64PR.Bitacora_64PR();
-                Servicios_64PR.Evento_64PR ev = new Evento_64PR(SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.Backup).ToString(), 4);
+                Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.Backup).ToString(), 4);
                 bita.RegistrarEvento(ev);
 
                 MessageBox.Show(textos["backup_Exitoso"] + $":\n{rutaCompleta}",
@@ -263,7 +262,7 @@ namespace ProyectoIS_64PR
                         gBackup.RestaurarBackup(rutaBackup, logicalData, logicalLog, rutaDestinoMdf, rutaDestinoLdf);
 
                         BLL_64PR.Bitacora_64PR bita = new BLL_64PR.Bitacora_64PR();
-                        Servicios_64PR.Evento_64PR ev = new Evento_64PR(SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.Restore).ToString(), 1);
+                        Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.Restore).ToString(), 1);
                         bita.RegistrarEvento(ev);
 
                         MessageBox.Show(textos["msg_restauracion"],
