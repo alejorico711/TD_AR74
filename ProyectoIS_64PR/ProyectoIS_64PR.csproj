@@ -103,6 +103,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Traductor_64PR.cs" />
     <Compile Include="ucCrearUsuario.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -158,10 +159,10 @@
       <DependentUpon>ucModificarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="idiomas\en.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="idiomas\es.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -92,5 +92,107 @@ namespace Idioma
 
             return lista;
         }
+        public void RegistrarClavesFaltantes(List<string> claves)
+        {
+            try
+            {
+                var serializer = new JavaScriptSerializer();
+
+                foreach (var codigoIdioma in IdiomasDisponibles()) // ej: "es", "en"
+                {
+                    string rutaArchivo = Path.Combine(RutaIdiomas, codigoIdioma + ".json");
+
+                    string json = File.ReadAllText(rutaArchivo, System.Text.Encoding.UTF8);
+                    var diccionario = serializer.Deserialize<Dictionary<string, string>>(json);
+
+                    bool huboCambios = false;
+                    foreach (var clave in claves)
+                    {
+                        if (!diccionario.ContainsKey(clave))
+                        {
+                            diccionario[clave] = "FALTA TRADUCCION";
+                            huboCambios = true;
+                        }
+                    }
+
+                    if (huboCambios)
+                    {
+                        string jsonActualizado = serializer.Serialize(diccionario);
+
+                        ///formato visual (saltos de línea y espacios)
+                        jsonActualizado = FormatearJson(jsonActualizado);
+
+                        File.WriteAllText(rutaArchivo, jsonActualizado, System.Text.Encoding.UTF8);
+
+                        ///Si el idioma actual es el que se modificó, refrescamos _textos y notificamos
+                        if (codigoIdioma == _idiomaActual)
+                        {
+                            _textos = diccionario;
+                            NotificarObservadores();
+                        }
+                    }
+                }
+            }
+
+            catch (Exception ex)
+            {
+                throw new Exception("Error en RegistrarClavesFaltantes: " + ex.Message);
+            }
+        }
+        private string FormatearJson(string json)
+        {
+            var stringBuilder = new StringBuilder();
+            bool entreComillas = false;
+            int nivelIndentacion = 0;
+
+            foreach (char c in json)
+            {
+                switch (c)
+                {
+                    case '"':
+                        stringBuilder.Append(c);
+                        entreComillas = !entreComillas;
+                        break;
+                    case '{':
+                    case '[':
+                        stringBuilder.Append(c);
+                        if (!entreComillas)
+                        {
+                            stringBuilder.AppendLine();
+                            nivelIndentacion++;
+                            stringBuilder.Append(new string(' ', nivelIndentacion * 4)); // 4 espacios de sangría
+                        }
+                        break;
+                    case '}':
+                    case ']':
+                        if (!entreComillas)
+                        {
+                            stringBuilder.AppendLine();
+                            nivelIndentacion--;
+                            stringBuilder.Append(new string(' ', nivelIndentacion * 4));
+                        }
+                        stringBuilder.Append(c);
+                        break;
+                    case ',':
+                        stringBuilder.Append(c);
+                        if (!entreComillas)
+                        {
+                            stringBuilder.AppendLine();
+                            stringBuilder.Append(new string(' ', nivelIndentacion * 4));
+                        }
+                        break;
+                    case ':':
+                        stringBuilder.Append(c);
+                        if (!entreComillas)
+                            stringBuilder.Append(" ");
+                        break;
+                    default:
+                        stringBuilder.Append(c);
+                        break;
+                }
+            }
+
+            return stringBuilder.ToString();
+        }
     }
 }

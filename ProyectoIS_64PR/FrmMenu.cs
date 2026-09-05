@@ -34,18 +34,21 @@ namespace ProyectoIS_64PR
         public void ActualizarIdioma(Dictionary<string, string> textoss)
         {
             textos = textoss;
+            Traductor_64PR.Traducir(this, textos);
+               
+
             if (textos.ContainsKey("frmMenu_titulo")) this.Text = textos["frmMenu_titulo"];
-            if (textos.ContainsKey("frmMenu_login")) loginToolStripMenuItem1.Text = textos["frmMenu_login"];
-            if (textos.ContainsKey("frmMenu_gestionUsuarios")) gestionarUsuariosToolStripMenuItem.Text = textos["frmMenu_gestionUsuarios"];
-            if (textos.ContainsKey("frmMenu_cambiarContrasena")) cambiarContraseñaToolStripMenuItem1.Text = textos["frmMenu_cambiarContrasena"];
-            if (textos.ContainsKey("frmMenu_eventos")) eventosToolStripMenuItem.Text = textos["frmMenu_eventos"];
-            if (textos.ContainsKey("frmMenu_cerrarSesion")) cerrarSesionToolStripMenuItem1.Text = textos["frmMenu_cerrarSesion"];
-            if (textos.ContainsKey("frmMenu_idioma")) idiomaToolStripMenuItem1.Text = textos["frmMenu_idioma"];
-            if (textos.ContainsKey("frmMenu_gestionFamilias")) gestionarPermisosToolStripMenuItem.Text = textos["frmMenu_gestionFamilias"];
-            configuracionToolStripMenuItem.Text = textos["configuracion"];
-            gestionarRolesToolStripMenuItem.Text = textos["gestionar_roles"];
-            respaldoBaseDeDatosToolStripMenuItem.Text = textos["respaldo"];
-            restaurarBaseDeDatosToolStripMenuItem.Text = textos["restaurar2"];
+            //if (textos.ContainsKey("frmMenu_login")) loginToolStripMenuItem1.Text = textos["frmMenu_login"];
+            //if (textos.ContainsKey("frmMenu_gestionUsuarios")) gestionarUsuariosToolStripMenuItem.Text = textos["frmMenu_gestionUsuarios"];
+            //if (textos.ContainsKey("frmMenu_cambiarContrasena")) cambiarContraseñaToolStripMenuItem1.Text = textos["frmMenu_cambiarContrasena"];
+            //if (textos.ContainsKey("frmMenu_eventos")) eventosToolStripMenuItem.Text = textos["frmMenu_eventos"];
+            //if (textos.ContainsKey("frmMenu_cerrarSesion")) cerrarSesionToolStripMenuItem1.Text = textos["frmMenu_cerrarSesion"];
+            //if (textos.ContainsKey("frmMenu_idioma")) idiomaToolStripMenuItem1.Text = textos["frmMenu_idioma"];
+            //if (textos.ContainsKey("frmMenu_gestionFamilias")) gestionarPermisosToolStripMenuItem.Text = textos["frmMenu_gestionFamilias"];
+            //configuracionToolStripMenuItem.Text = textos["configuracion"];
+            //gestionarRolesToolStripMenuItem.Text = textos["gestionar_roles"];
+            //respaldoBaseDeDatosToolStripMenuItem.Text = textos["respaldo"];
+            //restaurarBaseDeDatosToolStripMenuItem.Text = textos["restaurar2"];
         }
         private void AgregarSelectorIdioma()
         {
