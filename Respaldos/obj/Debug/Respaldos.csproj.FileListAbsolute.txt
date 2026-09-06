@@ -1,0 +1,9 @@
+C:\Users\Alejo\source\repos\TD_AR74\Respaldos\obj\Debug\Respaldos.csproj.AssemblyReference.cache
+C:\Users\Alejo\source\repos\TD_AR74\Respaldos\obj\Debug\Respaldos.csproj.CoreCompileInputs.cache
+C:\Users\Alejo\source\repos\TD_AR74\Respaldos\bin\Debug\Respaldos.dll
+C:\Users\Alejo\source\repos\TD_AR74\Respaldos\bin\Debug\Respaldos.pdb
+C:\Users\Alejo\source\repos\TD_AR74\Respaldos\bin\Debug\DAL_64PR.dll
+C:\Users\Alejo\source\repos\TD_AR74\Respaldos\bin\Debug\DAL_64PR.pdb
+C:\Users\Alejo\source\repos\TD_AR74\Respaldos\obj\Debug\Respaldos.csproj.Up2Date
+C:\Users\Alejo\source\repos\TD_AR74\Respaldos\obj\Debug\Respaldos.dll
+C:\Users\Alejo\source\repos\TD_AR74\Respaldos\obj\Debug\Respaldos.pdb

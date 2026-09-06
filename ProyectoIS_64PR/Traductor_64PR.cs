@@ -15,6 +15,31 @@ namespace ProyectoIS_64PR
 
             foreach (var control in form.Controls)
             {
+                if(control is DataGridView dgv)
+                {
+                    foreach (DataGridViewColumn column in dgv.Columns)
+                    {
+                        if (textos.ContainsKey(form.Name + "." + dgv.Name + "." + column.Name))
+                        {
+                            column.HeaderText = textos[form.Name + "."+ dgv.Name + "." + column.Name];
+                        }
+                        else
+                        {
+                            clavesFaltantes.Add(form.Name + "." + dgv.Name + "." + column.Name);
+                        }
+                    }
+                }
+                if (control is RadioButton rb)
+                {
+                    if (textos.ContainsKey(form.Name + "." + rb.Name))
+                    {
+                        rb.Text = textos[form.Name + "." + rb.Name];
+                    }
+                    else
+                    {
+                        clavesFaltantes.Add(form.Name + "." + rb.Name);
+                    }
+                }
                 if (control is Button btn)
                 {
                     if (textos.ContainsKey(form.Name + "." + btn.Name))
@@ -23,7 +48,6 @@ namespace ProyectoIS_64PR
                     }
                     else
                     {
-                        btn.Text = "FALTA TRADUCCION";
                         clavesFaltantes.Add(form.Name + "." + btn.Name);
                     }
                 }
@@ -36,7 +60,6 @@ namespace ProyectoIS_64PR
                     }
                     else
                     {
-                        lbl.Text = "FALTA TRADUCCION";
                         clavesFaltantes.Add(form.Name + "." + lbl.Name);
                     }
                 }
@@ -50,8 +73,7 @@ namespace ProyectoIS_64PR
                             item.Text = textos[form.Name + "." + item.Name];
                         }
                         else
-                        {
-                            // item.Text = "FALTA TRADUCCION";
+                        { 
                             clavesFaltantes.Add(form.Name + "." + item.Name);
                         }
                     }
@@ -66,7 +88,6 @@ namespace ProyectoIS_64PR
                             }
                             else
                             {
-                                //subItem.Text = "FALTA TRADUCCION";
                                 clavesFaltantes.Add(form.Name + "." + subItem.Name);
                             }
                         }

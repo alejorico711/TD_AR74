@@ -1,5 +1,4 @@
-﻿using BLL_64PR;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +13,7 @@ namespace ProyectoIS_64PR
 {
     public partial class FrmBitacora_64PR : Form, Idioma.IObservadorIdioma_64PR
     {
-        Bitacora_64PR bita = new Bitacora_64PR();
+        Bitacora.Bitacora_64PR bita = new Bitacora.Bitacora_64PR();
         List<Bitacora.Evento_64PR> lst = new List<Bitacora.Evento_64PR>();
         Dictionary<string, string> textos;
         public FrmBitacora_64PR()
@@ -274,24 +273,7 @@ namespace ProyectoIS_64PR
         public void ActualizarIdioma(Dictionary<string, string> textoss)
         {
             textos = textoss;
-            label1.Text = textos["lbl_BitacoraEventos"];
-            label2.Text = textos["lbl_Login"];
-            label3.Text = textos["lbl_FechaInicio"];
-            label4.Text = textos["lbl_FechaFin"];
-            label5.Text = textos["lbl_Modulo"];
-            label6.Text = textos["lbl_Evento"];
-            label7.Text = textos["lbl_Criticidad"];
-
-            btnLimpiar.Text = textos["btn_Limpiar"];
-            btnAplicar.Text = textos["btn_Aplicar"];
-            btnImprimir.Text = textos["btn_Imprimir"];
-
-            dgvEventos.Columns["Login"].HeaderText = textos["lbl_Login"];
-            dgvEventos.Columns["FechaHora"].HeaderText = textos["Fecha_y_hora"];
-            dgvEventos.Columns["Modulo"].HeaderText = textos["lbl_Modulo"];
-            dgvEventos.Columns["Tipo"].HeaderText = textos["lbl_Evento"];
-            dgvEventos.Columns["Criticidad"].HeaderText = textos["lbl_Criticidad"];
-
+            Traductor_64PR.Traducir(this, textos);
         }
 
         private void FrmBitacora_64PR_FormClosed(object sender, FormClosedEventArgs e)

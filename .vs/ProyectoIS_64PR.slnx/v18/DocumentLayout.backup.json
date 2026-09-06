@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\proyectois_64pr\\traductor_64pr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|solutionrelative:proyectois_64pr\\traductor_64pr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\proyectois_64pr\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|solutionrelative:proyectois_64pr\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\proyectois_64pr\\frmcontenedor_64pr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|solutionrelative:proyectois_64pr\\frmcontenedor_64pr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\proyectois_64pr\\frmcontenedor_64pr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|solutionrelative:proyectois_64pr\\frmcontenedor_64pr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,20 +35,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Traductor_64PR.cs",
-              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\Traductor_64PR.cs",
-              "RelativeDocumentMoniker": "ProyectoIS_64PR\\Traductor_64PR.cs",
-              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\Traductor_64PR.cs",
-              "RelativeToolTip": "ProyectoIS_64PR\\Traductor_64PR.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAQwEQAAAAiAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\Program.cs",
+              "RelativeDocumentMoniker": "ProyectoIS_64PR\\Program.cs",
+              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\Program.cs",
+              "RelativeToolTip": "ProyectoIS_64PR\\Program.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBIAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-04T16:57:47.139Z",
+              "WhenOpened": "2026-09-06T21:39:40.97Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FrmContenedor_64PR.cs",
+              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmContenedor_64PR.cs",
+              "RelativeDocumentMoniker": "ProyectoIS_64PR\\FrmContenedor_64PR.cs",
+              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmContenedor_64PR.cs",
+              "RelativeToolTip": "ProyectoIS_64PR\\FrmContenedor_64PR.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-06T21:39:01.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmContenedor_64PR.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmContenedor_64PR.cs",
+              "RelativeDocumentMoniker": "ProyectoIS_64PR\\FrmContenedor_64PR.cs",
+              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmContenedor_64PR.cs [Dise\u00F1o]",
+              "RelativeToolTip": "ProyectoIS_64PR\\FrmContenedor_64PR.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-06T21:38:59.655Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         },
         {
-          "DockedWidth": 1146,
+          "DockedWidth": 200,
           "SelectedChildIndex": -1,
           "Children": [
             {

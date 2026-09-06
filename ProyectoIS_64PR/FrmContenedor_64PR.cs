@@ -20,6 +20,7 @@ namespace ProyectoIS_64PR
             Instancia = this;
             this.WindowState = FormWindowState.Normal;
             MostrarHijo(new FrmLogin_64PR());
+            this.Text = "RoomIn";
         }
         public void MostrarHijo(Form hijo)
         {
@@ -44,10 +45,10 @@ namespace ProyectoIS_64PR
             {
                 string loginActual = Sesion.SessionManager.GetInstance.Usuario.Login;
                 string idiomaActual = Idioma.GestorIdioma_64PR.GetInstance.IdiomaActual;
-                new BLL_64PR.Usuario().GuardarIdioma(loginActual, idiomaActual);
+                new Sesion.BLL_Usuario().GuardarIdioma(loginActual, idiomaActual);
 
-                BLL_64PR.Bitacora_64PR bita2 = new BLL_64PR.Bitacora_64PR();
-                Bitacora.Evento_64PR ev2 = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.Logout).ToString(), 5);
+                Bitacora.Bitacora_64PR bita2 = new Bitacora.Bitacora_64PR();
+                Bitacora.Evento_64PR ev2 = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)Bitacora.Bitacora_64PR.TipoEventoBitacora_64PR.Logout).ToString(), 5);
                 bita2.RegistrarEvento(ev2);
 
                 Sesion.SessionManager.GetInstance.Logout();

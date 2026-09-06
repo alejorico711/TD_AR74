@@ -12,7 +12,7 @@ namespace ProyectoIS_64PR
 {
     public partial class FrmLogin_64PR : Form, Idioma.IObservadorIdioma_64PR
     {
-        BLL_64PR.Usuario gusuarios = new BLL_64PR.Usuario();
+        Sesion.BLL_Usuario gusuarios = new Sesion.BLL_Usuario();
         Dictionary<string, string> textos;
         public FrmLogin_64PR()
         {
@@ -20,7 +20,6 @@ namespace ProyectoIS_64PR
             this.AcceptButton = btnIniciarSesion;
             txtContra.UseSystemPasswordChar = true;
             lblMensaje.Enabled = false;
-
             Idioma.GestorIdioma_64PR.GetInstance.Suscribir(this); ///Evento del observer
 
             CargarComboIdiomas();
@@ -29,6 +28,7 @@ namespace ProyectoIS_64PR
             textos = Idioma.GestorIdioma_64PR.GetInstance.ObtenerTextos();
             if (textos.Count > 0)
                 ActualizarIdioma(textos);
+            lblMensaje.Hide();
         }
         private void CargarComboIdiomas()
         {
@@ -58,14 +58,11 @@ namespace ProyectoIS_64PR
         {
             ///Esto me actualiza los textos visibles
             textos = textoss;
-            this.Text = textos.ContainsKey("frmLogin_titulo") ? textos["frmLogin_titulo"] : "Iniciar sesion";
-            label1.Text = textos.ContainsKey("frmLogin_lblUsuario") ? textos["frmLogin_lblUsuario"] : "Usuario" ;
-            label2.Text = textos.ContainsKey("frmLogin_lblContrasena") ? textos["frmLogin_lblContrasena"] : "Contraseña";
-            btnIniciarSesion.Text = textos.ContainsKey("frmLogin_btnIniciar") ? textos["frmLogin_btnIniciar"] : "Iniciar sesion";
+            Traductor_64PR.Traducir(this, textos);
             if (lblMensaje.Enabled)
             {
                 string[] aux = lblMensaje.Text.Split(':');
-                aux[0]= textos.ContainsKey("intentos") ? textos["intentos"] : "Intentos";
+                aux[0]= textos.ContainsKey("FrmLogin_64PR.lblMensaje") ? textos["FrmLogin_64PR.lblMensaje"] : "Intentos";
                 lblMensaje.Text = aux[0]+":" + aux[1];
             }
         }
@@ -112,8 +109,8 @@ namespace ProyectoIS_64PR
                 Sesion.SessionManager.GetInstance.Login(u);
 
                 ///Registro el evennto en bitacora
-                BLL_64PR.Bitacora_64PR bita2 = new BLL_64PR.Bitacora_64PR();
-                Bitacora.Evento_64PR ev2 = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.LoginExitoso).ToString(), 5);
+                Bitacora.Bitacora_64PR bita2 = new Bitacora.Bitacora_64PR();
+                Bitacora.Evento_64PR ev2 = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)Bitacora.Bitacora_64PR.TipoEventoBitacora_64PR.LoginExitoso).ToString(), 5);
                 bita2.RegistrarEvento(ev2);
 
                 if (Sesion.SessionManager.GetInstance.Usuario.PrimeraVez)
@@ -122,23 +119,11 @@ namespace ProyectoIS_64PR
                     string tituTemp = textos.ContainsKey("msg_contrasenaTemporal_titulo") ? textos["msg_contrasenaTemporal_titulo"] : "Cambio de Contraseña Requerido";
 
                     MessageBox.Show(msgTemp, tituTemp, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                    using (var fcc = new FrmCambiarClave_64PR())
-                    {
-                        if (fcc.ShowDialog() != DialogResult.OK)
-                        {
-                            BLL_64PR.Bitacora_64PR bita = new BLL_64PR.Bitacora_64PR();
-                            Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.Logout).ToString(), 5);
-                            bita.RegistrarEvento(ev);
-
-                            Sesion.SessionManager.GetInstance.Logout();
-                            return;
-                        }
-                    }
+                    FrmContenedor_64PR.Instancia.MostrarHijo(new FrmCambiarClave_64PR());
                 }
                 else
                 {
-                    BLL_64PR.DV_64PR bllDV = new BLL_64PR.DV_64PR();
+                    DV.DV_64PR bllDV = new DV.DV_64PR();
                     Dictionary<string, List<DV.FilaInconsistente_64PR>> tablasInconsistentes = bllDV.VerificarIntegridadCompleta();
 
                     if (tablasInconsistentes.Count > 0)
@@ -157,8 +142,8 @@ namespace ProyectoIS_64PR
                                 textos["msg_inconsistencia2"],
                                 "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                            BLL_64PR.Bitacora_64PR bita = new BLL_64PR.Bitacora_64PR();
-                            Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.Logout).ToString(), 5);
+                            Bitacora.Bitacora_64PR bita = new Bitacora.Bitacora_64PR();
+                            Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)Bitacora.Bitacora_64PR.TipoEventoBitacora_64PR.Logout).ToString(), 5);
                             bita.RegistrarEvento(ev);
 
                             Sesion.SessionManager.GetInstance.Logout();
@@ -178,19 +163,20 @@ namespace ProyectoIS_64PR
             {
                 ///Si la contraseña no es correcta entra aca y sumamos un intento, registrandolo en bitacora
                 gusuarios.SumarIntento(txtLogin.Text.Trim());
-                BLL_64PR.Bitacora_64PR bita2 = new BLL_64PR.Bitacora_64PR();
-                Bitacora.Evento_64PR ev2 = new Bitacora.Evento_64PR(txtLogin.Text, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.LoginFallido).ToString(), 4);
+                Bitacora.Bitacora_64PR bita2 = new Bitacora.Bitacora_64PR();
+                Bitacora.Evento_64PR ev2 = new Bitacora.Evento_64PR(txtLogin.Text, ((int)Bitacora.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)Bitacora.Bitacora_64PR.TipoEventoBitacora_64PR.LoginFallido).ToString(), 4);
                 bita2.RegistrarEvento(ev2);
 
                 ///Obtenemos los intentos del usuario en base de datos y lo volcamos en el label
                 string temp = gusuarios.ObtenerIntentos(txtLogin.Text.Trim());
                 lblMensaje.Enabled = true;
-                lblMensaje.Text = textos["intentos"]+ ": " + temp + "/3";
+                lblMensaje.Show();
+                lblMensaje.Text = textos["FrmLogin_64PR.lblMensaje"] + ": " + temp + "/3";
 
                 if (Convert.ToInt16(temp) == 3)
                 {
                     ///Si los intentos llegan a 3 el bloqueo se hace desde la BD, aca lo que hago en registrar en la bitaora nomas
-                    ev2 = new Bitacora.Evento_64PR(txtLogin.Text, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.UsuarioBloqueado).ToString(), 5);
+                    ev2 = new Bitacora.Evento_64PR(txtLogin.Text, ((int)Bitacora.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)Bitacora.Bitacora_64PR.TipoEventoBitacora_64PR.UsuarioBloqueado).ToString(), 5);
                     bita2.RegistrarEvento(ev2);
                 }
 

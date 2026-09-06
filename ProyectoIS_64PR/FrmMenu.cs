@@ -1,5 +1,4 @@
-﻿using BLL_64PR;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +14,7 @@ namespace ProyectoIS_64PR
     public partial class FrmMenu : Form, Idioma.IObservadorIdioma_64PR
     {
         public Form formularioactual = null;
-        BLL_64PR.Usuario gusuarios = new BLL_64PR.Usuario();
+        Sesion.BLL_Usuario gusuarios = new Sesion.BLL_Usuario();
         Dictionary<string, string> textos;
         public FrmMenu()
         {
@@ -35,20 +34,6 @@ namespace ProyectoIS_64PR
         {
             textos = textoss;
             Traductor_64PR.Traducir(this, textos);
-               
-
-            if (textos.ContainsKey("frmMenu_titulo")) this.Text = textos["frmMenu_titulo"];
-            //if (textos.ContainsKey("frmMenu_login")) loginToolStripMenuItem1.Text = textos["frmMenu_login"];
-            //if (textos.ContainsKey("frmMenu_gestionUsuarios")) gestionarUsuariosToolStripMenuItem.Text = textos["frmMenu_gestionUsuarios"];
-            //if (textos.ContainsKey("frmMenu_cambiarContrasena")) cambiarContraseñaToolStripMenuItem1.Text = textos["frmMenu_cambiarContrasena"];
-            //if (textos.ContainsKey("frmMenu_eventos")) eventosToolStripMenuItem.Text = textos["frmMenu_eventos"];
-            //if (textos.ContainsKey("frmMenu_cerrarSesion")) cerrarSesionToolStripMenuItem1.Text = textos["frmMenu_cerrarSesion"];
-            //if (textos.ContainsKey("frmMenu_idioma")) idiomaToolStripMenuItem1.Text = textos["frmMenu_idioma"];
-            //if (textos.ContainsKey("frmMenu_gestionFamilias")) gestionarPermisosToolStripMenuItem.Text = textos["frmMenu_gestionFamilias"];
-            //configuracionToolStripMenuItem.Text = textos["configuracion"];
-            //gestionarRolesToolStripMenuItem.Text = textos["gestionar_roles"];
-            //respaldoBaseDeDatosToolStripMenuItem.Text = textos["respaldo"];
-            //restaurarBaseDeDatosToolStripMenuItem.Text = textos["restaurar2"];
         }
         private void AgregarSelectorIdioma()
         {
@@ -139,8 +124,8 @@ namespace ProyectoIS_64PR
 
                 ///Registrasmo ele vento en bitacora
 
-                BLL_64PR.Bitacora_64PR bita3 = new BLL_64PR.Bitacora_64PR();
-                Bitacora.Evento_64PR ev3 = new Bitacora.Evento_64PR(loginActual, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.Logout).ToString(), 5);
+                Bitacora.Bitacora_64PR bita3 = new Bitacora.Bitacora_64PR();
+                Bitacora.Evento_64PR ev3 = new Bitacora.Evento_64PR(loginActual, ((int)Bitacora.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)Bitacora.Bitacora_64PR.TipoEventoBitacora_64PR.Logout).ToString(), 5);
                 bita3.RegistrarEvento(ev3);
 
                 FrmContenedor_64PR.Instancia.MostrarHijo(new FrmLogin_64PR());
@@ -197,7 +182,7 @@ namespace ProyectoIS_64PR
         {
             try
             {
-                BLL_64PR.Backup gBackup = new BLL_64PR.Backup();
+                Respaldos.Backup gBackup = new Respaldos.Backup();
 
                 string carpetaProyecto = @"C:\Backups_64PR";
                 gBackup.CrearCarpetaSiNoExiste(carpetaProyecto); /// SQL la crea si no existe, no rompe si ya existe
@@ -207,8 +192,8 @@ namespace ProyectoIS_64PR
 
                 gBackup.GenerarBackup(rutaCompleta);
 
-                BLL_64PR.Bitacora_64PR bita = new BLL_64PR.Bitacora_64PR();
-                Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.Backup).ToString(), 4);
+                Bitacora.Bitacora_64PR bita = new Bitacora.Bitacora_64PR();
+                Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)Bitacora.Bitacora_64PR.TipoEventoBitacora_64PR.Backup).ToString(), 4);
                 bita.RegistrarEvento(ev);
 
                 MessageBox.Show(textos["backup_Exitoso"] + $":\n{rutaCompleta}",
@@ -244,7 +229,7 @@ namespace ProyectoIS_64PR
 
                     try
                     {
-                        BLL_64PR.Backup gBackup = new BLL_64PR.Backup();
+                        Respaldos.Backup gBackup = new Respaldos.Backup();
 
                         /// leer los nombres lógicos del backup
                         DataTable fileList = gBackup.ObtenerFileList(rutaBackup);
@@ -264,8 +249,8 @@ namespace ProyectoIS_64PR
 
                         gBackup.RestaurarBackup(rutaBackup, logicalData, logicalLog, rutaDestinoMdf, rutaDestinoLdf);
 
-                        BLL_64PR.Bitacora_64PR bita = new BLL_64PR.Bitacora_64PR();
-                        Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.Restore).ToString(), 1);
+                        Bitacora.Bitacora_64PR bita = new Bitacora.Bitacora_64PR();
+                        Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)Bitacora.Bitacora_64PR.TipoEventoBitacora_64PR.Restore).ToString(), 1);
                         bita.RegistrarEvento(ev);
 
                         MessageBox.Show(textos["msg_restauracion"],

@@ -13,7 +13,7 @@ namespace ProyectoIS_64PR
 {
     public partial class ucCrearUsuario : UserControl, Idioma.IObservadorIdioma_64PR
     {
-        BLL_64PR.Rol_64PR groles = new BLL_64PR.Rol_64PR();
+        Sesion.BLL_Rol_64PR groles = new Sesion.BLL_Rol_64PR();
         Dictionary<string, string> textos;
         List<Sesion.Rol_64PR> lst;
         public ucCrearUsuario()

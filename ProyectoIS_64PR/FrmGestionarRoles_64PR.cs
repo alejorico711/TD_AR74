@@ -12,8 +12,8 @@ namespace ProyectoIS_64PR
 {
     public partial class FrmGestionarRoles_64PR : Form, Idioma.IObservadorIdioma_64PR
     {
-        BLL_64PR.Rol_64PR bllRol = new BLL_64PR.Rol_64PR();
-        BLL_64PR.Permiso_64PR bllpermisos = new BLL_64PR.Permiso_64PR();
+        Sesion.BLL_Rol_64PR bllRol = new Sesion.BLL_Rol_64PR();
+        Sesion.BLL_Permiso_64PR bllpermisos = new Sesion.BLL_Permiso_64PR();
         List<Sesion.Rol_64PR> nodos2 = new List<Sesion.Rol_64PR>();
         Dictionary<string, string> textos;
 
@@ -242,8 +242,8 @@ namespace ProyectoIS_64PR
                 {
                     bllRol.CrearRol(txtNombre.Text.Trim(), hijos);
 
-                    BLL_64PR.Bitacora_64PR bita = new BLL_64PR.Bitacora_64PR();
-                    Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.GestionRoles).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.CreacionRol).ToString(), 4);
+                    Bitacora.Bitacora_64PR bita = new Bitacora.Bitacora_64PR();
+                    Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.Bitacora_64PR.ModuloBitacora_64PR.GestionRoles).ToString(), ((int)Bitacora.Bitacora_64PR.TipoEventoBitacora_64PR.CreacionRol).ToString(), 4);
                     bita.RegistrarEvento(ev);
 
                     MessageBox.Show(textos["rol_creado"]);
@@ -256,8 +256,8 @@ namespace ProyectoIS_64PR
                         return;
                     }
                     bllRol.ModificarRol(idRolEnEdicion, txtNombre.Text.Trim(), hijos);
-                    BLL_64PR.Bitacora_64PR bita = new BLL_64PR.Bitacora_64PR();
-                    Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.GestionRoles).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.ModificacionRol).ToString(), 4);
+                    Bitacora.Bitacora_64PR bita = new Bitacora.Bitacora_64PR();
+                    Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.Bitacora_64PR.ModuloBitacora_64PR.GestionRoles).ToString(), ((int)Bitacora.Bitacora_64PR.TipoEventoBitacora_64PR.ModificacionRol).ToString(), 4);
                     bita.RegistrarEvento(ev);
                     MessageBox.Show(textos["rol_modificado"]);
                 }
@@ -277,18 +277,9 @@ namespace ProyectoIS_64PR
         public void ActualizarIdioma(Dictionary<string, string> textoss)
         {
             textos = textoss;
-            rbCrear.Text = textos["crear"];
-            rbModificar.Text = textos["modificar"];
-            rbEliminar.Text = textos["eliminar"];
-
-            btnAgregar.Text = textos["agregar"]+"-->";
-            btnQuitar.Text = textos["quitar"]+"<--";
-            btnAplicar.Text = textos["aplicar"];
-            btnEliminar.Text = textos["eliminar"];
-
-            label1.Text = textos["nombre"];
-            label2.Text = textos["roles"];
-            label3.Text = textos["patentes_y_familias"];
+            Traductor_64PR.Traducir(this, textos);
+            btnAgregar.Text += "-->";
+            btnQuitar.Text +="<--";
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -321,8 +312,8 @@ namespace ProyectoIS_64PR
             try
             {
                 bllRol.EliminarRol(rolCompleto.Id, cantUsuarios > 0);
-                BLL_64PR.Bitacora_64PR bita = new BLL_64PR.Bitacora_64PR();
-                Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.GestionRoles).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.EliminacionRol).ToString(), 3);
+                Bitacora.Bitacora_64PR bita = new Bitacora.Bitacora_64PR();
+                Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.Bitacora_64PR.ModuloBitacora_64PR.GestionRoles).ToString(), ((int)Bitacora.Bitacora_64PR.TipoEventoBitacora_64PR.EliminacionRol).ToString(), 3);
                 bita.RegistrarEvento(ev);
                 MessageBox.Show(textos["rol_eliminado"]);
                 CargaRoles();

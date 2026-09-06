@@ -41,8 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bitacora_64PR.cs" />
     <Compile Include="Evento_64PR.cs" />
+    <Compile Include="mpp_bitacora.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL_64PR\DAL_64PR.csproj">
+      <Project>{e990023a-fd21-4606-8fbe-e91ee7e8fd96}</Project>
+      <Name>DAL_64PR</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

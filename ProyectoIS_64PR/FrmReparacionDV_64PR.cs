@@ -102,7 +102,7 @@ namespace ProyectoIS_64PR
 
             try
             {
-                BLL_64PR.DV_64PR bllDV = new BLL_64PR.DV_64PR();
+                DV.DV_64PR bllDV = new DV.DV_64PR();
                 bllDV.RecalcularIntegridadCompleta();
 
                 MessageBox.Show(textos["dvs_recalculados"],
@@ -110,8 +110,8 @@ namespace ProyectoIS_64PR
 
                 this.DialogResult = DialogResult.OK;
 
-                BLL_64PR.Bitacora_64PR bita = new BLL_64PR.Bitacora_64PR();
-                Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.Logout).ToString(), 5);
+                Bitacora.Bitacora_64PR bita = new Bitacora.Bitacora_64PR();
+                Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)Bitacora.Bitacora_64PR.TipoEventoBitacora_64PR.Logout).ToString(), 5);
                 bita.RegistrarEvento(ev);
 
                 Sesion.SessionManager.GetInstance.Logout();
@@ -142,7 +142,7 @@ namespace ProyectoIS_64PR
 
                     try
                     {
-                        BLL_64PR.Backup gBackup = new BLL_64PR.Backup();
+                        Respaldos.Backup gBackup = new Respaldos.Backup();
 
                         /// leer los nombres lógicos del backup
                         DataTable fileList = gBackup.ObtenerFileList(rutaBackup);
@@ -162,8 +162,8 @@ namespace ProyectoIS_64PR
 
                         gBackup.RestaurarBackup(rutaBackup, logicalData, logicalLog, rutaDestinoMdf, rutaDestinoLdf);
 
-                        BLL_64PR.Bitacora_64PR bita = new BLL_64PR.Bitacora_64PR();
-                        Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.Restore).ToString(), 1);
+                        Bitacora.Bitacora_64PR bita = new Bitacora.Bitacora_64PR();
+                        Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)Bitacora.Bitacora_64PR.TipoEventoBitacora_64PR.Restore).ToString(), 1);
                         bita.RegistrarEvento(ev);
 
                         MessageBox.Show(textos["msg_restauracion"],
@@ -187,8 +187,8 @@ namespace ProyectoIS_64PR
         {
             this.DialogResult = DialogResult.Cancel;
 
-            BLL_64PR.Bitacora_64PR bita = new BLL_64PR.Bitacora_64PR();
-            Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.Logout).ToString(), 5);
+            Bitacora.Bitacora_64PR bita = new Bitacora.Bitacora_64PR();
+            Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)Bitacora.Bitacora_64PR.TipoEventoBitacora_64PR.Logout).ToString(), 5);
             bita.RegistrarEvento(ev);
 
             Sesion.SessionManager.GetInstance.Logout();
@@ -198,9 +198,7 @@ namespace ProyectoIS_64PR
         public void ActualizarIdioma(Dictionary<string, string> textoss)
         {
             textos=textoss;
-            btnSalir.Text = textos["frmMenu_salir"];
-            btnRestore.Text = textos["restaurar"];
-            btnRecalcular.Text = textos["recalcular"];
+            Traductor_64PR.Traducir(this, textos);
             textBox1.Text = textos["msg_inconsistencia"];
         }
 

@@ -1,12 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\proyectois_64pr\\traductor_64pr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|solutionrelative:proyectois_64pr\\traductor_64pr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -23,24 +18,11 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Traductor_64PR.cs",
-              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\Traductor_64PR.cs",
-              "RelativeDocumentMoniker": "ProyectoIS_64PR\\Traductor_64PR.cs",
-              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\Traductor_64PR.cs",
-              "RelativeToolTip": "ProyectoIS_64PR\\Traductor_64PR.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAQwEQAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-04T16:57:47.139Z",
-              "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedWidth": 1146,
+          "DockedWidth": 200,
           "SelectedChildIndex": -1,
           "Children": [
             {

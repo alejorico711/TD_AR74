@@ -19,10 +19,10 @@ namespace ProyectoIS_64PR
 
     public partial class FrmGestionarUsuarios_64PR : Form, Idioma.IObservadorIdioma_64PR
     {
-        BLL_64PR.Bitacora_64PR bita = new BLL_64PR.Bitacora_64PR();
+        Bitacora.Bitacora_64PR bita = new Bitacora.Bitacora_64PR();
         Bitacora.Evento_64PR ev;
 
-        BLL_64PR.Usuario gusuarios = new BLL_64PR.Usuario();
+        Sesion.BLL_Usuario gusuarios = new Sesion.BLL_Usuario();
         public Dictionary<string, string> textos;
 
         ///Mi bandera para el switch
@@ -53,37 +53,18 @@ namespace ProyectoIS_64PR
             if (textos.Count > 0)
                 ActualizarIdioma(textos);
             lblModo.Text = textos["frmGestionUsuarios_lblModoConsulta"];
-            lblCantidad.Text = textos["frmGestionUsuarios_lblCantidad"] + lst.Count.ToString();
+            lblCantidad.Text = textos["FrmGestionarUsuarios_64PR.lblCantidad"] + lst.Count.ToString();
         }
         
         public void ActualizarIdioma(Dictionary<string, string> textoss)
         {
             ///Esto lo que hace es actualizar los textos visibles
             textos = textoss;
-
-            dgvUsuarios.Columns["Apellido"].HeaderText = textos["apellido"];
-            dgvUsuarios.Columns["Nombre"].HeaderText = textos["nombre"];
-            dgvUsuarios.Columns["Login"].HeaderText = textos["login"];
-            dgvUsuarios.Columns["Rol"].HeaderText = textos["rol"];
-            dgvUsuarios.Columns["Email"].HeaderText = textos["email"];
-            dgvUsuarios.Columns["Bloqueado"].HeaderText = textos["bloqueado"];
-            dgvUsuarios.Columns["Activo"].HeaderText = textos["activo"];
-            dgvUsuarios.Columns["PrimeraVez"].HeaderText = textos["primera_vez"];
-
-
-            if (textos.ContainsKey("frmGestionUsuarios_titulo")) this.Text = textos["frmGestionUsuarios_titulo"];
-            if (textos.ContainsKey("frmGestionUsuarios_btnCrear")) btnCrear.Text = textos["frmGestionUsuarios_btnCrear"];
-            if (textos.ContainsKey("frmGestionUsuarios_btnDesbloquear")) btnDesbloquear.Text = textos["frmGestionUsuarios_btnDesbloquear"];
-            if (textos.ContainsKey("frmGestionUsuarios_btnModificar")) btnModificar.Text = textos["frmGestionUsuarios_btnModificar"];
-            if (textos.ContainsKey("frmGestionUsuarios_btnActDesact")) btnActDesact.Text = textos["frmGestionUsuarios_btnActDesact"];
-            if (textos.ContainsKey("frmGestionUsuarios_btnGuardar")) btnGuardar.Text = textos["frmGestionUsuarios_btnGuardar"];
-            if (textos.ContainsKey("frmGestionUsuarios_rbActivos")) radioButton1.Text = textos["frmGestionUsuarios_rbActivos"];
-            if (textos.ContainsKey("frmGestionUsuarios_rbNoActivos")) radioButton2.Text = textos["frmGestionUsuarios_rbNoActivos"];
-            if (textos.ContainsKey("frmGestionUsuarios_rbTodos")) radioButton3.Text = textos["frmGestionUsuarios_rbTodos"];
-
             ///Necesario para no perder la cantidad de usuarios en memoria al momento de actualizar el idioma
-            string[] aux = lblCantidad.Text.Split(':'); 
-            if (textos.ContainsKey("frmGestionUsuarios_lblCantidad")) lblCantidad.Text = textos["frmGestionUsuarios_lblCantidad"] + aux[1];
+            string[] aux = lblCantidad.Text.Split(':');
+
+            Traductor_64PR.Traducir(this, textos);
+            lblCantidad.Text += aux[1];
 
             ///Necesario para no perder el modo al momento de actualizar el idioma
             switch (modo)
@@ -183,7 +164,7 @@ namespace ProyectoIS_64PR
                             gusuarios.Crear(u);
 
                             ///Registro el evento en bitacora
-                            Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.GestionUsuarios).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.AltaUsuario).ToString(), 4);
+                            Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.Bitacora_64PR.ModuloBitacora_64PR.GestionUsuarios).ToString(), ((int)Bitacora.Bitacora_64PR.TipoEventoBitacora_64PR.AltaUsuario).ToString(), 4);
                             MessageBox.Show(textos["usuario_creado"] + u.Login);
                             bita.RegistrarEvento(ev);
 
@@ -232,7 +213,7 @@ namespace ProyectoIS_64PR
                             gusuarios.Modificar(u);
 
                             ///Registro el evento en bitacora
-                            ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.GestionUsuarios).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.ModificacionUsuario).ToString(), 4);
+                            ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.Bitacora_64PR.ModuloBitacora_64PR.GestionUsuarios).ToString(), ((int)Bitacora.Bitacora_64PR.TipoEventoBitacora_64PR.ModificacionUsuario).ToString(), 4);
                             MessageBox.Show(textos["usuario_modificado"]);
                             bita.RegistrarEvento(ev);
 
@@ -271,7 +252,7 @@ namespace ProyectoIS_64PR
                 gusuarios.Desbloquear(u);
 
                 ///Registro el evento en bitacora
-                ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.GestionUsuarios).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.UsuarioBloqueado).ToString(), 4);
+                ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.Bitacora_64PR.ModuloBitacora_64PR.GestionUsuarios).ToString(), ((int)Bitacora.Bitacora_64PR.TipoEventoBitacora_64PR.UsuarioBloqueado).ToString(), 4);
                 MessageBox.Show(textos["usuario_desbloqueado"]);
                 bita.RegistrarEvento(ev);
 
@@ -295,7 +276,7 @@ namespace ProyectoIS_64PR
 
             ///Linea que me cambia el estado del usuario
             gusuarios.Actdesact(u);
-            ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)BLL_64PR.Bitacora_64PR.ModuloBitacora_64PR.GestionUsuarios).ToString(), ((int)BLL_64PR.Bitacora_64PR.TipoEventoBitacora_64PR.ModificacionUsuario).ToString(), 4);
+            ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.Bitacora_64PR.ModuloBitacora_64PR.GestionUsuarios).ToString(), ((int)Bitacora.Bitacora_64PR.TipoEventoBitacora_64PR.ModificacionUsuario).ToString(), 4);
             bita.RegistrarEvento(ev);
             MessageBox.Show(textos["operacion exitosa"]);
             CargaData();

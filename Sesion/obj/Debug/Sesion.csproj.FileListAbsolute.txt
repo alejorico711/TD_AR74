@@ -4,3 +4,10 @@ C:\Users\Alejo\source\repos\TD_AR74\Sesion\obj\Debug\Sesion.csproj.AssemblyRefer
 C:\Users\Alejo\source\repos\TD_AR74\Sesion\obj\Debug\Sesion.csproj.CoreCompileInputs.cache
 C:\Users\Alejo\source\repos\TD_AR74\Sesion\obj\Debug\Sesion.dll
 C:\Users\Alejo\source\repos\TD_AR74\Sesion\obj\Debug\Sesion.pdb
+C:\Users\Alejo\source\repos\TD_AR74\Sesion\bin\Debug\DAL_64PR.dll
+C:\Users\Alejo\source\repos\TD_AR74\Sesion\bin\Debug\DV.dll
+C:\Users\Alejo\source\repos\TD_AR74\Sesion\bin\Debug\Encriptacion.dll
+C:\Users\Alejo\source\repos\TD_AR74\Sesion\bin\Debug\DAL_64PR.pdb
+C:\Users\Alejo\source\repos\TD_AR74\Sesion\bin\Debug\DV.pdb
+C:\Users\Alejo\source\repos\TD_AR74\Sesion\bin\Debug\Encriptacion.pdb
+C:\Users\Alejo\source\repos\TD_AR74\Sesion\obj\Debug\Sesion.csproj.Up2Date

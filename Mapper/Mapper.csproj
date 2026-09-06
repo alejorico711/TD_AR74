@@ -41,11 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="mpp_backup.cs" />
-    <Compile Include="mpp_bitacora.cs" />
-    <Compile Include="mpp_DV.cs" />
-    <Compile Include="mpp_roles.cs" />
-    <Compile Include="mpp_usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

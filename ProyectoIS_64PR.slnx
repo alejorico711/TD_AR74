@@ -8,5 +8,6 @@
   <Project Path="Idioma/Idioma.csproj" Id="1fd8bd37-3015-407c-bda8-14195a6416c5" />
   <Project Path="Mapper/Mapper.csproj" Id="d4a244ea-ad1a-485f-97e8-942e226c4df7" />
   <Project Path="ProyectoIS_64PR/ProyectoIS_64PR.csproj" Id="9588eeec-6ca7-43df-820e-06a0f3423a0e" />
+  <Project Path="Respaldos/Respaldos.csproj" Id="adad126c-639b-4d13-ba8d-fadfe7e5ddd8" />
   <Project Path="Sesion/Sesion.csproj" Id="e0ff1d5b-9f6b-406c-bc04-00d7e11061e5" />
 </Solution>

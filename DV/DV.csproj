@@ -42,9 +42,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DVH_64PR.cs" />
+    <Compile Include="DV_64PR.cs" />
     <Compile Include="FilaInconsistente_64PR.cs" />
+    <Compile Include="mpp_DV.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TipoAnomalia_64PR.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL_64PR\DAL_64PR.csproj">
+      <Project>{e990023a-fd21-4606-8fbe-e91ee7e8fd96}</Project>
+      <Name>DAL_64PR</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

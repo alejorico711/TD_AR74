@@ -13,7 +13,7 @@ namespace ProyectoIS_64PR
 {
     public partial class ucModificarUsuario : UserControl
     {
-        BLL_64PR.Rol_64PR groles = new BLL_64PR.Rol_64PR();
+        Sesion.BLL_Rol_64PR groles = new Sesion.BLL_Rol_64PR();
         public ucModificarUsuario()
         {
             InitializeComponent();

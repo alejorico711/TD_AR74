@@ -202,6 +202,10 @@
       <Project>{1fd8bd37-3015-407c-bda8-14195a6416c5}</Project>
       <Name>Idioma</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Respaldos\Respaldos.csproj">
+      <Project>{adad126c-639b-4d13-ba8d-fadfe7e5ddd8}</Project>
+      <Name>Respaldos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Sesion\Sesion.csproj">
       <Project>{e0ff1d5b-9f6b-406c-bc04-00d7e11061e5}</Project>
       <Name>Sesion</Name>

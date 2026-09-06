@@ -64,9 +64,9 @@ C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\bin\Debug\Bitacora.dll
 C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\bin\Debug\DV.dll
 C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\bin\Debug\Idioma.dll
 C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\bin\Debug\Sesion.dll
-C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\bin\Debug\Mapper.dll
 C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\bin\Debug\Bitacora.pdb
 C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\bin\Debug\DV.pdb
 C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\bin\Debug\Idioma.pdb
 C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\bin\Debug\Sesion.pdb
-C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\bin\Debug\Mapper.pdb
+C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\bin\Debug\Respaldos.dll
+C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\bin\Debug\Respaldos.pdb
