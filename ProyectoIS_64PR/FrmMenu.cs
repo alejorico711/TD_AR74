@@ -269,5 +269,10 @@ namespace ProyectoIS_64PR
                 }
             }
         }
+
+        private void nuevaReservaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new FrmReservaPaso1_AR74(this));
+        }
     }
 }

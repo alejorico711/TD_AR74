@@ -70,3 +70,9 @@ C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\bin\Debug\Idioma.pdb
 C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\bin\Debug\Sesion.pdb
 C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\bin\Debug\Respaldos.dll
 C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\bin\Debug\Respaldos.pdb
+C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\obj\Debug\ProyectoIS_64PR.FrmReservaPaso1_AR74.resources
+C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\obj\Debug\ProyectoIS_64PR.FrmReservaPaso2_AR74.resources
+C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\obj\Debug\ProyectoIS_64PR.UcCtrlTarjetaHabitacion_AR74.resources
+C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\bin\Debug\Mapper.dll
+C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\bin\Debug\Mapper.pdb
+C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\obj\Debug\ProyectoIS_64PR.FrmReservaPaso3_AR74.resources

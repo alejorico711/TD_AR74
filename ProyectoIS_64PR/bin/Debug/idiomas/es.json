@@ -141,5 +141,6 @@
     "FrmLogin_64PR.btnIniciarSesion": "Iniciar sesión",
     "FrmReparacionDV_64PR.btnSalir": "Salir",
     "FrmReparacionDV_64PR.btnRecalcular": "Recalcular",
-    "FrmReparacionDV_64PR.btnRestore": "Restaurar"
+    "FrmReparacionDV_64PR.btnRestore": "Restaurar",
+    "FrmMenu.nuevaReservaToolStripMenuItem": "FALTA TRADUCCION"
 }

@@ -15,3 +15,5 @@ C:\Users\Alejo\source\repos\TD_AR74\Mapper\bin\Debug\DV.pdb
 C:\Users\Alejo\source\repos\TD_AR74\Mapper\bin\Debug\Encriptacion.pdb
 C:\Users\Alejo\source\repos\TD_AR74\Mapper\bin\Debug\Sesion.pdb
 C:\Users\Alejo\source\repos\TD_AR74\Mapper\obj\Debug\Mapper.csproj.Up2Date
+C:\Users\Alejo\source\repos\TD_AR74\Mapper\bin\Debug\BE.dll
+C:\Users\Alejo\source\repos\TD_AR74\Mapper\bin\Debug\BE.pdb

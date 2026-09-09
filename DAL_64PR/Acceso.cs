@@ -166,6 +166,29 @@ namespace DAL_64PR
             desconectar();
             return dt;
         }
+        public DataTable leerSP(string sp, SqlParameter[] parametro)
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter adaptador = new SqlDataAdapter();
+            conectar();
+            comando.Connection = conexion;
+            comando.CommandType = System.Data.CommandType.StoredProcedure;
+            comando.CommandText = sp;
+            comando.Parameters.Clear();
+
+            if (parametro != null)
+            {
+                foreach (SqlParameter param in parametro)
+                {
+                    comando.Parameters.AddWithValue(param.ParameterName, param.Value);
+                }
+                //comando.Parameters.AddRange(parametro);
+            }
+            adaptador.SelectCommand = comando;
+            adaptador.Fill(dt);
+            desconectar();
+            return dt;
+        }
 
         public object leerEscalar(string query, SqlParameter[] parametro)
         {
