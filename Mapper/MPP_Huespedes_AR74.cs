@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,6 +31,25 @@ namespace Mapper
                 lista.Add(huesped);
             }
             return lista;
+        }
+
+        public int RegistrarHuesped(Huesped huesped)
+        {
+            SqlParameter[] p = new SqlParameter[7];
+            p[0] = new SqlParameter("@Dni", huesped.DNI);
+            p[1] = new SqlParameter("@Nombre", huesped.Nombre);
+            p[2] = new SqlParameter("@Apellido", huesped.Apellido);
+            p[3] = new SqlParameter("@FechaNacimiento", huesped.FechaNacimiento);
+            p[4] = new SqlParameter("@CorreoElectronico", (object)huesped.Email ?? DBNull.Value);
+            p[5] = new SqlParameter("@Telefono", (object)huesped.Telefono ?? DBNull.Value);
+
+            p[6] = new SqlParameter("@IdHuespedGenerado", SqlDbType.Int);
+            p[6].Direction = ParameterDirection.Output;
+
+            DAL_64PR.Acceso.Instancia.escribirSP("sp_RegistrarHuesped", p);
+
+            int idGenerado = (int)p[6].Value;
+            return idGenerado;
         }
     }
 }

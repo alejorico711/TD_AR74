@@ -3,27 +3,35 @@
   "WorkspaceRootPath": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|C:\\Users\\Alejo\\source\\repos\\TD_AR74\\proyectois_64pr\\frmreservapaso3_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|solutionrelative:proyectois_64pr\\frmreservapaso3_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\proyectois_64pr\\frmcontenedor_64pr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|solutionrelative:proyectois_64pr\\frmcontenedor_64pr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A744F8D5-C890-4362-89E0-B603579A601C}|BLL_64PR\\BLL_64PR.csproj|C:\\Users\\Alejo\\source\\repos\\TD_AR74\\bll_64pr\\bll_huespedes_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A744F8D5-C890-4362-89E0-B603579A601C}|BLL_64PR\\BLL_64PR.csproj|solutionrelative:bll_64pr\\bll_huespedes_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\proyectois_64pr\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|solutionrelative:proyectois_64pr\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A744F8D5-C890-4362-89E0-B603579A601C}|BLL_64PR\\BLL_64PR.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\bll_64pr\\bll_reservas_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A744F8D5-C890-4362-89E0-B603579A601C}|BLL_64PR\\BLL_64PR.csproj|solutionrelative:bll_64pr\\bll_reservas_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4A244EA-AD1A-485F-97E8-942E226C4DF7}|Mapper\\Mapper.csproj|C:\\Users\\Alejo\\source\\repos\\TD_AR74\\mapper\\mpp_reservas_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4A244EA-AD1A-485F-97E8-942E226C4DF7}|Mapper\\Mapper.csproj|solutionrelative:mapper\\mpp_reservas_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D4A244EA-AD1A-485F-97E8-942E226C4DF7}|Mapper\\Mapper.csproj|C:\\Users\\Alejo\\source\\repos\\TD_AR74\\mapper\\mpp_huespedes_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D4A244EA-AD1A-485F-97E8-942E226C4DF7}|Mapper\\Mapper.csproj|solutionrelative:mapper\\mpp_huespedes_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\proyectois_64pr\\frmregistrarhuespedenreserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|solutionrelative:proyectois_64pr\\frmregistrarhuespedenreserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{5617D18D-5092-478A-B619-B3ADB88BBFC2}|BE\\BE_64PR.csproj|C:\\Users\\Alejo\\source\\repos\\TD_AR74\\be\\reserva_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5617D18D-5092-478A-B619-B3ADB88BBFC2}|BE\\BE_64PR.csproj|solutionrelative:be\\reserva_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4A244EA-AD1A-485F-97E8-942E226C4DF7}|Mapper\\Mapper.csproj|C:\\Users\\Alejo\\source\\repos\\TD_AR74\\mapper\\mpp_habitaciones_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4A244EA-AD1A-485F-97E8-942E226C4DF7}|Mapper\\Mapper.csproj|solutionrelative:mapper\\mpp_habitaciones_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|C:\\Users\\Alejo\\source\\repos\\TD_AR74\\proyectois_64pr\\frmreservapaso3_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|solutionrelative:proyectois_64pr\\frmreservapaso3_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\proyectois_64pr\\frmreservapaso3_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|C:\\Users\\Alejo\\source\\repos\\TD_AR74\\proyectois_64pr\\frmreservapaso3_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|solutionrelative:proyectois_64pr\\frmreservapaso3_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -34,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,79 +54,99 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FrmRegistrarHuespedEnReserva.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmRegistrarHuespedEnReserva.cs",
-              "RelativeDocumentMoniker": "ProyectoIS_64PR\\FrmRegistrarHuespedEnReserva.cs",
-              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmRegistrarHuespedEnReserva.cs [Dise\u00F1o]",
-              "RelativeToolTip": "ProyectoIS_64PR\\FrmRegistrarHuespedEnReserva.cs [Dise\u00F1o]",
+              "DocumentIndex": 0,
+              "Title": "FrmContenedor_64PR.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmContenedor_64PR.cs",
+              "RelativeDocumentMoniker": "ProyectoIS_64PR\\FrmContenedor_64PR.cs",
+              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmContenedor_64PR.cs [Dise\u00F1o]",
+              "RelativeToolTip": "ProyectoIS_64PR\\FrmContenedor_64PR.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-09T06:36:33.292Z",
+              "WhenOpened": "2026-09-10T21:13:07.079Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmMenu.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmMenu.cs",
+              "RelativeDocumentMoniker": "ProyectoIS_64PR\\FrmMenu.cs",
+              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmMenu.cs [Dise\u00F1o]",
+              "RelativeToolTip": "ProyectoIS_64PR\\FrmMenu.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-10T21:09:40.16Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "MPP_Habitaciones_AR74.cs",
-              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\Mapper\\MPP_Habitaciones_AR74.cs",
-              "RelativeDocumentMoniker": "Mapper\\MPP_Habitaciones_AR74.cs",
-              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\Mapper\\MPP_Habitaciones_AR74.cs",
-              "RelativeToolTip": "Mapper\\MPP_Habitaciones_AR74.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwBgAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-09T06:20:22.033Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "MPP_Huespedes_AR74.cs",
               "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\Mapper\\MPP_Huespedes_AR74.cs",
               "RelativeDocumentMoniker": "Mapper\\MPP_Huespedes_AR74.cs",
               "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\Mapper\\MPP_Huespedes_AR74.cs",
               "RelativeToolTip": "Mapper\\MPP_Huespedes_AR74.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwCUAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-09T06:17:14.428Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-10T20:28:48.035Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BLL_Huespedes_AR74.cs",
-              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\BLL_64PR\\BLL_Huespedes_AR74.cs",
-              "RelativeDocumentMoniker": "BLL_64PR\\BLL_Huespedes_AR74.cs",
-              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\BLL_64PR\\BLL_Huespedes_AR74.cs",
-              "RelativeToolTip": "BLL_64PR\\BLL_Huespedes_AR74.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAApAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "MPP_Reservas_AR74.cs",
+              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\Mapper\\MPP_Reservas_AR74.cs",
+              "RelativeDocumentMoniker": "Mapper\\MPP_Reservas_AR74.cs",
+              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\Mapper\\MPP_Reservas_AR74.cs",
+              "RelativeToolTip": "Mapper\\MPP_Reservas_AR74.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-09T06:14:55.281Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-10T20:24:10.895Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FrmReservaPaso3_AR74.cs",
-              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmReservaPaso3_AR74.cs",
-              "RelativeDocumentMoniker": "ProyectoIS_64PR\\FrmReservaPaso3_AR74.cs",
-              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmReservaPaso3_AR74.cs",
-              "RelativeToolTip": "ProyectoIS_64PR\\FrmReservaPaso3_AR74.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAewBYAAAAjAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "BLL_Reservas_AR74.cs",
+              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\BLL_64PR\\BLL_Reservas_AR74.cs",
+              "RelativeDocumentMoniker": "BLL_64PR\\BLL_Reservas_AR74.cs",
+              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\BLL_64PR\\BLL_Reservas_AR74.cs",
+              "RelativeToolTip": "BLL_64PR\\BLL_Reservas_AR74.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-09T06:13:52.666Z",
+              "WhenOpened": "2026-09-10T19:42:36.313Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "Reserva_AR74.cs",
+              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\BE\\Reserva_AR74.cs",
+              "RelativeDocumentMoniker": "BE\\Reserva_AR74.cs",
+              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\BE\\Reserva_AR74.cs",
+              "RelativeToolTip": "BE\\Reserva_AR74.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowCsAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-10T19:11:09.457Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FrmReservaPaso3_AR74.cs",
+              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmReservaPaso3_AR74.cs",
+              "RelativeDocumentMoniker": "ProyectoIS_64PR\\FrmReservaPaso3_AR74.cs",
+              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmReservaPaso3_AR74.cs",
+              "RelativeToolTip": "ProyectoIS_64PR\\FrmReservaPaso3_AR74.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAASwFQAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-10T19:10:13.79Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "FrmReservaPaso3_AR74.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmReservaPaso3_AR74.cs",
               "RelativeDocumentMoniker": "ProyectoIS_64PR\\FrmReservaPaso3_AR74.cs",
               "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmReservaPaso3_AR74.cs [Dise\u00F1o]",
               "RelativeToolTip": "ProyectoIS_64PR\\FrmReservaPaso3_AR74.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-09T06:13:51.293Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2026-09-10T19:10:12.333Z"
             }
           ]
         },

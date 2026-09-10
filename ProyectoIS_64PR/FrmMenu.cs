@@ -125,7 +125,7 @@ namespace ProyectoIS_64PR
                 ///Registrasmo ele vento en bitacora
 
                 Bitacora.Bitacora_64PR bita3 = new Bitacora.Bitacora_64PR();
-                Bitacora.Evento_64PR ev3 = new Bitacora.Evento_64PR(loginActual, ((int)Bitacora.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)Bitacora.Bitacora_64PR.TipoEventoBitacora_64PR.Logout).ToString(), 5);
+                Bitacora.Evento_64PR ev3 = new Bitacora.Evento_64PR(loginActual, ((int)Bitacora.ModuloBitacora_64PR.Login).ToString(), ((int)Bitacora.TipoEventoBitacora_64PR.Logout).ToString(), 5);
                 bita3.RegistrarEvento(ev3);
 
                 FrmContenedor_64PR.Instancia.MostrarHijo(new FrmLogin_64PR());
@@ -193,7 +193,7 @@ namespace ProyectoIS_64PR
                 gBackup.GenerarBackup(rutaCompleta);
 
                 Bitacora.Bitacora_64PR bita = new Bitacora.Bitacora_64PR();
-                Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)Bitacora.Bitacora_64PR.TipoEventoBitacora_64PR.Backup).ToString(), 4);
+                Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.ModuloBitacora_64PR.Login).ToString(), ((int)Bitacora.TipoEventoBitacora_64PR.Backup).ToString(), 4);
                 bita.RegistrarEvento(ev);
 
                 MessageBox.Show(textos["backup_Exitoso"] + $":\n{rutaCompleta}",
@@ -250,7 +250,7 @@ namespace ProyectoIS_64PR
                         gBackup.RestaurarBackup(rutaBackup, logicalData, logicalLog, rutaDestinoMdf, rutaDestinoLdf);
 
                         Bitacora.Bitacora_64PR bita = new Bitacora.Bitacora_64PR();
-                        Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)Bitacora.Bitacora_64PR.TipoEventoBitacora_64PR.Restore).ToString(), 1);
+                        Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.ModuloBitacora_64PR.Login).ToString(), ((int)Bitacora.TipoEventoBitacora_64PR.Restore).ToString(), 1);
                         bita.RegistrarEvento(ev);
 
                         MessageBox.Show(textos["msg_restauracion"],

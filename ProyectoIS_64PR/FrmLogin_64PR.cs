@@ -110,7 +110,7 @@ namespace ProyectoIS_64PR
 
                 ///Registro el evennto en bitacora
                 Bitacora.Bitacora_64PR bita2 = new Bitacora.Bitacora_64PR();
-                Bitacora.Evento_64PR ev2 = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)Bitacora.Bitacora_64PR.TipoEventoBitacora_64PR.LoginExitoso).ToString(), 5);
+                Bitacora.Evento_64PR ev2 = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.ModuloBitacora_64PR.Login).ToString(), ((int)Bitacora.TipoEventoBitacora_64PR.LoginExitoso).ToString(), 5);
                 bita2.RegistrarEvento(ev2);
 
                 if (Sesion.SessionManager.GetInstance.Usuario.PrimeraVez)
@@ -143,7 +143,7 @@ namespace ProyectoIS_64PR
                                 "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                             Bitacora.Bitacora_64PR bita = new Bitacora.Bitacora_64PR();
-                            Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)Bitacora.Bitacora_64PR.TipoEventoBitacora_64PR.Logout).ToString(), 5);
+                            Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.ModuloBitacora_64PR.Login).ToString(), ((int)Bitacora.TipoEventoBitacora_64PR.Logout).ToString(), 5);
                             bita.RegistrarEvento(ev);
 
                             Sesion.SessionManager.GetInstance.Logout();
@@ -164,7 +164,7 @@ namespace ProyectoIS_64PR
                 ///Si la contraseña no es correcta entra aca y sumamos un intento, registrandolo en bitacora
                 gusuarios.SumarIntento(txtLogin.Text.Trim());
                 Bitacora.Bitacora_64PR bita2 = new Bitacora.Bitacora_64PR();
-                Bitacora.Evento_64PR ev2 = new Bitacora.Evento_64PR(txtLogin.Text, ((int)Bitacora.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)Bitacora.Bitacora_64PR.TipoEventoBitacora_64PR.LoginFallido).ToString(), 4);
+                Bitacora.Evento_64PR ev2 = new Bitacora.Evento_64PR(txtLogin.Text, ((int)Bitacora.ModuloBitacora_64PR.Login).ToString(), ((int)Bitacora.TipoEventoBitacora_64PR.LoginFallido).ToString(), 4);
                 bita2.RegistrarEvento(ev2);
 
                 ///Obtenemos los intentos del usuario en base de datos y lo volcamos en el label
@@ -176,7 +176,7 @@ namespace ProyectoIS_64PR
                 if (Convert.ToInt16(temp) == 3)
                 {
                     ///Si los intentos llegan a 3 el bloqueo se hace desde la BD, aca lo que hago en registrar en la bitaora nomas
-                    ev2 = new Bitacora.Evento_64PR(txtLogin.Text, ((int)Bitacora.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)Bitacora.Bitacora_64PR.TipoEventoBitacora_64PR.UsuarioBloqueado).ToString(), 5);
+                    ev2 = new Bitacora.Evento_64PR(txtLogin.Text, ((int)Bitacora.ModuloBitacora_64PR.Login).ToString(), ((int)Bitacora.TipoEventoBitacora_64PR.UsuarioBloqueado).ToString(), 5);
                     bita2.RegistrarEvento(ev2);
                 }
 

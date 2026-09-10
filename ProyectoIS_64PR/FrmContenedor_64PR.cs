@@ -48,7 +48,7 @@ namespace ProyectoIS_64PR
                 new Sesion.BLL_Usuario().GuardarIdioma(loginActual, idiomaActual);
 
                 Bitacora.Bitacora_64PR bita2 = new Bitacora.Bitacora_64PR();
-                Bitacora.Evento_64PR ev2 = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.Bitacora_64PR.ModuloBitacora_64PR.Login).ToString(), ((int)Bitacora.Bitacora_64PR.TipoEventoBitacora_64PR.Logout).ToString(), 5);
+                Bitacora.Evento_64PR ev2 = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.ModuloBitacora_64PR.Login).ToString(), ((int)Bitacora.TipoEventoBitacora_64PR.Logout).ToString(), 5);
                 bita2.RegistrarEvento(ev2);
 
                 Sesion.SessionManager.GetInstance.Logout();

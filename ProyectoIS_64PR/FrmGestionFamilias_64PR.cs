@@ -223,7 +223,7 @@ namespace ProyectoIS_64PR
                 {
                     bllfamilia.CrearFamilia(txtNombre.Text.Trim(), hijos);
                     Bitacora.Bitacora_64PR bita = new Bitacora.Bitacora_64PR();
-                    Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.Bitacora_64PR.ModuloBitacora_64PR.GestionFamilias).ToString(), ((int)Bitacora.Bitacora_64PR.TipoEventoBitacora_64PR.CreacionFamilia).ToString(), 4);
+                    Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.ModuloBitacora_64PR.GestionFamilias).ToString(), ((int)Bitacora.TipoEventoBitacora_64PR.CreacionFamilia).ToString(), 4);
                     bita.RegistrarEvento(ev);
                     MessageBox.Show(textos["familia_creada"]);
                 }
@@ -236,7 +236,7 @@ namespace ProyectoIS_64PR
                     }
                     bllfamilia.ModificarFamilia(idFamiliaEnEdicion, txtNombre.Text.Trim(), hijos);
                     Bitacora.Bitacora_64PR bita = new Bitacora.Bitacora_64PR();
-                    Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.Bitacora_64PR.ModuloBitacora_64PR.GestionFamilias).ToString(), ((int)Bitacora.Bitacora_64PR.TipoEventoBitacora_64PR.ModificacionFamilia).ToString(), 4);
+                    Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.ModuloBitacora_64PR.GestionFamilias).ToString(), ((int)Bitacora.TipoEventoBitacora_64PR.ModificacionFamilia).ToString(), 4);
                     bita.RegistrarEvento(ev);
                     MessageBox.Show(textos["familia_modificada"]);
                 }
@@ -275,7 +275,7 @@ namespace ProyectoIS_64PR
             {
                 bllfamilia.EliminarFamilia(nodoSeleccionado.Id);
                 Bitacora.Bitacora_64PR bita = new Bitacora.Bitacora_64PR();
-                Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.Bitacora_64PR.ModuloBitacora_64PR.GestionFamilias).ToString(), ((int)Bitacora.Bitacora_64PR.TipoEventoBitacora_64PR.EliminacionFamilia).ToString(), 3);
+                Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.ModuloBitacora_64PR.GestionFamilias).ToString(), ((int)Bitacora.TipoEventoBitacora_64PR.EliminacionFamilia).ToString(), 3);
                 bita.RegistrarEvento(ev);
                 MessageBox.Show(textos["familia_eliminada"]);
                 CargaPermisosYFamilias();

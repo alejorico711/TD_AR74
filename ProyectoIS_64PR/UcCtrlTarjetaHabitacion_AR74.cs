@@ -16,10 +16,10 @@ namespace ProyectoIS_64PR
         public UcCtrlTarjetaHabitacion_AR74()
         {
             InitializeComponent();
-            this.Cursor = Cursors.Hand;
             foreach (Control control in this.Controls)
             {
                 control.Cursor = Cursors.Hand;
+                control.Click += (s, e) => this.OnClick(EventArgs.Empty);
             }
         }
 

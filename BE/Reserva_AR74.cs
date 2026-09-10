@@ -39,6 +39,13 @@ namespace BE
 			set { _cantidadPersonas = value; }
 		}
 
+		private BE.Huesped _huesped;
+
+		public BE.Huesped Huesped
+		{
+			get { return _huesped; }
+			set { _huesped = value; }
+		}
 
 	}
 }

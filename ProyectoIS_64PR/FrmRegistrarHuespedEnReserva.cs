@@ -13,13 +13,37 @@ namespace ProyectoIS_64PR
 {
     public partial class FrmRegistrarHuespedEnReserva : Form
     {
-        FrmMenu frmPadre;
-        Reserva_AR74 reserva = new Reserva_AR74();
-        public FrmRegistrarHuespedEnReserva(FrmMenu frmPadre, Reserva_AR74 reserva)
+        BLL_64PR.BLL_Huespedes_AR74 bllHuesped = new BLL_64PR.BLL_Huespedes_AR74();
+        public BE.Huesped HuespedRegistrado { get; private set; }
+        public FrmRegistrarHuespedEnReserva()
         {
-            this.frmPadre = frmPadre;
-            this.reserva = reserva;
             InitializeComponent();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            BE.Huesped huesped = new BE.Huesped
+            {
+                DNI = txtDni.Text,
+                Nombre = txtNombre.Text,
+                Apellido = txtApellido.Text,
+                FechaNacimiento = dtpFechaNacimiento.Value,
+                Email = txtEmail.Text,
+                Telefono = txtTelefono.Text
+            };
+
+            int idGenerado = bllHuesped.RegistrarHuesped(huesped);
+            huesped.IdHuesped = idGenerado;
+            HuespedRegistrado = huesped;
+
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
         }
     }
 }

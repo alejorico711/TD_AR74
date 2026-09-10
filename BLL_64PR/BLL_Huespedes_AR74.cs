@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BE;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,11 @@ namespace BLL_64PR
         public List<BE.Huesped> ListarHuespedes()
         {
             return mpp.ListarHuespedes();
+        }
+
+        public int RegistrarHuesped(Huesped huesped)
+        {
+            return mpp.RegistrarHuesped(huesped);
         }
     }
 }

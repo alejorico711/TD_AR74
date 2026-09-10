@@ -166,6 +166,44 @@ namespace DAL_64PR
             desconectar();
             return dt;
         }
+
+        public int escribirSP(string query, SqlParameter[] parametro)
+        {
+            SqlTransaction tx = null;
+            int filasAfectadas = 0;
+            try
+            {
+                comando.Parameters.Clear();
+                tx = IniciarTransaccion();
+                comando.Connection = tx.Connection; // Asignar la conexión de la transacción al comando
+                comando.Transaction = tx; // Asignar la transacción al comando
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+                comando.CommandText = query;
+                if (parametro != null)
+                {
+                    foreach (SqlParameter param in parametro)
+                    {
+                        if (param.Direction == ParameterDirection.Output)
+                        {
+                            comando.Parameters.Add(param);
+                        }
+                        else
+                        {
+                            comando.Parameters.AddWithValue(param.ParameterName, param.Value);
+                        }
+                    }
+                    //comando.Parameters.AddRange(parametro);   (asi lo haciamos antes, que funciona igual, solo que los mandaba todos de una)
+                }
+                filasAfectadas = comando.ExecuteNonQuery();
+                ConfirmarTransaccion(tx);
+                return filasAfectadas;
+            }
+            catch
+            {
+                CancelarTransaccion(tx);
+                throw;
+            }
+        }
         public DataTable leerSP(string sp, SqlParameter[] parametro)
         {
             DataTable dt = new DataTable();

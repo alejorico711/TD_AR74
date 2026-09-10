@@ -155,6 +155,9 @@
     <EmbeddedResource Include="FrmContenedor_64PR.resx">
       <DependentUpon>FrmContenedor_64PR.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistrarHuespedEnReserva.resx">
+      <DependentUpon>FrmRegistrarHuespedEnReserva.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmReservaPaso1_AR74.resx">
       <DependentUpon>FrmReservaPaso1_AR74.cs</DependentUpon>
     </EmbeddedResource>
