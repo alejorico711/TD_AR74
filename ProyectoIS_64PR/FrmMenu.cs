@@ -78,21 +78,6 @@ namespace ProyectoIS_64PR
             f.Show();
             formularioactual = f;
         }
-        private void gestionarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AbrirFormularioHijo(new FrmGestionarUsuarios_64PR());
-        }
-
-        private void eventosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AbrirFormularioHijo(new FrmBitacora_64PR());
-        }
-
-        private void gestionarPermisosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AbrirFormularioHijo(new FrmGestionFamilias_64PR());
-        }
-
         private void loginToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             AbrirFormularioHijo(new FrmLogin_64PR());
@@ -135,10 +120,6 @@ namespace ProyectoIS_64PR
             }
         }
 
-        private void gestionarRolesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AbrirFormularioHijo(new FrmGestionarRoles_64PR());
-        }
         private void FrmMenu_FormClosed(object sender, FormClosedEventArgs e)
         {
             Idioma.GestorIdioma_64PR.GetInstance.Desuscribir(this); ///observer del cambio de idioma
@@ -155,30 +136,40 @@ namespace ProyectoIS_64PR
                                           rolUsuario.TienePermiso(Sesion.Patentes_64PR.ModificarUsuario) ||
                                           rolUsuario.TienePermiso(Sesion.Patentes_64PR.ActivarDesactivarUsuarios) ||
                                           rolUsuario.TienePermiso(Sesion.Patentes_64PR.DesbloquearUsuario);
-            gestionarUsuariosToolStripMenuItem.Visible = puedeGestionarUsuarios;
+            gestionDeUsuariosToolStripMenuItem.Visible = puedeGestionarUsuarios;
 
             bool puedeGestionarFamilias = rolUsuario.TienePermiso(Sesion.Patentes_64PR.CrearFamilias) ||
                                           rolUsuario.TienePermiso(Sesion.Patentes_64PR.EliminarFamilias) ||
                                           rolUsuario.TienePermiso(Sesion.Patentes_64PR.ModificarFamilias);
-            gestionarPermisosToolStripMenuItem.Visible = puedeGestionarFamilias;
+            gestionarPermisosToolStripMenuItem1.Visible = puedeGestionarFamilias;
 
             bool puedeGestionarRoles = rolUsuario.TienePermiso(Sesion.Patentes_64PR.CrearRoles) ||
                                        rolUsuario.TienePermiso(Sesion.Patentes_64PR.EliminarRoles) ||
                                        rolUsuario.TienePermiso(Sesion.Patentes_64PR.ModificarRoles);
-            gestionarRolesToolStripMenuItem.Visible = puedeGestionarRoles;
+            gestionarRolesToolStripMenuItem1.Visible = puedeGestionarRoles;
 
-            eventosToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.Bitacora);
+            eventosToolStripMenuItem1.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.Bitacora);
 
             cambiarContraseñaToolStripMenuItem1.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.CambiarContra);
 
             idiomaToolStripMenuItem1.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.CambiarIdioma);
 
-            respaldoBaseDeDatosToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.Respaldos);
+            respaldoBaseDeDatosToolStripMenuItem1.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.Respaldos);
 
-            restaurarBaseDeDatosToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.Restauraciones);
+            restaurarBaseDeDatosToolStripMenuItem1.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.Restauraciones);
         }
 
-        private void respaldoBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void nuevaReservaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new FrmReservaPaso1_AR74(this));
+        }
+
+        private void checkinToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new FrmCheck_in_AR74(this));
+        }
+
+        private void respaldoBaseDeDatosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             try
             {
@@ -211,7 +202,7 @@ namespace ProyectoIS_64PR
             }
         }
 
-        private void restaurarBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void restaurarBaseDeDatosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog ofd = new OpenFileDialog())
             {
@@ -270,9 +261,34 @@ namespace ProyectoIS_64PR
             }
         }
 
-        private void nuevaReservaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void gestionDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new FrmReservaPaso1_AR74(this));
+            AbrirFormularioHijo(new FrmGestionarUsuarios_64PR());
+        }
+
+        private void gestionarPermisosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new FrmGestionFamilias_64PR());
+        }
+
+        private void gestionarRolesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new FrmGestionarRoles_64PR());
+        }
+
+        private void eventosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new FrmBitacora_64PR());
+        }
+
+        private void checkoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new FrmCheck_out_AR74(this));
+        }
+
+        private void estadoActualToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new FrmEstadoActual_AR74());
         }
     }
 }

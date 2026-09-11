@@ -77,3 +77,7 @@ C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\bin\Debug\Mapper.dll
 C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\bin\Debug\Mapper.pdb
 C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\obj\Debug\ProyectoIS_64PR.FrmReservaPaso3_AR74.resources
 C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\obj\Debug\ProyectoIS_64PR.FrmRegistrarHuespedEnReserva.resources
+C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\obj\Debug\ProyectoIS_64PR.FrmCheck_inPaso2_AR74.resources
+C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\obj\Debug\ProyectoIS_64PR.FrmCheck_out_AR74.resources
+C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\obj\Debug\ProyectoIS_64PR.FrmCheck_outPaso2_AR74.resources
+C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\obj\Debug\ProyectoIS_64PR.FrmEstadoActual_AR74.resources

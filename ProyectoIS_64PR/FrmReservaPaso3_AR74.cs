@@ -83,6 +83,7 @@ namespace ProyectoIS_64PR
         private void btnConfirmarReserva_Click(object sender, EventArgs e)
         {
             bllReserva.RegistrarReserva(reserva);
+            MessageBox.Show("Reserva registrada con exito");
         }
     }
 }

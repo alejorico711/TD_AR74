@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -9,6 +9,13 @@ namespace BE
 {
     public class Reserva_AR74
     {
+		private int _idReserva;
+		public int IdReserva
+		{
+			get { return _idReserva; }
+			set { _idReserva = value; }
+		}
+
 		private DateTime _fechaInicio;
 
 		public DateTime FechaInicio

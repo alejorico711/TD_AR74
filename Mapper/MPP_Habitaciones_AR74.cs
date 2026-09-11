@@ -42,5 +42,33 @@ namespace Mapper
             }
             return lista;
         }
+        public List<BE.Habitacion> ListarTodasHabitaciones()
+        {
+            List<BE.Habitacion> lista = new List<BE.Habitacion>();
+            DataTable tabla = DAL_64PR.Acceso.Instancia.leerSP("sp_ListarTodasHabitaciones", null);
+
+            foreach (DataRow dr in tabla.Rows)
+            {
+                BE.TipoHabitacion tipo = new BE.TipoHabitacion
+                {
+                    IdTipoHabitacion = (int)dr["IdTipoHabitacion"],
+                    Descripcion = (string)dr["DescripcionTipo"],
+                    Capacidad = (int)dr["Capacidad"],
+                    PrecioPorNoche = (decimal)dr["PrecioPorNoche"]
+                };
+
+                BE.Habitacion habitacion = new BE.Habitacion
+                {
+                    IdHabitacion = (int)dr["IdHabitacion"],
+                    Numero = (int)dr["Numero"],
+                    Descripcion = dr["Descripcion"] == DBNull.Value ? null : (string)dr["Descripcion"],
+                    Estado = (string)dr["Estado"],
+                    Tipo = tipo
+                };
+
+                lista.Add(habitacion);
+            }
+            return lista;
+        }
     }
 }

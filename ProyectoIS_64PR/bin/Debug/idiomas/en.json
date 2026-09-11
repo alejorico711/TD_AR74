@@ -203,5 +203,15 @@
     "FrmReparacionDV_64PR.btnSalir": "FALTA TRADUCCION",
     "FrmReparacionDV_64PR.btnRecalcular": "FALTA TRADUCCION",
     "FrmReparacionDV_64PR.btnRestore": "FALTA TRADUCCION",
-    "FrmMenu.nuevaReservaToolStripMenuItem": "FALTA TRADUCCION"
+    "FrmMenu.nuevaReservaToolStripMenuItem": "FALTA TRADUCCION",
+    "FrmMenu.checkinToolStripMenuItem": "FALTA TRADUCCION",
+    "FrmMenu.adminToolStripMenuItem": "FALTA TRADUCCION",
+    "FrmMenu.gestionDeUsuariosToolStripMenuItem": "FALTA TRADUCCION",
+    "FrmMenu.gestionarPermisosToolStripMenuItem1": "FALTA TRADUCCION",
+    "FrmMenu.gestionarRolesToolStripMenuItem1": "FALTA TRADUCCION",
+    "FrmMenu.eventosToolStripMenuItem1": "FALTA TRADUCCION",
+    "FrmMenu.respaldoBaseDeDatosToolStripMenuItem1": "FALTA TRADUCCION",
+    "FrmMenu.restaurarBaseDeDatosToolStripMenuItem1": "FALTA TRADUCCION",
+    "FrmMenu.checkoutToolStripMenuItem": "FALTA TRADUCCION",
+    "FrmMenu.estadoActualToolStripMenuItem": "FALTA TRADUCCION"
 }

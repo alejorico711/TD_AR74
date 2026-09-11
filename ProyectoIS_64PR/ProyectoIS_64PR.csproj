@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -59,11 +60,41 @@
     <Compile Include="FrmCambiarClave_64PR.Designer.cs">
       <DependentUpon>FrmCambiarClave_64PR.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCheck-in_AR74.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCheck-in_AR74.Designer.cs">
+      <DependentUpon>FrmCheck-in_AR74.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCheck-out_AR74.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCheck-out_AR74.Designer.cs">
+      <DependentUpon>FrmCheck-out_AR74.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCheck_inPaso2_AR74.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCheck_inPaso2_AR74.Designer.cs">
+      <DependentUpon>FrmCheck_inPaso2_AR74.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCheck_outPaso2_AR74.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCheck_outPaso2_AR74.Designer.cs">
+      <DependentUpon>FrmCheck_outPaso2_AR74.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmContenedor_64PR.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmContenedor_64PR.Designer.cs">
       <DependentUpon>FrmContenedor_64PR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEstadoActual_AR74.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEstadoActual_AR74.Designer.cs">
+      <DependentUpon>FrmEstadoActual_AR74.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmRegistrarHuespedEnReserva.cs">
       <SubType>Form</SubType>
@@ -152,8 +183,20 @@
     <EmbeddedResource Include="FrmCambiarClave_64PR.resx">
       <DependentUpon>FrmCambiarClave_64PR.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCheck-out_AR74.resx">
+      <DependentUpon>FrmCheck-out_AR74.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCheck_inPaso2_AR74.resx">
+      <DependentUpon>FrmCheck_inPaso2_AR74.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCheck_outPaso2_AR74.resx">
+      <DependentUpon>FrmCheck_outPaso2_AR74.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmContenedor_64PR.resx">
       <DependentUpon>FrmContenedor_64PR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEstadoActual_AR74.resx">
+      <DependentUpon>FrmEstadoActual_AR74.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRegistrarHuespedEnReserva.resx">
       <DependentUpon>FrmRegistrarHuespedEnReserva.cs</DependentUpon>

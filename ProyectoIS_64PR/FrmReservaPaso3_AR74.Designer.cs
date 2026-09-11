@@ -223,7 +223,7 @@ namespace ProyectoIS_64PR
             // 
             // pbHabitacion
             // 
-            this.pbHabitacion.Image = ((System.Drawing.Image)(resources.GetObject("pbHabitacion.Image")));
+            
             this.pbHabitacion.Location = new System.Drawing.Point(12, 105);
             this.pbHabitacion.Name = "pbHabitacion";
             this.pbHabitacion.Size = new System.Drawing.Size(100, 50);
@@ -233,7 +233,7 @@ namespace ProyectoIS_64PR
             // 
             // pbCalendario
             // 
-            this.pbCalendario.Image = ((System.Drawing.Image)(resources.GetObject("pbCalendario.Image")));
+            
             this.pbCalendario.Location = new System.Drawing.Point(12, 161);
             this.pbCalendario.Name = "pbCalendario";
             this.pbCalendario.Size = new System.Drawing.Size(100, 50);
@@ -243,7 +243,7 @@ namespace ProyectoIS_64PR
             // 
             // pbNoches
             // 
-            this.pbNoches.Image = ((System.Drawing.Image)(resources.GetObject("pbNoches.Image")));
+            
             this.pbNoches.Location = new System.Drawing.Point(12, 273);
             this.pbNoches.Name = "pbNoches";
             this.pbNoches.Size = new System.Drawing.Size(100, 50);
@@ -253,7 +253,7 @@ namespace ProyectoIS_64PR
             // 
             // pbPersonas
             // 
-            this.pbPersonas.Image = ((System.Drawing.Image)(resources.GetObject("pbPersonas.Image")));
+            
             this.pbPersonas.Location = new System.Drawing.Point(12, 217);
             this.pbPersonas.Name = "pbPersonas";
             this.pbPersonas.Size = new System.Drawing.Size(100, 50);

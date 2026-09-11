@@ -29,10 +29,28 @@ namespace ProyectoIS_64PR
             lblCantidad.Text = habitacion.Tipo.Capacidad.ToString();
             lblNumero.Text = habitacion.Numero.ToString(); 
             lblTipo.Text = habitacion.Tipo.Descripcion; 
-            this.BackColor = Color.FromArgb(46, 184, 92);
-            lblTipo.BackColor = Color.FromArgb(46, 184, 92);
-            lblNumero.BackColor = Color.FromArgb(46, 184, 92);
-            lblCantidad.BackColor = Color.FromArgb(46, 184, 92);
+
+            Color colorFondo = ObtenerColorPorEstado(habitacion.Estado);
+            AplicarColor(colorFondo);
+        }
+        private Color ObtenerColorPorEstado(string estado)
+        {
+            switch (estado)
+            {
+                case "Disponible": return Color.FromArgb(46, 184, 92);     // verde
+                case "Ocupada": return Color.FromArgb(230, 90, 60);        // rojo/naranja
+                case "Mantenimiento": return Color.FromArgb(150, 150, 150); // gris
+                default: return Color.Gray;
+            }
+        }
+
+        public void AplicarColor(Color color)
+        {
+            this.BackColor = color;
+            foreach (Control control in this.Controls)
+            {
+                control.BackColor = color;
+            }
         }
     }
 }

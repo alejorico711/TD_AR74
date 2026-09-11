@@ -1,14 +1,14 @@
-ï»¿namespace ProyectoIS_64PR
+namespace ProyectoIS_64PR
 {
     partial class UcCtrlTarjetaHabitacion_AR74
     {
         /// <summary> 
-        /// Variable del diseÃ±ador necesaria.
+        /// Variable del diseñador necesaria.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary> 
-        /// Limpiar los recursos que se estÃ©n usando.
+        /// Limpiar los recursos que se estén usando.
         /// </summary>
         /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
         protected override void Dispose(bool disposing)
@@ -20,11 +20,11 @@
             base.Dispose(disposing);
         }
 
-        #region CÃ³digo generado por el DiseÃ±ador de componentes
+        #region Código generado por el Diseñador de componentes
 
         /// <summary> 
-        /// MÃ©todo necesario para admitir el DiseÃ±ador. No se puede modificar
-        /// el contenido de este mÃ©todo con el editor de cÃ³digo.
+        /// Método necesario para admitir el Diseñador. No se puede modificar
+        /// el contenido de este método con el editor de código.
         /// </summary>
         private void InitializeComponent()
         {
@@ -40,7 +40,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            
             this.pictureBox1.Location = new System.Drawing.Point(102, 19);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(75, 72);
@@ -55,7 +55,7 @@
             this.lblNumero.Name = "lblNumero";
             this.lblNumero.Size = new System.Drawing.Size(44, 16);
             this.lblNumero.TabIndex = 1;
-            this.lblNumero.Text = "label1";
+            this.lblNumero.Text = "label1"; this.lblNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold); this.lblNumero.ForeColor = System.Drawing.Color.White;
             // 
             // lblTipo
             // 
@@ -64,7 +64,7 @@
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(44, 16);
             this.lblTipo.TabIndex = 2;
-            this.lblTipo.Text = "label1";
+            this.lblTipo.Text = "label1"; this.lblTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular); this.lblTipo.ForeColor = System.Drawing.Color.White;
             // 
             // lblCantidad
             // 
@@ -73,11 +73,11 @@
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(44, 16);
             this.lblCantidad.TabIndex = 3;
-            this.lblCantidad.Text = "label1";
+            this.lblCantidad.Text = "label1"; this.lblCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular); this.lblCantidad.ForeColor = System.Drawing.Color.White;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            
             this.pictureBox2.Location = new System.Drawing.Point(0, 90);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(38, 27);

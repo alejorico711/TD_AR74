@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BE;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,11 @@ namespace BLL_64PR
         public List<BE.Habitacion> ListarHabitaciones(DateTime fechaInicio, DateTime fechaFin, int capacidad)
         {
             return mpp.ListarHabitaciones(fechaInicio, fechaFin, capacidad);
+        }
+
+        public List<Habitacion> ListarTodasHabitaciones()
+        {
+            return mpp.ListarTodasHabitaciones();
         }
     }
 }
