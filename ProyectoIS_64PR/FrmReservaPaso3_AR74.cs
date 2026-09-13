@@ -84,6 +84,7 @@ namespace ProyectoIS_64PR
         {
             bllReserva.RegistrarReserva(reserva);
             MessageBox.Show("Reserva registrada con exito");
+            frmPadre.AbrirFormularioHijo(this);
         }
     }
 }

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +29,10 @@ namespace ProyectoIS_64PR
 
             ///Agrego el selector de idioma al menú en tiempo de ejecución para que cargue todos los idiomas
             AgregarSelectorIdioma();
+            
+            string rutaLogo = Path.Combine(Application.StartupPath, "Imagenes", "Logo RoomIn.png");
+            pnlContenidoMenu.BackgroundImageLayout = ImageLayout.Stretch;
+            pnlContenidoMenu.BackgroundImage = Image.FromFile(rutaLogo);
             
         }
         public void ActualizarIdioma(Dictionary<string, string> textoss)

@@ -47,6 +47,7 @@
             this.lblTotal2 = new System.Windows.Forms.Label();
             this.lblHuespedNombre = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.cmbMetodoDePago = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNoches)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCalendario)).BeginInit();
@@ -96,7 +97,7 @@
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.ForeColor = System.Drawing.Color.White;
-            this.btnVolver.Location = new System.Drawing.Point(268, 369);
+            this.btnVolver.Location = new System.Drawing.Point(12, 393);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(150, 45);
             this.btnVolver.TabIndex = 17;
@@ -110,7 +111,7 @@
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.Color.White;
-            this.btnConfirmar.Location = new System.Drawing.Point(43, 369);
+            this.btnConfirmar.Location = new System.Drawing.Point(588, 393);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(200, 45);
             this.btnConfirmar.TabIndex = 16;
@@ -266,11 +267,25 @@
             this.lblTitulo.TabIndex = 13;
             this.lblTitulo.Text = "Resumen de Check-Out";
             // 
+            // cmbMetodoDePago
+            // 
+            this.cmbMetodoDePago.FormattingEnabled = true;
+            this.cmbMetodoDePago.Items.AddRange(new object[] {
+            "Efectivo",
+            "Tarjeta De Debito",
+            "Tarjeta De Credito",
+            "Transferencia"});
+            this.cmbMetodoDePago.Location = new System.Drawing.Point(448, 405);
+            this.cmbMetodoDePago.Name = "cmbMetodoDePago";
+            this.cmbMetodoDePago.Size = new System.Drawing.Size(121, 24);
+            this.cmbMetodoDePago.TabIndex = 22;
+            // 
             // FrmCheck_outPaso2_AR74
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cmbMetodoDePago);
             this.Controls.Add(this.pbPersonas);
             this.Controls.Add(this.pbNoches);
             this.Controls.Add(this.pbCalendario);
@@ -314,5 +329,6 @@
         private System.Windows.Forms.Label lblTotal2;
         private System.Windows.Forms.Label lblHuespedNombre;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.ComboBox cmbMetodoDePago;
     }
 }

@@ -96,6 +96,12 @@
     <Compile Include="FrmEstadoActual_AR74.Designer.cs">
       <DependentUpon>FrmEstadoActual_AR74.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmOpcionesComprobante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOpcionesComprobante.Designer.cs">
+      <DependentUpon>FrmOpcionesComprobante.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRegistrarHuespedEnReserva.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +204,9 @@
     <EmbeddedResource Include="FrmEstadoActual_AR74.resx">
       <DependentUpon>FrmEstadoActual_AR74.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmOpcionesComprobante.resx">
+      <DependentUpon>FrmOpcionesComprobante.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmRegistrarHuespedEnReserva.resx">
       <DependentUpon>FrmRegistrarHuespedEnReserva.cs</DependentUpon>
     </EmbeddedResource>
@@ -298,6 +307,12 @@
       <Project>{e0ff1d5b-9f6b-406c-bc04-00d7e11061e5}</Project>
       <Name>Sesion</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Imagenes\Logo RoomIn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

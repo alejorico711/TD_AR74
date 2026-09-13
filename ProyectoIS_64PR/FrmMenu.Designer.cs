@@ -44,8 +44,8 @@ namespace ProyectoIS_64PR
             this.nuevaReservaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnlContenidoMenu = new System.Windows.Forms.Panel();
             this.estadoActualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnlContenidoMenu = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -180,6 +180,13 @@ namespace ProyectoIS_64PR
             this.checkoutToolStripMenuItem.Text = "Check-out";
             this.checkoutToolStripMenuItem.Click += new System.EventHandler(this.checkoutToolStripMenuItem_Click);
             // 
+            // estadoActualToolStripMenuItem
+            // 
+            this.estadoActualToolStripMenuItem.Name = "estadoActualToolStripMenuItem";
+            this.estadoActualToolStripMenuItem.Size = new System.Drawing.Size(112, 24);
+            this.estadoActualToolStripMenuItem.Text = "Estado actual";
+            this.estadoActualToolStripMenuItem.Click += new System.EventHandler(this.estadoActualToolStripMenuItem_Click);
+            // 
             // pnlContenidoMenu
             // 
             this.pnlContenidoMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -188,13 +195,6 @@ namespace ProyectoIS_64PR
             this.pnlContenidoMenu.Name = "pnlContenidoMenu";
             this.pnlContenidoMenu.Size = new System.Drawing.Size(1282, 535);
             this.pnlContenidoMenu.TabIndex = 2;
-            // 
-            // estadoActualToolStripMenuItem
-            // 
-            this.estadoActualToolStripMenuItem.Name = "estadoActualToolStripMenuItem";
-            this.estadoActualToolStripMenuItem.Size = new System.Drawing.Size(112, 24);
-            this.estadoActualToolStripMenuItem.Text = "Estado actual";
-            this.estadoActualToolStripMenuItem.Click += new System.EventHandler(this.estadoActualToolStripMenuItem_Click);
             // 
             // FrmMenu
             // 

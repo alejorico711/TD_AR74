@@ -81,3 +81,5 @@ C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\obj\Debug\ProyectoIS_64PR.Fr
 C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\obj\Debug\ProyectoIS_64PR.FrmCheck_out_AR74.resources
 C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\obj\Debug\ProyectoIS_64PR.FrmCheck_outPaso2_AR74.resources
 C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\obj\Debug\ProyectoIS_64PR.FrmEstadoActual_AR74.resources
+C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\bin\Debug\Imagenes\Logo RoomIn.png
+C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\obj\Debug\ProyectoIS_64PR.FrmOpcionesComprobante.resources
