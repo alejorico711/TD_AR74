@@ -7,15 +7,15 @@
       "RelativeMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|solutionrelative:proyectois_64pr\\frmcheck_outpaso2_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\proyectois_64pr\\frmcheck_outpaso2_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|C:\\Users\\Alejo\\source\\repos\\TD_AR74\\proyectois_64pr\\frmcheck_outpaso2_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|solutionrelative:proyectois_64pr\\frmcheck_outpaso2_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\proyectois_64pr\\frmreservapaso3_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|C:\\Users\\Alejo\\source\\repos\\TD_AR74\\proyectois_64pr\\frmreservapaso3_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|solutionrelative:proyectois_64pr\\frmreservapaso3_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\proyectois_64pr\\frmreservapaso3_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|C:\\Users\\Alejo\\source\\repos\\TD_AR74\\proyectois_64pr\\frmreservapaso3_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|solutionrelative:proyectois_64pr\\frmreservapaso3_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -46,8 +46,7 @@
               "RelativeToolTip": "ProyectoIS_64PR\\FrmReservaPaso3_AR74.cs",
               "ViewState": "AgIAACAAAAAAAAAAAAAiwFYAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-13T03:32:13.356Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-13T03:32:13.356Z"
             },
             {
               "$type": "Document",
@@ -58,8 +57,7 @@
               "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmReservaPaso3_AR74.cs [Dise\u00F1o]",
               "RelativeToolTip": "ProyectoIS_64PR\\FrmReservaPaso3_AR74.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-13T03:32:10.424Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2026-09-13T03:32:10.424Z"
             },
             {
               "$type": "Document",
@@ -81,7 +79,7 @@
               "RelativeDocumentMoniker": "ProyectoIS_64PR\\FrmCheck_outPaso2_AR74.cs",
               "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmCheck_outPaso2_AR74.cs",
               "RelativeToolTip": "ProyectoIS_64PR\\FrmCheck_outPaso2_AR74.cs",
-              "ViewState": "AgIAAG8AAAAAAAAAAAAIwHMAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAJUAAAAAAAAAAAAUwHMAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-12T23:46:55.621Z",
               "EditorCaption": ""
