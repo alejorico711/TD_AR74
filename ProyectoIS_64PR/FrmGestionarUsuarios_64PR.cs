@@ -53,7 +53,7 @@ namespace ProyectoIS_64PR
             if (textos.Count > 0)
                 ActualizarIdioma(textos);
             lblModo.Text = textos["frmGestionUsuarios_lblModoConsulta"];
-            lblCantidad.Text = textos["FrmGestionarUsuarios_64PR.lblCantidad"] + lst.Count.ToString();
+            lblCantidad.Text = (textos["FrmGestionarUsuarios_64PR.lblCantidad"] + lst.Count.ToString());
         }
         
         public void ActualizarIdioma(Dictionary<string, string> textoss)
@@ -62,11 +62,9 @@ namespace ProyectoIS_64PR
             textos = textoss;
             ///Necesario para no perder la cantidad de usuarios en memoria al momento de actualizar el idioma
             string[] aux = lblCantidad.Text.Split(':');
-
-            Traductor_64PR.Traducir(this, textos);
-            lblCantidad.Text += aux[1];
-
             ///Necesario para no perder el modo al momento de actualizar el idioma
+            
+            Traductor_64PR.Traducir(this, textos);
             switch (modo)
             {
                 case "consulta":
@@ -81,6 +79,7 @@ namespace ProyectoIS_64PR
                 default:
                     break;
             }
+            lblCantidad.Text += aux[1];
         }
 
         protected override void OnFormClosed(FormClosedEventArgs e)

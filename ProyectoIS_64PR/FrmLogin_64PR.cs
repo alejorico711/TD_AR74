@@ -58,13 +58,13 @@ namespace ProyectoIS_64PR
         {
             ///Esto me actualiza los textos visibles
             textos = textoss;
-            Traductor_64PR.Traducir(this, textos);
             if (lblMensaje.Enabled)
             {
                 string[] aux = lblMensaje.Text.Split(':');
                 aux[0]= textos.ContainsKey("FrmLogin_64PR.lblMensaje") ? textos["FrmLogin_64PR.lblMensaje"] : "Intentos";
                 lblMensaje.Text = aux[0]+":" + aux[1];
             }
+            Traductor_64PR.Traducir(this, textos);
         }
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
@@ -171,7 +171,7 @@ namespace ProyectoIS_64PR
                 string temp = gusuarios.ObtenerIntentos(txtLogin.Text.Trim());
                 lblMensaje.Enabled = true;
                 lblMensaje.Show();
-                lblMensaje.Text = textos["FrmLogin_64PR.lblMensaje"] + ": " + temp + "/3";
+                lblMensaje.Text = (textos["FrmLogin_64PR.lblMensaje"] + ": " + temp + "/3");
 
                 if (Convert.ToInt16(temp) == 3)
                 {
