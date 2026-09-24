@@ -19,5 +19,13 @@ namespace BLL_64PR
         {
             return mpp.RegistrarHuesped(huesped);
         }
+        public void EliminarHuesped(int idHuesped)
+        {
+            mpp.EliminarHuesped(idHuesped);
+        }
+        public void ModificarHuesped(Huesped huesped)
+        {
+            mpp.ModificarHuesped(huesped);
+        }
     }
 }

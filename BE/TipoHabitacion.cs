@@ -29,8 +29,6 @@ namespace BE
 			get { return _precioPorNoche; }
 			set { _precioPorNoche = value; }
 		}
-
-
 		private int _capacidad;
 
 		public int Capacidad
@@ -38,6 +36,16 @@ namespace BE
 			get { return _capacidad; }
 			set { _capacidad = value; }
 		}
+        private bool _activo;
 
-	}
+        public bool Activo
+        {
+            get { return _activo; }
+            set { _activo = value; }
+        }
+        public override string ToString()
+        {
+			return Descripcion;
+        }
+    }
 }

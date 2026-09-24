@@ -29,6 +29,8 @@ namespace ProyectoIS_64PR
             if (textos.Count > 0)
                 ActualizarIdioma(textos);
             lblMensaje.Hide();
+            txtContra.Text = "admin123";
+            txtLogin.Text = "admin";
         }
         private void CargarComboIdiomas()
         {

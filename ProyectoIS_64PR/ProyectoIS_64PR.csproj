@@ -48,6 +48,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmABMHabitaciones_AR74.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmABMHabitaciones_AR74.Designer.cs">
+      <DependentUpon>FrmABMHabitaciones_AR74.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmABMHuespedes_AR74.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmABMHuespedes_AR74.Designer.cs">
+      <DependentUpon>FrmABMHuespedes_AR74.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmABMTiposHabitaciones_AR74.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmABMTiposHabitaciones_AR74.Designer.cs">
+      <DependentUpon>FrmABMTiposHabitaciones_AR74.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmBitacora_64PR.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +201,15 @@
     <Compile Include="ucModificarUsuario.Designer.cs">
       <DependentUpon>ucModificarUsuario.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmABMHabitaciones_AR74.resx">
+      <DependentUpon>FrmABMHabitaciones_AR74.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmABMHuespedes_AR74.resx">
+      <DependentUpon>FrmABMHuespedes_AR74.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmABMTiposHabitaciones_AR74.resx">
+      <DependentUpon>FrmABMTiposHabitaciones_AR74.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmBitacora_64PR.resx">
       <DependentUpon>FrmBitacora_64PR.cs</DependentUpon>
     </EmbeddedResource>

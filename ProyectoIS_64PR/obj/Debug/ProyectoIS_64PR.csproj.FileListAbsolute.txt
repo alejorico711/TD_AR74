@@ -83,3 +83,6 @@ C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\obj\Debug\ProyectoIS_64PR.Fr
 C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\obj\Debug\ProyectoIS_64PR.FrmEstadoActual_AR74.resources
 C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\bin\Debug\Imagenes\Logo RoomIn.png
 C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\obj\Debug\ProyectoIS_64PR.FrmOpcionesComprobante.resources
+C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\obj\Debug\ProyectoIS_64PR.FrmABMHuespedes_AR74.resources
+C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\obj\Debug\ProyectoIS_64PR.FrmABMTiposHabitaciones_AR74.resources
+C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\obj\Debug\ProyectoIS_64PR.FrmABMHabitaciones_AR74.resources

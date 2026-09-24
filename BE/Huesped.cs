@@ -58,6 +58,13 @@ namespace BE
 			get { return _fechaNacimiento; }
 			set { _fechaNacimiento = value; }
 		}
+        private bool _activo;
+
+        public bool Activo
+        {
+            get { return _activo; }
+            set { _activo = value; }
+        }
 
         public override string ToString()
         {

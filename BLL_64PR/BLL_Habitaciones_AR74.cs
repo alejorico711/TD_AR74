@@ -19,5 +19,19 @@ namespace BLL_64PR
         {
             return mpp.ListarTodasHabitaciones();
         }
+        public int RegistrarHabitacion(Habitacion habitacion)
+        {
+            return mpp.RegistrarHabitacion(habitacion);
+        }
+
+        public void ModificarHabitacion(Habitacion habitacion)
+        {
+            mpp.ModificarHabitacion(habitacion);
+        }
+
+        public void EliminarHabitacion(int idHabitacion)
+        {
+            mpp.EliminarHabitacion(idHabitacion);
+        }
     }
 }

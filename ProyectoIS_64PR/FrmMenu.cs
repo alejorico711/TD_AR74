@@ -295,5 +295,20 @@ namespace ProyectoIS_64PR
         {
             AbrirFormularioHijo(new FrmEstadoActual_AR74());
         }
+
+        private void huespedesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new FrmABMHuespedes_AR74());
+        }
+
+        private void tiposDeHabitacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new FrmABMTiposHabitaciones_AR74());
+        }
+
+        private void habitacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new FrmABMHabitaciones_AR74());
+        }
     }
 }

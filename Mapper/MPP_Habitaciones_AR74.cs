@@ -63,12 +63,46 @@ namespace Mapper
                     Numero = (int)dr["Numero"],
                     Descripcion = dr["Descripcion"] == DBNull.Value ? null : (string)dr["Descripcion"],
                     Estado = (string)dr["Estado"],
+                    Activo = (bool)dr["Activo"],
                     Tipo = tipo
                 };
 
                 lista.Add(habitacion);
             }
             return lista;
+        }
+        public int RegistrarHabitacion(Habitacion habitacion)
+        {
+            SqlParameter[] p = new SqlParameter[4];
+            p[0] = new SqlParameter("@Numero", habitacion.Numero);
+            p[1] = new SqlParameter("@Descripcion", (object)habitacion.Descripcion ?? DBNull.Value);
+            p[2] = new SqlParameter("@IdTipoHabitacion", habitacion.Tipo.IdTipoHabitacion);
+
+            p[3] = new SqlParameter("@IdHabitacionGenerada", SqlDbType.Int);
+            p[3].Direction = ParameterDirection.Output;
+
+            DAL_64PR.Acceso.Instancia.escribirSP("sp_RegistrarHabitacion", p);
+
+            return (int)p[3].Value;
+        }
+
+        public void ModificarHabitacion(Habitacion habitacion)
+        {
+            SqlParameter[] p = new SqlParameter[4];
+            p[0] = new SqlParameter("@IdHabitacion", habitacion.IdHabitacion);
+            p[1] = new SqlParameter("@Numero", habitacion.Numero);
+            p[2] = new SqlParameter("@Descripcion", (object)habitacion.Descripcion ?? DBNull.Value);
+            p[3] = new SqlParameter("@IdTipoHabitacion", habitacion.Tipo.IdTipoHabitacion);
+
+            DAL_64PR.Acceso.Instancia.escribirSP("sp_ModificarHabitacion", p);
+        }
+
+        public void EliminarHabitacion(int idHabitacion)
+        {
+            SqlParameter[] p = new SqlParameter[1];
+            p[0] = new SqlParameter("@IdHabitacion", idHabitacion);
+
+            DAL_64PR.Acceso.Instancia.escribirSP("sp_EliminarHabitacion", p);
         }
     }
 }

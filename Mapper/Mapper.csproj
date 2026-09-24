@@ -45,6 +45,7 @@
     <Compile Include="MPP_Huespedes_AR74.cs" />
     <Compile Include="MPP_Pagos_AR74.cs" />
     <Compile Include="MPP_Reservas_AR74.cs" />
+    <Compile Include="MPP_TiposHabitacion_AR74.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

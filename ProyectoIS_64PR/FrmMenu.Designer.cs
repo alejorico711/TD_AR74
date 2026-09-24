@@ -45,7 +45,11 @@ namespace ProyectoIS_64PR
             this.checkinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadoActualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.maestrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.huespedesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlContenidoMenu = new System.Windows.Forms.Panel();
+            this.tiposDeHabitacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.habitacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +62,8 @@ namespace ProyectoIS_64PR
             this.nuevaReservaToolStripMenuItem,
             this.checkinToolStripMenuItem,
             this.checkoutToolStripMenuItem,
-            this.estadoActualToolStripMenuItem});
+            this.estadoActualToolStripMenuItem,
+            this.maestrosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -187,6 +192,23 @@ namespace ProyectoIS_64PR
             this.estadoActualToolStripMenuItem.Text = "Estado actual";
             this.estadoActualToolStripMenuItem.Click += new System.EventHandler(this.estadoActualToolStripMenuItem_Click);
             // 
+            // maestrosToolStripMenuItem
+            // 
+            this.maestrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.huespedesToolStripMenuItem,
+            this.tiposDeHabitacionesToolStripMenuItem,
+            this.habitacionesToolStripMenuItem});
+            this.maestrosToolStripMenuItem.Name = "maestrosToolStripMenuItem";
+            this.maestrosToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
+            this.maestrosToolStripMenuItem.Text = "Maestros";
+            // 
+            // huespedesToolStripMenuItem
+            // 
+            this.huespedesToolStripMenuItem.Name = "huespedesToolStripMenuItem";
+            this.huespedesToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
+            this.huespedesToolStripMenuItem.Text = "Huespedes";
+            this.huespedesToolStripMenuItem.Click += new System.EventHandler(this.huespedesToolStripMenuItem_Click);
+            // 
             // pnlContenidoMenu
             // 
             this.pnlContenidoMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -195,6 +217,20 @@ namespace ProyectoIS_64PR
             this.pnlContenidoMenu.Name = "pnlContenidoMenu";
             this.pnlContenidoMenu.Size = new System.Drawing.Size(1282, 535);
             this.pnlContenidoMenu.TabIndex = 2;
+            // 
+            // tiposDeHabitacionesToolStripMenuItem
+            // 
+            this.tiposDeHabitacionesToolStripMenuItem.Name = "tiposDeHabitacionesToolStripMenuItem";
+            this.tiposDeHabitacionesToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
+            this.tiposDeHabitacionesToolStripMenuItem.Text = "Tipos de Habitaciones";
+            this.tiposDeHabitacionesToolStripMenuItem.Click += new System.EventHandler(this.tiposDeHabitacionesToolStripMenuItem_Click);
+            // 
+            // habitacionesToolStripMenuItem
+            // 
+            this.habitacionesToolStripMenuItem.Name = "habitacionesToolStripMenuItem";
+            this.habitacionesToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
+            this.habitacionesToolStripMenuItem.Text = "Habitaciones";
+            this.habitacionesToolStripMenuItem.Click += new System.EventHandler(this.habitacionesToolStripMenuItem_Click);
             // 
             // FrmMenu
             // 
@@ -235,5 +271,9 @@ namespace ProyectoIS_64PR
         private System.Windows.Forms.ToolStripMenuItem restaurarBaseDeDatosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem checkoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estadoActualToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem maestrosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem huespedesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tiposDeHabitacionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem habitacionesToolStripMenuItem;
     }
 }

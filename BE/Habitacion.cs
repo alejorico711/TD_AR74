@@ -18,7 +18,7 @@ namespace BE
 		private int _idHabitacion;
 
 		public int IdHabitacion
-        {
+		{
 			get { return _idHabitacion; }
 			set { _idHabitacion = value; }
 		}
@@ -43,6 +43,13 @@ namespace BE
 			get { return _estado; }
 			set { _estado = value; }
 		}
+        private bool _activo;
 
-	}
+        public bool Activo
+        {
+            get { return _activo; }
+            set { _activo = value; }
+        }
+
+    }
 }

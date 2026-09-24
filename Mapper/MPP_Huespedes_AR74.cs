@@ -25,12 +25,20 @@ namespace Mapper
                     Apellido = (string)dr["Apellido"],
                     FechaNacimiento = (DateTime)dr["FechaNacimiento"],
                     Email = dr["CorreoElectronico"] == DBNull.Value ? null : (string)dr["CorreoElectronico"],
-                    Telefono = dr["Telefono"] == DBNull.Value ? null : (string)dr["Telefono"]
+                    Telefono = dr["Telefono"] == DBNull.Value ? null : (string)dr["Telefono"],
+                    Activo = (bool)dr["Activo"]
                 };
 
                 lista.Add(huesped);
             }
             return lista;
+        }
+
+        public void EliminarHuesped(int idHuesped)
+        {
+            SqlParameter[] p = new SqlParameter[1];
+            p[0] = new SqlParameter("@IdHuesped", idHuesped);
+            DAL_64PR.Acceso.Instancia.escribirSP("sp_EliminarHuesped", p);
         }
 
         public int RegistrarHuesped(Huesped huesped)
@@ -50,6 +58,20 @@ namespace Mapper
 
             int idGenerado = (int)p[6].Value;
             return idGenerado;
+        }
+
+        public void ModificarHuesped(Huesped huesped)
+        {
+            SqlParameter[] p = new SqlParameter[7];
+            p[0] = new SqlParameter("@IdHuesped", huesped.IdHuesped);
+            p[1] = new SqlParameter("@Dni", huesped.DNI);
+            p[2] = new SqlParameter("@Nombre", huesped.Nombre);
+            p[3] = new SqlParameter("@Apellido", huesped.Apellido);
+            p[4] = new SqlParameter("@FechaNacimiento", huesped.FechaNacimiento);
+            p[5] = new SqlParameter("@CorreoElectronico", (object)huesped.Email ?? DBNull.Value);
+            p[6] = new SqlParameter("@Telefono", (object)huesped.Telefono ?? DBNull.Value);
+
+            DAL_64PR.Acceso.Instancia.escribirSP("sp_ModificarHuesped", p);
         }
     }
 }
