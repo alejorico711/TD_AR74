@@ -12,37 +12,48 @@ using System.Windows.Forms;
 
 namespace ProyectoIS_64PR
 {
-    public partial class FrmCheck_outPaso2_AR74 : Form
+    public partial class FrmCheck_outPaso2_AR74 : Form, Idioma.IObservadorIdioma_64PR
     {
         FrmMenu frmPadre;
         Reserva_AR74 reserva;
         BLL_64PR.BLL_Reservas_AR74 bllReservas = new BLL_64PR.BLL_Reservas_AR74();
         BLL_64PR.BLL_Pagos_AR74 bllPagos = new BLL_64PR.BLL_Pagos_AR74();
+        Dictionary<string, string> textos;
         public FrmCheck_outPaso2_AR74(FrmMenu frmPadre, Reserva_AR74 reserva)
         {
             InitializeComponent();
             this.frmPadre = frmPadre;
             this.reserva = reserva;
+            Idioma.GestorIdioma_64PR.GetInstance.Suscribir(this); ///observer del cambio de idioma
+                                                                  ///Aplico el idioma que ya está cargado
+            textos = Idioma.GestorIdioma_64PR.GetInstance.ObtenerTextos();
+            if (textos.Count > 0)
+                ActualizarIdioma(textos);
             CargarResumen();
+        }
+        public void ActualizarIdioma(Dictionary<string, string> textoss)
+        {
+            textos = textoss;
+            Traductor_64PR.Traducir(this, textos);
         }
         private void CargarResumen()
         {
             lblHuespedNombre.Text = $"Huésped: {reserva.Huesped.Nombre} {reserva.Huesped.Apellido} (DNI: {reserva.Huesped.DNI})";
 
-            lblHabitacion2.Text = $"Nro {reserva.Habitacion.Numero} - {reserva.Habitacion.Tipo.Descripcion}";
+            lblValorHabitacion.Text = $"Nro {reserva.Habitacion.Numero} - {reserva.Habitacion.Tipo.Descripcion}";
             if (reserva.Habitacion.Descripcion != null)
             {
-                lblHabitacion2.Text += ", " + reserva.Habitacion.Descripcion;
+                lblValorHabitacion.Text += ", " + reserva.Habitacion.Descripcion;
             }
-            lblFechas2.Text = $"{reserva.FechaInicio:dd/MM/yyyy} --> {reserva.FechaFin:dd/MM/yyyy}";
-            lblPersonas2.Text = reserva.CantidadPersonas.ToString();
+            lblValorFechas.Text = $"{reserva.FechaInicio:dd/MM/yyyy} --> {reserva.FechaFin:dd/MM/yyyy}";
+            lblValorPersonas.Text = reserva.CantidadPersonas.ToString();
 
             int noches = (reserva.FechaFin - reserva.FechaInicio).Days;
             decimal precioPorNoche = reserva.Habitacion.Tipo.PrecioPorNoche;
             decimal total = noches * precioPorNoche;
 
-            lblNochesxPrecio2.Text = $"{noches} noches x ${precioPorNoche:N0}";
-            lblTotal2.Text = $"${total:N0}";
+            lblValorNochesxPrecio.Text = $"{noches} noches x ${precioPorNoche:N0}";
+            lblValorTotal.Text = $"${total:N0}";
         }
 
         private void btnConfirmar_Click_1(object sender, EventArgs e)

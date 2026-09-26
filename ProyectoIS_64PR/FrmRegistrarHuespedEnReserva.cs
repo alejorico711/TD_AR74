@@ -11,13 +11,24 @@ using System.Windows.Forms;
 
 namespace ProyectoIS_64PR
 {
-    public partial class FrmRegistrarHuespedEnReserva : Form
+    public partial class FrmRegistrarHuespedEnReserva : Form,Idioma.IObservadorIdioma_64PR
     {
         BLL_64PR.BLL_Huespedes_AR74 bllHuesped = new BLL_64PR.BLL_Huespedes_AR74();
         public BE.Huesped HuespedRegistrado { get; private set; }
+        Dictionary<string, string> textos;
         public FrmRegistrarHuespedEnReserva()
         {
             InitializeComponent();
+            Idioma.GestorIdioma_64PR.GetInstance.Suscribir(this); ///observer del cambio de idioma
+                                                                  ///Aplico el idioma que ya está cargado
+            textos = Idioma.GestorIdioma_64PR.GetInstance.ObtenerTextos();
+            if (textos.Count > 0)
+                ActualizarIdioma(textos);
+        }
+        public void ActualizarIdioma(Dictionary<string, string> textoss)
+        {
+            textos = textoss;
+            Traductor_64PR.Traducir(this, textos);
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)

@@ -93,6 +93,27 @@ namespace ProyectoIS_64PR
                         }
                     }
                 }
+                if (control is TableLayoutPanel tableLayoutControl)
+                {
+                    foreach (Control hijo in tableLayoutControl.Controls)
+                    {
+                        if (hijo is Label lblHijo)
+                        {
+                            // Las etiquetas de valor (columna derecha) no se traducen, son datos calculados
+                            if (lblHijo.Name.StartsWith("lblValor"))
+                                continue;
+
+                            if (textos.ContainsKey(form.Name + "." + lblHijo.Name))
+                            {
+                                lblHijo.Text = textos[form.Name + "." + lblHijo.Name];
+                            }
+                            else
+                            {
+                                clavesFaltantes.Add(form.Name + "." + lblHijo.Name);
+                            }
+                        }
+                    }
+                }
             }
             if (clavesFaltantes.Count > 0)
                 Idioma.GestorIdioma_64PR.GetInstance.RegistrarClavesFaltantes(clavesFaltantes);

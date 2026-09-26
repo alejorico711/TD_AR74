@@ -10,11 +10,22 @@ using System.Windows.Forms;
 
 namespace ProyectoIS_64PR
 {
-    public partial class FrmOpcionesComprobante : Form
+    public partial class FrmOpcionesComprobante : Form, Idioma.IObservadorIdioma_64PR
     {
+        Dictionary<string, string> textos;
         public FrmOpcionesComprobante()
         {
             InitializeComponent();
+            Idioma.GestorIdioma_64PR.GetInstance.Suscribir(this); ///observer del cambio de idioma
+                                                                  ///Aplico el idioma que ya está cargado
+            textos = Idioma.GestorIdioma_64PR.GetInstance.ObtenerTextos();
+            if (textos.Count > 0)
+                ActualizarIdioma(textos);
+        }
+        public void ActualizarIdioma(Dictionary<string, string> textoss)
+        {
+            textos = textoss;
+            Traductor_64PR.Traducir(this, textos);
         }
 
         public enum OpcionElegida { Imprimir, DescargarPdf, Ninguna }

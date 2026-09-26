@@ -13,11 +13,12 @@ using System.Windows.Forms;
 
 namespace ProyectoIS_64PR
 {
-    public partial class FrmABMHuespedes_AR74 : Form
+    public partial class FrmABMHuespedes_AR74 : Form, Idioma.IObservadorIdioma_64PR
     {
         List<Huesped> lst = new List<Huesped>();
         BLL_64PR.BLL_Huespedes_AR74 ghuepedes = new BLL_64PR.BLL_Huespedes_AR74();
         BE.Huesped h;
+        Dictionary<string, string> textos;
         public FrmABMHuespedes_AR74()
         {
             InitializeComponent();
@@ -28,6 +29,17 @@ namespace ProyectoIS_64PR
             dgvHuepedes.ReadOnly = true;
             dgvHuepedes.MultiSelect = false;
             CargaData();
+            Idioma.GestorIdioma_64PR.GetInstance.Suscribir(this); ///observer del cambio de idioma
+                                                                  ///Aplico el idioma que ya está cargado
+            textos = Idioma.GestorIdioma_64PR.GetInstance.ObtenerTextos();
+            if (textos.Count > 0)
+                ActualizarIdioma(textos);
+
+        }
+        public void ActualizarIdioma(Dictionary<string, string> textoss)
+        {
+            textos = textoss;
+            Traductor_64PR.Traducir(this, textos);
         }
 
         private void CargaData()

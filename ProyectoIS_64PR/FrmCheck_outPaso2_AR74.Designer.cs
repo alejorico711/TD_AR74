@@ -36,15 +36,15 @@
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblHabitacion = new System.Windows.Forms.Label();
-            this.lblHabitacion2 = new System.Windows.Forms.Label();
+            this.lblValorHabitacion = new System.Windows.Forms.Label();
             this.lblFechas = new System.Windows.Forms.Label();
-            this.lblFechas2 = new System.Windows.Forms.Label();
+            this.lblValorFechas = new System.Windows.Forms.Label();
             this.lblPersonas = new System.Windows.Forms.Label();
-            this.lblPersonas2 = new System.Windows.Forms.Label();
+            this.lblValorPersonas = new System.Windows.Forms.Label();
             this.lblNochesxPrecio = new System.Windows.Forms.Label();
-            this.lblNochesxPrecio2 = new System.Windows.Forms.Label();
+            this.lblValorNochesxPrecio = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
-            this.lblTotal2 = new System.Windows.Forms.Label();
+            this.lblValorTotal = new System.Windows.Forms.Label();
             this.lblHuespedNombre = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.cmbMetodoDePago = new System.Windows.Forms.ComboBox();
@@ -125,15 +125,15 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanel1.Controls.Add(this.lblHabitacion, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblHabitacion2, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblValorHabitacion, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblFechas, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lblFechas2, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lblValorFechas, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblPersonas, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lblPersonas2, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lblValorPersonas, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.lblNochesxPrecio, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.lblNochesxPrecio2, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lblValorNochesxPrecio, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.lblTotal, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.lblTotal2, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.lblValorTotal, 1, 4);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(107, 100);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
@@ -155,15 +155,15 @@
             this.lblHabitacion.TabIndex = 0;
             this.lblHabitacion.Text = "Habitación:";
             // 
-            // lblHabitacion2
+            // lblValorHabitacion
             // 
-            this.lblHabitacion2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblHabitacion2.AutoSize = true;
-            this.lblHabitacion2.Location = new System.Drawing.Point(187, 17);
-            this.lblHabitacion2.Name = "lblHabitacion2";
-            this.lblHabitacion2.Size = new System.Drawing.Size(44, 16);
-            this.lblHabitacion2.TabIndex = 1;
-            this.lblHabitacion2.Text = "label2";
+            this.lblValorHabitacion.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblValorHabitacion.AutoSize = true;
+            this.lblValorHabitacion.Location = new System.Drawing.Point(187, 17);
+            this.lblValorHabitacion.Name = "lblValorHabitacion";
+            this.lblValorHabitacion.Size = new System.Drawing.Size(44, 16);
+            this.lblValorHabitacion.TabIndex = 1;
+            this.lblValorHabitacion.Text = "label2";
             // 
             // lblFechas
             // 
@@ -175,15 +175,15 @@
             this.lblFechas.TabIndex = 2;
             this.lblFechas.Text = "Fechas:";
             // 
-            // lblFechas2
+            // lblValorFechas
             // 
-            this.lblFechas2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblFechas2.AutoSize = true;
-            this.lblFechas2.Location = new System.Drawing.Point(187, 67);
-            this.lblFechas2.Name = "lblFechas2";
-            this.lblFechas2.Size = new System.Drawing.Size(44, 16);
-            this.lblFechas2.TabIndex = 3;
-            this.lblFechas2.Text = "label4";
+            this.lblValorFechas.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblValorFechas.AutoSize = true;
+            this.lblValorFechas.Location = new System.Drawing.Point(187, 67);
+            this.lblValorFechas.Name = "lblValorFechas";
+            this.lblValorFechas.Size = new System.Drawing.Size(44, 16);
+            this.lblValorFechas.TabIndex = 3;
+            this.lblValorFechas.Text = "label4";
             // 
             // lblPersonas
             // 
@@ -195,15 +195,15 @@
             this.lblPersonas.TabIndex = 4;
             this.lblPersonas.Text = "Personas:";
             // 
-            // lblPersonas2
+            // lblValorPersonas
             // 
-            this.lblPersonas2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblPersonas2.AutoSize = true;
-            this.lblPersonas2.Location = new System.Drawing.Point(187, 117);
-            this.lblPersonas2.Name = "lblPersonas2";
-            this.lblPersonas2.Size = new System.Drawing.Size(44, 16);
-            this.lblPersonas2.TabIndex = 5;
-            this.lblPersonas2.Text = "label6";
+            this.lblValorPersonas.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblValorPersonas.AutoSize = true;
+            this.lblValorPersonas.Location = new System.Drawing.Point(187, 117);
+            this.lblValorPersonas.Name = "lblValorPersonas";
+            this.lblValorPersonas.Size = new System.Drawing.Size(44, 16);
+            this.lblValorPersonas.TabIndex = 5;
+            this.lblValorPersonas.Text = "label6";
             // 
             // lblNochesxPrecio
             // 
@@ -215,15 +215,15 @@
             this.lblNochesxPrecio.TabIndex = 6;
             this.lblNochesxPrecio.Text = "Noches x Precio:";
             // 
-            // lblNochesxPrecio2
+            // lblValorNochesxPrecio
             // 
-            this.lblNochesxPrecio2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblNochesxPrecio2.AutoSize = true;
-            this.lblNochesxPrecio2.Location = new System.Drawing.Point(187, 167);
-            this.lblNochesxPrecio2.Name = "lblNochesxPrecio2";
-            this.lblNochesxPrecio2.Size = new System.Drawing.Size(44, 16);
-            this.lblNochesxPrecio2.TabIndex = 7;
-            this.lblNochesxPrecio2.Text = "label8";
+            this.lblValorNochesxPrecio.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblValorNochesxPrecio.AutoSize = true;
+            this.lblValorNochesxPrecio.Location = new System.Drawing.Point(187, 167);
+            this.lblValorNochesxPrecio.Name = "lblValorNochesxPrecio";
+            this.lblValorNochesxPrecio.Size = new System.Drawing.Size(44, 16);
+            this.lblValorNochesxPrecio.TabIndex = 7;
+            this.lblValorNochesxPrecio.Text = "label8";
             // 
             // lblTotal
             // 
@@ -236,16 +236,16 @@
             this.lblTotal.TabIndex = 8;
             this.lblTotal.Text = "Total:";
             // 
-            // lblTotal2
+            // lblValorTotal
             // 
-            this.lblTotal2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblTotal2.AutoSize = true;
-            this.lblTotal2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal2.Location = new System.Drawing.Point(187, 217);
-            this.lblTotal2.Name = "lblTotal2";
-            this.lblTotal2.Size = new System.Drawing.Size(58, 16);
-            this.lblTotal2.TabIndex = 9;
-            this.lblTotal2.Text = "label10";
+            this.lblValorTotal.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblValorTotal.AutoSize = true;
+            this.lblValorTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValorTotal.Location = new System.Drawing.Point(187, 217);
+            this.lblValorTotal.Name = "lblValorTotal";
+            this.lblValorTotal.Size = new System.Drawing.Size(58, 16);
+            this.lblValorTotal.TabIndex = 9;
+            this.lblValorTotal.Text = "label10";
             // 
             // lblHuespedNombre
             // 
@@ -318,15 +318,15 @@
         private System.Windows.Forms.Button btnConfirmar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label lblHabitacion;
-        private System.Windows.Forms.Label lblHabitacion2;
+        private System.Windows.Forms.Label lblValorHabitacion;
         private System.Windows.Forms.Label lblFechas;
-        private System.Windows.Forms.Label lblFechas2;
+        private System.Windows.Forms.Label lblValorFechas;
         private System.Windows.Forms.Label lblPersonas;
-        private System.Windows.Forms.Label lblPersonas2;
+        private System.Windows.Forms.Label lblValorPersonas;
         private System.Windows.Forms.Label lblNochesxPrecio;
-        private System.Windows.Forms.Label lblNochesxPrecio2;
+        private System.Windows.Forms.Label lblValorNochesxPrecio;
         private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.Label lblTotal2;
+        private System.Windows.Forms.Label lblValorTotal;
         private System.Windows.Forms.Label lblHuespedNombre;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.ComboBox cmbMetodoDePago;

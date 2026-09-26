@@ -28,21 +28,20 @@ namespace ProyectoIS_64PR
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReservaPaso3_AR74));
             this.cmbHuesped = new System.Windows.Forms.ComboBox();
             this.btnRegistrarHuesped = new System.Windows.Forms.Button();
             this.lblResumen = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblFechas = new System.Windows.Forms.Label();
-            this.lblFechas2 = new System.Windows.Forms.Label();
+            this.lblValorFechas = new System.Windows.Forms.Label();
             this.lblPersonas = new System.Windows.Forms.Label();
-            this.lblPersonas2 = new System.Windows.Forms.Label();
+            this.lblValorPersonas = new System.Windows.Forms.Label();
             this.lblNochesxPrecio = new System.Windows.Forms.Label();
-            this.lblNochesxPrecio2 = new System.Windows.Forms.Label();
+            this.lblValorNochesxPrecio = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
-            this.lblTotal2 = new System.Windows.Forms.Label();
+            this.lblValorTotal = new System.Windows.Forms.Label();
+            this.lblValorHabitacion = new System.Windows.Forms.Label();
             this.lblHabitacion = new System.Windows.Forms.Label();
-            this.lblHabitacion2 = new System.Windows.Forms.Label();
             this.btnConfirmarReserva = new System.Windows.Forms.Button();
             this.pbHabitacion = new System.Windows.Forms.PictureBox();
             this.pbCalendario = new System.Windows.Forms.PictureBox();
@@ -91,14 +90,14 @@ namespace ProyectoIS_64PR
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanel1.Controls.Add(this.lblFechas, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lblFechas2, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lblValorFechas, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblPersonas, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lblPersonas2, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lblValorPersonas, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.lblNochesxPrecio, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.lblNochesxPrecio2, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lblValorNochesxPrecio, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.lblTotal, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.lblTotal2, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.lblHabitacion2, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblValorTotal, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.lblValorHabitacion, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblHabitacion, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(139, 105);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -121,15 +120,15 @@ namespace ProyectoIS_64PR
             this.lblFechas.TabIndex = 2;
             this.lblFechas.Text = "label3";
             // 
-            // lblFechas2
+            // lblValorFechas
             // 
-            this.lblFechas2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblFechas2.AutoSize = true;
-            this.lblFechas2.Location = new System.Drawing.Point(415, 73);
-            this.lblFechas2.Name = "lblFechas2";
-            this.lblFechas2.Size = new System.Drawing.Size(44, 16);
-            this.lblFechas2.TabIndex = 3;
-            this.lblFechas2.Text = "label4";
+            this.lblValorFechas.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblValorFechas.AutoSize = true;
+            this.lblValorFechas.Location = new System.Drawing.Point(415, 73);
+            this.lblValorFechas.Name = "lblValorFechas";
+            this.lblValorFechas.Size = new System.Drawing.Size(44, 16);
+            this.lblValorFechas.TabIndex = 3;
+            this.lblValorFechas.Text = "label4";
             // 
             // lblPersonas
             // 
@@ -141,15 +140,15 @@ namespace ProyectoIS_64PR
             this.lblPersonas.TabIndex = 4;
             this.lblPersonas.Text = "label5";
             // 
-            // lblPersonas2
+            // lblValorPersonas
             // 
-            this.lblPersonas2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblPersonas2.AutoSize = true;
-            this.lblPersonas2.Location = new System.Drawing.Point(415, 127);
-            this.lblPersonas2.Name = "lblPersonas2";
-            this.lblPersonas2.Size = new System.Drawing.Size(44, 16);
-            this.lblPersonas2.TabIndex = 5;
-            this.lblPersonas2.Text = "label6";
+            this.lblValorPersonas.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblValorPersonas.AutoSize = true;
+            this.lblValorPersonas.Location = new System.Drawing.Point(415, 127);
+            this.lblValorPersonas.Name = "lblValorPersonas";
+            this.lblValorPersonas.Size = new System.Drawing.Size(44, 16);
+            this.lblValorPersonas.TabIndex = 5;
+            this.lblValorPersonas.Text = "label6";
             // 
             // lblNochesxPrecio
             // 
@@ -161,15 +160,15 @@ namespace ProyectoIS_64PR
             this.lblNochesxPrecio.TabIndex = 6;
             this.lblNochesxPrecio.Text = "label7";
             // 
-            // lblNochesxPrecio2
+            // lblValorNochesxPrecio
             // 
-            this.lblNochesxPrecio2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblNochesxPrecio2.AutoSize = true;
-            this.lblNochesxPrecio2.Location = new System.Drawing.Point(415, 181);
-            this.lblNochesxPrecio2.Name = "lblNochesxPrecio2";
-            this.lblNochesxPrecio2.Size = new System.Drawing.Size(44, 16);
-            this.lblNochesxPrecio2.TabIndex = 7;
-            this.lblNochesxPrecio2.Text = "label8";
+            this.lblValorNochesxPrecio.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblValorNochesxPrecio.AutoSize = true;
+            this.lblValorNochesxPrecio.Location = new System.Drawing.Point(415, 181);
+            this.lblValorNochesxPrecio.Name = "lblValorNochesxPrecio";
+            this.lblValorNochesxPrecio.Size = new System.Drawing.Size(44, 16);
+            this.lblValorNochesxPrecio.TabIndex = 7;
+            this.lblValorNochesxPrecio.Text = "label8";
             // 
             // lblTotal
             // 
@@ -181,15 +180,25 @@ namespace ProyectoIS_64PR
             this.lblTotal.TabIndex = 8;
             this.lblTotal.Text = "label9";
             // 
-            // lblTotal2
+            // lblValorTotal
             // 
-            this.lblTotal2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblTotal2.AutoSize = true;
-            this.lblTotal2.Location = new System.Drawing.Point(408, 237);
-            this.lblTotal2.Name = "lblTotal2";
-            this.lblTotal2.Size = new System.Drawing.Size(51, 16);
-            this.lblTotal2.TabIndex = 9;
-            this.lblTotal2.Text = "label10";
+            this.lblValorTotal.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblValorTotal.AutoSize = true;
+            this.lblValorTotal.Location = new System.Drawing.Point(408, 237);
+            this.lblValorTotal.Name = "lblValorTotal";
+            this.lblValorTotal.Size = new System.Drawing.Size(51, 16);
+            this.lblValorTotal.TabIndex = 9;
+            this.lblValorTotal.Text = "label10";
+            // 
+            // lblValorHabitacion
+            // 
+            this.lblValorHabitacion.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblValorHabitacion.AutoSize = true;
+            this.lblValorHabitacion.Location = new System.Drawing.Point(415, 19);
+            this.lblValorHabitacion.Name = "lblValorHabitacion";
+            this.lblValorHabitacion.Size = new System.Drawing.Size(44, 16);
+            this.lblValorHabitacion.TabIndex = 1;
+            this.lblValorHabitacion.Text = "label2";
             // 
             // lblHabitacion
             // 
@@ -200,16 +209,6 @@ namespace ProyectoIS_64PR
             this.lblHabitacion.Size = new System.Drawing.Size(44, 16);
             this.lblHabitacion.TabIndex = 0;
             this.lblHabitacion.Text = "label1";
-            // 
-            // lblHabitacion2
-            // 
-            this.lblHabitacion2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblHabitacion2.AutoSize = true;
-            this.lblHabitacion2.Location = new System.Drawing.Point(415, 19);
-            this.lblHabitacion2.Name = "lblHabitacion2";
-            this.lblHabitacion2.Size = new System.Drawing.Size(44, 16);
-            this.lblHabitacion2.TabIndex = 1;
-            this.lblHabitacion2.Text = "label2";
             // 
             // btnConfirmarReserva
             // 
@@ -223,7 +222,6 @@ namespace ProyectoIS_64PR
             // 
             // pbHabitacion
             // 
-            
             this.pbHabitacion.Location = new System.Drawing.Point(12, 105);
             this.pbHabitacion.Name = "pbHabitacion";
             this.pbHabitacion.Size = new System.Drawing.Size(100, 50);
@@ -233,7 +231,6 @@ namespace ProyectoIS_64PR
             // 
             // pbCalendario
             // 
-            
             this.pbCalendario.Location = new System.Drawing.Point(12, 161);
             this.pbCalendario.Name = "pbCalendario";
             this.pbCalendario.Size = new System.Drawing.Size(100, 50);
@@ -243,7 +240,6 @@ namespace ProyectoIS_64PR
             // 
             // pbNoches
             // 
-            
             this.pbNoches.Location = new System.Drawing.Point(12, 273);
             this.pbNoches.Name = "pbNoches";
             this.pbNoches.Size = new System.Drawing.Size(100, 50);
@@ -253,7 +249,6 @@ namespace ProyectoIS_64PR
             // 
             // pbPersonas
             // 
-            
             this.pbPersonas.Location = new System.Drawing.Point(12, 217);
             this.pbPersonas.Name = "pbPersonas";
             this.pbPersonas.Size = new System.Drawing.Size(100, 50);
@@ -305,15 +300,15 @@ namespace ProyectoIS_64PR
         private System.Windows.Forms.Label lblResumen;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label lblFechas;
-        private System.Windows.Forms.Label lblFechas2;
+        private System.Windows.Forms.Label lblValorFechas;
         private System.Windows.Forms.Label lblPersonas;
-        private System.Windows.Forms.Label lblPersonas2;
+        private System.Windows.Forms.Label lblValorPersonas;
         private System.Windows.Forms.Label lblNochesxPrecio;
-        private System.Windows.Forms.Label lblNochesxPrecio2;
+        private System.Windows.Forms.Label lblValorNochesxPrecio;
         private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.Label lblTotal2;
+        private System.Windows.Forms.Label lblValorTotal;
         private System.Windows.Forms.Label lblHabitacion;
-        private System.Windows.Forms.Label lblHabitacion2;
+        private System.Windows.Forms.Label lblValorHabitacion;
         private System.Windows.Forms.Button btnConfirmarReserva;
         private System.Windows.Forms.PictureBox pbHabitacion;
         private System.Windows.Forms.PictureBox pbCalendario;

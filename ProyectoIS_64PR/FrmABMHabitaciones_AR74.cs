@@ -12,12 +12,14 @@ using System.Windows.Forms;
 
 namespace ProyectoIS_64PR
 {
-    public partial class FrmABMHabitaciones_AR74 : Form
+    public partial class FrmABMHabitaciones_AR74 : Form, Idioma.IObservadorIdioma_64PR
     {
         List<Habitacion> lst = new List<Habitacion>();
         BLL_64PR.BLL_Habitaciones_AR74 ghabitaciones = new BLL_64PR.BLL_Habitaciones_AR74();
         BLL_64PR.BLL_TiposHabitacion_AR74 gtipos = new BLL_64PR.BLL_TiposHabitacion_AR74();
         BE.Habitacion hab;
+
+        Dictionary<string, string> textos;
         public FrmABMHabitaciones_AR74()
         {
             InitializeComponent();
@@ -32,6 +34,16 @@ namespace ProyectoIS_64PR
             CargarTipos();
             CargaData();
 
+            Idioma.GestorIdioma_64PR.GetInstance.Suscribir(this); ///observer del cambio de idioma
+                                                                  ///Aplico el idioma que ya está cargado
+            textos = Idioma.GestorIdioma_64PR.GetInstance.ObtenerTextos();
+            if (textos.Count > 0)
+                ActualizarIdioma(textos);
+        }
+        public void ActualizarIdioma(Dictionary<string, string> textoss)
+        {
+            textos = textoss;
+            Traductor_64PR.Traducir(this, textos);
         }
         private void CargaData()
         {
