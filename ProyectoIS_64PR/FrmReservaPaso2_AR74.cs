@@ -42,9 +42,16 @@ namespace ProyectoIS_64PR
         }
         private void Tarjeta_Click(object sender, EventArgs e)
         {
-            UcCtrlTarjetaHabitacion_AR74 uc = (UcCtrlTarjetaHabitacion_AR74)sender;
-            reserva.Habitacion = uc.HabitacionAsociada;
-            frmPadre.AbrirFormularioHijo(new FrmReservaPaso3_AR74(frmPadre, reserva));
+            try
+            {
+                UcCtrlTarjetaHabitacion_AR74 uc = (UcCtrlTarjetaHabitacion_AR74)sender;
+                reserva.Habitacion = uc.HabitacionAsociada;
+                frmPadre.AbrirFormularioHijo(new FrmReservaPaso3_AR74(frmPadre, reserva));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

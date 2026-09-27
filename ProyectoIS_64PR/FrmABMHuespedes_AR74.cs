@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -28,6 +29,11 @@ namespace ProyectoIS_64PR
             dgvHuepedes.BorderStyle = BorderStyle.None;
             dgvHuepedes.ReadOnly = true;
             dgvHuepedes.MultiSelect = false;
+
+            txtDni.MaxLength = 8;
+            txtNombre.MaxLength = 50;
+            txtApellido.MaxLength = 50;
+
             CargaData();
             Idioma.GestorIdioma_64PR.GetInstance.Suscribir(this); ///observer del cambio de idioma
                                                                   ///Aplico el idioma que ya está cargado
@@ -57,9 +63,9 @@ namespace ProyectoIS_64PR
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(txtDni.Text) || string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtApellido.Text))
+            if (txtDni.Text.Length < 7 || string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtApellido.Text) || (!Regex.IsMatch(txtEmail.Text, @"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$") && string.IsNullOrEmpty(txtEmail.Text)) || (!Regex.IsMatch(txtTelefono.Text, @"^([0-9]{10}|[0-9]{8})$") && string.IsNullOrEmpty(txtTelefono.Text)))
             {
-                MessageBox.Show("Completá DNI, Nombre y Apellido antes de guardar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Completá DNI, Nombre, Apellido, Email y Telefono Correctamente antes de guardar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -117,9 +123,9 @@ namespace ProyectoIS_64PR
 
         private void bttnAlta_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtDni.Text) || string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtApellido.Text))
+            if (txtDni.Text.Length < 7 || string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtApellido.Text) || (!Regex.IsMatch(txtEmail.Text, @"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$") && string.IsNullOrEmpty(txtEmail.Text)) || (!Regex.IsMatch(txtTelefono.Text, @"^([0-9]{10}|[0-9]{8})$") && string.IsNullOrEmpty(txtTelefono.Text)))
             {
-                MessageBox.Show("Completá DNI, Nombre y Apellido antes de guardar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Completá DNI, Nombre, Apellido, Email y Telefono Correctamente antes de guardar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -157,6 +163,42 @@ namespace ProyectoIS_64PR
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             LimpiarControles();
+        }
+
+        private void txtDni_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Si NO es un número y NO es la tecla de borrar (BackSpace)
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; // Cancela el evento
+            }
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Si NO es una letra y NO es la tecla de borrar (BackSpace)
+            if (!Char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; // Cancela el evento (el carácter no se escribe)
+            }
+        }
+
+        private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Si NO es una letra y NO es la tecla de borrar (BackSpace)
+            if (!Char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; // Cancela el evento (el carácter no se escribe)
+            }
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Si NO es un número y NO es la tecla de borrar (BackSpace)
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; // Cancela el evento
+            }
         }
     }
 }

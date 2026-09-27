@@ -25,6 +25,7 @@ namespace ProyectoIS_64PR
             InitializeComponent();
             nupNumero.Minimum = 1;
             nupNumero.Maximum = 9999;
+            txtDescripcion.MaxLength = 100;
 
             dgvHabitaciones.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvHabitaciones.BorderStyle = BorderStyle.None;

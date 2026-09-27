@@ -58,30 +58,37 @@ namespace ProyectoIS_64PR
 
         private void btnConfirmar_Click_1(object sender, EventArgs e)
         {
-            btnConfirmar.Enabled = false; // primera línea, evita doble click por si la consulta a la BD tarda
-
-            int noches = (reserva.FechaFin - reserva.FechaInicio).Days;
-            decimal precioPorNoche = reserva.Habitacion.Tipo.PrecioPorNoche;
-            decimal total = noches * precioPorNoche;
-
-            bllPagos.RegistrarPago(reserva.IdReserva, total, cmbMetodoDePago.SelectedItem.ToString());
-            bllReservas.ConfirmarCheckOut(reserva.IdReserva);
-
-            FrmOpcionesComprobante dialogo = new FrmOpcionesComprobante();
-            dialogo.StartPosition = FormStartPosition.CenterParent;
-            dialogo.ShowDialog(frmPadre);
-
-            switch (dialogo.Opcion)
+            try
             {
-                case FrmOpcionesComprobante.OpcionElegida.Imprimir:
-                    ImprimirComprobante(reserva, total, cmbMetodoDePago.SelectedItem.ToString());
-                    break;
-                case FrmOpcionesComprobante.OpcionElegida.DescargarPdf:
-                    GuardarComprobantePdf(reserva, total, cmbMetodoDePago.SelectedItem.ToString());
-                    break;
-            }
+                btnConfirmar.Enabled = false; // primera línea, evita doble click por si la consulta a la BD tarda
 
-            frmPadre.AbrirFormularioHijo(this);
+                int noches = (reserva.FechaFin - reserva.FechaInicio).Days;
+                decimal precioPorNoche = reserva.Habitacion.Tipo.PrecioPorNoche;
+                decimal total = noches * precioPorNoche;
+
+                bllPagos.RegistrarPago(reserva.IdReserva, total, cmbMetodoDePago.SelectedItem.ToString());
+                bllReservas.ConfirmarCheckOut(reserva.IdReserva);
+
+                FrmOpcionesComprobante dialogo = new FrmOpcionesComprobante();
+                dialogo.StartPosition = FormStartPosition.CenterParent;
+                dialogo.ShowDialog(frmPadre);
+
+                switch (dialogo.Opcion)
+                {
+                    case FrmOpcionesComprobante.OpcionElegida.Imprimir:
+                        ImprimirComprobante(reserva, total, cmbMetodoDePago.SelectedItem.ToString());
+                        break;
+                    case FrmOpcionesComprobante.OpcionElegida.DescargarPdf:
+                        GuardarComprobantePdf(reserva, total, cmbMetodoDePago.SelectedItem.ToString());
+                        break;
+                }
+
+                frmPadre.AbrirFormularioHijo(this);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void GuardarComprobantePdf(Reserva_AR74 reserva, decimal total, string metodoPago)

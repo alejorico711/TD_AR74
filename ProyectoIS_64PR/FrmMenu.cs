@@ -85,12 +85,26 @@ namespace ProyectoIS_64PR
         }
         private void loginToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new FrmLogin_64PR());
+            try
+            {
+                AbrirFormularioHijo(new FrmLogin_64PR());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void cambiarContraseñaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new FrmCambiarClave_64PR());
+            try
+            {
+                AbrirFormularioHijo(new FrmCambiarClave_64PR());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void cerrarSesionToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -161,17 +175,51 @@ namespace ProyectoIS_64PR
 
             respaldoBaseDeDatosToolStripMenuItem1.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.Respaldos);
 
-            restaurarBaseDeDatosToolStripMenuItem1.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.Restauraciones);
+            restaurarBaseDeDatosToolStripMenuItem1.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.Restauraciones); 
+
+            nuevaReservaToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.Reserva);
+
+            checkinToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.CheckIn);
+
+            checkoutToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.CheckOut);
+
+            estadoActualToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.EstadoActual);
+
+            bool tieneMaestros = rolUsuario.TienePermiso(Sesion.Patentes_64PR.ABMHabitaciones) ||
+                                       rolUsuario.TienePermiso(Sesion.Patentes_64PR.ABMHuespedes) ||
+                                       rolUsuario.TienePermiso(Sesion.Patentes_64PR.ABMTipoHabitaciones);
+
+            maestrosToolStripMenuItem.Visible = tieneMaestros;
+
+            huespedesToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.ABMHuespedes);
+
+            habitacionesToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.ABMHabitaciones);
+
+            tiposDeHabitacionesToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.ABMTipoHabitaciones);
         }
 
         private void nuevaReservaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new FrmReservaPaso1_AR74(this));
+            try
+            {
+                AbrirFormularioHijo(new FrmReservaPaso1_AR74(this));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void checkinToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new FrmCheck_in_AR74(this));
+            try
+            {
+                AbrirFormularioHijo(new FrmCheck_in_AR74(this));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void respaldoBaseDeDatosToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -268,47 +316,110 @@ namespace ProyectoIS_64PR
 
         private void gestionDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new FrmGestionarUsuarios_64PR());
+            try
+            {
+                AbrirFormularioHijo(new FrmGestionarUsuarios_64PR());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void gestionarPermisosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new FrmGestionFamilias_64PR());
+            try
+            {
+                AbrirFormularioHijo(new FrmGestionFamilias_64PR());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void gestionarRolesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new FrmGestionarRoles_64PR());
+            try
+            {
+                AbrirFormularioHijo(new FrmGestionarRoles_64PR());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void eventosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new FrmBitacora_64PR());
+            try
+            {
+                AbrirFormularioHijo(new FrmBitacora_64PR());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void checkoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new FrmCheck_out_AR74(this));
+            try
+            {
+                AbrirFormularioHijo(new FrmCheck_out_AR74(this));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void estadoActualToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new FrmEstadoActual_AR74());
+            try
+            {
+                AbrirFormularioHijo(new FrmEstadoActual_AR74());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void huespedesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new FrmABMHuespedes_AR74());
+            try
+            {
+                AbrirFormularioHijo(new FrmABMHuespedes_AR74());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void tiposDeHabitacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new FrmABMTiposHabitaciones_AR74());
+            try
+            {
+                AbrirFormularioHijo(new FrmABMTiposHabitaciones_AR74());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void habitacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new FrmABMHabitaciones_AR74());
+            try
+            {
+                AbrirFormularioHijo(new FrmABMHabitaciones_AR74());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

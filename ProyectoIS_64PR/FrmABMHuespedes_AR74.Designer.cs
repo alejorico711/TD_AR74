@@ -156,6 +156,7 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(100, 22);
             this.txtTelefono.TabIndex = 18;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // txtEmail
             // 
@@ -170,6 +171,7 @@
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(100, 22);
             this.txtApellido.TabIndex = 16;
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // txtNombre
             // 
@@ -177,6 +179,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 22);
             this.txtNombre.TabIndex = 15;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtDni
             // 
@@ -184,6 +187,7 @@
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(100, 22);
             this.txtDni.TabIndex = 14;
+            this.txtDni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDni_KeyPress);
             // 
             // btnLimpiar
             // 
@@ -219,7 +223,6 @@
             this.Controls.Add(this.dgvHuepedes);
             this.Name = "FrmABMHuespedes_AR74";
             this.Text = "FrmABMHuespedes_AR74";
-//            this.Load += new System.EventHandler(this.FrmABMHuespedes_AR74_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHuepedes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

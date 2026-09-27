@@ -57,7 +57,7 @@
             // lblCapacidad
             // 
             this.lblCapacidad.AutoSize = true;
-            this.lblCapacidad.Location = new System.Drawing.Point(24, 383);
+            this.lblCapacidad.Location = new System.Drawing.Point(24, 330);
             this.lblCapacidad.Name = "lblCapacidad";
             this.lblCapacidad.Size = new System.Drawing.Size(77, 16);
             this.lblCapacidad.TabIndex = 39;
@@ -66,7 +66,7 @@
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(24, 355);
+            this.lblPrecio.Location = new System.Drawing.Point(24, 302);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(112, 16);
             this.lblPrecio.TabIndex = 38;
@@ -83,10 +83,9 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(179, 253);
-            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Location = new System.Drawing.Point(179, 267);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(153, 50);
+            this.txtDescripcion.Size = new System.Drawing.Size(153, 22);
             this.txtDescripcion.TabIndex = 31;
             // 
             // btnModificacion
@@ -132,14 +131,14 @@
             // 
             // nupPrecio
             // 
-            this.nupPrecio.Location = new System.Drawing.Point(179, 348);
+            this.nupPrecio.Location = new System.Drawing.Point(179, 295);
             this.nupPrecio.Name = "nupPrecio";
             this.nupPrecio.Size = new System.Drawing.Size(120, 22);
             this.nupPrecio.TabIndex = 44;
             // 
             // nupCapacidad
             // 
-            this.nupCapacidad.Location = new System.Drawing.Point(179, 375);
+            this.nupCapacidad.Location = new System.Drawing.Point(179, 322);
             this.nupCapacidad.Name = "nupCapacidad";
             this.nupCapacidad.Size = new System.Drawing.Size(120, 22);
             this.nupCapacidad.TabIndex = 45;

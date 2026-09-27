@@ -27,5 +27,12 @@ namespace Sesion
         public const string CambiarIdioma = "Cambiar idioma";
         public const string Respaldos = "Hacer respaldos";
         public const string Restauraciones = "Hacer restauraciones";
+        public const string Reserva = "Hacer reservas";
+        public const string CheckIn = "Hacer CheckIn";
+        public const string CheckOut = "Hacer CheckOut";
+        public const string ABMHuespedes = "ABM huespedes";
+        public const string ABMHabitaciones = "ABM habitaciones";
+        public const string ABMTipoHabitaciones = "ABM tipo habitaciones";
+        public const string EstadoActual = "Ver estado actual";
     }
 }

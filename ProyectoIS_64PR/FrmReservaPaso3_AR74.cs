@@ -94,9 +94,16 @@ namespace ProyectoIS_64PR
 
         private void btnConfirmarReserva_Click(object sender, EventArgs e)
         {
-            bllReserva.RegistrarReserva(reserva);
-            MessageBox.Show("Reserva registrada con exito");
-            frmPadre.AbrirFormularioHijo(this);
+            try
+            {
+                bllReserva.RegistrarReserva(reserva);
+                MessageBox.Show("Reserva registrada con exito");
+                frmPadre.AbrirFormularioHijo(this);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

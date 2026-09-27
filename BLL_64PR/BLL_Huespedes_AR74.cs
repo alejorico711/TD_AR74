@@ -10,6 +10,7 @@ namespace BLL_64PR
     public class BLL_Huespedes_AR74
     {
         Mapper.MPP_Huespedes_AR74 mpp = new Mapper.MPP_Huespedes_AR74();
+        private static readonly DV.DV_64PR recalculador = new DV.DV_64PR();
         public List<BE.Huesped> ListarHuespedes()
         {
             return mpp.ListarHuespedes();
@@ -17,15 +18,20 @@ namespace BLL_64PR
 
         public int RegistrarHuesped(Huesped huesped)
         {
-            return mpp.RegistrarHuesped(huesped);
+            int aux = mpp.RegistrarHuesped(huesped);
+            recalculador.RecalcularTabla("Huesped");
+            return aux;
+
         }
         public void EliminarHuesped(int idHuesped)
         {
             mpp.EliminarHuesped(idHuesped);
+            recalculador.RecalcularTabla("Huesped");
         }
         public void ModificarHuesped(Huesped huesped)
         {
             mpp.ModificarHuesped(huesped);
+            recalculador.RecalcularTabla("Huesped");
         }
     }
 }

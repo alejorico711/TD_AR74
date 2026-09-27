@@ -58,9 +58,16 @@ namespace ProyectoIS_64PR
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            bllReservas.ConfirmarCheckIn(reserva.IdReserva);
-            MessageBox.Show("Check-In confirmado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            frmPadre.AbrirFormularioHijo(this);
+            try
+            {
+                bllReservas.ConfirmarCheckIn(reserva.IdReserva);
+                MessageBox.Show("Check-In confirmado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                frmPadre.AbrirFormularioHijo(this);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnVolver_Click(object sender, EventArgs e)

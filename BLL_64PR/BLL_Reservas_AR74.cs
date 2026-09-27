@@ -10,9 +10,11 @@ namespace BLL_64PR
     public class BLL_Reservas_AR74
     {
         Mapper.MPP_Reservas_AR74 mpp = new Mapper.MPP_Reservas_AR74();
+        private static readonly DV.DV_64PR recalculador = new DV.DV_64PR();
         public void RegistrarReserva(Reserva_AR74 reserva)
         {
             mpp.RegistrarReserva(reserva);
+            recalculador.RecalcularTabla("Reserva");
         }
 
         public List<Reserva_AR74> ListarReservasCheckInHoy()
@@ -23,6 +25,8 @@ namespace BLL_64PR
         public void ConfirmarCheckIn(int idReserva)
         {
             mpp.ConfirmarCheckIn(idReserva);
+            recalculador.RecalcularTabla("Reserva");
+            recalculador.RecalcularTabla("Habitacion");
         }
 
         public List<Reserva_AR74> ListarReservasCheckOutHoy()
@@ -33,6 +37,8 @@ namespace BLL_64PR
         public void ConfirmarCheckOut(int idReserva)
         {
             mpp.ConfirmarCheckout(idReserva);
+            recalculador.RecalcularTabla("Reserva");
+            recalculador.RecalcularTabla("Habitacion");
         }
     }
 }
