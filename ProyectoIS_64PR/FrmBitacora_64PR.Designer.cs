@@ -59,6 +59,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(227, 383);
             this.label7.Name = "label7";
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.label7.Size = new System.Drawing.Size(63, 16);
             this.label7.TabIndex = 21;
             this.label7.Text = "Criticidad";
@@ -68,6 +69,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(241, 346);
             this.label6.Name = "label6";
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.label6.Size = new System.Drawing.Size(49, 16);
             this.label6.TabIndex = 20;
             this.label6.Text = "Evento";
@@ -77,6 +79,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(2, 380);
             this.label5.Name = "label5";
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.label5.Size = new System.Drawing.Size(52, 16);
             this.label5.TabIndex = 19;
             this.label5.Text = "Modulo";
@@ -86,6 +89,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(334, 421);
             this.label4.Name = "label4";
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.label4.Size = new System.Drawing.Size(61, 16);
             this.label4.TabIndex = 18;
             this.label4.Text = "Fecha fin";
@@ -95,6 +99,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(2, 417);
             this.label3.Name = "label3";
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.label3.Size = new System.Drawing.Size(79, 16);
             this.label3.TabIndex = 17;
             this.label3.Text = "Fecha inicio";
@@ -104,6 +109,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(2, 341);
             this.label2.Name = "label2";
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.label2.Size = new System.Drawing.Size(40, 16);
             this.label2.TabIndex = 16;
             this.label2.Text = "Login";
@@ -112,6 +118,11 @@
             // 
             this.btnImprimir.Location = new System.Drawing.Point(722, 399);
             this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnImprimir.ForeColor = System.Drawing.Color.White;
+            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImprimir.FlatAppearance.BorderSize = 0;
+            this.btnImprimir.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnImprimir.Size = new System.Drawing.Size(75, 26);
             this.btnImprimir.TabIndex = 15;
             this.btnImprimir.Text = "Imprimir";
@@ -122,6 +133,11 @@
             // 
             this.btnAplicar.Location = new System.Drawing.Point(722, 367);
             this.btnAplicar.Name = "btnAplicar";
+            this.btnAplicar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnAplicar.ForeColor = System.Drawing.Color.White;
+            this.btnAplicar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAplicar.FlatAppearance.BorderSize = 0;
+            this.btnAplicar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnAplicar.Size = new System.Drawing.Size(75, 26);
             this.btnAplicar.TabIndex = 14;
             this.btnAplicar.Text = "Aplicar";
@@ -132,6 +148,12 @@
             // 
             this.btnLimpiar.Location = new System.Drawing.Point(722, 336);
             this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.BackColor = System.Drawing.Color.White;
+            this.btnLimpiar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(168)))), ((int)(((byte)(149)))));
+            this.btnLimpiar.FlatAppearance.BorderSize = 1;
+            this.btnLimpiar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLimpiar.Size = new System.Drawing.Size(75, 26);
             this.btnLimpiar.TabIndex = 13;
             this.btnLimpiar.Text = "Limpiar";
@@ -143,6 +165,18 @@
             this.dgvEventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEventos.Location = new System.Drawing.Point(22, 30);
             this.dgvEventos.Name = "dgvEventos";
+            this.dgvEventos.BackgroundColor = System.Drawing.Color.White;
+            this.dgvEventos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvEventos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvEventos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(243)))), ((int)(((byte)(231)))));
+            this.dgvEventos.EnableHeadersVisualStyles = false;
+            this.dgvEventos.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.dgvEventos.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvEventos.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.dgvEventos.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            this.dgvEventos.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(168)))), ((int)(((byte)(149)))));
+            this.dgvEventos.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvEventos.AlternatingRowsDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(243)))), ((int)(((byte)(231)))));
             this.dgvEventos.RowHeadersWidth = 51;
             this.dgvEventos.RowTemplate.Height = 24;
             this.dgvEventos.Size = new System.Drawing.Size(759, 299);
@@ -153,6 +187,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(19, 11);
             this.label1.Name = "label1";
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.label1.Size = new System.Drawing.Size(127, 16);
             this.label1.TabIndex = 11;
             this.label1.Text = "Bitacora de eventos";
@@ -163,6 +198,7 @@
             this.dtpInicio.MaxDate = new System.DateTime(2026, 5, 19, 0, 0, 0, 0);
             this.dtpInicio.MinDate = new System.DateTime(2026, 4, 1, 0, 0, 0, 0);
             this.dtpInicio.Name = "dtpInicio";
+            this.dtpInicio.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpInicio.Size = new System.Drawing.Size(184, 22);
             this.dtpInicio.TabIndex = 22;
             this.dtpInicio.Value = new System.DateTime(2026, 5, 19, 0, 0, 0, 0);
@@ -173,6 +209,7 @@
             this.dtpFin.MaxDate = new System.DateTime(2026, 5, 19, 0, 0, 0, 0);
             this.dtpFin.MinDate = new System.DateTime(2026, 4, 1, 0, 0, 0, 0);
             this.dtpFin.Name = "dtpFin";
+            this.dtpFin.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpFin.Size = new System.Drawing.Size(184, 22);
             this.dtpFin.TabIndex = 24;
             this.dtpFin.Value = new System.DateTime(2026, 5, 19, 0, 0, 0, 0);
@@ -182,6 +219,10 @@
             this.cmbLogins.FormattingEnabled = true;
             this.cmbLogins.Location = new System.Drawing.Point(68, 338);
             this.cmbLogins.Name = "cmbLogins";
+            this.cmbLogins.BackColor = System.Drawing.Color.White;
+            this.cmbLogins.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.cmbLogins.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbLogins.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cmbLogins.Size = new System.Drawing.Size(121, 24);
             this.cmbLogins.TabIndex = 25;
             // 
@@ -190,6 +231,10 @@
             this.cmbModulos.FormattingEnabled = true;
             this.cmbModulos.Location = new System.Drawing.Point(68, 377);
             this.cmbModulos.Name = "cmbModulos";
+            this.cmbModulos.BackColor = System.Drawing.Color.White;
+            this.cmbModulos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.cmbModulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbModulos.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cmbModulos.Size = new System.Drawing.Size(121, 24);
             this.cmbModulos.TabIndex = 26;
             // 
@@ -198,6 +243,10 @@
             this.cmbTipos.FormattingEnabled = true;
             this.cmbTipos.Location = new System.Drawing.Point(303, 341);
             this.cmbTipos.Name = "cmbTipos";
+            this.cmbTipos.BackColor = System.Drawing.Color.White;
+            this.cmbTipos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.cmbTipos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbTipos.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cmbTipos.Size = new System.Drawing.Size(121, 24);
             this.cmbTipos.TabIndex = 27;
             // 
@@ -212,6 +261,10 @@
             "5"});
             this.cmbCriticidad.Location = new System.Drawing.Point(303, 379);
             this.cmbCriticidad.Name = "cmbCriticidad";
+            this.cmbCriticidad.BackColor = System.Drawing.Color.White;
+            this.cmbCriticidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.cmbCriticidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbCriticidad.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cmbCriticidad.Size = new System.Drawing.Size(121, 24);
             this.cmbCriticidad.TabIndex = 28;
             // 
@@ -220,6 +273,9 @@
             this.cbTipo.AutoSize = true;
             this.cbTipo.Location = new System.Drawing.Point(430, 345);
             this.cbTipo.Name = "cbTipo";
+            this.cbTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbTipo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cbTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.cbTipo.Size = new System.Drawing.Size(18, 17);
             this.cbTipo.TabIndex = 29;
             this.cbTipo.UseVisualStyleBackColor = true;
@@ -230,6 +286,9 @@
             this.cbCriticidad.AutoSize = true;
             this.cbCriticidad.Location = new System.Drawing.Point(430, 384);
             this.cbCriticidad.Name = "cbCriticidad";
+            this.cbCriticidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbCriticidad.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cbCriticidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.cbCriticidad.Size = new System.Drawing.Size(18, 17);
             this.cbCriticidad.TabIndex = 30;
             this.cbCriticidad.UseVisualStyleBackColor = true;
@@ -240,6 +299,9 @@
             this.cbFin.AutoSize = true;
             this.cbFin.Location = new System.Drawing.Point(596, 419);
             this.cbFin.Name = "cbFin";
+            this.cbFin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbFin.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cbFin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.cbFin.Size = new System.Drawing.Size(18, 17);
             this.cbFin.TabIndex = 31;
             this.cbFin.UseVisualStyleBackColor = true;
@@ -250,6 +312,9 @@
             this.cbInicio.AutoSize = true;
             this.cbInicio.Location = new System.Drawing.Point(282, 418);
             this.cbInicio.Name = "cbInicio";
+            this.cbInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbInicio.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cbInicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.cbInicio.Size = new System.Drawing.Size(18, 17);
             this.cbInicio.TabIndex = 32;
             this.cbInicio.UseVisualStyleBackColor = true;
@@ -260,6 +325,9 @@
             this.cbModulo.AutoSize = true;
             this.cbModulo.Location = new System.Drawing.Point(195, 384);
             this.cbModulo.Name = "cbModulo";
+            this.cbModulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbModulo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cbModulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.cbModulo.Size = new System.Drawing.Size(18, 17);
             this.cbModulo.TabIndex = 33;
             this.cbModulo.UseVisualStyleBackColor = true;
@@ -270,6 +338,9 @@
             this.cbLogin.AutoSize = true;
             this.cbLogin.Location = new System.Drawing.Point(195, 340);
             this.cbLogin.Name = "cbLogin";
+            this.cbLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cbLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.cbLogin.Size = new System.Drawing.Size(18, 17);
             this.cbLogin.TabIndex = 34;
             this.cbLogin.UseVisualStyleBackColor = true;
@@ -278,6 +349,8 @@
             // FrmBitacora_64PR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(243)))), ((int)(((byte)(231)))));
+            this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.cbLogin);

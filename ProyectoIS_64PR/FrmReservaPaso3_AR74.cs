@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +29,22 @@ namespace ProyectoIS_64PR
             cmbHuesped.AutoCompleteSource = AutoCompleteSource.ListItems;
             cmbHuesped.DataSource = bllHuesped.ListarHuespedes();
             cmbHuesped.SelectedIndex = -1;
+
+            string rutaLogo = Path.Combine(Application.StartupPath, "Imagenes", "doorway.png");
+            pbHabitacion.BackgroundImageLayout = ImageLayout.Zoom;
+            pbHabitacion.BackgroundImage = Image.FromFile(rutaLogo);
+
+            rutaLogo = Path.Combine(Application.StartupPath, "Imagenes", "calendar.png");
+            pbCalendario.BackgroundImageLayout = ImageLayout.Zoom;
+            pbCalendario.BackgroundImage = Image.FromFile(rutaLogo);
+
+            rutaLogo = Path.Combine(Application.StartupPath, "Imagenes", "people.png");
+            pbPersonas.BackgroundImageLayout = ImageLayout.Zoom;
+            pbPersonas.BackgroundImage = Image.FromFile(rutaLogo);
+
+            rutaLogo = Path.Combine(Application.StartupPath, "Imagenes", "crescent-moon.png");
+            pbNoches.BackgroundImageLayout = ImageLayout.Zoom;
+            pbNoches.BackgroundImage = Image.FromFile(rutaLogo);
 
             Idioma.GestorIdioma_64PR.GetInstance.Suscribir(this); ///observer del cambio de idioma
                                                                   ///Aplico el idioma que ya está cargado

@@ -227,5 +227,6 @@
   "FrmReservaPaso3_AR74.lblNochesxPrecio": "Nights x price",
   "FrmReservaPaso3_AR74.lblTotal": "Total:",
   "FrmReservaPaso3_AR74.lblHabitacion": "Room:",
-  "FrmReservaPaso3_AR74.btnRegistrarHuesped": "Register guest"
+  "FrmReservaPaso3_AR74.btnRegistrarHuesped": "Register guest",
+  "frmGestionUsuarios_lblCantidad": "Count: "
 }

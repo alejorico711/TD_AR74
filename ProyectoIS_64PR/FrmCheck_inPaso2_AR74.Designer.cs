@@ -49,6 +49,7 @@ namespace ProyectoIS_64PR
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(30, 20);
             this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.lblTitulo.Size = new System.Drawing.Size(303, 31);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Resumen de Check-In";
@@ -59,6 +60,7 @@ namespace ProyectoIS_64PR
             this.lblHuespedNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHuespedNombre.Location = new System.Drawing.Point(35, 70);
             this.lblHuespedNombre.Name = "lblHuespedNombre";
+            this.lblHuespedNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.lblHuespedNombre.Size = new System.Drawing.Size(89, 20);
             this.lblHuespedNombre.TabIndex = 1;
             this.lblHuespedNombre.Text = "Huésped:";
@@ -95,6 +97,7 @@ namespace ProyectoIS_64PR
             this.lblHabitacion.AutoSize = true;
             this.lblHabitacion.Location = new System.Drawing.Point(3, 17);
             this.lblHabitacion.Name = "lblHabitacion";
+            this.lblHabitacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.lblHabitacion.Size = new System.Drawing.Size(75, 16);
             this.lblHabitacion.TabIndex = 0;
             this.lblHabitacion.Text = "Habitación:";
@@ -105,6 +108,7 @@ namespace ProyectoIS_64PR
             this.lblValorHabitacion.AutoSize = true;
             this.lblValorHabitacion.Location = new System.Drawing.Point(187, 17);
             this.lblValorHabitacion.Name = "lblValorHabitacion";
+            this.lblValorHabitacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.lblValorHabitacion.Size = new System.Drawing.Size(44, 16);
             this.lblValorHabitacion.TabIndex = 1;
             this.lblValorHabitacion.Text = "label2";
@@ -115,6 +119,7 @@ namespace ProyectoIS_64PR
             this.lblFechas.AutoSize = true;
             this.lblFechas.Location = new System.Drawing.Point(3, 67);
             this.lblFechas.Name = "lblFechas";
+            this.lblFechas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.lblFechas.Size = new System.Drawing.Size(55, 16);
             this.lblFechas.TabIndex = 2;
             this.lblFechas.Text = "Fechas:";
@@ -125,6 +130,7 @@ namespace ProyectoIS_64PR
             this.lblValorFechas.AutoSize = true;
             this.lblValorFechas.Location = new System.Drawing.Point(187, 67);
             this.lblValorFechas.Name = "lblValorFechas";
+            this.lblValorFechas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.lblValorFechas.Size = new System.Drawing.Size(44, 16);
             this.lblValorFechas.TabIndex = 3;
             this.lblValorFechas.Text = "label4";
@@ -135,6 +141,7 @@ namespace ProyectoIS_64PR
             this.lblPersonas.AutoSize = true;
             this.lblPersonas.Location = new System.Drawing.Point(3, 117);
             this.lblPersonas.Name = "lblPersonas";
+            this.lblPersonas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.lblPersonas.Size = new System.Drawing.Size(68, 16);
             this.lblPersonas.TabIndex = 4;
             this.lblPersonas.Text = "Personas:";
@@ -145,6 +152,7 @@ namespace ProyectoIS_64PR
             this.lblValorPersonas.AutoSize = true;
             this.lblValorPersonas.Location = new System.Drawing.Point(187, 117);
             this.lblValorPersonas.Name = "lblValorPersonas";
+            this.lblValorPersonas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.lblValorPersonas.Size = new System.Drawing.Size(44, 16);
             this.lblValorPersonas.TabIndex = 5;
             this.lblValorPersonas.Text = "label6";
@@ -155,6 +163,7 @@ namespace ProyectoIS_64PR
             this.lblNochesxPrecio.AutoSize = true;
             this.lblNochesxPrecio.Location = new System.Drawing.Point(3, 167);
             this.lblNochesxPrecio.Name = "lblNochesxPrecio";
+            this.lblNochesxPrecio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.lblNochesxPrecio.Size = new System.Drawing.Size(108, 16);
             this.lblNochesxPrecio.TabIndex = 6;
             this.lblNochesxPrecio.Text = "Noches x Precio:";
@@ -165,6 +174,7 @@ namespace ProyectoIS_64PR
             this.lblValorNochesxPrecio.AutoSize = true;
             this.lblValorNochesxPrecio.Location = new System.Drawing.Point(187, 167);
             this.lblValorNochesxPrecio.Name = "lblValorNochesxPrecio";
+            this.lblValorNochesxPrecio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.lblValorNochesxPrecio.Size = new System.Drawing.Size(44, 16);
             this.lblValorNochesxPrecio.TabIndex = 7;
             this.lblValorNochesxPrecio.Text = "label8";
@@ -176,6 +186,7 @@ namespace ProyectoIS_64PR
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.Location = new System.Drawing.Point(3, 217);
             this.lblTotal.Name = "lblTotal";
+            this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.lblTotal.Size = new System.Drawing.Size(47, 16);
             this.lblTotal.TabIndex = 8;
             this.lblTotal.Text = "Total:";
@@ -187,6 +198,7 @@ namespace ProyectoIS_64PR
             this.lblValorTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblValorTotal.Location = new System.Drawing.Point(187, 217);
             this.lblValorTotal.Name = "lblValorTotal";
+            this.lblValorTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.lblValorTotal.Size = new System.Drawing.Size(58, 16);
             this.lblValorTotal.TabIndex = 9;
             this.lblValorTotal.Text = "label10";
@@ -199,6 +211,11 @@ namespace ProyectoIS_64PR
             this.btnConfirmar.ForeColor = System.Drawing.Color.White;
             this.btnConfirmar.Location = new System.Drawing.Point(35, 380);
             this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnConfirmar.ForeColor = System.Drawing.Color.White;
+            this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmar.FlatAppearance.BorderSize = 0;
+            this.btnConfirmar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnConfirmar.Size = new System.Drawing.Size(200, 45);
             this.btnConfirmar.TabIndex = 3;
             this.btnConfirmar.Text = "Confirmar Check-In";
@@ -213,6 +230,12 @@ namespace ProyectoIS_64PR
             this.btnVolver.ForeColor = System.Drawing.Color.White;
             this.btnVolver.Location = new System.Drawing.Point(260, 380);
             this.btnVolver.Name = "btnVolver";
+            this.btnVolver.BackColor = System.Drawing.Color.White;
+            this.btnVolver.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolver.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(168)))), ((int)(((byte)(149)))));
+            this.btnVolver.FlatAppearance.BorderSize = 1;
+            this.btnVolver.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnVolver.Size = new System.Drawing.Size(150, 45);
             this.btnVolver.TabIndex = 4;
             this.btnVolver.Text = "Volver";
@@ -258,6 +281,8 @@ namespace ProyectoIS_64PR
             // FrmCheck_inPaso2_AR74
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(243)))), ((int)(((byte)(231)))));
+            this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pbPersonas);

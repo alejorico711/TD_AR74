@@ -64,6 +64,11 @@
             // 
             this.btnBuscar.Location = new System.Drawing.Point(143, 158);
             this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 3;
             this.btnBuscar.Text = "button1";
@@ -75,6 +80,7 @@
             this.lblInicio.AutoSize = true;
             this.lblInicio.Location = new System.Drawing.Point(34, 80);
             this.lblInicio.Name = "lblInicio";
+            this.lblInicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.lblInicio.Size = new System.Drawing.Size(44, 16);
             this.lblInicio.TabIndex = 4;
             this.lblInicio.Text = "label1";
@@ -84,6 +90,7 @@
             this.lblFin.AutoSize = true;
             this.lblFin.Location = new System.Drawing.Point(34, 107);
             this.lblFin.Name = "lblFin";
+            this.lblFin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.lblFin.Size = new System.Drawing.Size(44, 16);
             this.lblFin.TabIndex = 5;
             this.lblFin.Text = "label2";
@@ -93,6 +100,7 @@
             this.lblCantidadPersonas.AutoSize = true;
             this.lblCantidadPersonas.Location = new System.Drawing.Point(34, 136);
             this.lblCantidadPersonas.Name = "lblCantidadPersonas";
+            this.lblCantidadPersonas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.lblCantidadPersonas.Size = new System.Drawing.Size(44, 16);
             this.lblCantidadPersonas.TabIndex = 6;
             this.lblCantidadPersonas.Text = "label3";
@@ -100,6 +108,8 @@
             // FrmReservaPaso1_AR74
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(243)))), ((int)(((byte)(231)))));
+            this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblCantidadPersonas);

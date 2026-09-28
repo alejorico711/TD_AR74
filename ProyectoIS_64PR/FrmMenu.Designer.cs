@@ -65,6 +65,9 @@ namespace ProyectoIS_64PR
             this.estadoActualToolStripMenuItem,
             this.maestrosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.menuStrip1.ForeColor = System.Drawing.Color.White;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.menuStrip1.Size = new System.Drawing.Size(1282, 28);
@@ -234,8 +237,10 @@ namespace ProyectoIS_64PR
             // 
             // FrmMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(243)))), ((int)(((byte)(231)))));
+            this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ClientSize = new System.Drawing.Size(1282, 563);
             this.Controls.Add(this.pnlContenidoMenu);
             this.Controls.Add(this.menuStrip1);

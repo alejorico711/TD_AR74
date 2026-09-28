@@ -58,18 +58,25 @@ namespace ProyectoIS_64PR
             // cmbHuesped
             // 
             this.cmbHuesped.FormattingEnabled = true;
-            this.cmbHuesped.Location = new System.Drawing.Point(169, 45);
+            this.cmbHuesped.Location = new System.Drawing.Point(169, 5);
+            this.cmbHuesped.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbHuesped.Name = "cmbHuesped";
-            this.cmbHuesped.Size = new System.Drawing.Size(215, 24);
+            this.cmbHuesped.Size = new System.Drawing.Size(215, 28);
             this.cmbHuesped.TabIndex = 0;
             this.cmbHuesped.SelectedIndexChanged += new System.EventHandler(this.cmbHuesped_SelectedIndexChanged);
             this.cmbHuesped.SelectedValueChanged += new System.EventHandler(this.cmbHuesped_SelectedValueChanged);
             // 
             // btnRegistrarHuesped
             // 
-            this.btnRegistrarHuesped.Location = new System.Drawing.Point(390, 46);
+            this.btnRegistrarHuesped.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnRegistrarHuesped.FlatAppearance.BorderSize = 0;
+            this.btnRegistrarHuesped.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrarHuesped.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnRegistrarHuesped.ForeColor = System.Drawing.Color.White;
+            this.btnRegistrarHuesped.Location = new System.Drawing.Point(390, 7);
+            this.btnRegistrarHuesped.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRegistrarHuesped.Name = "btnRegistrarHuesped";
-            this.btnRegistrarHuesped.Size = new System.Drawing.Size(75, 23);
+            this.btnRegistrarHuesped.Size = new System.Drawing.Size(75, 29);
             this.btnRegistrarHuesped.TabIndex = 1;
             this.btnRegistrarHuesped.Text = "button1";
             this.btnRegistrarHuesped.UseVisualStyleBackColor = true;
@@ -78,9 +85,10 @@ namespace ProyectoIS_64PR
             // lblResumen
             // 
             this.lblResumen.AutoSize = true;
-            this.lblResumen.Location = new System.Drawing.Point(136, 76);
+            this.lblResumen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.lblResumen.Location = new System.Drawing.Point(136, 44);
             this.lblResumen.Name = "lblResumen";
-            this.lblResumen.Size = new System.Drawing.Size(147, 16);
+            this.lblResumen.Size = new System.Drawing.Size(157, 20);
             this.lblResumen.TabIndex = 4;
             this.lblResumen.Text = "Resumen de la reserva";
             // 
@@ -99,7 +107,8 @@ namespace ProyectoIS_64PR
             this.tableLayoutPanel1.Controls.Add(this.lblValorTotal, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.lblValorHabitacion, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblHabitacion, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(139, 105);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(139, 80);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
@@ -107,16 +116,17 @@ namespace ProyectoIS_64PR
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(462, 274);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(440, 327);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // lblFechas
             // 
             this.lblFechas.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblFechas.AutoSize = true;
-            this.lblFechas.Location = new System.Drawing.Point(3, 73);
+            this.lblFechas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.lblFechas.Location = new System.Drawing.Point(3, 87);
             this.lblFechas.Name = "lblFechas";
-            this.lblFechas.Size = new System.Drawing.Size(44, 16);
+            this.lblFechas.Size = new System.Drawing.Size(50, 20);
             this.lblFechas.TabIndex = 2;
             this.lblFechas.Text = "label3";
             // 
@@ -124,9 +134,10 @@ namespace ProyectoIS_64PR
             // 
             this.lblValorFechas.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblValorFechas.AutoSize = true;
-            this.lblValorFechas.Location = new System.Drawing.Point(415, 73);
+            this.lblValorFechas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.lblValorFechas.Location = new System.Drawing.Point(387, 87);
             this.lblValorFechas.Name = "lblValorFechas";
-            this.lblValorFechas.Size = new System.Drawing.Size(44, 16);
+            this.lblValorFechas.Size = new System.Drawing.Size(50, 20);
             this.lblValorFechas.TabIndex = 3;
             this.lblValorFechas.Text = "label4";
             // 
@@ -134,9 +145,10 @@ namespace ProyectoIS_64PR
             // 
             this.lblPersonas.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblPersonas.AutoSize = true;
-            this.lblPersonas.Location = new System.Drawing.Point(3, 127);
+            this.lblPersonas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.lblPersonas.Location = new System.Drawing.Point(3, 152);
             this.lblPersonas.Name = "lblPersonas";
-            this.lblPersonas.Size = new System.Drawing.Size(44, 16);
+            this.lblPersonas.Size = new System.Drawing.Size(50, 20);
             this.lblPersonas.TabIndex = 4;
             this.lblPersonas.Text = "label5";
             // 
@@ -144,9 +156,10 @@ namespace ProyectoIS_64PR
             // 
             this.lblValorPersonas.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblValorPersonas.AutoSize = true;
-            this.lblValorPersonas.Location = new System.Drawing.Point(415, 127);
+            this.lblValorPersonas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.lblValorPersonas.Location = new System.Drawing.Point(387, 152);
             this.lblValorPersonas.Name = "lblValorPersonas";
-            this.lblValorPersonas.Size = new System.Drawing.Size(44, 16);
+            this.lblValorPersonas.Size = new System.Drawing.Size(50, 20);
             this.lblValorPersonas.TabIndex = 5;
             this.lblValorPersonas.Text = "label6";
             // 
@@ -154,9 +167,10 @@ namespace ProyectoIS_64PR
             // 
             this.lblNochesxPrecio.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblNochesxPrecio.AutoSize = true;
-            this.lblNochesxPrecio.Location = new System.Drawing.Point(3, 181);
+            this.lblNochesxPrecio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.lblNochesxPrecio.Location = new System.Drawing.Point(3, 217);
             this.lblNochesxPrecio.Name = "lblNochesxPrecio";
-            this.lblNochesxPrecio.Size = new System.Drawing.Size(44, 16);
+            this.lblNochesxPrecio.Size = new System.Drawing.Size(50, 20);
             this.lblNochesxPrecio.TabIndex = 6;
             this.lblNochesxPrecio.Text = "label7";
             // 
@@ -164,9 +178,10 @@ namespace ProyectoIS_64PR
             // 
             this.lblValorNochesxPrecio.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblValorNochesxPrecio.AutoSize = true;
-            this.lblValorNochesxPrecio.Location = new System.Drawing.Point(415, 181);
+            this.lblValorNochesxPrecio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.lblValorNochesxPrecio.Location = new System.Drawing.Point(387, 217);
             this.lblValorNochesxPrecio.Name = "lblValorNochesxPrecio";
-            this.lblValorNochesxPrecio.Size = new System.Drawing.Size(44, 16);
+            this.lblValorNochesxPrecio.Size = new System.Drawing.Size(50, 20);
             this.lblValorNochesxPrecio.TabIndex = 7;
             this.lblValorNochesxPrecio.Text = "label8";
             // 
@@ -174,9 +189,10 @@ namespace ProyectoIS_64PR
             // 
             this.lblTotal.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(3, 237);
+            this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.lblTotal.Location = new System.Drawing.Point(3, 283);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(44, 16);
+            this.lblTotal.Size = new System.Drawing.Size(50, 20);
             this.lblTotal.TabIndex = 8;
             this.lblTotal.Text = "label9";
             // 
@@ -184,9 +200,10 @@ namespace ProyectoIS_64PR
             // 
             this.lblValorTotal.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblValorTotal.AutoSize = true;
-            this.lblValorTotal.Location = new System.Drawing.Point(408, 237);
+            this.lblValorTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.lblValorTotal.Location = new System.Drawing.Point(379, 283);
             this.lblValorTotal.Name = "lblValorTotal";
-            this.lblValorTotal.Size = new System.Drawing.Size(51, 16);
+            this.lblValorTotal.Size = new System.Drawing.Size(58, 20);
             this.lblValorTotal.TabIndex = 9;
             this.lblValorTotal.Text = "label10";
             // 
@@ -194,9 +211,10 @@ namespace ProyectoIS_64PR
             // 
             this.lblValorHabitacion.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblValorHabitacion.AutoSize = true;
-            this.lblValorHabitacion.Location = new System.Drawing.Point(415, 19);
+            this.lblValorHabitacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.lblValorHabitacion.Location = new System.Drawing.Point(387, 22);
             this.lblValorHabitacion.Name = "lblValorHabitacion";
-            this.lblValorHabitacion.Size = new System.Drawing.Size(44, 16);
+            this.lblValorHabitacion.Size = new System.Drawing.Size(50, 20);
             this.lblValorHabitacion.TabIndex = 1;
             this.lblValorHabitacion.Text = "label2";
             // 
@@ -204,17 +222,24 @@ namespace ProyectoIS_64PR
             // 
             this.lblHabitacion.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblHabitacion.AutoSize = true;
-            this.lblHabitacion.Location = new System.Drawing.Point(3, 19);
+            this.lblHabitacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.lblHabitacion.Location = new System.Drawing.Point(3, 22);
             this.lblHabitacion.Name = "lblHabitacion";
-            this.lblHabitacion.Size = new System.Drawing.Size(44, 16);
+            this.lblHabitacion.Size = new System.Drawing.Size(50, 20);
             this.lblHabitacion.TabIndex = 0;
             this.lblHabitacion.Text = "label1";
             // 
             // btnConfirmarReserva
             // 
-            this.btnConfirmarReserva.Location = new System.Drawing.Point(649, 317);
+            this.btnConfirmarReserva.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnConfirmarReserva.FlatAppearance.BorderSize = 0;
+            this.btnConfirmarReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmarReserva.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnConfirmarReserva.ForeColor = System.Drawing.Color.White;
+            this.btnConfirmarReserva.Location = new System.Drawing.Point(649, 345);
+            this.btnConfirmarReserva.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnConfirmarReserva.Name = "btnConfirmarReserva";
-            this.btnConfirmarReserva.Size = new System.Drawing.Size(75, 23);
+            this.btnConfirmarReserva.Size = new System.Drawing.Size(75, 29);
             this.btnConfirmarReserva.TabIndex = 3;
             this.btnConfirmarReserva.Text = "button1";
             this.btnConfirmarReserva.UseVisualStyleBackColor = true;
@@ -222,36 +247,40 @@ namespace ProyectoIS_64PR
             // 
             // pbHabitacion
             // 
-            this.pbHabitacion.Location = new System.Drawing.Point(12, 105);
+            this.pbHabitacion.Location = new System.Drawing.Point(55, 95);
+            this.pbHabitacion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbHabitacion.Name = "pbHabitacion";
-            this.pbHabitacion.Size = new System.Drawing.Size(100, 50);
+            this.pbHabitacion.Size = new System.Drawing.Size(78, 47);
             this.pbHabitacion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbHabitacion.TabIndex = 5;
             this.pbHabitacion.TabStop = false;
             // 
             // pbCalendario
             // 
-            this.pbCalendario.Location = new System.Drawing.Point(12, 161);
+            this.pbCalendario.Location = new System.Drawing.Point(55, 150);
+            this.pbCalendario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbCalendario.Name = "pbCalendario";
-            this.pbCalendario.Size = new System.Drawing.Size(100, 50);
+            this.pbCalendario.Size = new System.Drawing.Size(78, 47);
             this.pbCalendario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbCalendario.TabIndex = 6;
             this.pbCalendario.TabStop = false;
             // 
             // pbNoches
             // 
-            this.pbNoches.Location = new System.Drawing.Point(12, 273);
+            this.pbNoches.Location = new System.Drawing.Point(55, 283);
+            this.pbNoches.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbNoches.Name = "pbNoches";
-            this.pbNoches.Size = new System.Drawing.Size(100, 50);
+            this.pbNoches.Size = new System.Drawing.Size(78, 47);
             this.pbNoches.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbNoches.TabIndex = 7;
             this.pbNoches.TabStop = false;
             // 
             // pbPersonas
             // 
-            this.pbPersonas.Location = new System.Drawing.Point(12, 217);
+            this.pbPersonas.Location = new System.Drawing.Point(55, 217);
+            this.pbPersonas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbPersonas.Name = "pbPersonas";
-            this.pbPersonas.Size = new System.Drawing.Size(100, 50);
+            this.pbPersonas.Size = new System.Drawing.Size(78, 47);
             this.pbPersonas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbPersonas.TabIndex = 8;
             this.pbPersonas.TabStop = false;
@@ -259,17 +288,19 @@ namespace ProyectoIS_64PR
             // lblHuesped
             // 
             this.lblHuesped.AutoSize = true;
-            this.lblHuesped.Location = new System.Drawing.Point(12, 48);
+            this.lblHuesped.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.lblHuesped.Location = new System.Drawing.Point(12, 9);
             this.lblHuesped.Name = "lblHuesped";
-            this.lblHuesped.Size = new System.Drawing.Size(151, 16);
+            this.lblHuesped.Size = new System.Drawing.Size(163, 20);
             this.lblHuesped.TabIndex = 9;
             this.lblHuesped.Text = "Seleccione un huesped:";
             // 
             // FrmReservaPaso3_AR74
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(243)))), ((int)(((byte)(231)))));
+            this.ClientSize = new System.Drawing.Size(800, 562);
             this.Controls.Add(this.lblHuesped);
             this.Controls.Add(this.pbPersonas);
             this.Controls.Add(this.pbNoches);
@@ -280,6 +311,8 @@ namespace ProyectoIS_64PR
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.btnRegistrarHuesped);
             this.Controls.Add(this.cmbHuesped);
+            this.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmReservaPaso3_AR74";
             this.Text = "FrmReservaPaso3_AR74";
             this.tableLayoutPanel1.ResumeLayout(false);

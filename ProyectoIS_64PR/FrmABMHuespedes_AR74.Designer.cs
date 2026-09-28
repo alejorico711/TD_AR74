@@ -53,6 +53,18 @@
             this.dgvHuepedes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHuepedes.Location = new System.Drawing.Point(12, 12);
             this.dgvHuepedes.Name = "dgvHuepedes";
+            this.dgvHuepedes.BackgroundColor = System.Drawing.Color.White;
+            this.dgvHuepedes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvHuepedes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvHuepedes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(243)))), ((int)(((byte)(231)))));
+            this.dgvHuepedes.EnableHeadersVisualStyles = false;
+            this.dgvHuepedes.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.dgvHuepedes.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvHuepedes.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.dgvHuepedes.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            this.dgvHuepedes.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(168)))), ((int)(((byte)(149)))));
+            this.dgvHuepedes.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvHuepedes.AlternatingRowsDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(243)))), ((int)(((byte)(231)))));
             this.dgvHuepedes.RowHeadersWidth = 51;
             this.dgvHuepedes.RowTemplate.Height = 24;
             this.dgvHuepedes.Size = new System.Drawing.Size(776, 235);
@@ -63,6 +75,11 @@
             // 
             this.bttnAlta.Location = new System.Drawing.Point(445, 308);
             this.bttnAlta.Name = "bttnAlta";
+            this.bttnAlta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.bttnAlta.ForeColor = System.Drawing.Color.White;
+            this.bttnAlta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttnAlta.FlatAppearance.BorderSize = 0;
+            this.bttnAlta.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.bttnAlta.Size = new System.Drawing.Size(75, 23);
             this.bttnAlta.TabIndex = 1;
             this.bttnAlta.Text = "button1";
@@ -73,6 +90,11 @@
             // 
             this.btnBaja.Location = new System.Drawing.Point(445, 337);
             this.btnBaja.Name = "btnBaja";
+            this.btnBaja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnBaja.ForeColor = System.Drawing.Color.White;
+            this.btnBaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBaja.FlatAppearance.BorderSize = 0;
+            this.btnBaja.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnBaja.Size = new System.Drawing.Size(75, 23);
             this.btnBaja.TabIndex = 2;
             this.btnBaja.Text = "button2";
@@ -83,6 +105,11 @@
             // 
             this.btnModificacion.Location = new System.Drawing.Point(445, 366);
             this.btnModificacion.Name = "btnModificacion";
+            this.btnModificacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnModificacion.ForeColor = System.Drawing.Color.White;
+            this.btnModificacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificacion.FlatAppearance.BorderSize = 0;
+            this.btnModificacion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnModificacion.Size = new System.Drawing.Size(75, 23);
             this.btnModificacion.TabIndex = 3;
             this.btnModificacion.Text = "button3";
@@ -94,6 +121,7 @@
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Location = new System.Drawing.Point(24, 399);
             this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.lblTelefono.Size = new System.Drawing.Size(64, 16);
             this.lblTelefono.TabIndex = 25;
             this.lblTelefono.Text = "Teléfono:";
@@ -103,6 +131,7 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Location = new System.Drawing.Point(24, 371);
             this.lblEmail.Name = "lblEmail";
+            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.lblEmail.Size = new System.Drawing.Size(44, 16);
             this.lblEmail.TabIndex = 24;
             this.lblEmail.Text = "Email:";
@@ -112,6 +141,7 @@
             this.lblFechaNacimiento.AutoSize = true;
             this.lblFechaNacimiento.Location = new System.Drawing.Point(24, 343);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
+            this.lblFechaNacimiento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.lblFechaNacimiento.Size = new System.Drawing.Size(138, 16);
             this.lblFechaNacimiento.TabIndex = 23;
             this.lblFechaNacimiento.Text = "Fecha de Nacimiento:";
@@ -121,6 +151,7 @@
             this.lblApellido.AutoSize = true;
             this.lblApellido.Location = new System.Drawing.Point(24, 315);
             this.lblApellido.Name = "lblApellido";
+            this.lblApellido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.lblApellido.Size = new System.Drawing.Size(60, 16);
             this.lblApellido.TabIndex = 22;
             this.lblApellido.Text = "Apellido:";
@@ -130,6 +161,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Location = new System.Drawing.Point(24, 287);
             this.lblNombre.Name = "lblNombre";
+            this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.lblNombre.Size = new System.Drawing.Size(59, 16);
             this.lblNombre.TabIndex = 21;
             this.lblNombre.Text = "Nombre:";
@@ -139,6 +171,7 @@
             this.lblDni.AutoSize = true;
             this.lblDni.Location = new System.Drawing.Point(24, 259);
             this.lblDni.Name = "lblDni";
+            this.lblDni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.lblDni.Size = new System.Drawing.Size(33, 16);
             this.lblDni.TabIndex = 20;
             this.lblDni.Text = "DNI:";
@@ -147,6 +180,7 @@
             // 
             this.dtpFechaNacimiento.Location = new System.Drawing.Point(220, 337);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
+            this.dtpFechaNacimiento.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(200, 22);
             this.dtpFechaNacimiento.TabIndex = 19;
             // 
@@ -154,6 +188,10 @@
             // 
             this.txtTelefono.Location = new System.Drawing.Point(220, 393);
             this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTelefono.BackColor = System.Drawing.Color.White;
+            this.txtTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.txtTelefono.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTelefono.Size = new System.Drawing.Size(100, 22);
             this.txtTelefono.TabIndex = 18;
             this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
@@ -162,6 +200,10 @@
             // 
             this.txtEmail.Location = new System.Drawing.Point(220, 365);
             this.txtEmail.Name = "txtEmail";
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmail.BackColor = System.Drawing.Color.White;
+            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtEmail.Size = new System.Drawing.Size(100, 22);
             this.txtEmail.TabIndex = 17;
             // 
@@ -169,6 +211,10 @@
             // 
             this.txtApellido.Location = new System.Drawing.Point(220, 309);
             this.txtApellido.Name = "txtApellido";
+            this.txtApellido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtApellido.BackColor = System.Drawing.Color.White;
+            this.txtApellido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.txtApellido.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtApellido.Size = new System.Drawing.Size(100, 22);
             this.txtApellido.TabIndex = 16;
             this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
@@ -177,6 +223,10 @@
             // 
             this.txtNombre.Location = new System.Drawing.Point(220, 281);
             this.txtNombre.Name = "txtNombre";
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNombre.BackColor = System.Drawing.Color.White;
+            this.txtNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNombre.Size = new System.Drawing.Size(100, 22);
             this.txtNombre.TabIndex = 15;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
@@ -185,6 +235,10 @@
             // 
             this.txtDni.Location = new System.Drawing.Point(220, 253);
             this.txtDni.Name = "txtDni";
+            this.txtDni.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDni.BackColor = System.Drawing.Color.White;
+            this.txtDni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.txtDni.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDni.Size = new System.Drawing.Size(100, 22);
             this.txtDni.TabIndex = 14;
             this.txtDni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDni_KeyPress);
@@ -193,6 +247,12 @@
             // 
             this.btnLimpiar.Location = new System.Drawing.Point(445, 393);
             this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.BackColor = System.Drawing.Color.White;
+            this.btnLimpiar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(168)))), ((int)(((byte)(149)))));
+            this.btnLimpiar.FlatAppearance.BorderSize = 1;
+            this.btnLimpiar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
             this.btnLimpiar.TabIndex = 26;
             this.btnLimpiar.Text = "button3";
@@ -202,6 +262,8 @@
             // FrmABMHuespedes_AR74
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(243)))), ((int)(((byte)(231)))));
+            this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnLimpiar);
