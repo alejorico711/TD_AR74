@@ -35,6 +35,8 @@ namespace ProyectoIS_64PR
             this.label2 = new System.Windows.Forms.Label();
             this.lblMensaje = new System.Windows.Forms.Label();
             this.cmbIdioma = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtLogin
@@ -42,7 +44,7 @@ namespace ProyectoIS_64PR
             this.txtLogin.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtLogin.Location = new System.Drawing.Point(297, 121);
             this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(200, 25);
+            this.txtLogin.Size = new System.Drawing.Size(200, 30);
             this.txtLogin.TabIndex = 0;
             // 
             // btnIniciarSesion
@@ -65,7 +67,7 @@ namespace ProyectoIS_64PR
             this.txtContra.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtContra.Location = new System.Drawing.Point(297, 188);
             this.txtContra.Name = "txtContra";
-            this.txtContra.Size = new System.Drawing.Size(200, 25);
+            this.txtContra.Size = new System.Drawing.Size(200, 30);
             this.txtContra.TabIndex = 1;
             // 
             // label1
@@ -75,7 +77,7 @@ namespace ProyectoIS_64PR
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.label1.Location = new System.Drawing.Point(293, 99);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 19);
+            this.label1.Size = new System.Drawing.Size(158, 23);
             this.label1.TabIndex = 3;
             this.label1.Text = "Nombre de usuario";
             // 
@@ -86,7 +88,7 @@ namespace ProyectoIS_64PR
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.label2.Location = new System.Drawing.Point(293, 166);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 19);
+            this.label2.Size = new System.Drawing.Size(97, 23);
             this.label2.TabIndex = 4;
             this.label2.Text = "Contraseña";
             // 
@@ -96,7 +98,7 @@ namespace ProyectoIS_64PR
             this.lblMensaje.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblMensaje.Location = new System.Drawing.Point(294, 273);
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(0, 15);
+            this.lblMensaje.Size = new System.Drawing.Size(0, 20);
             this.lblMensaje.TabIndex = 5;
             // 
             // cmbIdioma
@@ -104,18 +106,27 @@ namespace ProyectoIS_64PR
             this.cmbIdioma.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbIdioma.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cmbIdioma.FormattingEnabled = true;
-            this.cmbIdioma.Location = new System.Drawing.Point(667, 415);
+            this.cmbIdioma.Location = new System.Drawing.Point(205, 234);
             this.cmbIdioma.Name = "cmbIdioma";
-            this.cmbIdioma.Size = new System.Drawing.Size(121, 23);
+            this.cmbIdioma.Size = new System.Drawing.Size(121, 28);
             this.cmbIdioma.TabIndex = 6;
             this.cmbIdioma.SelectedIndexChanged += new System.EventHandler(this.cmbIdioma_SelectedIndexChanged_1);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(119, 65);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(175, 163);
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmLogin_64PR
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(243)))), ((int)(((byte)(231)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cmbIdioma);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.label2);
@@ -128,6 +139,7 @@ namespace ProyectoIS_64PR
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmLogin_64PR";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmLogin_64PR_FormClosed);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,5 +154,6 @@ namespace ProyectoIS_64PR
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblMensaje;
         private System.Windows.Forms.ComboBox cmbIdioma;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

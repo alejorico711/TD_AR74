@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,10 @@ namespace ProyectoIS_64PR
             Idioma.GestorIdioma_64PR.GetInstance.Suscribir(this); ///Evento del observer
 
             CargarComboIdiomas();
+
+            string rutaLogo = Path.Combine(Application.StartupPath, "Imagenes", "Logo chiquito.png");
+            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox1.BackgroundImage = Image.FromFile(rutaLogo);
 
             ///Aplico el idioma que ya está cargado
             textos = Idioma.GestorIdioma_64PR.GetInstance.ObtenerTextos();

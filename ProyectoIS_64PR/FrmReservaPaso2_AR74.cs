@@ -37,6 +37,7 @@ namespace ProyectoIS_64PR
                 UcCtrlTarjetaHabitacion_AR74 uc = new UcCtrlTarjetaHabitacion_AR74();
                 uc.CargarDatos(habitacion);
                 uc.Click += Tarjeta_Click;
+                uc.AplicarColor(Color.FromArgb(46, 184, 92)); //forzamos el verde, sin importar el estado actual
                 flowLayoutPanelHabitaciones.Controls.Add(uc);
             }
         }

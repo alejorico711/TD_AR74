@@ -40,36 +40,40 @@
             // 
             // dtpInicio
             // 
-            this.dtpInicio.Location = new System.Drawing.Point(143, 74);
+            this.dtpInicio.Location = new System.Drawing.Point(332, 130);
+            this.dtpInicio.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpInicio.MinDate = new System.DateTime(2026, 9, 9, 0, 0, 0, 0);
             this.dtpInicio.Name = "dtpInicio";
-            this.dtpInicio.Size = new System.Drawing.Size(200, 22);
+            this.dtpInicio.Size = new System.Drawing.Size(200, 27);
             this.dtpInicio.TabIndex = 0;
             // 
             // dtpFin
             // 
-            this.dtpFin.Location = new System.Drawing.Point(143, 102);
+            this.dtpFin.Location = new System.Drawing.Point(332, 166);
+            this.dtpFin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpFin.Name = "dtpFin";
-            this.dtpFin.Size = new System.Drawing.Size(200, 22);
+            this.dtpFin.Size = new System.Drawing.Size(200, 27);
             this.dtpFin.TabIndex = 1;
             // 
             // nupCantidad
             // 
-            this.nupCantidad.Location = new System.Drawing.Point(143, 130);
+            this.nupCantidad.Location = new System.Drawing.Point(332, 200);
+            this.nupCantidad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nupCantidad.Name = "nupCantidad";
-            this.nupCantidad.Size = new System.Drawing.Size(120, 22);
+            this.nupCantidad.Size = new System.Drawing.Size(120, 27);
             this.nupCantidad.TabIndex = 2;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(143, 158);
-            this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Location = new System.Drawing.Point(332, 236);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 29);
             this.btnBuscar.TabIndex = 3;
             this.btnBuscar.Text = "button1";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -78,40 +82,39 @@
             // lblInicio
             // 
             this.lblInicio.AutoSize = true;
-            this.lblInicio.Location = new System.Drawing.Point(34, 80);
-            this.lblInicio.Name = "lblInicio";
             this.lblInicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.lblInicio.Size = new System.Drawing.Size(44, 16);
+            this.lblInicio.Location = new System.Drawing.Point(173, 137);
+            this.lblInicio.Name = "lblInicio";
+            this.lblInicio.Size = new System.Drawing.Size(50, 20);
             this.lblInicio.TabIndex = 4;
             this.lblInicio.Text = "label1";
             // 
             // lblFin
             // 
             this.lblFin.AutoSize = true;
-            this.lblFin.Location = new System.Drawing.Point(34, 107);
-            this.lblFin.Name = "lblFin";
             this.lblFin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.lblFin.Size = new System.Drawing.Size(44, 16);
+            this.lblFin.Location = new System.Drawing.Point(173, 171);
+            this.lblFin.Name = "lblFin";
+            this.lblFin.Size = new System.Drawing.Size(50, 20);
             this.lblFin.TabIndex = 5;
             this.lblFin.Text = "label2";
             // 
             // lblCantidadPersonas
             // 
             this.lblCantidadPersonas.AutoSize = true;
-            this.lblCantidadPersonas.Location = new System.Drawing.Point(34, 136);
-            this.lblCantidadPersonas.Name = "lblCantidadPersonas";
             this.lblCantidadPersonas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.lblCantidadPersonas.Size = new System.Drawing.Size(44, 16);
+            this.lblCantidadPersonas.Location = new System.Drawing.Point(173, 207);
+            this.lblCantidadPersonas.Name = "lblCantidadPersonas";
+            this.lblCantidadPersonas.Size = new System.Drawing.Size(50, 20);
             this.lblCantidadPersonas.TabIndex = 6;
             this.lblCantidadPersonas.Text = "label3";
             // 
             // FrmReservaPaso1_AR74
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(243)))), ((int)(((byte)(231)))));
-            this.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(243)))), ((int)(((byte)(231)))));
+            this.ClientSize = new System.Drawing.Size(800, 562);
             this.Controls.Add(this.lblCantidadPersonas);
             this.Controls.Add(this.lblFin);
             this.Controls.Add(this.lblInicio);
@@ -119,6 +122,8 @@
             this.Controls.Add(this.nupCantidad);
             this.Controls.Add(this.dtpFin);
             this.Controls.Add(this.dtpInicio);
+            this.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmReservaPaso1_AR74";
             this.Text = "FrmFecha_AR74";
             ((System.ComponentModel.ISupportInitialize)(this.nupCantidad)).EndInit();
