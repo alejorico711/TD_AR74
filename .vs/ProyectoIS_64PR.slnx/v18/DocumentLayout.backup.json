@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\bin\\Debug\\idiomas\\en.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ProyectoIS_64PR\\bin\\Debug\\idiomas\\en.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\proyectois_64pr\\ucctrltarjetahabitacion_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|solutionrelative:proyectois_64pr\\ucctrltarjetahabitacion_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\bin\\Debug\\idiomas\\es.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ProyectoIS_64PR\\bin\\Debug\\idiomas\\es.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\proyectois_64pr\\ucctrltarjetahabitacion_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|solutionrelative:proyectois_64pr\\ucctrltarjetahabitacion_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\proyectois_64pr\\frmreservapaso3_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|solutionrelative:proyectois_64pr\\frmreservapaso3_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\proyectois_64pr\\frmcheck_outpaso2_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|solutionrelative:proyectois_64pr\\frmcheck_outpaso2_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\proyectois_64pr\\frmcheck_inpaso2_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|solutionrelative:proyectois_64pr\\frmcheck_inpaso2_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\proyectois_64pr\\frmreservapaso3_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|solutionrelative:proyectois_64pr\\frmreservapaso3_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,28 +38,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "es.json",
-              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\bin\\Debug\\idiomas\\es.json",
-              "RelativeDocumentMoniker": "ProyectoIS_64PR\\bin\\Debug\\idiomas\\es.json",
-              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\bin\\Debug\\idiomas\\es.json",
-              "RelativeToolTip": "ProyectoIS_64PR\\bin\\Debug\\idiomas\\es.json",
-              "ViewState": "AgIAAOQAAAAAAAAAAAAAAOYAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-09-28T03:05:32.398Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "en.json",
-              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\bin\\Debug\\idiomas\\en.json",
-              "RelativeDocumentMoniker": "ProyectoIS_64PR\\bin\\Debug\\idiomas\\en.json",
-              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\bin\\Debug\\idiomas\\en.json",
-              "RelativeToolTip": "ProyectoIS_64PR\\bin\\Debug\\idiomas\\en.json",
-              "ViewState": "AgIAANoAAAAAAAAAAAAAAOYAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-09-28T03:05:04.418Z",
+              "DocumentIndex": 3,
+              "Title": "FrmReservaPaso3_AR74.cs",
+              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmReservaPaso3_AR74.cs",
+              "RelativeDocumentMoniker": "ProyectoIS_64PR\\FrmReservaPaso3_AR74.cs",
+              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmReservaPaso3_AR74.cs",
+              "RelativeToolTip": "ProyectoIS_64PR\\FrmReservaPaso3_AR74.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAswCoAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-28T23:58:19.56Z",
               "EditorCaption": ""
             },
             {
@@ -75,31 +58,32 @@
               "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmReservaPaso3_AR74.cs [Dise\u00F1o]",
               "RelativeToolTip": "ProyectoIS_64PR\\FrmReservaPaso3_AR74.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-28T02:59:49.833Z",
+              "WhenOpened": "2026-09-28T23:58:17.422Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FrmCheck_outPaso2_AR74.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmCheck_outPaso2_AR74.cs",
-              "RelativeDocumentMoniker": "ProyectoIS_64PR\\FrmCheck_outPaso2_AR74.cs",
-              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmCheck_outPaso2_AR74.cs [Dise\u00F1o]",
-              "RelativeToolTip": "ProyectoIS_64PR\\FrmCheck_outPaso2_AR74.cs [Dise\u00F1o]",
+              "DocumentIndex": 0,
+              "Title": "UcCtrlTarjetaHabitacion_AR74.cs",
+              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\UcCtrlTarjetaHabitacion_AR74.cs",
+              "RelativeDocumentMoniker": "ProyectoIS_64PR\\UcCtrlTarjetaHabitacion_AR74.cs",
+              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\UcCtrlTarjetaHabitacion_AR74.cs",
+              "RelativeToolTip": "ProyectoIS_64PR\\UcCtrlTarjetaHabitacion_AR74.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA0wB8AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-28T02:59:36.242Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2026-09-28T23:58:03.218Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FrmCheck_inPaso2_AR74.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmCheck_inPaso2_AR74.cs",
-              "RelativeDocumentMoniker": "ProyectoIS_64PR\\FrmCheck_inPaso2_AR74.cs",
-              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmCheck_inPaso2_AR74.cs [Dise\u00F1o]",
-              "RelativeToolTip": "ProyectoIS_64PR\\FrmCheck_inPaso2_AR74.cs [Dise\u00F1o]",
+              "DocumentIndex": 1,
+              "Title": "UcCtrlTarjetaHabitacion_AR74.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\UcCtrlTarjetaHabitacion_AR74.cs",
+              "RelativeDocumentMoniker": "ProyectoIS_64PR\\UcCtrlTarjetaHabitacion_AR74.cs",
+              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\UcCtrlTarjetaHabitacion_AR74.cs [Dise\u00F1o]",
+              "RelativeToolTip": "ProyectoIS_64PR\\UcCtrlTarjetaHabitacion_AR74.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-28T02:58:59.938Z",
+              "WhenOpened": "2026-09-28T23:58:00.93Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]

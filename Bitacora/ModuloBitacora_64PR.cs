@@ -11,6 +11,10 @@ namespace Bitacora
         Login = 1,
         GestionUsuarios = 2,
         GestionRoles = 3,
-        GestionFamilias = 4
+        GestionFamilias = 4,
+        Maestros = 5,
+        Reserva =6,
+        CheckIn = 7,
+        CheckOut = 8
     }
 }

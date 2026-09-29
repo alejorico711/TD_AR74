@@ -1,8 +1,10 @@
-﻿using System;
+﻿using BE;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +23,13 @@ namespace ProyectoIS_64PR
                 control.Cursor = Cursors.Hand;
                 control.Click += (s, e) => this.OnClick(EventArgs.Empty);
             }
+            string rutaLogo = Path.Combine(Application.StartupPath, "Imagenes", "doorway.png");
+            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox1.BackgroundImage = Image.FromFile(rutaLogo);
+
+            rutaLogo = Path.Combine(Application.StartupPath, "Imagenes", "people.png");
+            pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox2.BackgroundImage = Image.FromFile(rutaLogo);
         }
 
         public void CargarDatos(BE.Habitacion habitacion)

@@ -19,6 +19,7 @@ namespace ProyectoIS_64PR
         BLL_64PR.BLL_TiposHabitacion_AR74 gtipos = new BLL_64PR.BLL_TiposHabitacion_AR74();
         BE.Habitacion hab;
 
+
         Dictionary<string, string> textos;
         public FrmABMHabitaciones_AR74()
         {

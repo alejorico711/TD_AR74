@@ -9,6 +9,7 @@ namespace BLL_64PR
 {
     public class BLL_Habitaciones_AR74
     {
+        Bitacora.Bitacora_64PR bita = new Bitacora.Bitacora_64PR();
         private static readonly DV.DV_64PR recalculador = new DV.DV_64PR();
         Mapper.MPP_Habitaciones_AR74 mpp = new Mapper.MPP_Habitaciones_AR74();
         public List<BE.Habitacion> ListarHabitaciones(DateTime fechaInicio, DateTime fechaFin, int capacidad)
@@ -24,6 +25,8 @@ namespace BLL_64PR
         {
             int aux = mpp.RegistrarHabitacion(habitacion);
             recalculador.RecalcularTabla("Habitacion");
+            Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.ModuloBitacora_64PR.Maestros).ToString(), ((int)Bitacora.TipoEventoBitacora_64PR.AltaHabitacion).ToString(), 4);
+            bita.RegistrarEvento(ev);
             return aux;
         }
 
@@ -31,12 +34,16 @@ namespace BLL_64PR
         {
             mpp.ModificarHabitacion(habitacion);
             recalculador.RecalcularTabla("Habitacion");
+            Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.ModuloBitacora_64PR.Maestros).ToString(), ((int)Bitacora.TipoEventoBitacora_64PR.ModificacionHabitacion).ToString(), 4);
+            bita.RegistrarEvento(ev);
         }
 
         public void EliminarHabitacion(int idHabitacion)
         {
             mpp.EliminarHabitacion(idHabitacion);
             recalculador.RecalcularTabla("Habitacion");
+            Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.ModuloBitacora_64PR.Maestros).ToString(), ((int)Bitacora.TipoEventoBitacora_64PR.EliminacionHabitacion).ToString(), 4);
+            bita.RegistrarEvento(ev);
         }
     }
 }

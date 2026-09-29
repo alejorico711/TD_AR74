@@ -22,6 +22,18 @@ namespace Bitacora
         EliminacionFamilia = 13,
         ModificacionFamilia = 14,
         Backup = 15,
-        Restore = 16
+        Restore = 16,
+        AltaHabitacion = 17,
+        ModificacionHabitacion = 18,
+        EliminacionHabitacion = 19,
+        AltaHuesped = 20,
+        BajaHuesped = 21,
+        ModificacionHuesped=22,
+        AltaTipoHabitacion=23,
+        ModificarTipoHabitacion=24,
+        EliminacionTipoHabitacion = 25,
+        RegistrarReserva=26,
+        RegistrarCheckIn = 27,
+        RegistrarCheckOut=28
     }
 }

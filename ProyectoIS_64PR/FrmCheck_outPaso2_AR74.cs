@@ -84,6 +84,12 @@ namespace ProyectoIS_64PR
                 decimal precioPorNoche = reserva.Habitacion.Tipo.PrecioPorNoche;
                 decimal total = noches * precioPorNoche;
 
+                if(cmbMetodoDePago.SelectedItem == null)
+                {
+                    MessageBox.Show("Seleccione un metodo de pago");
+                    btnConfirmar.Enabled = true;
+                    return;
+                }
                 bllPagos.RegistrarPago(reserva.IdReserva, total, cmbMetodoDePago.SelectedItem.ToString());
                 bllReservas.ConfirmarCheckOut(reserva.IdReserva);
 
