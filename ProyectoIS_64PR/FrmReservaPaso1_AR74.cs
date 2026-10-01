@@ -30,6 +30,15 @@ namespace ProyectoIS_64PR
             textos = Idioma.GestorIdioma_64PR.GetInstance.ObtenerTextos();
             if (textos.Count > 0)
                 ActualizarIdioma(textos);
+            this.Resize += FrmReservaPaso1_AR74_Resize;
+            CentrarPanel();
+        }
+        private void CentrarPanel()
+        {
+            panel1.Location = new Point(
+                (this.ClientSize.Width - panel1.Width) / 2,
+                (this.ClientSize.Height - panel1.Height) / 2
+            );
         }
         public void ActualizarIdioma(Dictionary<string, string> textoss)
         {
@@ -43,6 +52,11 @@ namespace ProyectoIS_64PR
             reserva.FechaFin = dtpFin.Value;
             reserva.CantidadPersonas= (int)nupCantidad.Value;
             frmPadre.AbrirFormularioHijo(new FrmReservaPaso2_AR74(frmPadre, reserva));
+        }
+
+        private void FrmReservaPaso1_AR74_Resize(object sender, EventArgs e)
+        {
+            CentrarPanel();
         }
     }
 }

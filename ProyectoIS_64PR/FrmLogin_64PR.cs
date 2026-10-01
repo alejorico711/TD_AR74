@@ -36,7 +36,15 @@ namespace ProyectoIS_64PR
             lblMensaje.Hide();
             txtContra.Text = "admin123";
             txtLogin.Text = "admin";
+            this.Resize += FrmLogin_64PR_Resize;
+            CentrarPanel();
         }
+
+        private void CentrarPanel()
+        {
+            panel1.Location = new Point((this.ClientSize.Width - panel1.Width) / 2, (this.ClientSize.Height - panel1.Height) / 2);
+        }
+
         private void CargarComboIdiomas()
         {
             cmbIdioma.Items.Clear();
@@ -195,6 +203,11 @@ namespace ProyectoIS_64PR
         private void FrmLogin_64PR_FormClosed(object sender, FormClosedEventArgs e)
         {
             Idioma.GestorIdioma_64PR.GetInstance.Desuscribir(this); ///observer del cambio de idioma
+        }
+
+        private void FrmLogin_64PR_Resize(object sender, EventArgs e)
+        {
+            CentrarPanel();
         }
     }
 }

@@ -54,6 +54,8 @@ namespace ProyectoIS_64PR
             lst = ghuepedes.ListarHuespedes();
             dgvHuepedes.DataSource = lst;
             LimpiarControles();
+            dgvHuepedes.Columns["Activo"].Visible = false;
+            dgvHuepedes.Columns["IdHuesped"].Visible = false;
         }
         private void btnModificacion_Click(object sender, EventArgs e)
         {

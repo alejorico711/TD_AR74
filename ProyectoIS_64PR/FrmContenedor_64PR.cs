@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,10 +18,13 @@ namespace ProyectoIS_64PR
         public FrmContenedor_64PR()
         {
             InitializeComponent();
+            string rutaIcono = Path.Combine(Application.StartupPath, "Imagenes", "solo-logo.ico");
+            this.Icon = new Icon(rutaIcono);
             Instancia = this;
             this.WindowState = FormWindowState.Normal;
             MostrarHijo(new FrmLogin_64PR());
             this.Text = "RoomIn";
+            this.MinimumSize = new Size(1024, 650);
         }
         public void MostrarHijo(Form hijo)
         {

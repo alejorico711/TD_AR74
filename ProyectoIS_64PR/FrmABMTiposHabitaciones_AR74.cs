@@ -54,6 +54,8 @@ namespace ProyectoIS_64PR
             lst = gtipos.ListarTiposHabitacion();
             dgvTipos.DataSource = lst;
             LimpiarControles();
+            dgvTipos.Columns["Activo"].Visible = false;
+            dgvTipos.Columns["IdTipoHabitacion"].Visible = false;
         }
         private void LimpiarControles()
         {

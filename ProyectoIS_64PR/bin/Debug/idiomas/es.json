@@ -236,5 +236,15 @@
     "FrmRegistrarHuespedEnReserva.lblNombre": "Nombre:",
     "FrmRegistrarHuespedEnReserva.lblDni": "DNI:",
     "FrmRegistrarHuespedEnReserva.btnCancelar": "Cancelar",
-    "FrmRegistrarHuespedEnReserva.btnGuardar": "Guardar"
+    "FrmRegistrarHuespedEnReserva.btnGuardar": "Guardar",
+    "FrmCheck_inPaso2_AR74.lblValorHabitacion": "FALTA TRADUCCION",
+    "FrmCheck_inPaso2_AR74.lblValorFechas": "FALTA TRADUCCION",
+    "FrmCheck_inPaso2_AR74.lblValorPersonas": "FALTA TRADUCCION",
+    "FrmCheck_inPaso2_AR74.lblValorNochesxPrecio": "FALTA TRADUCCION",
+    "FrmCheck_inPaso2_AR74.lblValorTotal": "FALTA TRADUCCION",
+    "FrmCheck_outPaso2_AR74.lblValorHabitacion": "FALTA TRADUCCION",
+    "FrmCheck_outPaso2_AR74.lblValorFechas": "FALTA TRADUCCION",
+    "FrmCheck_outPaso2_AR74.lblValorPersonas": "FALTA TRADUCCION",
+    "FrmCheck_outPaso2_AR74.lblValorNochesxPrecio": "FALTA TRADUCCION",
+    "FrmCheck_outPaso2_AR74.lblValorTotal": "FALTA TRADUCCION"
 }
