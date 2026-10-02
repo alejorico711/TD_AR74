@@ -1,4 +1,4 @@
-﻿using BE;
+using BE;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,11 +11,12 @@ using System.Windows.Forms;
 
 namespace ProyectoIS_64PR
 {
-    public partial class FrmReservaPaso2_AR74 : Form
+    public partial class FrmReservaPaso2_AR74 : Form, Idioma.IObservadorIdioma_64PR
     {
         FrmMenu frmPadre;
         Reserva_AR74 reserva = new Reserva_AR74();
         BLL_64PR.BLL_Habitaciones_AR74 bllHabitaciones = new BLL_64PR.BLL_Habitaciones_AR74();
+        Dictionary<string, string> textos;
 
         public FrmReservaPaso2_AR74(FrmMenu frmPadre, Reserva_AR74 reserva)
         {
@@ -27,11 +28,42 @@ namespace ProyectoIS_64PR
             flowLayoutPanelHabitaciones.AutoScroll = true;
 
             MostrarHabitaciones();
+            Idioma.GestorIdioma_64PR.GetInstance.Suscribir(this); ///observer del cambio de idioma
+                                                                  ///Aplico el idioma que ya está cargado
+            textos = Idioma.GestorIdioma_64PR.GetInstance.ObtenerTextos();
+            if (textos.Count > 0)
+                ActualizarIdioma(textos);
+        }
+        public void ActualizarIdioma(Dictionary<string, string> textoss)
+        {
+            textos = textoss;
+            Traductor_64PR.Traducir(this, textos);
         }
 
         public void MostrarHabitaciones()
         {
+            flowLayoutPanelHabitaciones.Controls.Clear();
             List<BE.Habitacion> habitacionesDisponibles = bllHabitaciones.ListarHabitaciones(reserva.FechaInicio, reserva.FechaFin, reserva.CantidadPersonas);
+
+            if (habitacionesDisponibles.Count == 0)
+            {
+                Label lblSinResultados = new Label();
+                lblSinResultados.ForeColor = Color.Red;
+                lblSinResultados.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+                lblSinResultados.AutoSize = false;
+                lblSinResultados.Dock = DockStyle.Fill;
+                lblSinResultados.TextAlign = ContentAlignment.MiddleCenter;
+                lblSinResultados.Name = "lblSinResultados";
+
+
+                this.Controls.Add(lblSinResultados);
+                lblSinResultados.BringToFront();
+                flowLayoutPanelHabitaciones.Visible = false;
+                return;
+            }
+
+            flowLayoutPanelHabitaciones.Visible = true;
+
             foreach (var habitacion in habitacionesDisponibles)
             {
                 UcCtrlTarjetaHabitacion_AR74 uc = new UcCtrlTarjetaHabitacion_AR74();
