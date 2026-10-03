@@ -104,5 +104,40 @@ namespace Mapper
 
             DAL_64PR.Acceso.Instancia.escribirSP("sp_EliminarHabitacion", p);
         }
+        public List<Habitacion> ListarHabitacionesParaLimpieza()
+        {
+            List<Habitacion> lista = new List<Habitacion>();
+            DataTable tabla = DAL_64PR.Acceso.Instancia.leerSP("sp_ListarHabitacionesParaLimpieza", null);
+
+            foreach (DataRow dr in tabla.Rows)
+            {
+                BE.TipoHabitacion tipo = new BE.TipoHabitacion
+                {
+                    IdTipoHabitacion = (int)dr["IdTipoHabitacion"],
+                    Descripcion = (string)dr["DescripcionTipo"],
+                    Capacidad = (int)dr["Capacidad"],
+                    PrecioPorNoche = (decimal)dr["PrecioPorNoche"]
+                };
+
+                Habitacion habitacion = new Habitacion
+                {
+                    IdHabitacion = (int)dr["IdHabitacion"],
+                    Numero = (int)dr["Numero"],
+                    Descripcion = dr["Descripcion"] == DBNull.Value ? null : (string)dr["Descripcion"],
+                    Estado = (string)dr["Estado"],
+                    Tipo = tipo
+                };
+
+                lista.Add(habitacion);
+            }
+            return lista;
+        }
+
+        public void FinalizarLimpieza(int idHabitacion)
+        {
+            SqlParameter[] p = new SqlParameter[1];
+            p[0] = new SqlParameter("@IdHabitacion", idHabitacion);
+            DAL_64PR.Acceso.Instancia.escribirSP("sp_FinalizarLimpieza", p);
+        }
     }
 }

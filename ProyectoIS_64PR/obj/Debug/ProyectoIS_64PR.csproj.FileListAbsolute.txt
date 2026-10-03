@@ -86,3 +86,4 @@ C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\obj\Debug\ProyectoIS_64PR.Fr
 C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\obj\Debug\ProyectoIS_64PR.FrmABMHuespedes_AR74.resources
 C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\obj\Debug\ProyectoIS_64PR.FrmABMTiposHabitaciones_AR74.resources
 C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\obj\Debug\ProyectoIS_64PR.FrmABMHabitaciones_AR74.resources
+C:\Users\Alejo\source\repos\TD_AR74\ProyectoIS_64PR\obj\Debug\ProyectoIS_64PR.FrmTareasPendientes_AR74.resources

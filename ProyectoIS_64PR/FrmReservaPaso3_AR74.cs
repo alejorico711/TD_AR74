@@ -1,4 +1,4 @@
-﻿using BE;
+using BE;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -63,7 +63,15 @@ namespace ProyectoIS_64PR
         private void btnRegistrarHuesped_Click(object sender, EventArgs e)
         {
             FrmRegistrarHuespedEnReserva frmAlta = new FrmRegistrarHuespedEnReserva();
-            DialogResult resultado = frmAlta.ShowDialog();
+
+            // Lo posicionamos y dimensionamos exactamente igual que este formulario para "taparlo"
+            // Como este form es un hijo MDI, this.Location es relativo al contenedor MDI.
+            // Hay que convertirlo a coordenadas de pantalla para que el diálogo quede bien posicionado.
+            frmAlta.StartPosition = FormStartPosition.Manual;
+            frmAlta.Size = this.Size;
+            frmAlta.Location = this.Parent.PointToScreen(this.Location);
+
+            DialogResult resultado = frmAlta.ShowDialog(this);
 
             if (resultado == DialogResult.OK)
             {

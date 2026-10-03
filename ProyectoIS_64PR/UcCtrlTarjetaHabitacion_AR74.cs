@@ -48,7 +48,8 @@ namespace ProyectoIS_64PR
             {
                 case "Disponible": return Color.FromArgb(46, 184, 92);     // verde
                 case "Ocupada": return Color.FromArgb(230, 90, 60);        // rojo/naranja
-                case "Mantenimiento": return Color.FromArgb(150, 150, 150); // gris
+                case "Mantenimiento": return Color.FromArgb(150, 150, 150);// gris
+                case "Limpieza": return Color.FromArgb(117, 170, 219);     //celeste
                 default: return Color.Gray;
             }
         }

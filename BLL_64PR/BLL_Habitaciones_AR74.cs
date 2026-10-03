@@ -45,5 +45,15 @@ namespace BLL_64PR
             Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.ModuloBitacora_64PR.Maestros).ToString(), ((int)Bitacora.TipoEventoBitacora_64PR.EliminacionHabitacion).ToString(), 4);
             bita.RegistrarEvento(ev);
         }
+        public List<Habitacion> ListarHabitacionesParaLimpieza()
+        {
+            return mpp.ListarHabitacionesParaLimpieza();
+        }
+
+        public void FinalizarLimpieza(int idHabitacion)
+        {
+            mpp.FinalizarLimpieza(idHabitacion);
+            recalculador.RecalcularTabla("Habitacion");
+        }
     }
 }

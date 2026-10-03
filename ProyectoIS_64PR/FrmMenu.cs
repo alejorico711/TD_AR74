@@ -421,5 +421,17 @@ namespace ProyectoIS_64PR
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void tareasPendientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                AbrirFormularioHijo(new FrmTareasPendientes_AR74());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
