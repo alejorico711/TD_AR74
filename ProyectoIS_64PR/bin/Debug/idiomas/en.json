@@ -252,5 +252,10 @@
     "FrmCheck_in_AR74.": "FALTA TRADUCCION",
     "FrmCheck_in_AR74.lblSinResultados": "FALTA TRADUCCION",
     "FrmReservaPaso2_AR74.": "FALTA TRADUCCION",
-    "FrmCheck_out_AR74.": "FALTA TRADUCCION"
+    "FrmCheck_out_AR74.": "FALTA TRADUCCION",
+    "FrmReservaPaso3_AR74.lblValorFechas": "FALTA TRADUCCION",
+    "FrmReservaPaso3_AR74.lblValorPersonas": "FALTA TRADUCCION",
+    "FrmReservaPaso3_AR74.lblValorNochesxPrecio": "FALTA TRADUCCION",
+    "FrmReservaPaso3_AR74.lblValorTotal": "FALTA TRADUCCION",
+    "FrmReservaPaso3_AR74.lblValorHabitacion": "FALTA TRADUCCION"
 }

@@ -51,6 +51,8 @@ namespace ProyectoIS_64PR
             textos = Idioma.GestorIdioma_64PR.GetInstance.ObtenerTextos();
             if (textos.Count > 0)
                 ActualizarIdioma(textos);
+
+            ActualizarResumen(reserva);
         }
         public void ActualizarIdioma(Dictionary<string, string> textoss)
         {
@@ -113,6 +115,11 @@ namespace ProyectoIS_64PR
         {
             try
             {
+                if (cmbHuesped.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Seleccione un huesped");
+                    return;
+                }
                 bllReserva.RegistrarReserva(reserva);
                 MessageBox.Show("Reserva registrada con exito");
                 frmPadre.AbrirFormularioHijo(this);
