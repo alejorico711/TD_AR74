@@ -169,13 +169,18 @@ namespace ProyectoIS_64PR
 
             eventosToolStripMenuItem1.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.Bitacora);
 
-            cambiarContraseñaToolStripMenuItem1.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.CambiarContra);
-
-            idiomaToolStripMenuItem1.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.CambiarIdioma);
-
             respaldoBaseDeDatosToolStripMenuItem1.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.Respaldos);
 
-            restaurarBaseDeDatosToolStripMenuItem1.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.Restauraciones); 
+            restaurarBaseDeDatosToolStripMenuItem1.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.Restauraciones);
+
+            bool puedeAdministrar = puedeGestionarFamilias || puedeGestionarRoles || puedeGestionarUsuarios || rolUsuario.TienePermiso(Sesion.Patentes_64PR.Bitacora) || rolUsuario.TienePermiso(Sesion.Patentes_64PR.Respaldos) || rolUsuario.TienePermiso(Sesion.Patentes_64PR.Restauraciones);
+            adminToolStripMenuItem.Visible = puedeAdministrar;
+
+
+
+            cambiarContraseñaToolStripMenuItem1.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.CambiarContra);
+
+            idiomaToolStripMenuItem1.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.CambiarIdioma); 
 
             nuevaReservaToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.Reserva);
 
@@ -196,6 +201,8 @@ namespace ProyectoIS_64PR
             habitacionesToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.ABMHabitaciones);
 
             tiposDeHabitacionesToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.ABMTipoHabitaciones);
+            tareasPendientesToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.TareasPendientes);
+            serviciosAdicionalesToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.RegistrarServiciosAdicionales);
         }
 
         private void nuevaReservaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -427,6 +434,18 @@ namespace ProyectoIS_64PR
             try
             {
                 AbrirFormularioHijo(new FrmTareasPendientes_AR74());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void serviciosAdicionalesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                AbrirFormularioHijo(new FrmSolicitudServicioPaso1(this));
             }
             catch (Exception ex)
             {

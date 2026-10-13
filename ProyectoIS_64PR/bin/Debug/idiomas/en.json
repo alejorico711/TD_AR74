@@ -258,5 +258,15 @@
     "FrmReservaPaso3_AR74.lblValorNochesxPrecio": "FALTA TRADUCCION",
     "FrmReservaPaso3_AR74.lblValorTotal": "FALTA TRADUCCION",
     "FrmReservaPaso3_AR74.lblValorHabitacion": "FALTA TRADUCCION",
-    "FrmMenu.tareasPendientesToolStripMenuItem": "FALTA TRADUCCION"
+    "FrmMenu.tareasPendientesToolStripMenuItem": "FALTA TRADUCCION",
+    "FrmMenu.serviciosAdicionalesToolStripMenuItem": "FALTA TRADUCCION",
+    "FrmTareasPendientes_AR74.btnMarcarCompletada": "FALTA TRADUCCION",
+    "FrmTareasPendientes_AR74.dgvTareas.TipoTarea": "FALTA TRADUCCION",
+    "FrmTareasPendientes_AR74.dgvTareas.IdReferencia": "FALTA TRADUCCION",
+    "FrmTareasPendientes_AR74.dgvTareas.NumeroHabitacion": "FALTA TRADUCCION",
+    "FrmTareasPendientes_AR74.dgvTareas.Descripcion": "FALTA TRADUCCION",
+    "FrmSolicitudServicioPaso2.btnConfirmar": "FALTA TRADUCCION",
+    "FrmSolicitudServicioPaso2.btnPagar": "FALTA TRADUCCION",
+    "FrmSolicitudServicioPaso2.btnAgregarCuenta": "FALTA TRADUCCION",
+    "FrmSolicitudServicioPaso2.lblServicios": "FALTA TRADUCCION"
 }

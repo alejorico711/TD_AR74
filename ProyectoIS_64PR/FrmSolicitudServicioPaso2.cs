@@ -1,0 +1,208 @@
+﻿using BE;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Drawing.Printing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ProyectoIS_64PR
+{
+    
+    public partial class FrmSolicitudServicioPaso2 : Form, Idioma.IObservadorIdioma_64PR
+    {
+        FrmMenu frmPadre;
+        BE.Reserva_AR74 reserva;
+        BE.SolicitudServicio solicitud = new BE.SolicitudServicio();
+        BE.TipoServicio servicio;
+        BLL_64PR.BLL_TiposServicio_AR74 bllTipos = new BLL_64PR.BLL_TiposServicio_AR74();
+        BLL_64PR.BLL_Pagos_AR74 bllPagos = new BLL_64PR.BLL_Pagos_AR74();
+        BLL_64PR.BLL_SolicitudesServicio_AR74 bllSolicitud = new BLL_64PR.BLL_SolicitudesServicio_AR74();
+        Dictionary<string, string> textos;
+        public FrmSolicitudServicioPaso2(FrmMenu frmPadre, BE.Reserva_AR74 reserva)
+        {
+            InitializeComponent();
+            this.frmPadre = frmPadre;
+            this.reserva = reserva;
+            btnConfirmar.Visible = false;
+            cmbMetodoDePago.Visible = false;
+            CargaServicios();
+            Idioma.GestorIdioma_64PR.GetInstance.Suscribir(this); ///observer del cambio de idioma
+                                                                  ///Aplico el idioma que ya está cargado
+            textos = Idioma.GestorIdioma_64PR.GetInstance.ObtenerTextos();
+            if (textos.Count > 0)
+                ActualizarIdioma(textos);
+        }
+        public void ActualizarIdioma(Dictionary<string, string> textoss)
+        {
+            textos = textoss;
+            Traductor_64PR.Traducir(this, textos);
+        }
+        private void CargaServicios()
+        {
+            lstTipos.DataSource = bllTipos.ListarTiposServicio();
+        }
+
+        private void btnPagar_Click(object sender, EventArgs e)
+        {
+            btnAgregarCuenta.Visible = false;
+            btnPagar.Visible = false;
+            btnConfirmar.Visible = true;
+            cmbMetodoDePago.Visible = true;
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                btnConfirmar.Enabled = false; // primera línea, evita doble click por si la consulta a la BD tarda
+
+                if (cmbMetodoDePago.SelectedItem == null)
+                {
+                    MessageBox.Show("Seleccione un metodo de pago");
+                    btnConfirmar.Enabled = true;
+                    return;
+                }
+
+                solicitud.Reserva = reserva;
+                solicitud.Servicio = servicio;
+                solicitud.MetodoPago = cmbMetodoDePago.SelectedItem.ToString();
+                solicitud.EstadoPago = EstadoPago.Pagado;
+
+                bllPagos.RegistrarPago(reserva.IdReserva, solicitud.Precio, cmbMetodoDePago.SelectedItem.ToString());
+                bllSolicitud.RegistrarSolicitudServicio(solicitud);
+
+                FrmOpcionesComprobante dialogo = new FrmOpcionesComprobante();
+                dialogo.StartPosition = FormStartPosition.CenterParent;
+                dialogo.ShowDialog(frmPadre);
+
+                switch (dialogo.Opcion)
+                {
+                    case FrmOpcionesComprobante.OpcionElegida.Imprimir:
+                        ImprimirComprobante(reserva, servicio.Precio, cmbMetodoDePago.SelectedItem.ToString());
+                        break;
+                    case FrmOpcionesComprobante.OpcionElegida.DescargarPdf:
+                        GuardarComprobantePdf(reserva, servicio.Precio, cmbMetodoDePago.SelectedItem.ToString());
+                        break;
+                }
+
+                frmPadre.AbrirFormularioHijo(this);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void lstTipos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(lstTipos.SelectedIndex != -1)
+            {
+                servicio = (BE.TipoServicio)lstTipos.SelectedItem;
+            }
+        }
+        private void GuardarComprobantePdf(Reserva_AR74 reserva, decimal total, string metodoPago)
+        {
+            SaveFileDialog saveDialog = new SaveFileDialog();
+            saveDialog.Filter = "Archivo PDF (*.pdf)|*.pdf";
+            saveDialog.FileName = $"Comprobante_{reserva.IdReserva:D6}.pdf";
+
+            if (saveDialog.ShowDialog() != DialogResult.OK)
+                return;
+
+            PrintDocument printDoc = new PrintDocument();
+            printDoc.DefaultPageSettings.Landscape = false;
+            printDoc.PrinterSettings.PrinterName = "Microsoft Print to PDF";
+            printDoc.PrinterSettings.PrintToFile = true;
+            printDoc.PrinterSettings.PrintFileName = saveDialog.FileName;
+
+            printDoc.PrintPage += (s, ev) => PrintDoc_PrintComprobante(s, ev, reserva, total, metodoPago);
+
+            printDoc.Print();
+
+            MessageBox.Show("Comprobante guardado con éxito.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void ImprimirComprobante(Reserva_AR74 reserva, decimal montoTotal, string metodoPago)
+        {
+            PrintDocument printDoc = new PrintDocument();
+            printDoc.DefaultPageSettings.Landscape = false; // Portrait, es un comprobante angosto
+
+            printDoc.PrintPage += (sender, e) => PrintDoc_PrintComprobante(sender, e, reserva, montoTotal, metodoPago);
+
+            PrintPreviewDialog preview = new PrintPreviewDialog();
+            preview.Document = printDoc;
+            preview.WindowState = FormWindowState.Maximized;
+            preview.ShowDialog();
+        }
+
+        private void PrintDoc_PrintComprobante(object sender, PrintPageEventArgs e, Reserva_AR74 reserva, decimal montoTotal, string metodoPago)
+        {
+            Graphics g = e.Graphics;
+            Font fontTitulo = new Font("Arial", 14, FontStyle.Bold);
+            Font fontHeader = new Font("Arial", 10, FontStyle.Bold);
+            Font fontData = new Font("Arial", 10, FontStyle.Regular);
+            Brush brush = Brushes.Black;
+
+            float x = e.MarginBounds.Left;
+            float y = e.MarginBounds.Top;
+            float rowH = fontData.GetHeight(g) + 8;
+
+            // Encabezado del comprobante
+            g.DrawString("Sistema Hotelero - Comprobante de Pago", fontTitulo, brush, x, y);
+            y += rowH + 10;
+            g.DrawString($"Comprobante N°: {reserva.IdReserva:D6}", fontData, brush, x, y);
+            y += rowH;
+            g.DrawString($"Fecha de emisión: {DateTime.Now:dd/MM/yyyy HH:mm}", fontData, brush, x, y);
+            y += rowH + 6;
+
+            g.DrawLine(Pens.Black, e.MarginBounds.Left, y, e.MarginBounds.Right, y);
+            y += 12;
+
+            // Datos del huésped
+            g.DrawString("Huésped", fontHeader, brush, x, y);
+            y += rowH;
+            g.DrawString($"{reserva.Huesped.Nombre} {reserva.Huesped.Apellido} - DNI: {reserva.Huesped.DNI}", fontData, brush, x, y);
+            y += rowH + 10;
+
+            // Datos de la estadía
+            g.DrawString("Detalle de la estadía", fontHeader, brush, x, y);
+            y += rowH;
+            g.DrawString($"Habitación N° {reserva.Habitacion.Numero} - {reserva.Habitacion.Tipo.Descripcion}", fontData, brush, x, y);
+            y += rowH;
+
+            g.DrawLine(Pens.Black, e.MarginBounds.Left, y, e.MarginBounds.Right, y);
+            y += 12;
+
+            // Pago
+            g.DrawString("Pago", fontHeader, brush, x, y);
+            y += rowH;
+            g.DrawString($"Método: {metodoPago}", fontData, brush, x, y);
+            y += rowH;
+            g.DrawString($"Total abonado: ${montoTotal:N2}", new Font("Arial", 12, FontStyle.Bold), brush, x, y);
+        }
+
+        private void btnAgregarCuenta_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                btnConfirmar.Enabled = false; // primera línea, evita doble click por si la consulta a la BD tarda
+
+                solicitud.Reserva = reserva;
+                solicitud.Servicio = servicio;
+                solicitud.EstadoPago = EstadoPago.PendientePago;
+
+                bllSolicitud.RegistrarSolicitudServicio(solicitud);
+
+                frmPadre.AbrirFormularioHijo(this);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+    }
+}

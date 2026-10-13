@@ -183,6 +183,18 @@
     <Compile Include="FrmReservaPaso3_AR74.Designer.cs">
       <DependentUpon>FrmReservaPaso3_AR74.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSolicitudServicioPaso1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSolicitudServicioPaso1.Designer.cs">
+      <DependentUpon>FrmSolicitudServicioPaso1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSolicitudServicioPaso2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSolicitudServicioPaso2.Designer.cs">
+      <DependentUpon>FrmSolicitudServicioPaso2.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmTareasPendientes_AR74.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -272,6 +284,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReservaPaso3_AR74.resx">
       <DependentUpon>FrmReservaPaso3_AR74.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSolicitudServicioPaso1.resx">
+      <DependentUpon>FrmSolicitudServicioPaso1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSolicitudServicioPaso2.resx">
+      <DependentUpon>FrmSolicitudServicioPaso2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTareasPendientes_AR74.resx">
       <DependentUpon>FrmTareasPendientes_AR74.cs</DependentUpon>

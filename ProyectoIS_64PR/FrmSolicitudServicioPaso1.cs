@@ -1,0 +1,84 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ProyectoIS_64PR
+{
+    public partial class FrmSolicitudServicioPaso1 : Form, Idioma.IObservadorIdioma_64PR
+    {
+        FrmMenu frmPadre;
+        BLL_64PR.BLL_Reservas_AR74 bllReservas = new BLL_64PR.BLL_Reservas_AR74();
+        Dictionary<string, string> textos;
+        public FrmSolicitudServicioPaso1(FrmMenu frmPadre)
+        {
+            InitializeComponent();
+            this.frmPadre = frmPadre;
+            flowLayoutPanelHabitaciones.FlowDirection = FlowDirection.LeftToRight;
+            flowLayoutPanelHabitaciones.WrapContents = true;
+            flowLayoutPanelHabitaciones.AutoScroll = true;
+            MostrarReservas();
+            Idioma.GestorIdioma_64PR.GetInstance.Suscribir(this); ///observer del cambio de idioma
+                                                                  ///Aplico el idioma que ya está cargado
+            textos = Idioma.GestorIdioma_64PR.GetInstance.ObtenerTextos();
+            if (textos.Count > 0)
+                ActualizarIdioma(textos);
+        }
+        public void ActualizarIdioma(Dictionary<string, string> textoss)
+        {
+            textos = textoss;
+            Traductor_64PR.Traducir(this, textos);
+        }
+        public void MostrarReservas()
+        {
+            flowLayoutPanelHabitaciones.Controls.Clear();
+            List<BE.Reserva_AR74> reservasHoy = bllReservas.ListarReservasCheckOutHoy(); // reutilizo el mismo metodo, ya que el estado de la reserva = enCurso
+
+            if (reservasHoy.Count == 0)
+            {
+                Label lblSinResultados = new Label();
+                lblSinResultados.ForeColor = Color.Red;
+                lblSinResultados.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+                lblSinResultados.AutoSize = false;
+                lblSinResultados.Dock = DockStyle.Fill;
+                lblSinResultados.TextAlign = ContentAlignment.MiddleCenter;
+                lblSinResultados.Name = "lblSinResultados";
+
+                this.Controls.Add(lblSinResultados);
+                lblSinResultados.BringToFront();
+                flowLayoutPanelHabitaciones.Visible = false;
+                return;
+            }
+
+            flowLayoutPanelHabitaciones.Visible = true;
+
+            foreach (var reserva in reservasHoy)
+            {
+                UcCtrlTarjetaHabitacion_AR74 uc = new UcCtrlTarjetaHabitacion_AR74();
+                uc.CargarDatos(reserva.Habitacion);
+                uc.AplicarColor(Color.FromArgb(230, 90, 60)); //fuerzo el color rojo/naranja
+                uc.Tag = reserva;
+                uc.Click += Tarjeta_Click;
+                flowLayoutPanelHabitaciones.Controls.Add(uc);
+            }
+        }
+        private void Tarjeta_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                UcCtrlTarjetaHabitacion_AR74 uc = (UcCtrlTarjetaHabitacion_AR74)sender;
+                BE.Reserva_AR74 reserva = (BE.Reserva_AR74)uc.Tag;
+                frmPadre.AbrirFormularioHijo(new FrmSolicitudServicioPaso2(frmPadre, reserva));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+    }
+}

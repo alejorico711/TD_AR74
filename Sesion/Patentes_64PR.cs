@@ -34,5 +34,7 @@ namespace Sesion
         public const string ABMHabitaciones = "ABM habitaciones";
         public const string ABMTipoHabitaciones = "ABM tipo habitaciones";
         public const string EstadoActual = "Ver estado actual";
+        public const string TareasPendientes = "Tareas pendientes";
+        public const string RegistrarServiciosAdicionales = "Registrar servicios adicionales";
     }
 }

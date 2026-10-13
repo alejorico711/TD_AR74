@@ -24,9 +24,7 @@ namespace BLL_64PR
                     TipoTarea = "Limpieza",
                     IdReferencia = hab.IdHabitacion,
                     NumeroHabitacion = hab.Numero,
-                    Descripcion = "Limpieza de habitación",
-                    FechaHora = null,
-                    Cantidad = 0
+                    Descripcion = "Limpieza de habitación"
                 });
             }
 
