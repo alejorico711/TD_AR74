@@ -50,8 +50,9 @@ namespace ProyectoIS_64PR
             this.tiposDeHabitacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.habitacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tareasPendientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnlContenidoMenu = new System.Windows.Forms.Panel();
             this.serviciosAdicionalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnlContenidoMenu = new System.Windows.Forms.Panel();
+            this.tiposDeServiciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -204,7 +205,8 @@ namespace ProyectoIS_64PR
             this.maestrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.huespedesToolStripMenuItem,
             this.tiposDeHabitacionesToolStripMenuItem,
-            this.habitacionesToolStripMenuItem});
+            this.habitacionesToolStripMenuItem,
+            this.tiposDeServiciosToolStripMenuItem});
             this.maestrosToolStripMenuItem.Name = "maestrosToolStripMenuItem";
             this.maestrosToolStripMenuItem.Size = new System.Drawing.Size(93, 27);
             this.maestrosToolStripMenuItem.Text = "Maestros";
@@ -237,6 +239,13 @@ namespace ProyectoIS_64PR
             this.tareasPendientesToolStripMenuItem.Text = "Tareas pendientes";
             this.tareasPendientesToolStripMenuItem.Click += new System.EventHandler(this.tareasPendientesToolStripMenuItem_Click);
             // 
+            // serviciosAdicionalesToolStripMenuItem
+            // 
+            this.serviciosAdicionalesToolStripMenuItem.Name = "serviciosAdicionalesToolStripMenuItem";
+            this.serviciosAdicionalesToolStripMenuItem.Size = new System.Drawing.Size(178, 27);
+            this.serviciosAdicionalesToolStripMenuItem.Text = "Servicios adicionales";
+            this.serviciosAdicionalesToolStripMenuItem.Click += new System.EventHandler(this.serviciosAdicionalesToolStripMenuItem_Click);
+            // 
             // pnlContenidoMenu
             // 
             this.pnlContenidoMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -246,12 +255,12 @@ namespace ProyectoIS_64PR
             this.pnlContenidoMenu.Size = new System.Drawing.Size(1282, 532);
             this.pnlContenidoMenu.TabIndex = 2;
             // 
-            // serviciosAdicionalesToolStripMenuItem
+            // tiposDeServiciosToolStripMenuItem
             // 
-            this.serviciosAdicionalesToolStripMenuItem.Name = "serviciosAdicionalesToolStripMenuItem";
-            this.serviciosAdicionalesToolStripMenuItem.Size = new System.Drawing.Size(178, 27);
-            this.serviciosAdicionalesToolStripMenuItem.Text = "Servicios adicionales";
-            this.serviciosAdicionalesToolStripMenuItem.Click += new System.EventHandler(this.serviciosAdicionalesToolStripMenuItem_Click);
+            this.tiposDeServiciosToolStripMenuItem.Name = "tiposDeServiciosToolStripMenuItem";
+            this.tiposDeServiciosToolStripMenuItem.Size = new System.Drawing.Size(261, 28);
+            this.tiposDeServiciosToolStripMenuItem.Text = "Tipos de servicios";
+            this.tiposDeServiciosToolStripMenuItem.Click += new System.EventHandler(this.tiposDeServiciosToolStripMenuItem_Click);
             // 
             // FrmMenu
             // 
@@ -300,5 +309,6 @@ namespace ProyectoIS_64PR
         private System.Windows.Forms.ToolStripMenuItem habitacionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tareasPendientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem serviciosAdicionalesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tiposDeServiciosToolStripMenuItem;
     }
 }

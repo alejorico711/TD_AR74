@@ -268,5 +268,19 @@
     "FrmSolicitudServicioPaso2.btnConfirmar": "FALTA TRADUCCION",
     "FrmSolicitudServicioPaso2.btnPagar": "FALTA TRADUCCION",
     "FrmSolicitudServicioPaso2.btnAgregarCuenta": "FALTA TRADUCCION",
-    "FrmSolicitudServicioPaso2.lblServicios": "FALTA TRADUCCION"
+    "FrmSolicitudServicioPaso2.lblServicios": "FALTA TRADUCCION",
+    "FrmMenu.tiposDeServiciosToolStripMenuItem": "FALTA TRADUCCION",
+    "FrmABMTiposServicios_AR74.btnLimpiar": "FALTA TRADUCCION",
+    "FrmABMTiposServicios_AR74.btnModificacion": "FALTA TRADUCCION",
+    "FrmABMTiposServicios_AR74.btnBaja": "FALTA TRADUCCION",
+    "FrmABMTiposServicios_AR74.bttnAlta": "FALTA TRADUCCION",
+    "FrmABMTiposServicios_AR74.lblRequiereStaff": "FALTA TRADUCCION",
+    "FrmABMTiposServicios_AR74.lblPrecio": "FALTA TRADUCCION",
+    "FrmABMTiposServicios_AR74.lblDescripcion": "FALTA TRADUCCION",
+    "FrmABMTiposServicios_AR74.dgvServicios.IdTipoServicio": "FALTA TRADUCCION",
+    "FrmABMTiposServicios_AR74.dgvServicios.Descripcion": "FALTA TRADUCCION",
+    "FrmABMTiposServicios_AR74.dgvServicios.Precio": "FALTA TRADUCCION",
+    "FrmABMTiposServicios_AR74.dgvServicios.RequiereStaff": "FALTA TRADUCCION",
+    "FrmABMTiposServicios_AR74.dgvServicios.Activo": "FALTA TRADUCCION",
+    "FrmABMTiposServicios_AR74.rbRequiereStaff": "FALTA TRADUCCION"
 }

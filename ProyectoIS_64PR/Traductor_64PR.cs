@@ -129,6 +129,17 @@ namespace ProyectoIS_64PR
                     ProcesarControl(hijo, form, textos, clavesFaltantes);
                 }
             }
+            if (control is CheckBox cb)
+            {
+                if (textos.ContainsKey(form.Name + "." + cb.Name))
+                {
+                    cb.Text = textos[form.Name + "." + cb.Name];
+                }
+                else
+                {
+                    clavesFaltantes.Add(form.Name + "." + cb.Name);
+                }
+            }
         }
     }
 }

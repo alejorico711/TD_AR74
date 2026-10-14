@@ -452,5 +452,17 @@ namespace ProyectoIS_64PR
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void tiposDeServiciosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                AbrirFormularioHijo(new FrmABMTiposServicios_AR74());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

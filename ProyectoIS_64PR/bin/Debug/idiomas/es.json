@@ -267,5 +267,19 @@
     "FrmSolicitudServicioPaso2.btnConfirmar": "Confirmar",
     "FrmSolicitudServicioPaso2.btnPagar": "Pagar ahora",
     "FrmSolicitudServicioPaso2.btnAgregarCuenta": "Pagar en Check-Out",
-    "FrmSolicitudServicioPaso2.lblServicios": "Seleccione el servicio deseado:"
+    "FrmSolicitudServicioPaso2.lblServicios": "Seleccione el servicio deseado:",
+    "FrmMenu.tiposDeServiciosToolStripMenuItem": "Tipos de servicios",
+    "FrmABMTiposServicios_AR74.btnLimpiar": "Limpiar",
+    "FrmABMTiposServicios_AR74.btnModificacion": "Modificar",
+    "FrmABMTiposServicios_AR74.btnBaja": "Baja",
+    "FrmABMTiposServicios_AR74.bttnAlta": "Alta",
+    "FrmABMTiposServicios_AR74.lblRequiereStaff": "Requiere staff:",
+    "FrmABMTiposServicios_AR74.lblPrecio": "Precio:",
+    "FrmABMTiposServicios_AR74.lblDescripcion": "Descripcion:",
+    "FrmABMTiposServicios_AR74.dgvServicios.IdTipoServicio": "",
+    "FrmABMTiposServicios_AR74.dgvServicios.Descripcion": "Descripcion",
+    "FrmABMTiposServicios_AR74.dgvServicios.Precio": "Precio",
+    "FrmABMTiposServicios_AR74.dgvServicios.RequiereStaff": "Requiere staff",
+    "FrmABMTiposServicios_AR74.dgvServicios.Activo": "",
+    "FrmABMTiposServicios_AR74.rbRequiereStaff": ""
 }
