@@ -19,5 +19,18 @@ namespace BLL_64PR
 
             return mpp.RegistrarSolicitudServicio(solicitud);
         }
+        public List<SolicitudServicio> ListarServiciosPendientesStaff()
+        {
+            return mpp.ListarServiciosPendientesStaff();
+        }
+
+        public void FinalizarServicio(int idSolicitud)
+        {
+            mpp.FinalizarServicio(idSolicitud);
+        }
+        public List<SolicitudServicio> ListarServiciosPendientesDePago(int idReserva)
+        {
+            return mpp.ListarServiciosPendientesDePago(idReserva);
+        }
     }
 }

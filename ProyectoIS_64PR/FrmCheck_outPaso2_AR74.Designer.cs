@@ -48,6 +48,8 @@
             this.lblHuespedNombre = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.cmbMetodoDePago = new System.Windows.Forms.ComboBox();
+            this.lstServiciosCuenta = new System.Windows.Forms.ListBox();
+            this.lblSubtotalServicios = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNoches)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCalendario)).BeginInit();
@@ -306,12 +308,32 @@
             this.cmbMetodoDePago.Size = new System.Drawing.Size(121, 28);
             this.cmbMetodoDePago.TabIndex = 22;
             // 
+            // lstServiciosCuenta
+            // 
+            this.lstServiciosCuenta.FormattingEnabled = true;
+            this.lstServiciosCuenta.ItemHeight = 20;
+            this.lstServiciosCuenta.Location = new System.Drawing.Point(618, 125);
+            this.lstServiciosCuenta.Name = "lstServiciosCuenta";
+            this.lstServiciosCuenta.Size = new System.Drawing.Size(167, 224);
+            this.lstServiciosCuenta.TabIndex = 23;
+            // 
+            // lblSubtotalServicios
+            // 
+            this.lblSubtotalServicios.AutoSize = true;
+            this.lblSubtotalServicios.Location = new System.Drawing.Point(614, 352);
+            this.lblSubtotalServicios.Name = "lblSubtotalServicios";
+            this.lblSubtotalServicios.Size = new System.Drawing.Size(50, 20);
+            this.lblSubtotalServicios.TabIndex = 24;
+            this.lblSubtotalServicios.Text = "label1";
+            // 
             // FrmCheck_outPaso2_AR74
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(243)))), ((int)(((byte)(231)))));
             this.ClientSize = new System.Drawing.Size(800, 562);
+            this.Controls.Add(this.lblSubtotalServicios);
+            this.Controls.Add(this.lstServiciosCuenta);
             this.Controls.Add(this.cmbMetodoDePago);
             this.Controls.Add(this.pbPersonas);
             this.Controls.Add(this.pbNoches);
@@ -359,5 +381,7 @@
         private System.Windows.Forms.Label lblHuespedNombre;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.ComboBox cmbMetodoDePago;
+        private System.Windows.Forms.ListBox lstServiciosCuenta;
+        private System.Windows.Forms.Label lblSubtotalServicios;
     }
 }

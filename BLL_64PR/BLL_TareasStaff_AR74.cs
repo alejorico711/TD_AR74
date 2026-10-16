@@ -10,7 +10,7 @@ namespace BLL_64PR
     public class BLL_TareasStaff_AR74
     {
         BLL_Habitaciones_AR74 bllHabitaciones = new BLL_Habitaciones_AR74();
-        // A futuro: BLL_ServiciosAdicionales_AR74 bllServicios = new BLL_ServiciosAdicionales_AR74();
+        BLL_64PR.BLL_SolicitudesServicio_AR74 bllServicios = new BLL_64PR.BLL_SolicitudesServicio_AR74();
 
         public List<TareaPendiente> ListarTareasPendientes()
         {
@@ -28,8 +28,17 @@ namespace BLL_64PR
                 });
             }
 
-            // A futuro, acá se agrega el foreach de servicios pendientes del staff,
-            // armando TareaPendiente con TipoTarea = "ServicioAdicional"
+            List<SolicitudServicio> serviciosPendientes = bllServicios.ListarServiciosPendientesStaff();
+            foreach (var s in serviciosPendientes)
+            {
+                tareas.Add(new TareaPendiente
+                {
+                    TipoTarea = "ServicioAdicional",
+                    IdReferencia = s.IdSolicitud,
+                    NumeroHabitacion = s.Reserva.Habitacion.Numero,
+                    Descripcion = s.Servicio.Descripcion
+                });
+            }
 
             return tareas.OrderBy(t => t.NumeroHabitacion).ToList();
         }
@@ -41,11 +50,9 @@ namespace BLL_64PR
                 case "Limpieza":
                     bllHabitaciones.FinalizarLimpieza(tarea.IdReferencia);
                     break;
-
-                    // A futuro:
-                    // case "ServicioAdicional":
-                    //     bllServicios.FinalizarServicio(tarea.IdReferencia, responsableStaff);
-                    //     break;
+                case "ServicioAdicional":
+                    bllServicios.FinalizarServicio(tarea.IdReferencia);
+                    break;
             }
         }
     }

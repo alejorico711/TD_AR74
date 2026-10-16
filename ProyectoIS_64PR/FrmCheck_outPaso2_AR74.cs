@@ -19,6 +19,9 @@ namespace ProyectoIS_64PR
         Reserva_AR74 reserva;
         BLL_64PR.BLL_Reservas_AR74 bllReservas = new BLL_64PR.BLL_Reservas_AR74();
         BLL_64PR.BLL_Pagos_AR74 bllPagos = new BLL_64PR.BLL_Pagos_AR74();
+        BLL_64PR.BLL_SolicitudesServicio_AR74 bllSolicitudes = new BLL_64PR.BLL_SolicitudesServicio_AR74();
+        List<SolicitudServicio> serviciosCuenta = new List<SolicitudServicio>();
+        decimal subtotalServicios;
         Dictionary<string, string> textos;
         public FrmCheck_outPaso2_AR74(FrmMenu frmPadre, Reserva_AR74 reserva)
         {
@@ -47,6 +50,10 @@ namespace ProyectoIS_64PR
             textos = Idioma.GestorIdioma_64PR.GetInstance.ObtenerTextos();
             if (textos.Count > 0)
                 ActualizarIdioma(textos);
+
+            lstServiciosCuenta.Visible = false;
+            lblSubtotalServicios.Visible = false;
+            CargarServiciosCuenta();
             CargarResumen();
         }
         public void ActualizarIdioma(Dictionary<string, string> textoss)
@@ -69,29 +76,48 @@ namespace ProyectoIS_64PR
             int noches = (reserva.FechaFin - reserva.FechaInicio).Days;
             decimal precioPorNoche = reserva.Habitacion.Tipo.PrecioPorNoche;
             decimal total = noches * precioPorNoche;
+            decimal montoCobrado = total + subtotalServicios;
 
             lblValorNochesxPrecio.Text = $"{noches} noches x ${precioPorNoche:N0}";
-            lblValorTotal.Text = $"${total:N0}";
+            lblValorTotal.Text = $"${montoCobrado:N0}";
+        }
+        private void CargarServiciosCuenta()
+        {
+            serviciosCuenta = bllSolicitudes.ListarServiciosPendientesDePago(reserva.IdReserva);
+            if(serviciosCuenta.Count > 0)
+            {
+                lstServiciosCuenta.Visible = true;
+                lblSubtotalServicios.Visible = true;
+
+                subtotalServicios = serviciosCuenta.Sum(s => s.Precio);
+                lstServiciosCuenta.DataSource = serviciosCuenta;
+
+                lblSubtotalServicios.Text = $"${subtotalServicios:N0}";
+            }
         }
 
         private void btnConfirmar_Click_1(object sender, EventArgs e)
         {
             try
             {
+                
                 btnConfirmar.Enabled = false; // primera línea, evita doble click por si la consulta a la BD tarda
 
-                int noches = (reserva.FechaFin - reserva.FechaInicio).Days;
-                decimal precioPorNoche = reserva.Habitacion.Tipo.PrecioPorNoche;
-                decimal total = noches * precioPorNoche;
-
-                if(cmbMetodoDePago.SelectedItem == null)
+                if (cmbMetodoDePago.SelectedItem == null)
                 {
                     MessageBox.Show("Seleccione un metodo de pago");
                     btnConfirmar.Enabled = true;
                     return;
                 }
+
+                int noches = (reserva.FechaFin - reserva.FechaInicio).Days;
+                decimal precioPorNoche = reserva.Habitacion.Tipo.PrecioPorNoche;
+                decimal total = noches * precioPorNoche;
+                decimal montoCobrado = total + subtotalServicios;
+                string metodoPago = cmbMetodoDePago.SelectedItem.ToString();
+
                 bllPagos.RegistrarPago(reserva.IdReserva, total, cmbMetodoDePago.SelectedItem.ToString());
-                bllReservas.ConfirmarCheckOut(reserva.IdReserva);
+                bllReservas.ConfirmarCheckOut(reserva.IdReserva, cmbMetodoDePago.SelectedItem.ToString());
 
                 FrmOpcionesComprobante dialogo = new FrmOpcionesComprobante();
                 dialogo.StartPosition = FormStartPosition.CenterParent;
@@ -195,12 +221,31 @@ namespace ProyectoIS_64PR
             g.DrawLine(Pens.Black, e.MarginBounds.Left, y, e.MarginBounds.Right, y);
             y += 12;
 
+            if (serviciosCuenta.Count > 0)
+            {
+                g.DrawString("Servicios adicionales", fontHeader, brush, x, y);
+                y += rowH;
+                foreach (var s in serviciosCuenta)
+                {
+                    g.DrawString(s.Servicio.Descripcion, fontData, brush, x, y);
+                    string precio = $"${s.Precio:N2}";
+                    float anchoPrecio = g.MeasureString(precio, fontData).Width;
+                    g.DrawString(precio, fontData, brush, e.MarginBounds.Right - anchoPrecio, y);
+                    y += rowH;
+                }
+                g.DrawString($"Subtotal servicios: ${subtotalServicios:N2}", fontHeader, brush, x, y);
+                y += rowH + 10;
+            }
+
             // Pago
-            g.DrawString("Pago", fontHeader, brush, x, y);
-            y += rowH;
             g.DrawString($"Método: {metodoPago}", fontData, brush, x, y);
             y += rowH;
-            g.DrawString($"Total abonado: ${montoTotal:N2}", new Font("Arial", 12, FontStyle.Bold), brush, x, y);
+            if (serviciosCuenta.Count > 0)
+            {
+                g.DrawString($"Estadía: ${montoTotal:N2}", fontData, brush, x, y);
+                y += rowH;
+            }
+            g.DrawString($"Total abonado: ${montoTotal + subtotalServicios:N2}", new Font("Arial", 12, FontStyle.Bold), brush, x, y);
         }
 
         private void btnVolver_Click(object sender, EventArgs e)

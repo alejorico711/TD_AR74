@@ -81,10 +81,11 @@ namespace Mapper
             p[0] = new SqlParameter("@IdReserva", idReserva);
             DAL_64PR.Acceso.Instancia.escribirSP("sp_ConfirmarCheckIn", p);
         }
-        public void ConfirmarCheckout(int idReserva)
+        public void ConfirmarCheckout(int idReserva, string metodoPago)
         {
-            SqlParameter[] p = new SqlParameter[1];
+            SqlParameter[] p = new SqlParameter[2];
             p[0] = new SqlParameter("@IdReserva", idReserva);
+            p[1] = new SqlParameter("@MetodoPago", metodoPago);
             DAL_64PR.Acceso.Instancia.escribirSP("sp_ConfirmarCheckout", p);
         }
 

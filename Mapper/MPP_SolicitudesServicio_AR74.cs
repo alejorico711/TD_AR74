@@ -26,5 +26,66 @@ namespace Mapper
 
             return (int)p[4].Value;
         }
+        public List<SolicitudServicio> ListarServiciosPendientesStaff()
+        {
+            DataTable tabla = DAL_64PR.Acceso.Instancia.leerSP("sp_ListarServiciosPendientesStaff", null);
+            List<SolicitudServicio> lista = new List<SolicitudServicio>();
+
+            foreach (DataRow dr in tabla.Rows)
+            {
+                lista.Add(new SolicitudServicio
+                {
+                    IdSolicitud = (int)dr["IdSolicitud"],
+                    FechaHoraSolicitud = (DateTime)dr["FechaHoraSolicitud"],
+                    Servicio = new TipoServicio
+                    {
+                        IdTipoServicio = (int)dr["IdTipoServicio"],
+                        Descripcion = (string)dr["DescripcionServicio"]
+                    },
+                    Reserva = new Reserva_AR74
+                    {
+                        IdReserva = (int)dr["IdReserva"],
+                        Habitacion = new Habitacion
+                        {
+                            IdHabitacion = (int)dr["IdHabitacion"],
+                            Numero = (int)dr["Numero"]
+                        }
+                    }
+                });
+            }
+            return lista;
+        }
+
+        public void FinalizarServicio(int idSolicitud)
+        {
+            SqlParameter[] p = new SqlParameter[1];
+            p[0] = new SqlParameter("@IdSolicitud", idSolicitud);
+
+            DAL_64PR.Acceso.Instancia.escribirSP("sp_FinalizarServicio", p);
+        }
+        public List<SolicitudServicio> ListarServiciosPendientesDePago(int idReserva)
+        {
+            SqlParameter[] p = new SqlParameter[1];
+            p[0] = new SqlParameter("@IdReserva", idReserva);
+
+            DataTable tabla = DAL_64PR.Acceso.Instancia.leerSP("sp_ListarServiciosPendientesDePago", p);
+            List<SolicitudServicio> lista = new List<SolicitudServicio>();
+
+            foreach (DataRow dr in tabla.Rows)
+            {
+                lista.Add(new SolicitudServicio
+                {
+                    IdSolicitud = (int)dr["IdSolicitud"],
+                    FechaHoraSolicitud = (DateTime)dr["FechaHoraSolicitud"],
+                    Precio = (decimal)dr["Precio"],
+                    Servicio = new TipoServicio
+                    {
+                        IdTipoServicio = (int)dr["IdTipoServicio"],
+                        Descripcion = (string)dr["DescripcionServicio"]
+                    }
+                });
+            }
+            return lista;
+        }
     }
 }

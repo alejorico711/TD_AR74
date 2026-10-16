@@ -16,5 +16,10 @@ namespace BE
         public EstadoServicio EstadoServicio { get; set; }
         public EstadoPago EstadoPago { get; set; }
         public string MetodoPago { get; set; }
+
+        public override string ToString()
+        {
+            return Servicio.Descripcion + " | " + Precio.ToString();
+        }
     }
 }
