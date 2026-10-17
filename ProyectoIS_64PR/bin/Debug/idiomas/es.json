@@ -282,5 +282,6 @@
     "FrmABMTiposServicios_AR74.dgvServicios.RequiereStaff": "Requiere staff",
     "FrmABMTiposServicios_AR74.dgvServicios.Activo": "",
     "FrmABMTiposServicios_AR74.rbRequiereStaff": "",
-    "FrmCheck_outPaso2_AR74.lblSubtotalServicios": "FALTA TRADUCCION"
+    "FrmCheck_outPaso2_AR74.lblSubtotalServicios": "FALTA TRADUCCION",
+    "FrmCheck_in_AR74.lblBuscarPorDNI": "Busca por DNI:"
 }

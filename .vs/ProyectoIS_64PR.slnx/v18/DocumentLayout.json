@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A744F8D5-C890-4362-89E0-B603579A601C}|BLL_64PR\\BLL_64PR.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\bll_64pr\\bll_tiposservicio_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A744F8D5-C890-4362-89E0-B603579A601C}|BLL_64PR\\BLL_64PR.csproj|solutionrelative:bll_64pr\\bll_tiposservicio_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\proyectois_64pr\\frmcheck-in_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|solutionrelative:proyectois_64pr\\frmcheck-in_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4301447-7B78-4DD7-8209-DFB4B3B5FABB}|DV\\DV.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\dv\\dv_64pr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4301447-7B78-4DD7-8209-DFB4B3B5FABB}|DV\\DV.csproj|solutionrelative:dv\\dv_64pr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A744F8D5-C890-4362-89E0-B603579A601C}|BLL_64PR\\BLL_64PR.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\bll_64pr\\bll_tiposhabitacion_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A744F8D5-C890-4362-89E0-B603579A601C}|BLL_64PR\\BLL_64PR.csproj|solutionrelative:bll_64pr\\bll_tiposhabitacion_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A744F8D5-C890-4362-89E0-B603579A601C}|BLL_64PR\\BLL_64PR.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\bll_64pr\\bll_tareasstaff_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A744F8D5-C890-4362-89E0-B603579A601C}|BLL_64PR\\BLL_64PR.csproj|solutionrelative:bll_64pr\\bll_tareasstaff_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A744F8D5-C890-4362-89E0-B603579A601C}|BLL_64PR\\BLL_64PR.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\bll_64pr\\bll_reservas_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A744F8D5-C890-4362-89E0-B603579A601C}|BLL_64PR\\BLL_64PR.csproj|solutionrelative:bll_64pr\\bll_reservas_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\proyectois_64pr\\frmcheck-in_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|solutionrelative:proyectois_64pr\\frmcheck-in_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,67 +31,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "BLL_TiposServicio_AR74.cs",
-              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\BLL_64PR\\BLL_TiposServicio_AR74.cs",
-              "RelativeDocumentMoniker": "BLL_64PR\\BLL_TiposServicio_AR74.cs",
-              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\BLL_64PR\\BLL_TiposServicio_AR74.cs",
-              "RelativeToolTip": "BLL_64PR\\BLL_TiposServicio_AR74.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAgwBwAAAA5AAAAAAAAAA==",
+              "Title": "FrmCheck-in_AR74.cs",
+              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmCheck-in_AR74.cs",
+              "RelativeDocumentMoniker": "ProyectoIS_64PR\\FrmCheck-in_AR74.cs",
+              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmCheck-in_AR74.cs",
+              "RelativeToolTip": "ProyectoIS_64PR\\FrmCheck-in_AR74.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAuwG0AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-17T02:27:33.844Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BLL_TiposHabitacion_AR74.cs",
-              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\BLL_64PR\\BLL_TiposHabitacion_AR74.cs",
-              "RelativeDocumentMoniker": "BLL_64PR\\BLL_TiposHabitacion_AR74.cs",
-              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\BLL_64PR\\BLL_TiposHabitacion_AR74.cs",
-              "RelativeToolTip": "BLL_64PR\\BLL_TiposHabitacion_AR74.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAowA0AAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-17T02:27:26.544Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BLL_TareasStaff_AR74.cs",
-              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\BLL_64PR\\BLL_TareasStaff_AR74.cs",
-              "RelativeDocumentMoniker": "BLL_64PR\\BLL_TareasStaff_AR74.cs",
-              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\BLL_64PR\\BLL_TareasStaff_AR74.cs",
-              "RelativeToolTip": "BLL_64PR\\BLL_TareasStaff_AR74.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAkwDYAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-17T02:26:27.691Z",
+              "WhenOpened": "2026-10-17T02:44:31.483Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DV_64PR.cs",
-              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\DV\\DV_64PR.cs",
-              "RelativeDocumentMoniker": "DV\\DV_64PR.cs",
-              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\DV\\DV_64PR.cs",
-              "RelativeToolTip": "DV\\DV_64PR.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAbAAAAAAAAAA==",
+              "Title": "FrmCheck-in_AR74.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmCheck-in_AR74.cs",
+              "RelativeDocumentMoniker": "ProyectoIS_64PR\\FrmCheck-in_AR74.cs",
+              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmCheck-in_AR74.cs [Dise\u00F1o]",
+              "RelativeToolTip": "ProyectoIS_64PR\\FrmCheck-in_AR74.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-17T02:24:45.477Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BLL_Reservas_AR74.cs",
-              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\BLL_64PR\\BLL_Reservas_AR74.cs",
-              "RelativeDocumentMoniker": "BLL_64PR\\BLL_Reservas_AR74.cs",
-              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\BLL_64PR\\BLL_Reservas_AR74.cs",
-              "RelativeToolTip": "BLL_64PR\\BLL_Reservas_AR74.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-17T02:23:42.83Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-17T02:37:34.114Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         },

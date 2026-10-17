@@ -59,7 +59,6 @@ namespace ProyectoIS_64PR
             }
 
             flowLayoutPanelHabitaciones.Visible = true;
-
             foreach (var reserva in reservasHoy)
             {
                 UcCtrlTarjetaHabitacion_AR74 uc = new UcCtrlTarjetaHabitacion_AR74();
@@ -69,6 +68,8 @@ namespace ProyectoIS_64PR
                 uc.Click += Tarjeta_Click;
                 flowLayoutPanelHabitaciones.Controls.Add(uc);
             }
+            lblBuscarPorDNI.BringToFront();
+            flowLayoutPanelHabitaciones.SendToBack();
         }
 
         private void Tarjeta_Click(object sender, EventArgs e)
@@ -82,6 +83,50 @@ namespace ProyectoIS_64PR
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txtDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Si NO es un número y NO es la tecla de borrar (BackSpace)
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; // Cancela el evento
+            }
+        }
+
+        private void txtDNI_TextChanged(object sender, EventArgs e)
+        {
+            string filtro = txtDNI.Text.Trim();
+
+            // Si el cuadro de texto está vacío, mostramos todas las tarjetas
+            if (string.IsNullOrEmpty(filtro))
+            {
+                foreach (Control control in flowLayoutPanelHabitaciones.Controls)
+                {
+                    control.Visible = true;
+                }
+                return;
+            }
+            
+            foreach (Control control in flowLayoutPanelHabitaciones.Controls)
+            {
+                
+                if (control is UcCtrlTarjetaHabitacion_AR74 uc)
+                {
+                    
+                    BE.Reserva_AR74 reserva = (BE.Reserva_AR74)uc.Tag;
+
+                    
+                    if (reserva != null && reserva.Huesped != null && reserva.Huesped.DNI.ToString().StartsWith(filtro))
+                    {
+                        uc.Visible = true; // Coincide -> Se muestra
+                    }
+                    else
+                    {
+                        uc.Visible = false; // No coincide -> Se oculta
+                    }
+                }
             }
         }
     }

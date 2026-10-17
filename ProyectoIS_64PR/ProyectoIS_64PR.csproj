@@ -246,6 +246,9 @@
     <EmbeddedResource Include="FrmCambiarClave_64PR.resx">
       <DependentUpon>FrmCambiarClave_64PR.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCheck-in_AR74.resx">
+      <DependentUpon>FrmCheck-in_AR74.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCheck-out_AR74.resx">
       <DependentUpon>FrmCheck-out_AR74.cs</DependentUpon>
     </EmbeddedResource>
