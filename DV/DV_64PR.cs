@@ -22,7 +22,9 @@ namespace DV
             { "Huesped",            new string[] { "IdHuesped" } },
             { "Pago",               new string[] { "IdPago" } },
             { "Reserva",            new string[] { "IdReserva" } },
-            { "TipoHabitacion",     new string[] { "IdTipoHabitacion" } }
+            { "TipoHabitacion",     new string[] { "IdTipoHabitacion" } },
+            { "TipoServicio",       new string[] { "IdTipoServicio" } },
+            { "SolicitudServicio",  new string[] { "IdSolicitud" } }
         };
 
         DV.mpp_DV mpp = new DV.mpp_DV();

@@ -11,6 +11,7 @@ namespace BLL_64PR
     {
         BLL_Habitaciones_AR74 bllHabitaciones = new BLL_Habitaciones_AR74();
         BLL_64PR.BLL_SolicitudesServicio_AR74 bllServicios = new BLL_64PR.BLL_SolicitudesServicio_AR74();
+        private static readonly DV.DV_64PR recalculador = new DV.DV_64PR();
 
         public List<TareaPendiente> ListarTareasPendientes()
         {
