@@ -312,9 +312,9 @@
             // 
             this.lstServiciosCuenta.FormattingEnabled = true;
             this.lstServiciosCuenta.ItemHeight = 20;
-            this.lstServiciosCuenta.Location = new System.Drawing.Point(618, 125);
+            this.lstServiciosCuenta.Location = new System.Drawing.Point(588, 125);
             this.lstServiciosCuenta.Name = "lstServiciosCuenta";
-            this.lstServiciosCuenta.Size = new System.Drawing.Size(167, 224);
+            this.lstServiciosCuenta.Size = new System.Drawing.Size(212, 224);
             this.lstServiciosCuenta.TabIndex = 23;
             // 
             // lblSubtotalServicios

@@ -20,8 +20,8 @@ namespace ProyectoIS_64PR
         {
             InitializeComponent();
             this.frmPadre = frmPadre;
-            dtpInicio.MinDate = DateTime.Today + TimeSpan.FromDays(1);
-            dtpFin.MinDate = DateTime.Today + TimeSpan.FromDays(2);
+            dtpInicio.MinDate = DateTime.Today;
+            dtpFin.MinDate = DateTime.Today + TimeSpan.FromDays(1);
             nupCantidad.Minimum = 1;
             nupCantidad.Maximum = 6;
             nupCantidad.Value = 1;
@@ -48,6 +48,11 @@ namespace ProyectoIS_64PR
 
         private void btnBuscar_Click_1(object sender, EventArgs e)
         {
+            if (dtpInicio.Value.Date > dtpFin.Value.Date)
+            {
+                MessageBox.Show(textos["msgInicioMayorFin"]);
+                return;
+            }
             reserva.FechaInicio = dtpInicio.Value;
             reserva.FechaFin = dtpFin.Value;
             reserva.CantidadPersonas= (int)nupCantidad.Value;

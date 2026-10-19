@@ -44,6 +44,7 @@ namespace BLL_64PR
             mpp.ConfirmarCheckout(idReserva, metodoPago);
             recalculador.RecalcularTabla("Reserva");
             recalculador.RecalcularTabla("Habitacion");
+            recalculador.RecalcularTabla("SolicitudServicio");
             Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.ModuloBitacora_64PR.CheckOut).ToString(), ((int)Bitacora.TipoEventoBitacora_64PR.RegistrarCheckOut).ToString(), 4);
             bita.RegistrarEvento(ev);
         }

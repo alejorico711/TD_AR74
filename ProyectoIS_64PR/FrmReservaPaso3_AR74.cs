@@ -106,7 +106,7 @@ namespace ProyectoIS_64PR
             lblValorFechas.Text = $"{reserva.FechaInicio:dd/MM/yyyy} --> {reserva.FechaFin:dd/MM/yyyy}";
             lblValorPersonas.Text = reserva.CantidadPersonas.ToString();
 
-            int noches = (reserva.FechaFin - reserva.FechaInicio).Days;
+            int noches = (reserva.FechaFin - reserva.FechaInicio).Days +1;
             decimal precioPorNoche = reserva.Habitacion.Tipo.PrecioPorNoche;
             decimal total = noches * precioPorNoche;
 
