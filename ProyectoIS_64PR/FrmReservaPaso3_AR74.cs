@@ -125,11 +125,11 @@ namespace ProyectoIS_64PR
             {
                 if (cmbHuesped.SelectedIndex == -1)
                 {
-                    MessageBox.Show("Seleccione un huesped");
+                    MessageBox.Show(textos["msgSeleccionarHuesped"]);
                     return;
                 }
                 bllReserva.RegistrarReserva(reserva);
-                MessageBox.Show("Reserva registrada con exito");
+                MessageBox.Show(textos["msgExitoReserva"]);
                 frmPadre.AbrirFormularioHijo(this);
             }
             catch (Exception ex)

@@ -68,7 +68,7 @@ namespace ProyectoIS_64PR
         {
             if (string.IsNullOrWhiteSpace(txtDescripcion.Text))
             {
-                MessageBox.Show("Completá descripcion antes de guardar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(textos["msgCompletarDescripcion"], "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -83,7 +83,7 @@ namespace ProyectoIS_64PR
             {
                 gtipos.RegistrarTipoHabitacion(tipo);
                 CargaData();
-                MessageBox.Show("Tipo registrado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(textos["msgAltaTipo"], "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -95,9 +95,7 @@ namespace ProyectoIS_64PR
         {
             t = (TipoHabitacion)dgvTipos.CurrentRow.DataBoundItem;
 
-            DialogResult confirmacion = MessageBox.Show(
-                $"¿Confirmás dar de baja a {t.Descripcion}?",
-                "Confirmar baja", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult confirmacion = MessageBox.Show(textos["msgBajaTH"] + t.Descripcion + "?","", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (confirmacion == DialogResult.Yes)
             {
@@ -110,13 +108,13 @@ namespace ProyectoIS_64PR
         {
             if (t == null)
             {
-                MessageBox.Show("Seleccioná un tipo de la grilla antes de modificar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(textos["msgNoTH"], "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             if (string.IsNullOrWhiteSpace(txtDescripcion.Text))
             {
-                MessageBox.Show("Completá descripcion antes de guardar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(textos["msgCompletarDescripcion"], "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -133,7 +131,7 @@ namespace ProyectoIS_64PR
                 gtipos.ModificarTipoHabitacion(tipo);
                 CargaData();
                 t = null;
-                MessageBox.Show("Tipo modificado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(textos["msgTHModificado"], "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {

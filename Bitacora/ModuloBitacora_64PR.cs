@@ -13,8 +13,9 @@ namespace Bitacora
         GestionRoles = 3,
         GestionFamilias = 4,
         Maestros = 5,
-        Reserva =6,
+        Reserva = 6,
         CheckIn = 7,
-        CheckOut = 8
+        CheckOut = 8,
+        Servicios = 12
     }
 }

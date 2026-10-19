@@ -76,7 +76,7 @@ namespace ProyectoIS_64PR
         {
             if (cmbTipoHabitacion.SelectedValue == null)
             {
-                MessageBox.Show("Seleccioná un tipo de habitación antes de guardar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(textos["msgNoTipoHabitacion"],"", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -91,11 +91,11 @@ namespace ProyectoIS_64PR
             {
                 ghabitaciones.RegistrarHabitacion(nuevaHabitacion);
                 CargaData();
-                MessageBox.Show("Habitación registrada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(textos["msgHabitacionRegistrada"], "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (SqlException ex) when (ex.Number == 2627 || ex.Number == 2601)
             {
-                MessageBox.Show("Ya existe una habitación con ese número.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(textos["msgNumeroRepetido"], "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception ex)
             {
@@ -107,9 +107,7 @@ namespace ProyectoIS_64PR
         {
             hab = (Habitacion)dgvHabitaciones.CurrentRow.DataBoundItem;
 
-            DialogResult confirmacion = MessageBox.Show(
-                $"¿Confirmás dar de baja la habitación Nro {hab.Numero}?",
-                "Confirmar baja", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult confirmacion = MessageBox.Show(textos["msgBajaHabitacion"] + hab.Numero.ToString() + "?","", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (confirmacion == DialogResult.Yes)
             {
@@ -122,13 +120,13 @@ namespace ProyectoIS_64PR
         {
             if (hab == null)
             {
-                MessageBox.Show("Seleccioná una habitación de la grilla antes de modificar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(textos["msgHabitacionAModificar"], "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             if (cmbTipoHabitacion.SelectedValue == null)
             {
-                MessageBox.Show("Seleccioná un tipo de habitación antes de guardar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(textos["msgNoTipoHabitacion"], "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -145,11 +143,11 @@ namespace ProyectoIS_64PR
                 ghabitaciones.ModificarHabitacion(habitacionModificada);
                 CargaData();
                 hab = null;
-                MessageBox.Show("Habitación modificada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(textos["msgHabitacionModificada"], "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (SqlException ex) when (ex.Number == 2627 || ex.Number == 2601)
             {
-                MessageBox.Show("Ya existe otra habitación con ese número.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(textos["msgNumeroRepetido"], "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception ex)
             {

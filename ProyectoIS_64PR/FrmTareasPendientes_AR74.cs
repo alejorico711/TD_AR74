@@ -50,7 +50,7 @@ namespace ProyectoIS_64PR
         {
             if (tareaSeleccionada == null)
             {
-                MessageBox.Show("Seleccioná una tarea de la grilla.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(textos["msgSeleccionarTarea"], "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 

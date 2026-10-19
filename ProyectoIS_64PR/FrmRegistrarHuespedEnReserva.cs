@@ -41,7 +41,7 @@ namespace ProyectoIS_64PR
         {
             if (txtDni.Text.Length < 7 || string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtApellido.Text) || (!Regex.IsMatch(txtEmail.Text, @"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$") && string.IsNullOrEmpty(txtEmail.Text)) || (!Regex.IsMatch(txtTelefono.Text, @"^([0-9]{10}|[0-9]{8})$") && string.IsNullOrEmpty(txtTelefono.Text)))
             {
-                MessageBox.Show("Completá DNI, Nombre, Apellido, Email y Telefono Correctamente antes de guardar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(textos["msgCompletarCampos"], "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             BE.Huesped huesped = new BE.Huesped

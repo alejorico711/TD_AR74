@@ -105,7 +105,7 @@ namespace ProyectoIS_64PR
 
                 if (cmbMetodoDePago.SelectedItem == null)
                 {
-                    MessageBox.Show("Seleccione un metodo de pago");
+                    MessageBox.Show(textos["msgSeleccionarMetodo"]);
                     btnConfirmar.Enabled = true;
                     return;
                 }
@@ -161,7 +161,7 @@ namespace ProyectoIS_64PR
 
             printDoc.Print();
 
-            MessageBox.Show("Comprobante guardado con éxito.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(textos["msgComprobanteGuardado"], "", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void ImprimirComprobante(Reserva_AR74 reserva, decimal montoTotal, string metodoPago)

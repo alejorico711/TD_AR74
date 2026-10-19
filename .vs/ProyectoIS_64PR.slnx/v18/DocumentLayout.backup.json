@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\proyectois_64pr\\frmcheck-in_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|solutionrelative:proyectois_64pr\\frmcheck-in_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\proyectois_64pr\\frmcheck-in_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|solutionrelative:proyectois_64pr\\frmcheck-in_ar74.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{958952E0-4119-415D-A393-8A202DF2D22F}|Bitacora\\Bitacora.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\bitacora\\modulobitacora_64pr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{958952E0-4119-415D-A393-8A202DF2D22F}|Bitacora\\Bitacora.csproj|solutionrelative:bitacora\\modulobitacora_64pr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,27 +27,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FrmCheck-in_AR74.cs",
-              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmCheck-in_AR74.cs",
-              "RelativeDocumentMoniker": "ProyectoIS_64PR\\FrmCheck-in_AR74.cs",
-              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmCheck-in_AR74.cs",
-              "RelativeToolTip": "ProyectoIS_64PR\\FrmCheck-in_AR74.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAuwG0AAAANAAAAAAAAAA==",
+              "Title": "ModuloBitacora_64PR.cs",
+              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\Bitacora\\ModuloBitacora_64PR.cs",
+              "RelativeDocumentMoniker": "Bitacora\\ModuloBitacora_64PR.cs",
+              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\Bitacora\\ModuloBitacora_64PR.cs",
+              "RelativeToolTip": "Bitacora\\ModuloBitacora_64PR.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-17T02:44:31.483Z",
+              "WhenOpened": "2026-10-19T06:24:05.666Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FrmCheck-in_AR74.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmCheck-in_AR74.cs",
-              "RelativeDocumentMoniker": "ProyectoIS_64PR\\FrmCheck-in_AR74.cs",
-              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmCheck-in_AR74.cs [Dise\u00F1o]",
-              "RelativeToolTip": "ProyectoIS_64PR\\FrmCheck-in_AR74.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-17T02:37:34.114Z",
-              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         },

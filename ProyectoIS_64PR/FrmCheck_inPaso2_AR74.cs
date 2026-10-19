@@ -78,7 +78,7 @@ namespace ProyectoIS_64PR
             try
             {
                 bllReservas.ConfirmarCheckIn(reserva.IdReserva);
-                MessageBox.Show("Check-In confirmado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(textos["msgCheckinCorrecto"], "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 frmPadre.AbrirFormularioHijo(this);
             }
             catch (Exception ex)

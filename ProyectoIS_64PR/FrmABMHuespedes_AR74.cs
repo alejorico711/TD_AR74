@@ -61,13 +61,13 @@ namespace ProyectoIS_64PR
         {
             if (h == null)
             {
-                MessageBox.Show("Seleccioná un huésped de la grilla antes de modificar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(textos["msgNoHuesped"], "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             if (txtDni.Text.Length < 7 || string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtApellido.Text) || (!Regex.IsMatch(txtEmail.Text, @"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$") && string.IsNullOrEmpty(txtEmail.Text)) || (!Regex.IsMatch(txtTelefono.Text, @"^([0-9]{10}|[0-9]{8})$") && string.IsNullOrEmpty(txtTelefono.Text)))
             {
-                MessageBox.Show("Completá DNI, Nombre, Apellido, Email y Telefono Correctamente antes de guardar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(textos["msgCompletarCampos"], "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -87,11 +87,11 @@ namespace ProyectoIS_64PR
                 ghuepedes.ModificarHuesped(huespedModificado);
                 CargaData();
                 h = null;
-                MessageBox.Show("Huésped modificado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(textos["msgHuespedModificado"], "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (SqlException ex) when (ex.Number == 2627 || ex.Number == 2601)
             {
-                MessageBox.Show("Ya existe otro huésped registrado con ese DNI.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(textos["msgDNIRepetido"], "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -99,9 +99,7 @@ namespace ProyectoIS_64PR
         {
             h = (Huesped)dgvHuepedes.CurrentRow.DataBoundItem;
 
-            DialogResult confirmacion = MessageBox.Show(
-                $"¿Confirmás dar de baja a {h.Nombre} {h.Apellido}?",
-                "Confirmar baja", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult confirmacion = MessageBox.Show(textos["msgBajaHuesped"] + h.Nombre + h.Apellido + "?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (confirmacion == DialogResult.Yes)
             {
@@ -127,7 +125,7 @@ namespace ProyectoIS_64PR
         {
             if (txtDni.Text.Length < 7 || string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtApellido.Text) || (!Regex.IsMatch(txtEmail.Text, @"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$") && string.IsNullOrEmpty(txtEmail.Text)) || (!Regex.IsMatch(txtTelefono.Text, @"^([0-9]{10}|[0-9]{8})$") && string.IsNullOrEmpty(txtTelefono.Text)))
             {
-                MessageBox.Show("Completá DNI, Nombre, Apellido, Email y Telefono Correctamente antes de guardar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(textos["msgCompletarCampos"], "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -145,11 +143,11 @@ namespace ProyectoIS_64PR
             {
                 ghuepedes.RegistrarHuesped(nuevoHuesped);
                 CargaData();
-                MessageBox.Show("Huésped registrado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(textos["msgAltaHuesped"], "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (SqlException ex) when (ex.Number == 2627 || ex.Number == 2601)
             {
-                MessageBox.Show("Ya existe un huésped registrado con ese DNI.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(textos["msgDNIRepetido"], "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
