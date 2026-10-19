@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\proyectois_64pr\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9588EEEC-6CA7-43DF-820E-06A0F3423A0E}|ProyectoIS_64PR\\ProyectoIS_64PR.csproj|solutionrelative:proyectois_64pr\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0FF1D5B-9F6B-406C-BC04-00D7E11061E5}|Sesion\\Sesion.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\sesion\\patentes_64pr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0FF1D5B-9F6B-406C-BC04-00D7E11061E5}|Sesion\\Sesion.csproj|solutionrelative:sesion\\patentes_64pr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{958952E0-4119-415D-A393-8A202DF2D22F}|Bitacora\\Bitacora.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\bitacora\\modulobitacora_64pr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{958952E0-4119-415D-A393-8A202DF2D22F}|Bitacora\\Bitacora.csproj|solutionrelative:bitacora\\modulobitacora_64pr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -27,6 +35,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "FrmMenu.cs",
+              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmMenu.cs",
+              "RelativeDocumentMoniker": "ProyectoIS_64PR\\FrmMenu.cs",
+              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\ProyectoIS_64PR\\FrmMenu.cs",
+              "RelativeToolTip": "ProyectoIS_64PR\\FrmMenu.cs",
+              "ViewState": "AgIAALgAAAAAAAAAAAAswMsAAABlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T06:46:42.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Patentes_64PR.cs",
+              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\Sesion\\Patentes_64PR.cs",
+              "RelativeDocumentMoniker": "Sesion\\Patentes_64PR.cs",
+              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\Sesion\\Patentes_64PR.cs",
+              "RelativeToolTip": "Sesion\\Patentes_64PR.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T06:46:34.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ModuloBitacora_64PR.cs",
               "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\Bitacora\\ModuloBitacora_64PR.cs",
               "RelativeDocumentMoniker": "Bitacora\\ModuloBitacora_64PR.cs",

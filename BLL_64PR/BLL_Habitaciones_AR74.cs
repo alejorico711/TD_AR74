@@ -1,4 +1,4 @@
-﻿using BE;
+using BE;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -54,6 +54,8 @@ namespace BLL_64PR
         {
             mpp.FinalizarLimpieza(idHabitacion);
             recalculador.RecalcularTabla("Habitacion");
+            Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.ModuloBitacora_64PR.Servicios).ToString(), ((int)Bitacora.TipoEventoBitacora_64PR.FinalizacionLimpieza).ToString(), 4);
+            bita.RegistrarEvento(ev);
         }
     }
 }

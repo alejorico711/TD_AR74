@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -34,6 +34,13 @@ namespace Bitacora
         EliminacionTipoHabitacion = 25,
         RegistrarReserva=26,
         RegistrarCheckIn = 27,
-        RegistrarCheckOut=28
+        RegistrarCheckOut=28,
+        AltaTipoServicio = 29,
+        BajaTipoServicio = 30,
+        ModificacionTipoServicio = 31,
+        RegistrarPago = 32,
+        AltaSolicitudServicio = 33,
+        FinalizacionServicio = 34,
+        FinalizacionLimpieza = 35
     }
 }

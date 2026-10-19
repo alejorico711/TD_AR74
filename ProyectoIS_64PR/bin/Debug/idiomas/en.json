@@ -284,5 +284,12 @@
     "FrmABMTiposServicios_AR74.dgvServicios.Activo": "FALTA TRADUCCION",
     "FrmABMTiposServicios_AR74.rbRequiereStaff": "FALTA TRADUCCION",
     "FrmCheck_outPaso2_AR74.lblSubtotalServicios": "FALTA TRADUCCION",
-    "FrmCheck_in_AR74.lblBuscarPorDNI": "FALTA TRADUCCION"
+    "FrmCheck_in_AR74.lblBuscarPorDNI": "FALTA TRADUCCION",
+    "FrmBitacora_64PR.cbLogin": "FALTA TRADUCCION",
+    "FrmBitacora_64PR.cbModulo": "FALTA TRADUCCION",
+    "FrmBitacora_64PR.cbInicio": "FALTA TRADUCCION",
+    "FrmBitacora_64PR.cbFin": "FALTA TRADUCCION",
+    "FrmBitacora_64PR.cbCriticidad": "FALTA TRADUCCION",
+    "FrmBitacora_64PR.cbTipo": "FALTA TRADUCCION",
+    "FrmSolicitudServicioPaso1.lblSinResultados": "FALTA TRADUCCION"
 }
