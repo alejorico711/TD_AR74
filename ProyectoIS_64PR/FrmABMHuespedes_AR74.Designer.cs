@@ -44,7 +44,9 @@
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtDni = new System.Windows.Forms.TextBox();
-            this.btnLimpiar = new System.Windows.Forms.Button();
+                        this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnSerializarXML = new System.Windows.Forms.Button();
+            this.btnDeserializarXML = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHuepedes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -257,7 +259,37 @@
             this.btnLimpiar.TabIndex = 26;
             this.btnLimpiar.Text = "button3";
             this.btnLimpiar.UseVisualStyleBackColor = true;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+                        this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // btnSerializarXML
+            // 
+            this.btnSerializarXML.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnSerializarXML.FlatAppearance.BorderSize = 0;
+            this.btnSerializarXML.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSerializarXML.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnSerializarXML.ForeColor = System.Drawing.Color.White;
+            this.btnSerializarXML.Location = new System.Drawing.Point(560, 320);
+            this.btnSerializarXML.Name = "btnSerializarXML";
+            this.btnSerializarXML.Size = new System.Drawing.Size(140, 30);
+            this.btnSerializarXML.TabIndex = 27;
+            this.btnSerializarXML.Text = "Serializar XML";
+            this.btnSerializarXML.UseVisualStyleBackColor = true;
+            this.btnSerializarXML.Click += new System.EventHandler(this.btnSerializarXML_Click);
+            // 
+            // btnDeserializarXML
+            // 
+            this.btnDeserializarXML.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnDeserializarXML.FlatAppearance.BorderSize = 0;
+            this.btnDeserializarXML.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeserializarXML.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnDeserializarXML.ForeColor = System.Drawing.Color.White;
+            this.btnDeserializarXML.Location = new System.Drawing.Point(560, 365);
+            this.btnDeserializarXML.Name = "btnDeserializarXML";
+            this.btnDeserializarXML.Size = new System.Drawing.Size(140, 30);
+            this.btnDeserializarXML.TabIndex = 28;
+            this.btnDeserializarXML.Text = "Deserializar XML";
+            this.btnDeserializarXML.UseVisualStyleBackColor = true;
+            this.btnDeserializarXML.Click += new System.EventHandler(this.btnDeserializarXML_Click);
             // 
             // FrmABMHuespedes_AR74
             // 
@@ -266,6 +298,8 @@
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+                        this.Controls.Add(this.btnDeserializarXML);
+            this.Controls.Add(this.btnSerializarXML);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.lblTelefono);
             this.Controls.Add(this.lblEmail);
@@ -309,6 +343,8 @@
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtDni;
-        private System.Windows.Forms.Button btnLimpiar;
+                private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Button btnSerializarXML;
+        private System.Windows.Forms.Button btnDeserializarXML;
     }
 }

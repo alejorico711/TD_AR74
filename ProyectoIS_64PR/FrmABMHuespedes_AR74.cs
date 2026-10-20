@@ -11,6 +11,8 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace ProyectoIS_64PR
 {
@@ -110,13 +112,20 @@ namespace ProyectoIS_64PR
 
         private void dgvHuepedes_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgvHuepedes.CurrentRow == null) return;
+            if (dgvHuepedes.CurrentRow == null || !(dgvHuepedes.CurrentRow.DataBoundItem is Huesped huespedSeleccionado)) return;
 
-            h = (Huesped)dgvHuepedes.CurrentRow.DataBoundItem;
+            h = huespedSeleccionado;
             txtDni.Text = h.DNI;
             txtNombre.Text = h.Nombre;
             txtApellido.Text = h.Apellido;
-            dtpFechaNacimiento.Value = h.FechaNacimiento;
+            if (h.FechaNacimiento >= dtpFechaNacimiento.MinDate && h.FechaNacimiento <= dtpFechaNacimiento.MaxDate)
+            {
+                dtpFechaNacimiento.Value = h.FechaNacimiento;
+            }
+            else
+            {
+                dtpFechaNacimiento.Value = DateTime.Today;
+            }
             txtEmail.Text = h.Email;
             txtTelefono.Text = h.Telefono;
         }
@@ -198,6 +207,96 @@ namespace ProyectoIS_64PR
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
             {
                 e.Handled = true; // Cancela el evento
+            }
+        }
+        private void btnSerializarXML_Click(object sender, EventArgs e)
+        {
+            List<Huesped> listaHuespedes = dgvHuepedes.DataSource as List<Huesped>;
+            if (listaHuespedes == null && dgvHuepedes.DataSource is IEnumerable<Huesped> enumerable)
+            {
+                listaHuespedes = enumerable.ToList();
+            }
+
+            if (listaHuespedes == null || listaHuespedes.Count == 0)
+            {
+                MessageBox.Show(textos["NoHuespedes"], "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            using (SaveFileDialog sfd = new SaveFileDialog())
+            {
+                sfd.Filter = "Archivos XML (*.xml)|*.xml|Todos los archivos (*.*)|*.*";
+                sfd.FilterIndex = 1;
+                sfd.DefaultExt = "xml";
+                sfd.AddExtension = true;
+                sfd.FileName = "Huespedes.xml";
+                sfd.Title = "Guardar huéspedes en formato XML";
+
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        XmlSerializer serializer = new XmlSerializer(typeof(List<Huesped>));
+                        using (StreamWriter writer = new StreamWriter(sfd.FileName, false, Encoding.UTF8))
+                        {
+                            serializer.Serialize(writer, listaHuespedes);
+                        }
+
+                        MessageBox.Show(textos["XMLOK"], "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al serializar los datos: " + ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void btnDeserializarXML_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new OpenFileDialog())
+            {
+                ofd.Filter = "Archivos XML (*.xml)|*.xml|Todos los archivos (*.*)|*.*";
+                ofd.FilterIndex = 1;
+                ofd.DefaultExt = "xml";
+                ofd.Title = "Seleccionar archivo XML de huéspedes";
+
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        XmlSerializer serializer = new XmlSerializer(typeof(List<Huesped>));
+                        List<Huesped> listaDeserializada;
+                        using (StreamReader reader = new StreamReader(ofd.FileName, Encoding.UTF8))
+                        {
+                            listaDeserializada = (List<Huesped>)serializer.Deserialize(reader);
+                        }
+
+                        if (listaDeserializada != null)
+                        {
+                            lst = listaDeserializada;
+                            dgvHuepedes.DataSource = null;
+                            dgvHuepedes.DataSource = lst;
+                            LimpiarControles();
+
+                            if (dgvHuepedes.Columns["Activo"] != null)
+                                dgvHuepedes.Columns["Activo"].Visible = false;
+                            if (dgvHuepedes.Columns["IdHuesped"] != null)
+                                dgvHuepedes.Columns["IdHuesped"].Visible = false;
+
+                            if (textos != null && textos.Count > 0)
+                            {
+                                ActualizarIdioma(textos);
+                            }
+
+                            MessageBox.Show(textos["DESXMLOK"], "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al deserializar el archivo XML: " + ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
         }
     }

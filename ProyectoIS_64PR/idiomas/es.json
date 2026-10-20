@@ -1,14 +1,12 @@
 {
   "ucCrear_Nombre": "Nombre: ",
   "ucCrear_Apellido": "Apellido: ",
-
   "frmLogin_titulo": "Iniciar sesión",
   "frmLogin_lblUsuario": "Nombre de usuario",
   "frmLogin_lblContrasena": "Contraseña",
   "frmLogin_btnIniciar": "Iniciar sesión",
   "frmLogin_lblMensaje": "",
   "intentos": "Intento",
-
   "frmMenu_titulo": "Menú principal",
   "frmMenu_login": "Login",
   "frmMenu_gestionUsuarios": "Gestionar usuarios",
@@ -20,13 +18,11 @@
   "frmMenu_gestionFamilias": "Gestionar familias",
   "configuracion": "Configuracion",
   "gestionar_roles": "Gestionar roles",
-
   "frmCambiarClave_titulo": "Cambiar contraseña",
   "frmCambiarClave_lblActual": "Contraseña actual:",
   "frmCambiarClave_lblNueva": "Nueva contraseña:",
   "frmCambiarClave_lblConfirmar": "Confirmar contraseña:",
   "frmCambiarClave_btnConfirmar": "Confirmar",
-
   "frmGestionUsuarios_titulo": "Gestionar usuarios",
   "frmGestionUsuarios_btnCrear": "Crear",
   "frmGestionUsuarios_btnDesbloquear": "Desbloquear",
@@ -56,7 +52,6 @@
   "bloqueado": "Bloqueado",
   "activo": "Activo",
   "primera_vez": "Primera vez",
-
   "msg_sesionYaIniciada": "Ya hay una sesión activa.",
   "msg_usuarioNoEncontrado": "Usuario no encontrado.",
   "msg_bloqueadoInactivo": "El usuario se encuentra bloqueado o inactivo.",
@@ -75,7 +70,6 @@
   "msg_NoCambios": "No esta realizando ningun cambio",
   "msg_claveActualComoNueva": "No puede establacer como nueva clave su clave actual",
   "msg_cambio_exitoso": "Contraseña cambiada exitosamente.",
-
   "lbl_BitacoraEventos": "Bitácora de eventos",
   "lbl_Login": "Login",
   "lbl_Modulo": "Módulo",
@@ -90,7 +84,6 @@
   "fechas_filtros": "La fecha de inicio no puede ser posterior a la fecha de fin.",
   "aviso": "Aviso",
   "no_datos": "No hay datos para imprimir.",
-
   "crear": "Crear",
   "modificar": "Modificar",
   "eliminar": "Eliminar",
@@ -135,5 +128,7 @@
   "Recalcular integridad": "Recalcular integridad",
   "dvs_recalculados": "Dígitos verificadores recalculados correctamente.",
   "respaldo": "Respaldo base de datos",
-  "restaurar2": "Restaurar base de datos"
+  "restaurar2": "Restaurar base de datos",
+  "FrmABMHuespedes_AR74.btnSerializarXML": "Serializar XML",
+  "FrmABMHuespedes_AR74.btnDeserializarXML": "Deserializar XML"
 }

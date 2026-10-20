@@ -1,4 +1,4 @@
-﻿{
+{
   "ucCrear_Nombre": "Nombre: ",
   "ucCrear_Apellido": "Apellido: ",
   "usuario_creado": "Usuario creado con exito. El login asignado es: ",
@@ -314,5 +314,10 @@
   "FrmBitacora_64PR.cbCriticidad": "FALTA TRADUCCION",
   "FrmBitacora_64PR.cbTipo": "FALTA TRADUCCION",
   "FrmSolicitudServicioPaso1.lblSinResultados": "FALTA TRADUCCION",
-  "msgInicioMayorFin" :  "La fecha de inicio no puede ser posterior a la fecha de fin"
+  "msgInicioMayorFin": "La fecha de inicio no puede ser posterior a la fecha de fin",
+  "FrmABMHuespedes_AR74.btnSerializarXML": "Serializar XML",
+  "FrmABMHuespedes_AR74.btnDeserializarXML": "Deserializar XML",
+  "NoHuespedes": "No hay huéspedes en la grilla para serializar.",
+  "XMLOK": "Los datos de los huéspedes se serializaron y guardaron exitosamente.",
+  "DESXMLOK": "Datos deserializados y cargados en la grilla exitosamente."
 }

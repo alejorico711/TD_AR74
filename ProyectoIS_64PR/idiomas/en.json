@@ -1,14 +1,12 @@
 {
   "ucCrear_Nombre": "First Name: ",
   "ucCrear_Apellido": "Last Name: ",
-
   "frmLogin_titulo": "Sign in",
   "frmLogin_lblUsuario": "Username",
   "frmLogin_lblContrasena": "Password",
   "frmLogin_btnIniciar": "Sign in",
   "frmLogin_lblMensaje": "",
   "intentos": "Attempt",
-
   "frmMenu_titulo": "Main Menu",
   "frmMenu_login": "Login",
   "frmMenu_gestionUsuarios": "Manage users",
@@ -20,13 +18,11 @@
   "frmMenu_gestionFamilias": "Manage families",
   "configuracion": "Settings",
   "gestionar_roles": "Manage roles",
-
   "frmCambiarClave_titulo": "Change password",
   "frmCambiarClave_lblActual": "Current password:",
   "frmCambiarClave_lblNueva": "New password:",
   "frmCambiarClave_lblConfirmar": "Confirm password:",
   "frmCambiarClave_btnConfirmar": "Confirm",
-
   "frmGestionUsuarios_titulo": "Manage users",
   "frmGestionUsuarios_btnCrear": "Create",
   "frmGestionUsuarios_btnDesbloquear": "Unlock",
@@ -56,7 +52,6 @@
   "bloqueado": "Blocked",
   "activo": "Active",
   "primera_vez": "First time",
-
   "msg_sesionYaIniciada": "A session is already active.",
   "msg_usuarioNoEncontrado": "User not found.",
   "msg_bloqueadoInactivo": "The user is blocked or inactive.",
@@ -75,7 +70,6 @@
   "msg_NoCambios": "You are not making any changes",
   "msg_claveActualComoNueva": "You cannot set your current password as the new password",
   "msg_cambio_exitoso": "Password changed successfully.",
-
   "lbl_BitacoraEventos": "Event Log",
   "lbl_Login": "Login",
   "lbl_Modulo": "Module",
@@ -90,7 +84,6 @@
   "fechas_filtros": "The start date cannot be later than the end date.",
   "aviso": "Warning",
   "no_datos": "No data to print.",
-
   "crear": "Create",
   "modificar": "Edit",
   "eliminar": "Delete",
@@ -135,5 +128,7 @@
   "Recalcular integridad": "Recalculate integrity",
   "dvs_recalculados": "Check digits recalculated successfully.",
   "respaldo": "Data base backup",
-  "restaurar2": "Data base restore"
+  "restaurar2": "Data base restore",
+  "FrmABMHuespedes_AR74.btnSerializarXML": "Serialize XML",
+  "FrmABMHuespedes_AR74.btnDeserializarXML": "Deserialize XML"
 }
