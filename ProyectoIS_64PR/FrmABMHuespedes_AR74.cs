@@ -67,7 +67,18 @@ namespace ProyectoIS_64PR
                 return;
             }
 
-            if (txtDni.Text.Length < 7 || string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtApellido.Text) || (!Regex.IsMatch(txtEmail.Text, @"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$") && string.IsNullOrEmpty(txtEmail.Text)) || (!Regex.IsMatch(txtTelefono.Text, @"^([0-9]{10}|[0-9]{8})$") && string.IsNullOrEmpty(txtTelefono.Text)))
+            bool banderaEmail= false;
+            if (Regex.IsMatch(txtEmail.Text, @"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$") || string.IsNullOrEmpty(txtEmail.Text))
+            {
+                banderaEmail = true;
+            }
+            bool banderaTelefono = false;
+            if (Regex.IsMatch(txtTelefono.Text, @"^([0-9]{10}|[0-9]{8})$") || string.IsNullOrEmpty(txtTelefono.Text))
+            {
+                banderaTelefono = true;
+            }
+
+            if (txtDni.Text.Length < 7 || string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtApellido.Text) || !banderaEmail || !banderaTelefono)
             {
                 MessageBox.Show(textos["msgCompletarCampos"], "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
