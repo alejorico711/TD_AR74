@@ -1,4 +1,4 @@
-﻿using BE;
+using BE;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -63,6 +63,39 @@ namespace Mapper
             p[0] = new SqlParameter("@IdTipoHabitacion", idTipoHabitacion);
 
             DAL_64PR.Acceso.Instancia.escribirSP("sp_EliminarTipoHabitacion", p);
+        }
+
+        // ── Bitacora de Cambios ──────────────────────────────────────────────
+
+        /// <summary>
+        /// Devuelve el historial de TipoHabitacion_C.
+        /// Si idFiltro es null o vacío, trae todos los registros.
+        /// </summary>
+        public DataTable ListarBitacoraCambios(string idFiltro)
+        {
+            SqlParameter[] p = new SqlParameter[1];
+
+            if (!string.IsNullOrWhiteSpace(idFiltro) && int.TryParse(idFiltro.Trim(), out int id))
+                p[0] = new SqlParameter("@IdTipoHabitacion", id);
+            else
+                p[0] = new SqlParameter("@IdTipoHabitacion", DBNull.Value);
+
+            return DAL_64PR.Acceso.Instancia.leerSP("sp_ListarBitacoraTipoHabitacion", p);
+        }
+
+        /// <summary>
+        /// Activa el registro histórico indicado (por Id + Fecha + Hora)
+        /// y desactiva los demás del mismo tipo de habitación.
+        /// También sincroniza TipoHabitacion con los datos de ese registro.
+        /// </summary>
+        public void ActivarRegistroBitacora(int idTipoHabitacion, DateTime fecha, TimeSpan hora)
+        {
+            SqlParameter[] p = new SqlParameter[3];
+            p[0] = new SqlParameter("@IdTipoHabitacion", idTipoHabitacion);
+            p[1] = new SqlParameter("@Fecha", fecha.Date);
+            p[2] = new SqlParameter("@Hora", hora);
+
+            DAL_64PR.Acceso.Instancia.escribirSP("sp_ActivarRegistroBitacora", p);
         }
     }
 }

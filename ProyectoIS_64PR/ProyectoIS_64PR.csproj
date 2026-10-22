@@ -75,6 +75,12 @@
     <Compile Include="FrmABMTiposServicios_AR74.Designer.cs">
       <DependentUpon>FrmABMTiposServicios_AR74.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmBitacoraCambios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBitacoraCambios.Designer.cs">
+      <DependentUpon>FrmBitacoraCambios.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmBitacora_64PR.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmABMTiposServicios_AR74.resx">
       <DependentUpon>FrmABMTiposServicios_AR74.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBitacoraCambios.resx">
+      <DependentUpon>FrmBitacoraCambios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBitacora_64PR.resx">
       <DependentUpon>FrmBitacora_64PR.cs</DependentUpon>

@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,13 +27,13 @@ namespace ProyectoIS_64PR
             if (textos.Count > 0)
                 ActualizarIdioma(textos);
 
-            ///Agrego el selector de idioma al menÃº en tiempo de ejecuciÃ³n para que cargue todos los idiomas
+            ///Agrego el selector de idioma al menú en tiempo de ejecución para que cargue todos los idiomas
             AgregarSelectorIdioma();
-            
+
             string rutaLogo = Path.Combine(Application.StartupPath, "Imagenes", "Logo RoomIn.png");
             pnlContenidoMenu.BackgroundImageLayout = ImageLayout.Stretch;
             pnlContenidoMenu.BackgroundImage = Image.FromFile(rutaLogo);
-            
+
         }
         public void ActualizarIdioma(Dictionary<string, string> textoss)
         {
@@ -95,7 +95,7 @@ namespace ProyectoIS_64PR
             }
         }
 
-        private void cambiarContraseÃ±aToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void cambiarContraseñaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             try
             {
@@ -114,14 +114,14 @@ namespace ProyectoIS_64PR
                 formularioactual.Close();
             }
             var textos = Idioma.GestorIdioma_64PR.GetInstance.ObtenerTextos();
-            string msg = textos.ContainsKey("msg_cerrarSesion") ? textos["msg_cerrarSesion"] : "Â¿EstÃ¡ seguro de que desea cerrar la sesiÃ³n?";
-            string titulo = textos.ContainsKey("msg_cerrarSesion_titulo") ? textos["msg_cerrarSesion_titulo"] : "Cerrar SesiÃ³n";
+            string msg = textos.ContainsKey("msg_cerrarSesion") ? textos["msg_cerrarSesion"] : "¿Está seguro de que desea cerrar la sesión?";
+            string titulo = textos.ContainsKey("msg_cerrarSesion_titulo") ? textos["msg_cerrarSesion_titulo"] : "Cerrar Sesión";
 
             var resultado = MessageBox.Show(msg, titulo, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (resultado == DialogResult.Yes)
             {
-                ///Guardamos el idioma en BD antes de cerrar sesiÃ³n
+                ///Guardamos el idioma en BD antes de cerrar sesión
                 string loginActual = Sesion.SessionManager.GetInstance.Usuario.Login;
                 string idiomaActual = Idioma.GestorIdioma_64PR.GetInstance.IdiomaActual;
                 gusuarios.GuardarIdioma(loginActual, idiomaActual);
@@ -151,6 +151,10 @@ namespace ProyectoIS_64PR
         {
             Sesion.Rol_64PR rolUsuario = Sesion.SessionManager.GetInstance.Usuario.Rol;
 
+            cambiarContraseñaToolStripMenuItem1.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.CambiarContra);
+
+            idiomaToolStripMenuItem1.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.CambiarIdioma);
+
             bool puedeGestionarUsuarios = rolUsuario.TienePermiso(Sesion.Patentes_64PR.CrearUsuario) ||
                                           rolUsuario.TienePermiso(Sesion.Patentes_64PR.ModificarUsuario) ||
                                           rolUsuario.TienePermiso(Sesion.Patentes_64PR.ActivarDesactivarUsuarios) ||
@@ -173,60 +177,40 @@ namespace ProyectoIS_64PR
 
             restaurarBaseDeDatosToolStripMenuItem1.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.Restauraciones);
 
-            bool puedeAdministrar = puedeGestionarFamilias || puedeGestionarRoles || puedeGestionarUsuarios || rolUsuario.TienePermiso(Sesion.Patentes_64PR.Bitacora) || rolUsuario.TienePermiso(Sesion.Patentes_64PR.Respaldos) || rolUsuario.TienePermiso(Sesion.Patentes_64PR.Restauraciones);
+            bitacoraDeCambiosToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.BitacoraDeCambios);
+
+            bool puedeAdministrar = puedeGestionarFamilias || puedeGestionarRoles || puedeGestionarUsuarios || rolUsuario.TienePermiso(Sesion.Patentes_64PR.Bitacora) || rolUsuario.TienePermiso(Sesion.Patentes_64PR.Respaldos) || rolUsuario.TienePermiso(Sesion.Patentes_64PR.Restauraciones) || rolUsuario.TienePermiso(Sesion.Patentes_64PR.BitacoraDeCambios);
             adminToolStripMenuItem.Visible = puedeAdministrar;
-
-
-
-            cambiarContraseÃ±aToolStripMenuItem1.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.CambiarContra);
-
-            idiomaToolStripMenuItem1.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.CambiarIdioma); 
-
-            nuevaReservaToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.Reserva);
-
-            checkinToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.CheckIn);
-
-            checkoutToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.CheckOut);
-
-            estadoActualToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.EstadoActual);
-
-            bool tieneMaestros = rolUsuario.TienePermiso(Sesion.Patentes_64PR.ABMHabitaciones) ||
-                                       rolUsuario.TienePermiso(Sesion.Patentes_64PR.ABMHuespedes) ||
-                                       rolUsuario.TienePermiso(Sesion.Patentes_64PR.ABMTipoHabitaciones);
-
-            maestrosToolStripMenuItem.Visible = tieneMaestros;
 
             huespedesToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.ABMHuespedes);
 
             habitacionesToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.ABMHabitaciones);
 
             tiposDeHabitacionesToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.ABMTipoHabitaciones);
+
+            tiposDeServiciosToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.ABMTipoServicios);
+
+            bool tieneMaestros = rolUsuario.TienePermiso(Sesion.Patentes_64PR.ABMHabitaciones) ||
+                                       rolUsuario.TienePermiso(Sesion.Patentes_64PR.ABMHuespedes) ||
+                                       rolUsuario.TienePermiso(Sesion.Patentes_64PR.ABMTipoHabitaciones) ||
+                                       rolUsuario.TienePermiso(Sesion.Patentes_64PR.ABMTipoServicios);
+            maestrosToolStripMenuItem.Visible = tieneMaestros;
+
+            nuevaReservaToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.Reserva);
+
+            checkInToolStripMenuItem1.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.CheckIn);
+
+            checkOutToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.CheckOut);
+
+            estadoActualToolStripMenuItem1.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.EstadoActual);
+
+            reservasToolStripMenuItem.Visible = false;
+
+            reservasToolStripMenuItem.Visible = (nuevaReservaToolStripMenuItem.Visible || checkInToolStripMenuItem1.Visible || checkOutToolStripMenuItem.Visible || estadoActualToolStripMenuItem1.Visible);
+
             tareasPendientesToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.TareasPendientes);
+
             serviciosAdicionalesToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.RegistrarServiciosAdicionales);
-        }
-
-        private void nuevaReservaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                AbrirFormularioHijo(new FrmReservaPaso1_AR74(this));
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void checkinToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                AbrirFormularioHijo(new FrmCheck_in_AR74(this));
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
 
         private void respaldoBaseDeDatosToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -274,7 +258,7 @@ namespace ProyectoIS_64PR
                     string rutaBackup = ofd.FileName;
 
                     var confirmacion = MessageBox.Show(textos["msg_confirmacion"],
-                        textos["Confirmar restauraciÃ³n"], MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                        textos["Confirmar restauración"], MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                     if (confirmacion != DialogResult.Yes) return;
 
@@ -282,7 +266,7 @@ namespace ProyectoIS_64PR
                     {
                         Respaldos.Backup gBackup = new Respaldos.Backup();
 
-                        /// leer los nombres lÃ³gicos del backup
+                        /// leer los nombres lógicos del backup
                         DataTable fileList = gBackup.ObtenerFileList(rutaBackup);
                         string logicalData = null, logicalLog = null;
 
@@ -293,7 +277,7 @@ namespace ProyectoIS_64PR
                             else if (tipo == "L") logicalLog = fila["LogicalName"].ToString();
                         }
 
-                        /// calcular dÃ³nde van a ir los archivos fÃ­sicos
+                        /// calcular dónde van a ir los archivos físicos
                         string rutaDefaultData = gBackup.ObtenerRutaDefaultData();
                         string rutaDestinoMdf = System.IO.Path.Combine(rutaDefaultData, "BD_64PR.mdf");
                         string rutaDestinoLdf = System.IO.Path.Combine(rutaDefaultData, "BD_64PR_log.ldf");
@@ -305,7 +289,7 @@ namespace ProyectoIS_64PR
                         bita.RegistrarEvento(ev);
 
                         MessageBox.Show(textos["msg_restauracion"],
-                                        textos["RestauraciÃ³n exitosa"], MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        textos["Restauración exitosa"], MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Application.Restart();
                     }
                     catch (SqlException ex)
@@ -369,28 +353,9 @@ namespace ProyectoIS_64PR
             }
         }
 
-        private void checkoutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                AbrirFormularioHijo(new FrmCheck_out_AR74(this));
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
         private void estadoActualToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                AbrirFormularioHijo(new FrmEstadoActual_AR74());
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            
         }
 
         private void huespedesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -458,6 +423,66 @@ namespace ProyectoIS_64PR
             try
             {
                 AbrirFormularioHijo(new FrmABMTiposServicios_AR74());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void bitacoraDeCambiosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                AbrirFormularioHijo(new FrmBitacoraCambios());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void nuevaReservaToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                AbrirFormularioHijo(new FrmReservaPaso1_AR74(this));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void checkInToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                AbrirFormularioHijo(new FrmCheck_in_AR74(this));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void checkOutToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                AbrirFormularioHijo(new FrmCheck_out_AR74(this));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void estadoActualToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                AbrirFormularioHijo(new FrmEstadoActual_AR74());
             }
             catch (Exception ex)
             {

@@ -23,7 +23,7 @@ namespace Sesion
          CrearFamilias = 9,
          ModificarFamilias = 10,
          EliminarFamilias = 11,
-        RepararIntegridadDV = 12,
+         RepararIntegridadDV = 12,
          CambiarContra = 13,
          CambiarIdioma = 14,
          Respaldos = 16,
@@ -36,6 +36,8 @@ namespace Sesion
          ABMTipoHabitaciones = 24,
          EstadoActual = 25,
          TareasPendientes = 26,
-         RegistrarServiciosAdicionales = 27
+         RegistrarServiciosAdicionales = 27,
+        BitacoraDeCambios = 28,
+        ABMTipoServicios = 29
     }
 }

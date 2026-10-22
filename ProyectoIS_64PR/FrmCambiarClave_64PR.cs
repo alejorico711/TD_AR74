@@ -19,6 +19,7 @@ namespace ProyectoIS_64PR
             txtContra.UseSystemPasswordChar = true;
             txtConfirmar.UseSystemPasswordChar = true;
             txtNueva.UseSystemPasswordChar = true;
+            this.AcceptButton = btnConfirmar;
 
             Idioma.GestorIdioma_64PR.GetInstance.Suscribir(this); ///observer del cambio de idioma
 

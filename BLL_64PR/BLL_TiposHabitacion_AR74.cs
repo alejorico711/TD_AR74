@@ -1,6 +1,7 @@
-﻿using BE;
+using BE;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,6 +42,27 @@ namespace BLL_64PR
             recalculador.RecalcularTabla("TipoHabitacion");
             Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.ModuloBitacora_64PR.Maestros).ToString(), ((int)Bitacora.TipoEventoBitacora_64PR.EliminacionTipoHabitacion).ToString(), 4);
             bita.RegistrarEvento(ev);
+        }
+
+        // ── Bitacora de Cambios ──────────────────────────────────────────────
+
+        /// <summary>
+        /// Retorna el historial de TipoHabitacion_C, filtrado opcionalmente
+        /// por el texto ingresado en el cuadro de búsqueda.
+        /// </summary>
+        public DataTable ListarBitacoraCambios(string idFiltro)
+        {
+            return mpp.ListarBitacoraCambios(idFiltro);
+        }
+
+        /// <summary>
+        /// Activa el registro histórico indicado en TipoHabitacion_C
+        /// y sincroniza TipoHabitacion con sus datos.
+        /// </summary>
+        public void ActivarRegistroBitacora(int idTipoHabitacion, DateTime fecha, TimeSpan hora)
+        {
+            mpp.ActivarRegistroBitacora(idTipoHabitacion, fecha, hora);
+            recalculador.RecalcularTabla("TipoHabitacion");
         }
     }
 }
