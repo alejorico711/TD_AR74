@@ -21,7 +21,27 @@ namespace ProyectoIS_64PR
             textos = Idioma.GestorIdioma_64PR.GetInstance.ObtenerTextos();
             if (textos.Count > 0)
                 ActualizarIdioma(textos);
+
+            this.Resize += FrmBitacoraCambios_Resize;
+            CentrarPanel();
         }
+
+        private void CentrarPanel()
+        {
+            if (panel1 != null)
+            {
+                panel1.Location = new Point(
+                    (this.ClientSize.Width - panel1.Width) / 2,
+                    (this.ClientSize.Height - panel1.Height) / 2
+                );
+            }
+        }
+
+        private void FrmBitacoraCambios_Resize(object sender, EventArgs e)
+        {
+            CentrarPanel();
+        }
+
         public void ActualizarIdioma(Dictionary<string, string> textoss)
         {
             textos = textoss;
@@ -33,10 +53,12 @@ namespace ProyectoIS_64PR
         private void ConfigurarGrilla()
         {
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.AllowUserToAddRows = false;
             dataGridView1.ReadOnly = true;
             dataGridView1.MultiSelect = false;
-            dataGridView1.BackgroundColor = SystemColors.Menu;
+            dataGridView1.BackgroundColor = Color.White;
             dataGridView1.BorderStyle = BorderStyle.None;
         }
 

@@ -1,4 +1,4 @@
-﻿using BE;
+using BE;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -55,7 +55,27 @@ namespace ProyectoIS_64PR
             lblSubtotalServicios.Visible = false;
             CargarServiciosCuenta();
             CargarResumen();
+
+            this.Resize += FrmCheck_outPaso2_AR74_Resize;
+            CentrarPanel();
         }
+
+        private void CentrarPanel()
+        {
+            if (panel1 != null)
+            {
+                panel1.Location = new Point(
+                    (this.ClientSize.Width - panel1.Width) / 2,
+                    (this.ClientSize.Height - panel1.Height) / 2
+                );
+            }
+        }
+
+        private void FrmCheck_outPaso2_AR74_Resize(object sender, EventArgs e)
+        {
+            CentrarPanel();
+        }
+
         public void ActualizarIdioma(Dictionary<string, string> textoss)
         {
             textos = textoss;
@@ -139,84 +159,94 @@ namespace ProyectoIS_64PR
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void GuardarComprobantePdf(Reserva_AR74 reserva, decimal total, string metodoPago)
-        {
-
-            SaveFileDialog saveDialog = new SaveFileDialog();
-            saveDialog.Filter = "Archivo PDF (*.pdf)|*.pdf";
-            saveDialog.FileName = $"Comprobante_{reserva.IdReserva:D6}.pdf";
-
-            if (saveDialog.ShowDialog() != DialogResult.OK)
-                return;
-
-            PrintDocument printDoc = new PrintDocument();
-            printDoc.DefaultPageSettings.Landscape = false;
-            printDoc.PrinterSettings.PrinterName = "Microsoft Print to PDF";
-            printDoc.PrinterSettings.PrintToFile = true;
-            printDoc.PrinterSettings.PrintFileName = saveDialog.FileName;
-
-            printDoc.PrintPage += (s, ev) => PrintDoc_PrintComprobante(s, ev, reserva, total, metodoPago);
-
-            printDoc.Print();
-
-            MessageBox.Show(textos["msgComprobanteGuardado"], "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            finally
+            {
+                btnConfirmar.Enabled = true;
+            }
         }
 
         private void ImprimirComprobante(Reserva_AR74 reserva, decimal montoTotal, string metodoPago)
         {
-            PrintDocument printDoc = new PrintDocument();
-            printDoc.DefaultPageSettings.Landscape = false; // Portrait, es un comprobante angosto
+            PrintDocument doc = new PrintDocument();
+            doc.PrintPage += (s, ev) => DibujarComprobante(ev, reserva, montoTotal, metodoPago);
 
-            printDoc.PrintPage += (sender, e) => PrintDoc_PrintComprobante(sender, e, reserva, montoTotal, metodoPago);
+            PrintDialog pd = new PrintDialog();
+            pd.Document = doc;
 
-            PrintPreviewDialog preview = new PrintPreviewDialog();
-            preview.Document = printDoc;
-            preview.WindowState = FormWindowState.Maximized;
-            preview.ShowDialog();
+            if (pd.ShowDialog() == DialogResult.OK)
+                doc.Print();
         }
 
-        private void PrintDoc_PrintComprobante(object sender, PrintPageEventArgs e, Reserva_AR74 reserva, decimal montoTotal, string metodoPago)
+        private void GuardarComprobantePdf(Reserva_AR74 reserva, decimal montoTotal, string metodoPago)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "Documento PDF (*.pdf)|*.pdf";
+            sfd.FileName = $"Comprobante_Reserva_{reserva.IdReserva}.pdf";
+
+            if (sfd.ShowDialog() != DialogResult.OK) return;
+
+            PrintDocument doc = new PrintDocument();
+            doc.PrinterSettings.PrinterName = "Microsoft Print to PDF";
+            doc.PrinterSettings.PrintToFile = true;
+            doc.PrinterSettings.PrintFileName = sfd.FileName;
+            doc.PrintPage += (s, ev) => DibujarComprobante(ev, reserva, montoTotal, metodoPago);
+            doc.Print();
+        }
+
+        private void DibujarComprobante(PrintPageEventArgs e, Reserva_AR74 reserva, decimal montoTotal, string metodoPago)
         {
             Graphics g = e.Graphics;
-            Font fontTitulo = new Font("Arial", 14, FontStyle.Bold);
-            Font fontHeader = new Font("Arial", 10, FontStyle.Bold);
+            Font fontTitulo = new Font("Arial", 16, FontStyle.Bold);
+            Font fontSub = new Font("Arial", 11, FontStyle.Bold);
             Font fontData = new Font("Arial", 10, FontStyle.Regular);
+            Font fontHeader = new Font("Arial", 10, FontStyle.Bold);
             Brush brush = Brushes.Black;
 
             float x = e.MarginBounds.Left;
             float y = e.MarginBounds.Top;
-            float rowH = fontData.GetHeight(g) + 8;
+            float rowH = fontData.GetHeight(g) + 6;
 
-            // Encabezado del comprobante
-            g.DrawString("Sistema Hotelero - Comprobante de Pago", fontTitulo, brush, x, y);
-            y += rowH + 10;
-            g.DrawString($"Comprobante N°: {reserva.IdReserva:D6}", fontData, brush, x, y);
-            y += rowH;
+            // Encabezado
+            g.DrawString("RoomIn Hotel", fontTitulo, brush, x, y);
+            y += rowH * 1.5f;
+            g.DrawString("COMPROBANTE DE CHECK-OUT", fontSub, brush, x, y);
+            y += rowH * 1.2f;
             g.DrawString($"Fecha de emisión: {DateTime.Now:dd/MM/yyyy HH:mm}", fontData, brush, x, y);
-            y += rowH + 6;
+            y += rowH;
+            g.DrawString($"Nro. Reserva: {reserva.IdReserva}", fontData, brush, x, y);
+            y += rowH * 1.5f;
 
+            // Línea separadora
             g.DrawLine(Pens.Black, e.MarginBounds.Left, y, e.MarginBounds.Right, y);
-            y += 12;
+            y += 8;
 
             // Datos del huésped
-            g.DrawString("Huésped", fontHeader, brush, x, y);
+            g.DrawString($"Huésped: {reserva.Huesped.Nombre} {reserva.Huesped.Apellido}", fontData, brush, x, y);
             y += rowH;
-            g.DrawString($"{reserva.Huesped.Nombre} {reserva.Huesped.Apellido} - DNI: {reserva.Huesped.DNI}", fontData, brush, x, y);
-            y += rowH + 10;
+            g.DrawString($"DNI: {reserva.Huesped.DNI}", fontData, brush, x, y);
+            y += rowH * 1.5f;
 
-            // Datos de la estadía
-            g.DrawString("Detalle de la estadía", fontHeader, brush, x, y);
-            y += rowH;
-            g.DrawString($"Habitación N° {reserva.Habitacion.Numero} - {reserva.Habitacion.Tipo.Descripcion}", fontData, brush, x, y);
-            y += rowH;
-            g.DrawString($"Check-in: {reserva.FechaInicio:dd/MM/yyyy}   Check-out: {reserva.FechaFin:dd/MM/yyyy}", fontData, brush, x, y);
-            y += rowH;
+            // Línea separadora
+            g.DrawLine(Pens.Black, e.MarginBounds.Left, y, e.MarginBounds.Right, y);
+            y += 8;
+
+            // Detalle estadía
+            g.DrawString("Detalle de la estadía", fontSub, brush, x, y);
+            y += rowH * 1.2f;
 
             int noches = (reserva.FechaFin - reserva.FechaInicio).Days;
-            g.DrawString($"Cantidad de noches: {noches}   Personas: {reserva.CantidadPersonas}", fontData, brush, x, y);
-            y += rowH + 10;
+            decimal precioPorNoche = reserva.Habitacion.Tipo.PrecioPorNoche;
+
+            g.DrawString($"Habitación: Nro {reserva.Habitacion.Numero} ({reserva.Habitacion.Tipo.Descripcion})", fontData, brush, x, y);
+            y += rowH;
+            g.DrawString($"Check-In:  {reserva.FechaInicio:dd/MM/yyyy}", fontData, brush, x, y);
+            y += rowH;
+            g.DrawString($"Check-Out: {reserva.FechaFin:dd/MM/yyyy}", fontData, brush, x, y);
+            y += rowH;
+            g.DrawString($"Huéspedes: {reserva.CantidadPersonas}", fontData, brush, x, y);
+            y += rowH;
+            g.DrawString($"Noches: {noches} x ${precioPorNoche:N2}", fontData, brush, x, y);
+            y += rowH * 1.5f;
 
             g.DrawLine(Pens.Black, e.MarginBounds.Left, y, e.MarginBounds.Right, y);
             y += 12;

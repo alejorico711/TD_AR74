@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -39,8 +39,10 @@ namespace ProyectoIS_64PR
             dgvUsuarios.MultiSelect = false;
 
             dgvUsuarios.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dgvUsuarios.BackgroundColor = SystemColors.Menu;
+            dgvUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvUsuarios.RowHeadersVisible = false;
+            dgvUsuarios.AllowUserToAddRows = false;
+            dgvUsuarios.BackgroundColor = Color.White;
             dgvUsuarios.BorderStyle = BorderStyle.None;
             CargaData();
 
@@ -54,6 +56,25 @@ namespace ProyectoIS_64PR
                 ActualizarIdioma(textos);
             lblModo.Text = textos["frmGestionUsuarios_lblModoConsulta"];
             lblCantidad.Text = (textos["FrmGestionarUsuarios_64PR.lblCantidad"] + lst.Count.ToString());
+
+            this.Resize += FrmGestionarUsuarios_64PR_Resize;
+            CentrarPanel();
+        }
+
+        private void FrmGestionarUsuarios_64PR_Resize(object sender, EventArgs e)
+        {
+            CentrarPanel();
+        }
+
+        private void CentrarPanel()
+        {
+            if (panel1 != null)
+            {
+                panel1.Location = new Point(
+                    (this.ClientSize.Width - panel1.Width) / 2,
+                    (this.ClientSize.Height - panel1.Height) / 2
+                );
+            }
         }
         
         public void ActualizarIdioma(Dictionary<string, string> textoss)
@@ -228,7 +249,7 @@ namespace ProyectoIS_64PR
                             ///Cualquiera de los 2 numeros es para violacion de PK o UQ
                             if (ex.Number == 2627 || ex.Number == 2601)
                             {
-                                if (ex.Message.Contains("UQ__USUARIO")) ///Validacion no necesaria, ya que el unico campo que se puede actualizar que tiene UQ es el mail
+                                if (ex.Message.Contains("UQ__USUARIO"))
                                 {
                                     MessageBox.Show(textos["mail_duplicado"],
                                                     "Email", MessageBoxButtons.OK, MessageBoxIcon.Warning);

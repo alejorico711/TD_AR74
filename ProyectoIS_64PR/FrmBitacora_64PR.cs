@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,7 +37,9 @@ namespace ProyectoIS_64PR
             lst = bita.ListarEventos();
             dgvEventos.DataSource = lst;
             dgvEventos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvEventos.BackgroundColor = SystemColors.Menu;
+            dgvEventos.RowHeadersVisible = false;
+            dgvEventos.AllowUserToAddRows = false;
+            dgvEventos.BackgroundColor = Color.White;
             dgvEventos.BorderStyle = BorderStyle.None;
 
             Idioma.GestorIdioma_64PR.GetInstance.Suscribir(this); ///observer del cambio de idioma
@@ -46,6 +48,25 @@ namespace ProyectoIS_64PR
             textos = Idioma.GestorIdioma_64PR.GetInstance.ObtenerTextos();
             if (textos.Count > 0)
                 ActualizarIdioma(textos);
+
+            this.Resize += FrmBitacora_64PR_Resize;
+            CentrarPanel();
+        }
+
+        private void CentrarPanel()
+        {
+            if (panel1 != null)
+            {
+                panel1.Location = new Point(
+                    (this.ClientSize.Width - panel1.Width) / 2,
+                    (this.ClientSize.Height - panel1.Height) / 2
+                );
+            }
+        }
+
+        private void FrmBitacora_64PR_Resize(object sender, EventArgs e)
+        {
+            CentrarPanel();
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)

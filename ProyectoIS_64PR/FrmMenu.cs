@@ -204,9 +204,14 @@ namespace ProyectoIS_64PR
 
             estadoActualToolStripMenuItem1.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.EstadoActual);
 
-            reservasToolStripMenuItem.Visible = false;
-
-            reservasToolStripMenuItem.Visible = (nuevaReservaToolStripMenuItem.Visible || checkInToolStripMenuItem1.Visible || checkOutToolStripMenuItem.Visible || estadoActualToolStripMenuItem1.Visible);
+            if (rolUsuario.TienePermiso(Sesion.Patentes_64PR.Reserva) || rolUsuario.TienePermiso(Sesion.Patentes_64PR.CheckIn) || rolUsuario.TienePermiso(Sesion.Patentes_64PR.CheckOut) || rolUsuario.TienePermiso(Sesion.Patentes_64PR.EstadoActual))
+            {
+                reservasToolStripMenuItem.Visible = true;
+            }
+            else
+            {
+                reservasToolStripMenuItem.Visible = false;
+            }
 
             tareasPendientesToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.TareasPendientes);
 

@@ -47,7 +47,27 @@ namespace ProyectoIS_64PR
             if (textos.Count > 0)
                 ActualizarIdioma(textos);
             CargarResumen();
+
+            this.Resize += FrmCheck_inPaso2_AR74_Resize;
+            CentrarPanel();
         }
+
+        private void CentrarPanel()
+        {
+            if (panel1 != null)
+            {
+                panel1.Location = new Point(
+                    (this.ClientSize.Width - panel1.Width) / 2,
+                    (this.ClientSize.Height - panel1.Height) / 2
+                );
+            }
+        }
+
+        private void FrmCheck_inPaso2_AR74_Resize(object sender, EventArgs e)
+        {
+            CentrarPanel();
+        }
+
         public void ActualizarIdioma(Dictionary<string, string> textoss)
         {
             textos = textoss;

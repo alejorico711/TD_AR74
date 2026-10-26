@@ -1,4 +1,4 @@
-﻿using BE;
+using BE;
 using Sesion;
 using System;
 using System.Collections.Generic;
@@ -26,8 +26,10 @@ namespace ProyectoIS_64PR
         {
             InitializeComponent();
             dgvHuepedes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvHuepedes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dgvHuepedes.BackgroundColor = SystemColors.Menu;
+            dgvHuepedes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvHuepedes.RowHeadersVisible = false;
+            dgvHuepedes.AllowUserToAddRows = false;
+            dgvHuepedes.BackgroundColor = Color.White;
             dgvHuepedes.BorderStyle = BorderStyle.None;
             dgvHuepedes.ReadOnly = true;
             dgvHuepedes.MultiSelect = false;
@@ -43,7 +45,26 @@ namespace ProyectoIS_64PR
             if (textos.Count > 0)
                 ActualizarIdioma(textos);
 
+            this.Resize += FrmABMHuespedes_AR74_Resize;
+            CentrarPanel();
         }
+
+        private void CentrarPanel()
+        {
+            if (panel1 != null)
+            {
+                panel1.Location = new Point(
+                    (this.ClientSize.Width - panel1.Width) / 2,
+                    (this.ClientSize.Height - panel1.Height) / 2
+                );
+            }
+        }
+
+        private void FrmABMHuespedes_AR74_Resize(object sender, EventArgs e)
+        {
+            CentrarPanel();
+        }
+
         public void ActualizarIdioma(Dictionary<string, string> textoss)
         {
             textos = textoss;

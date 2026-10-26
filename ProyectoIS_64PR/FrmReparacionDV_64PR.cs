@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,7 +31,27 @@ namespace ProyectoIS_64PR
             _tablasInconsistentes = tablasInconsistentes;
             textBox1.ReadOnly = true;
             CargarTreeView();
+
+            this.Resize += FrmReparacionDV_64PR_Resize;
+            CentrarPanel();
         }
+
+        private void FrmReparacionDV_64PR_Resize(object sender, EventArgs e)
+        {
+            CentrarPanel();
+        }
+
+        private void CentrarPanel()
+        {
+            if (panel1 != null)
+            {
+                panel1.Location = new Point(
+                    (this.ClientSize.Width - panel1.Width) / 2,
+                    (this.ClientSize.Height - panel1.Height) / 2
+                );
+            }
+        }
+
         private void CargarComboIdiomas()
         {
             cmbIdioma.Items.Clear();

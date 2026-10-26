@@ -1,4 +1,4 @@
-﻿namespace ProyectoIS_64PR
+namespace ProyectoIS_64PR
 {
     partial class FrmEstadoActual_AR74
     {

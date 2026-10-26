@@ -1,4 +1,4 @@
-﻿using BE;
+using BE;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,8 +29,10 @@ namespace ProyectoIS_64PR
             nupCapacidad.Maximum = 10;
 
             dgvTipos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvTipos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dgvTipos.BackgroundColor = SystemColors.Menu;
+            dgvTipos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvTipos.RowHeadersVisible = false;
+            dgvTipos.AllowUserToAddRows = false;
+            dgvTipos.BackgroundColor = Color.White;
             dgvTipos.BorderStyle = BorderStyle.None;
             dgvTipos.ReadOnly = true;
             dgvTipos.MultiSelect = false;
@@ -41,6 +43,25 @@ namespace ProyectoIS_64PR
             textos = Idioma.GestorIdioma_64PR.GetInstance.ObtenerTextos();
             if (textos.Count > 0)
                 ActualizarIdioma(textos);
+
+            this.Resize += FrmABMTiposHabitaciones_AR74_Resize;
+            CentrarPanel();
+        }
+
+        private void CentrarPanel()
+        {
+            if (panel1 != null)
+            {
+                panel1.Location = new Point(
+                    (this.ClientSize.Width - panel1.Width) / 2,
+                    (this.ClientSize.Height - panel1.Height) / 2
+                );
+            }
+        }
+
+        private void FrmABMTiposHabitaciones_AR74_Resize(object sender, EventArgs e)
+        {
+            CentrarPanel();
         }
 
         public void ActualizarIdioma(Dictionary<string, string> textoss)
