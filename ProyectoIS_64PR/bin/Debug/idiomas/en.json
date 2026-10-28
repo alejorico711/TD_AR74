@@ -310,5 +310,12 @@
     "FrmMenu.reservasToolStripMenuItem": "FALTA TRADUCCION",
     "FrmMenu.checkInToolStripMenuItem1": "FALTA TRADUCCION",
     "FrmMenu.checkOutToolStripMenuItem": "FALTA TRADUCCION",
-    "FrmMenu.estadoActualToolStripMenuItem1": "FALTA TRADUCCION"
+    "FrmMenu.estadoActualToolStripMenuItem1": "FALTA TRADUCCION",
+    "FrmMenu.verToolStripMenuItem": "FALTA TRADUCCION",
+    "FrmVerReservas_AR74.dgvReservas.IdReserva": "FALTA TRADUCCION",
+    "FrmVerReservas_AR74.dgvReservas.FechaInicio": "FALTA TRADUCCION",
+    "FrmVerReservas_AR74.dgvReservas.FechaFin": "FALTA TRADUCCION",
+    "FrmVerReservas_AR74.dgvReservas.Habitacion": "FALTA TRADUCCION",
+    "FrmVerReservas_AR74.dgvReservas.CantidadPersonas": "FALTA TRADUCCION",
+    "FrmVerReservas_AR74.dgvReservas.Huesped": "FALTA TRADUCCION"
 }

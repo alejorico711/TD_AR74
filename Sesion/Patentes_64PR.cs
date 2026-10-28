@@ -38,6 +38,7 @@ namespace Sesion
          TareasPendientes = 26,
          RegistrarServiciosAdicionales = 27,
         BitacoraDeCambios = 28,
-        ABMTipoServicios = 29
+        ABMTipoServicios = 29,
+        VerReservas = 30
     }
 }

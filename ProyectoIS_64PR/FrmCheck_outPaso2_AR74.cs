@@ -58,6 +58,7 @@ namespace ProyectoIS_64PR
 
             this.Resize += FrmCheck_outPaso2_AR74_Resize;
             CentrarPanel();
+            cmbMetodoDePago.SelectedIndex = 0;
         }
 
         private void CentrarPanel()

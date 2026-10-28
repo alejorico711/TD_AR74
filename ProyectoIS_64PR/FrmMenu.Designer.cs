@@ -42,19 +42,20 @@ namespace ProyectoIS_64PR
             this.respaldoBaseDeDatosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.restaurarBaseDeDatosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.bitacoraDeCambiosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nuevaReservaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.maestrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.huespedesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tiposDeHabitacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.habitacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tiposDeServiciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tareasPendientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.serviciosAdicionalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnlContenidoMenu = new System.Windows.Forms.Panel();
+            this.reservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevaReservaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkInToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.checkOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadoActualToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.serviciosAdicionalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tareasPendientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnlContenidoMenu = new System.Windows.Forms.Panel();
+            this.verToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -179,24 +180,6 @@ namespace ProyectoIS_64PR
             this.bitacoraDeCambiosToolStripMenuItem.Text = "Bitacora de cambios";
             this.bitacoraDeCambiosToolStripMenuItem.Click += new System.EventHandler(this.bitacoraDeCambiosToolStripMenuItem_Click);
             // 
-            // reservasToolStripMenuItem
-            // 
-            this.reservasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nuevaReservaToolStripMenuItem,
-            this.checkInToolStripMenuItem1,
-            this.checkOutToolStripMenuItem,
-            this.estadoActualToolStripMenuItem1});
-            this.reservasToolStripMenuItem.Name = "reservasToolStripMenuItem";
-            this.reservasToolStripMenuItem.Size = new System.Drawing.Size(89, 27);
-            this.reservasToolStripMenuItem.Text = "Reservas";
-            // 
-            // nuevaReservaToolStripMenuItem
-            // 
-            this.nuevaReservaToolStripMenuItem.Name = "nuevaReservaToolStripMenuItem";
-            this.nuevaReservaToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
-            this.nuevaReservaToolStripMenuItem.Text = "Nueva reserva";
-            this.nuevaReservaToolStripMenuItem.Click += new System.EventHandler(this.nuevaReservaToolStripMenuItem_Click_1);
-            // 
             // maestrosToolStripMenuItem
             // 
             this.maestrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -236,28 +219,24 @@ namespace ProyectoIS_64PR
             this.tiposDeServiciosToolStripMenuItem.Text = "Tipos de servicios";
             this.tiposDeServiciosToolStripMenuItem.Click += new System.EventHandler(this.tiposDeServiciosToolStripMenuItem_Click);
             // 
-            // tareasPendientesToolStripMenuItem
+            // reservasToolStripMenuItem
             // 
-            this.tareasPendientesToolStripMenuItem.Name = "tareasPendientesToolStripMenuItem";
-            this.tareasPendientesToolStripMenuItem.Size = new System.Drawing.Size(160, 27);
-            this.tareasPendientesToolStripMenuItem.Text = "Tareas pendientes";
-            this.tareasPendientesToolStripMenuItem.Click += new System.EventHandler(this.tareasPendientesToolStripMenuItem_Click);
+            this.reservasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nuevaReservaToolStripMenuItem,
+            this.checkInToolStripMenuItem1,
+            this.checkOutToolStripMenuItem,
+            this.estadoActualToolStripMenuItem1,
+            this.verToolStripMenuItem});
+            this.reservasToolStripMenuItem.Name = "reservasToolStripMenuItem";
+            this.reservasToolStripMenuItem.Size = new System.Drawing.Size(29, 27);
+            this.reservasToolStripMenuItem.Text = " ";
             // 
-            // serviciosAdicionalesToolStripMenuItem
+            // nuevaReservaToolStripMenuItem
             // 
-            this.serviciosAdicionalesToolStripMenuItem.Name = "serviciosAdicionalesToolStripMenuItem";
-            this.serviciosAdicionalesToolStripMenuItem.Size = new System.Drawing.Size(178, 27);
-            this.serviciosAdicionalesToolStripMenuItem.Text = "Servicios adicionales";
-            this.serviciosAdicionalesToolStripMenuItem.Click += new System.EventHandler(this.serviciosAdicionalesToolStripMenuItem_Click);
-            // 
-            // pnlContenidoMenu
-            // 
-            this.pnlContenidoMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlContenidoMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContenidoMenu.Location = new System.Drawing.Point(0, 31);
-            this.pnlContenidoMenu.Name = "pnlContenidoMenu";
-            this.pnlContenidoMenu.Size = new System.Drawing.Size(1282, 532);
-            this.pnlContenidoMenu.TabIndex = 2;
+            this.nuevaReservaToolStripMenuItem.Name = "nuevaReservaToolStripMenuItem";
+            this.nuevaReservaToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.nuevaReservaToolStripMenuItem.Text = "Nueva reserva";
+            this.nuevaReservaToolStripMenuItem.Click += new System.EventHandler(this.nuevaReservaToolStripMenuItem_Click_1);
             // 
             // checkInToolStripMenuItem1
             // 
@@ -279,6 +258,36 @@ namespace ProyectoIS_64PR
             this.estadoActualToolStripMenuItem1.Size = new System.Drawing.Size(224, 28);
             this.estadoActualToolStripMenuItem1.Text = "Estado actual";
             this.estadoActualToolStripMenuItem1.Click += new System.EventHandler(this.estadoActualToolStripMenuItem1_Click);
+            // 
+            // serviciosAdicionalesToolStripMenuItem
+            // 
+            this.serviciosAdicionalesToolStripMenuItem.Name = "serviciosAdicionalesToolStripMenuItem";
+            this.serviciosAdicionalesToolStripMenuItem.Size = new System.Drawing.Size(178, 27);
+            this.serviciosAdicionalesToolStripMenuItem.Text = "Servicios adicionales";
+            this.serviciosAdicionalesToolStripMenuItem.Click += new System.EventHandler(this.serviciosAdicionalesToolStripMenuItem_Click);
+            // 
+            // tareasPendientesToolStripMenuItem
+            // 
+            this.tareasPendientesToolStripMenuItem.Name = "tareasPendientesToolStripMenuItem";
+            this.tareasPendientesToolStripMenuItem.Size = new System.Drawing.Size(160, 27);
+            this.tareasPendientesToolStripMenuItem.Text = "Tareas pendientes";
+            this.tareasPendientesToolStripMenuItem.Click += new System.EventHandler(this.tareasPendientesToolStripMenuItem_Click);
+            // 
+            // pnlContenidoMenu
+            // 
+            this.pnlContenidoMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlContenidoMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContenidoMenu.Location = new System.Drawing.Point(0, 31);
+            this.pnlContenidoMenu.Name = "pnlContenidoMenu";
+            this.pnlContenidoMenu.Size = new System.Drawing.Size(1282, 532);
+            this.pnlContenidoMenu.TabIndex = 2;
+            // 
+            // verToolStripMenuItem
+            // 
+            this.verToolStripMenuItem.Name = "verToolStripMenuItem";
+            this.verToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.verToolStripMenuItem.Text = "Ver Reservas";
+            this.verToolStripMenuItem.Click += new System.EventHandler(this.verToolStripMenuItem_Click);
             // 
             // FrmMenu
             // 
@@ -330,5 +339,6 @@ namespace ProyectoIS_64PR
         private System.Windows.Forms.ToolStripMenuItem checkInToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem checkOutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estadoActualToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem verToolStripMenuItem;
     }
 }

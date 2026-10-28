@@ -134,5 +134,50 @@ namespace Mapper
             }
             return lista;
         }
+        public List<Reserva_AR74> ListarReservas()
+        {
+            List<Reserva_AR74> lista = new List<Reserva_AR74>();
+            DataTable tabla = DAL_64PR.Acceso.Instancia.leerSP("sp_ListarReservas", null);
+
+            foreach (DataRow dr in tabla.Rows)
+            {
+                Reserva_AR74 r = new Reserva_AR74();
+                r.IdReserva = (int)dr["IdReserva"];
+                r.FechaInicio = (DateTime)dr["FechaCheckIn"];
+                r.FechaFin = (DateTime)dr["FechaCheckOut"];
+                r.CantidadPersonas = (int)dr["CantidadPersonas"];
+
+                BE.TipoHabitacion tipo = new BE.TipoHabitacion
+                {
+                    IdTipoHabitacion = (int)dr["IdTipoHabitacion"],
+                    Descripcion = (string)dr["DescTipoHabitacion"],
+                    Capacidad = (int)dr["Capacidad"],
+                    PrecioPorNoche = (decimal)dr["PrecioPorNoche"]
+                };
+
+                r.Habitacion = new BE.Habitacion
+                {
+                    IdHabitacion = (int)dr["IdHabitacion"],
+                    Numero = (int)dr["Numero"],
+                    Descripcion = dr["DescHabitacion"] == DBNull.Value ? null : (string)dr["DescHabitacion"],
+                    Estado = (string)dr["EstadoHabitacion"],
+                    Tipo = tipo
+                };
+
+                r.Huesped = new BE.Huesped
+                {
+                    IdHuesped = (int)dr["IdHuesped"],
+                    DNI = (string)dr["Dni"],
+                    Nombre = (string)dr["Nombre"],
+                    Apellido = (string)dr["Apellido"],
+                    FechaNacimiento = (DateTime)dr["FechaNacimiento"],
+                    Email = dr["CorreoElectronico"] == DBNull.Value ? null : (string)dr["CorreoElectronico"],
+                    Telefono = dr["Telefono"] == DBNull.Value ? null : (string)dr["Telefono"]
+                };
+
+                lista.Add(r);
+            }
+            return lista;
+        }
     }
 }

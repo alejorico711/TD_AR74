@@ -48,5 +48,9 @@ namespace BLL_64PR
             Bitacora.Evento_64PR ev = new Bitacora.Evento_64PR(Sesion.SessionManager.GetInstance.Usuario.Login, ((int)Bitacora.ModuloBitacora_64PR.CheckOut).ToString(), ((int)Bitacora.TipoEventoBitacora_64PR.RegistrarCheckOut).ToString(), 4);
             bita.RegistrarEvento(ev);
         }
+        public List<Reserva_AR74> ListarReservas()
+        {
+            return mpp.ListarReservas();
+        }
     }
 }

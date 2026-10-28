@@ -38,8 +38,8 @@ namespace ProyectoIS_64PR
             this.lblIdTipoHabitacion = new System.Windows.Forms.Label();
             this.txtIdTipoHabitacion = new System.Windows.Forms.TextBox();
             this.btnActivar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -64,7 +64,7 @@ namespace ProyectoIS_64PR
             this.lblBitacoraCambios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.lblBitacoraCambios.Location = new System.Drawing.Point(15, 12);
             this.lblBitacoraCambios.Name = "lblBitacoraCambios";
-            this.lblBitacoraCambios.Size = new System.Drawing.Size(206, 28);
+            this.lblBitacoraCambios.Size = new System.Drawing.Size(204, 28);
             this.lblBitacoraCambios.TabIndex = 0;
             this.lblBitacoraCambios.Text = "Bitacora de cambios";
             // 
@@ -73,7 +73,7 @@ namespace ProyectoIS_64PR
             this.lblTipoHabitacion_C.AutoSize = true;
             this.lblTipoHabitacion_C.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic);
             this.lblTipoHabitacion_C.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(168)))), ((int)(((byte)(149)))));
-            this.lblTipoHabitacion_C.Location = new System.Drawing.Point(600, 15);
+            this.lblTipoHabitacion_C.Location = new System.Drawing.Point(619, 12);
             this.lblTipoHabitacion_C.Name = "lblTipoHabitacion_C";
             this.lblTipoHabitacion_C.Size = new System.Drawing.Size(124, 20);
             this.lblTipoHabitacion_C.TabIndex = 1;
@@ -82,15 +82,15 @@ namespace ProyectoIS_64PR
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(243)))), ((int)(((byte)(231)))));
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -122,7 +122,7 @@ namespace ProyectoIS_64PR
             this.lblIdTipoHabitacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.lblIdTipoHabitacion.Location = new System.Drawing.Point(20, 420);
             this.lblIdTipoHabitacion.Name = "lblIdTipoHabitacion";
-            this.lblIdTipoHabitacion.Size = new System.Drawing.Size(133, 20);
+            this.lblIdTipoHabitacion.Size = new System.Drawing.Size(136, 20);
             this.lblIdTipoHabitacion.TabIndex = 3;
             this.lblIdTipoHabitacion.Text = "Id Tipo Habitacion:";
             // 
@@ -146,9 +146,9 @@ namespace ProyectoIS_64PR
             this.btnActivar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActivar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnActivar.ForeColor = System.Drawing.Color.White;
-            this.btnActivar.Location = new System.Drawing.Point(623, 415);
+            this.btnActivar.Location = new System.Drawing.Point(552, 415);
             this.btnActivar.Name = "btnActivar";
-            this.btnActivar.Size = new System.Drawing.Size(120, 32);
+            this.btnActivar.Size = new System.Drawing.Size(191, 32);
             this.btnActivar.TabIndex = 5;
             this.btnActivar.Text = "Activar";
             this.btnActivar.UseVisualStyleBackColor = false;
@@ -165,9 +165,9 @@ namespace ProyectoIS_64PR
             this.Name = "FrmBitacoraCambios";
             this.Text = "FrmBitacoraCambios";
             this.Resize += new System.EventHandler(this.FrmBitacoraCambios_Resize);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

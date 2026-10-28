@@ -338,5 +338,12 @@
   "msgRegistroActivo": "El registro seleccionado ya es el activo.",
   "msgRegistroActivado": "Registro activado correctamente.",
   "msgConfirmacion1": "¿Desea activar el registro del",
-  "msgConfirmacion2": "para el Tipo de Habitación"
+  "msgConfirmacion2": "para el Tipo de Habitación",
+  "FrmMenu.verToolStripMenuItem": "Ver reservas",
+  "FrmVerReservas_AR74.dgvReservas.IdReserva": "Id reserva",
+  "FrmVerReservas_AR74.dgvReservas.FechaInicio": "Fecha inicio",
+  "FrmVerReservas_AR74.dgvReservas.FechaFin": "Fecha fin",
+  "FrmVerReservas_AR74.dgvReservas.Habitacion": "Habitacion",
+  "FrmVerReservas_AR74.dgvReservas.CantidadPersonas": "Cantidad personas",
+  "FrmVerReservas_AR74.dgvReservas.Huesped": "Huesped"
 }

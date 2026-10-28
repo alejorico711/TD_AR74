@@ -73,6 +73,7 @@ namespace ProyectoIS_64PR
             btnPagar.Visible = false;
             btnConfirmar.Visible = true;
             cmbMetodoDePago.Visible = true;
+            cmbMetodoDePago.SelectedIndex = 0;
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)

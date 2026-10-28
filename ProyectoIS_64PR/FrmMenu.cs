@@ -204,7 +204,9 @@ namespace ProyectoIS_64PR
 
             estadoActualToolStripMenuItem1.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.EstadoActual);
 
-            if (rolUsuario.TienePermiso(Sesion.Patentes_64PR.Reserva) || rolUsuario.TienePermiso(Sesion.Patentes_64PR.CheckIn) || rolUsuario.TienePermiso(Sesion.Patentes_64PR.CheckOut) || rolUsuario.TienePermiso(Sesion.Patentes_64PR.EstadoActual))
+            verToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.VerReservas);
+
+            if (rolUsuario.TienePermiso(Sesion.Patentes_64PR.Reserva) || rolUsuario.TienePermiso(Sesion.Patentes_64PR.CheckIn) || rolUsuario.TienePermiso(Sesion.Patentes_64PR.CheckOut) || rolUsuario.TienePermiso(Sesion.Patentes_64PR.EstadoActual)||rolUsuario.TienePermiso(Sesion.Patentes_64PR.VerReservas))
             {
                 reservasToolStripMenuItem.Visible = true;
             }
@@ -488,6 +490,18 @@ namespace ProyectoIS_64PR
             try
             {
                 AbrirFormularioHijo(new FrmEstadoActual_AR74());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void verToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                AbrirFormularioHijo(new FrmVerReservas_AR74());
             }
             catch (Exception ex)
             {

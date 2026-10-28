@@ -50,6 +50,10 @@ namespace BE
             get { return _activo; }
             set { _activo = value; }
         }
+        public override string ToString()
+        {
+			return Numero.ToString();
+        }
 
     }
 }
