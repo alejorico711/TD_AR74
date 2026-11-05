@@ -220,6 +220,7 @@
       <DependentUpon>FrmVerReservas_AR74.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="PdfAyuda.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Traductor_64PR.cs" />
     <Compile Include="ucCrearUsuario.cs">
@@ -405,6 +406,9 @@
     </Content>
     <Content Include="Imagenes\people.png" />
     <Content Include="Solo-logo.ico" />
+    <Content Include="Ayuda\Manual_Ayuda_RoomIn.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

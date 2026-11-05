@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -203,6 +203,11 @@ namespace ProyectoIS_64PR
         private void FrmLogin_64PR_FormClosed(object sender, FormClosedEventArgs e)
         {
             Idioma.GestorIdioma_64PR.GetInstance.Desuscribir(this); ///observer del cambio de idioma
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            PdfAyuda.Abrir(this.Name);
         }
 
         private void FrmLogin_64PR_Resize(object sender, EventArgs e)

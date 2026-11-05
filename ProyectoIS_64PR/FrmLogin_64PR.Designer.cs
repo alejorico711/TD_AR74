@@ -37,6 +37,7 @@ namespace ProyectoIS_64PR
             this.cmbIdioma = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAyuda = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +64,21 @@ namespace ProyectoIS_64PR
             this.btnIniciarSesion.Text = "Iniciar sesion";
             this.btnIniciarSesion.UseVisualStyleBackColor = false;
             this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
+            // 
+            // btnAyuda
+            // 
+            this.btnAyuda.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnAyuda.FlatAppearance.BorderSize = 1;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAyuda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnAyuda.Location = new System.Drawing.Point(183, 210);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(200, 28);
+            this.btnAyuda.TabIndex = 3;
+            this.btnAyuda.Text = "? Ayuda";
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // txtContra
             // 
@@ -128,12 +144,13 @@ namespace ProyectoIS_64PR
             this.panel1.Controls.Add(this.cmbIdioma);
             this.panel1.Controls.Add(this.txtLogin);
             this.panel1.Controls.Add(this.btnIniciarSesion);
+            this.panel1.Controls.Add(this.btnAyuda);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtContra);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(140, 95);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(388, 208);
+            this.panel1.Size = new System.Drawing.Size(388, 248);
             this.panel1.TabIndex = 8;
             // 
             // FrmLogin_64PR
@@ -169,5 +186,6 @@ namespace ProyectoIS_64PR
         private System.Windows.Forms.ComboBox cmbIdioma;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnAyuda;
     }
 }
