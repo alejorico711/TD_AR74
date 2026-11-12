@@ -38,6 +38,7 @@ namespace ProyectoIS_64PR
             this.lblIdTipoHabitacion = new System.Windows.Forms.Label();
             this.txtIdTipoHabitacion = new System.Windows.Forms.TextBox();
             this.btnActivar = new System.Windows.Forms.Button();
+            this.btnAyuda = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -52,6 +53,7 @@ namespace ProyectoIS_64PR
             this.panel1.Controls.Add(this.lblIdTipoHabitacion);
             this.panel1.Controls.Add(this.txtIdTipoHabitacion);
             this.panel1.Controls.Add(this.btnActivar);
+            this.panel1.Controls.Add(this.btnAyuda);
             this.panel1.Location = new System.Drawing.Point(20, 20);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(760, 480);
@@ -154,6 +156,21 @@ namespace ProyectoIS_64PR
             this.btnActivar.UseVisualStyleBackColor = false;
             this.btnActivar.Click += new System.EventHandler(this.btnActivar_Click_1);
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnAyuda.FlatAppearance.BorderSize = 1;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAyuda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnAyuda.Location = new System.Drawing.Point(425, 417);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(110, 28);
+            this.btnAyuda.TabIndex = 6;
+            this.btnAyuda.Text = "? Ayuda";
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            // 
             // FrmBitacoraCambios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -181,5 +198,6 @@ namespace ProyectoIS_64PR
         private System.Windows.Forms.Label lblIdTipoHabitacion;
         private System.Windows.Forms.Label lblBitacoraCambios;
         private System.Windows.Forms.Label lblTipoHabitacion_C;
+        private System.Windows.Forms.Button btnAyuda;
     }
 }

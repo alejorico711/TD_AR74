@@ -508,5 +508,17 @@ namespace ProyectoIS_64PR
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void reporteInteligenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                AbrirFormularioHijo(new FrmReporteInteligente());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

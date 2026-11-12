@@ -29,6 +29,7 @@ namespace ProyectoIS_64PR
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAyuda = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.txtDni = new System.Windows.Forms.TextBox();
@@ -64,6 +65,7 @@ namespace ProyectoIS_64PR
             this.panel1.Controls.Add(this.txtDni);
             this.panel1.Controls.Add(this.btnCancelar);
             this.panel1.Controls.Add(this.btnGuardar);
+            this.panel1.Controls.Add(this.btnAyuda);
             this.panel1.Location = new System.Drawing.Point(40, 30);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(460, 350);
@@ -237,6 +239,22 @@ namespace ProyectoIS_64PR
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnAyuda.FlatAppearance.BorderSize = 1;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAyuda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnAyuda.Location = new System.Drawing.Point(30, 285);
+            this.btnAyuda.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(100, 32);
+            this.btnAyuda.TabIndex = 7;
+            this.btnAyuda.Text = "? Ayuda";
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            // 
             // FrmRegistrarHuespedEnReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -272,5 +290,6 @@ namespace ProyectoIS_64PR
         private System.Windows.Forms.Label lblFechaNacimiento;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblTelefono;
+        private System.Windows.Forms.Button btnAyuda;
     }
 }

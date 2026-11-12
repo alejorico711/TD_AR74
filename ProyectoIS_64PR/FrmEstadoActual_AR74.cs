@@ -34,5 +34,10 @@ namespace ProyectoIS_64PR
                 flowLayoutPanelHabitaciones.Controls.Add(uc);
             }
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            PdfAyuda.Abrir(this.Name);
+        }
     }
 }

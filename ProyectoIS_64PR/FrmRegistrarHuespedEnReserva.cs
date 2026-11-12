@@ -87,5 +87,10 @@ namespace ProyectoIS_64PR
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            PdfAyuda.Abrir(this.Name);
+        }
     }
 }

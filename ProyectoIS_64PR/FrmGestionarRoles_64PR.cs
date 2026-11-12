@@ -363,5 +363,10 @@ namespace ProyectoIS_64PR
             rbModificar.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.ModificarRoles);
             rbEliminar.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.EliminarRoles);
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            PdfAyuda.Abrir(this.Name);
+        }
     }
 }

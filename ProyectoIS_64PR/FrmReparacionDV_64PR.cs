@@ -230,5 +230,10 @@ namespace ProyectoIS_64PR
             Idioma.GestorIdioma_64PR.GetInstance.SetIdioma(seleccionado);
             ///El Observer se encarga de actualizar el formulario automáticamente
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            PdfAyuda.Abrir(this.Name);
+        }
     }
 }

@@ -225,5 +225,10 @@ namespace ProyectoIS_64PR
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            PdfAyuda.Abrir(this.Name);
+        }
     }
 }

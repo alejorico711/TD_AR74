@@ -29,6 +29,7 @@ namespace ProyectoIS_64PR
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAyuda = new System.Windows.Forms.Button();
             this.btnRestore = new System.Windows.Forms.Button();
             this.btnRecalcular = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -48,6 +49,7 @@ namespace ProyectoIS_64PR
             this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Controls.Add(this.btnRecalcular);
             this.panel1.Controls.Add(this.btnRestore);
+            this.panel1.Controls.Add(this.btnAyuda);
             this.panel1.Location = new System.Drawing.Point(30, 30);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(760, 450);
@@ -97,6 +99,21 @@ namespace ProyectoIS_64PR
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnAyuda
+            // 
+            this.btnAyuda.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnAyuda.FlatAppearance.BorderSize = 1;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAyuda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnAyuda.Location = new System.Drawing.Point(630, 270);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(110, 32);
+            this.btnAyuda.TabIndex = 6;
+            this.btnAyuda.Text = "? Ayuda";
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // treeResultados
             // 
@@ -156,5 +173,6 @@ namespace ProyectoIS_64PR
         private System.Windows.Forms.TreeView treeResultados;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox cmbIdioma;
+        private System.Windows.Forms.Button btnAyuda;
     }
 }

@@ -55,6 +55,7 @@ namespace ProyectoIS_64PR
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnAplicar = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
+            this.btnAyuda = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEventos)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -86,6 +87,7 @@ namespace ProyectoIS_64PR
             this.panel1.Controls.Add(this.btnLimpiar);
             this.panel1.Controls.Add(this.btnAplicar);
             this.panel1.Controls.Add(this.btnImprimir);
+            this.panel1.Controls.Add(this.btnAyuda);
             this.panel1.Location = new System.Drawing.Point(20, 20);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(780, 500);
@@ -373,6 +375,21 @@ namespace ProyectoIS_64PR
             this.btnImprimir.UseVisualStyleBackColor = false;
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnAyuda.FlatAppearance.BorderSize = 1;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAyuda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnAyuda.Location = new System.Drawing.Point(653, 8);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(110, 28);
+            this.btnAyuda.TabIndex = 23;
+            this.btnAyuda.Text = "? Ayuda";
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            // 
             // FrmBitacora_64PR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -419,5 +436,6 @@ namespace ProyectoIS_64PR
         private System.Windows.Forms.CheckBox cbInicio;
         private System.Windows.Forms.CheckBox cbModulo;
         private System.Windows.Forms.CheckBox cbLogin;
+        private System.Windows.Forms.Button btnAyuda;
     }
 }

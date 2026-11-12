@@ -193,5 +193,10 @@ namespace ProyectoIS_64PR
             txtDescripcion.Text = hab.Descripcion;
             cmbTipoHabitacion.SelectedValue = hab.Tipo.IdTipoHabitacion;
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            PdfAyuda.Abrir(this.Name);
+        }
     }
 }

@@ -32,6 +32,7 @@ namespace ProyectoIS_64PR
             this.dtpFin = new System.Windows.Forms.DateTimePicker();
             this.nupCantidad = new System.Windows.Forms.NumericUpDown();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnAyuda = new System.Windows.Forms.Button();
             this.lblInicio = new System.Windows.Forms.Label();
             this.lblFin = new System.Windows.Forms.Label();
             this.lblCantidadPersonas = new System.Windows.Forms.Label();
@@ -53,9 +54,10 @@ namespace ProyectoIS_64PR
             this.panel1.Controls.Add(this.lblCantidadPersonas);
             this.panel1.Controls.Add(this.nupCantidad);
             this.panel1.Controls.Add(this.btnBuscar);
+            this.panel1.Controls.Add(this.btnAyuda);
             this.panel1.Location = new System.Drawing.Point(200, 111);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(400, 340);
+            this.panel1.Size = new System.Drawing.Size(400, 385);
             this.panel1.TabIndex = 7;
             // 
             // lblTitulo
@@ -150,6 +152,21 @@ namespace ProyectoIS_64PR
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnAyuda.FlatAppearance.BorderSize = 1;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAyuda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnAyuda.Location = new System.Drawing.Point(24, 332);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(350, 32);
+            this.btnAyuda.TabIndex = 8;
+            this.btnAyuda.Text = "? Ayuda";
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            // 
             // FrmReservaPaso1_AR74
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -180,5 +197,6 @@ namespace ProyectoIS_64PR
         private System.Windows.Forms.Label lblCantidadPersonas;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnAyuda;
     }
 }

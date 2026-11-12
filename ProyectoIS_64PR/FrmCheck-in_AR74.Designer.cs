@@ -31,6 +31,7 @@ namespace ProyectoIS_64PR
             this.flowLayoutPanelHabitaciones = new System.Windows.Forms.FlowLayoutPanel();
             this.lblBuscarPorDNI = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAyuda = new System.Windows.Forms.Button();
             this.txtDNI = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -70,6 +71,22 @@ namespace ProyectoIS_64PR
             this.txtDNI.TextChanged += new System.EventHandler(this.txtDNI_TextChanged);
             this.txtDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDNI_KeyPress);
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAyuda.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnAyuda.FlatAppearance.BorderSize = 1;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAyuda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnAyuda.Location = new System.Drawing.Point(670, 11);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(110, 28);
+            this.btnAyuda.TabIndex = 3;
+            this.btnAyuda.Text = "? Ayuda";
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            // 
             // FrmCheck_in_AR74
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -77,6 +94,7 @@ namespace ProyectoIS_64PR
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(243)))), ((int)(((byte)(231)))));
             this.ClientSize = new System.Drawing.Size(800, 562);
             this.Controls.Add(this.txtDNI);
+            this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblBuscarPorDNI);
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -95,5 +113,6 @@ namespace ProyectoIS_64PR
         private System.Windows.Forms.Label lblBuscarPorDNI;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtDNI;
+        private System.Windows.Forms.Button btnAyuda;
     }
 }

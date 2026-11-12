@@ -33,6 +33,7 @@ namespace ProyectoIS_64PR
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnConfirmar = new System.Windows.Forms.Button();
+            this.btnAyuda = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtContra = new System.Windows.Forms.TextBox();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -93,6 +94,21 @@ namespace ProyectoIS_64PR
             this.btnConfirmar.UseVisualStyleBackColor = false;
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnAyuda.FlatAppearance.BorderSize = 1;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAyuda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnAyuda.Location = new System.Drawing.Point(24, 316);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(350, 32);
+            this.btnAyuda.TabIndex = 4;
+            this.btnAyuda.Text = "? Ayuda";
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -134,9 +150,10 @@ namespace ProyectoIS_64PR
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtConfirmar);
             this.panel1.Controls.Add(this.btnConfirmar);
+            this.panel1.Controls.Add(this.btnAyuda);
             this.panel1.Location = new System.Drawing.Point(200, 75);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(400, 310);
+            this.panel1.Size = new System.Drawing.Size(400, 360);
             this.panel1.TabIndex = 0;
             // 
             // FrmCambiarClave_64PR
@@ -169,5 +186,6 @@ namespace ProyectoIS_64PR
         private System.Windows.Forms.TextBox txtContra;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnAyuda;
     }
 }

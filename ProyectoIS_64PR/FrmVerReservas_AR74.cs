@@ -67,5 +67,10 @@ namespace ProyectoIS_64PR
             List<Reserva_AR74> aux = greservas.ListarReservas();
             dgvReservas.DataSource = aux.OrderBy(r=>r.FechaInicio).ToList();
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            PdfAyuda.Abrir(this.Name);
+        }
     }
 }

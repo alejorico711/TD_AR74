@@ -283,5 +283,10 @@ namespace ProyectoIS_64PR
         {
             frmPadre.AbrirFormularioHijo(new FrmCheck_out_AR74(frmPadre));
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            PdfAyuda.Abrir(this.Name);
+        }
     }
 }

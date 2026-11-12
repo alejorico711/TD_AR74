@@ -38,6 +38,7 @@ namespace ProyectoIS_64PR
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnActDesact = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnAyuda = new System.Windows.Forms.Button();
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.lblModo = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -59,6 +60,7 @@ namespace ProyectoIS_64PR
             this.panel1.Controls.Add(this.lblModo);
             this.panel1.Controls.Add(this.pnlContenedor);
             this.panel1.Controls.Add(this.btnGuardar);
+            this.panel1.Controls.Add(this.btnAyuda);
             this.panel1.Controls.Add(this.btnActDesact);
             this.panel1.Controls.Add(this.btnModificar);
             this.panel1.Controls.Add(this.btnDesbloquear);
@@ -193,6 +195,22 @@ namespace ProyectoIS_64PR
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnAyuda.FlatAppearance.BorderSize = 1;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAyuda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnAyuda.Location = new System.Drawing.Point(705, 425);
+            this.btnAyuda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(110, 28);
+            this.btnAyuda.TabIndex = 13;
+            this.btnAyuda.Text = "? Ayuda";
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            // 
             // pnlContenedor
             // 
             this.pnlContenedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -305,5 +323,6 @@ namespace ProyectoIS_64PR
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.Label lblCantidad;
+        private System.Windows.Forms.Button btnAyuda;
     }
 }

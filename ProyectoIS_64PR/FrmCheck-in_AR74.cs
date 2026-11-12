@@ -129,5 +129,10 @@ namespace ProyectoIS_64PR
                 }
             }
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            PdfAyuda.Abrir("FrmCheck_inPaso2_AR74");
+        }
     }
 }

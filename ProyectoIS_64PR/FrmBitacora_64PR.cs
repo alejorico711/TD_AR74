@@ -301,5 +301,10 @@ namespace ProyectoIS_64PR
         {
             Idioma.GestorIdioma_64PR.GetInstance.Desuscribir(this); ///observer del cambio de idioma
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            PdfAyuda.Abrir(this.Name);
+        }
     }
 }

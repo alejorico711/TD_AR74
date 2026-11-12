@@ -37,12 +37,12 @@ namespace ProyectoIS_64PR
             this.lblValorTotal = new System.Windows.Forms.Label();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbHabitacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCalendario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNoches)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -70,7 +70,7 @@ namespace ProyectoIS_64PR
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.lblTitulo.Location = new System.Drawing.Point(25, 20);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(262, 32);
+            this.lblTitulo.Size = new System.Drawing.Size(259, 32);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Resumen de Check-In";
             // 
@@ -81,7 +81,7 @@ namespace ProyectoIS_64PR
             this.lblHuespedNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
             this.lblHuespedNombre.Location = new System.Drawing.Point(26, 60);
             this.lblHuespedNombre.Name = "lblHuespedNombre";
-            this.lblHuespedNombre.Size = new System.Drawing.Size(83, 23);
+            this.lblHuespedNombre.Size = new System.Drawing.Size(85, 23);
             this.lblHuespedNombre.TabIndex = 1;
             this.lblHuespedNombre.Text = "Huésped:";
             // 
@@ -155,7 +155,7 @@ namespace ProyectoIS_64PR
             this.lblHabitacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.lblHabitacion.Location = new System.Drawing.Point(3, 15);
             this.lblHabitacion.Name = "lblHabitacion";
-            this.lblHabitacion.Size = new System.Drawing.Size(83, 20);
+            this.lblHabitacion.Size = new System.Drawing.Size(85, 20);
             this.lblHabitacion.TabIndex = 0;
             this.lblHabitacion.Text = "Habitación:";
             // 
@@ -227,7 +227,7 @@ namespace ProyectoIS_64PR
             this.lblNochesxPrecio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.lblNochesxPrecio.Location = new System.Drawing.Point(3, 165);
             this.lblNochesxPrecio.Name = "lblNochesxPrecio";
-            this.lblNochesxPrecio.Size = new System.Drawing.Size(116, 20);
+            this.lblNochesxPrecio.Size = new System.Drawing.Size(117, 20);
             this.lblNochesxPrecio.TabIndex = 6;
             this.lblNochesxPrecio.Text = "Noches x Precio:";
             // 
@@ -249,7 +249,7 @@ namespace ProyectoIS_64PR
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.lblTotal.Location = new System.Drawing.Point(3, 215);
+            this.lblTotal.Location = new System.Drawing.Point(3, 213);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(54, 23);
             this.lblTotal.TabIndex = 8;
@@ -261,7 +261,7 @@ namespace ProyectoIS_64PR
             this.lblValorTotal.AutoSize = true;
             this.lblValorTotal.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.lblValorTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
-            this.lblValorTotal.Location = new System.Drawing.Point(177, 214);
+            this.lblValorTotal.Location = new System.Drawing.Point(177, 212);
             this.lblValorTotal.Name = "lblValorTotal";
             this.lblValorTotal.Size = new System.Drawing.Size(76, 25);
             this.lblValorTotal.TabIndex = 9;
@@ -308,14 +308,14 @@ namespace ProyectoIS_64PR
             this.Name = "FrmCheck_inPaso2_AR74";
             this.Text = "Check In - Paso 2";
             this.Resize += new System.EventHandler(this.FrmCheck_inPaso2_AR74_Resize);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbHabitacion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCalendario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNoches)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

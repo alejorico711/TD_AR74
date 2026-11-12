@@ -172,5 +172,10 @@ namespace ProyectoIS_64PR
             rbRequiereStaff.Checked = t.RequiereStaff;
             rbRequiereStaff.Enabled = true;
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            PdfAyuda.Abrir(this.Name);
+        }
     }
 }

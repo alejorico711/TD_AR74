@@ -32,6 +32,7 @@ namespace ProyectoIS_64PR
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAyuda = new System.Windows.Forms.Button();
             this.dgvHuepedes = new System.Windows.Forms.DataGridView();
             this.lblDni = new System.Windows.Forms.Label();
             this.txtDni = new System.Windows.Forms.TextBox();
@@ -78,6 +79,7 @@ namespace ProyectoIS_64PR
             this.panel1.Controls.Add(this.btnLimpiar);
             this.panel1.Controls.Add(this.btnSerializarXML);
             this.panel1.Controls.Add(this.btnDeserializarXML);
+            this.panel1.Controls.Add(this.btnAyuda);
             this.panel1.Location = new System.Drawing.Point(20, 20);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(760, 500);
@@ -343,6 +345,21 @@ namespace ProyectoIS_64PR
             this.btnDeserializarXML.UseVisualStyleBackColor = false;
             this.btnDeserializarXML.Click += new System.EventHandler(this.btnDeserializarXML_Click);
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnAyuda.FlatAppearance.BorderSize = 1;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAyuda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnAyuda.Location = new System.Drawing.Point(530, 455);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(110, 28);
+            this.btnAyuda.TabIndex = 19;
+            this.btnAyuda.Text = "? Ayuda";
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            // 
             // FrmABMHuespedes_AR74
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -383,5 +400,6 @@ namespace ProyectoIS_64PR
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnSerializarXML;
         private System.Windows.Forms.Button btnDeserializarXML;
+        private System.Windows.Forms.Button btnAyuda;
     }
 }

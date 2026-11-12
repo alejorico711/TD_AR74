@@ -1,4 +1,4 @@
-﻿using BE;
+using BE;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -62,6 +62,11 @@ namespace ProyectoIS_64PR
         private void FrmReservaPaso1_AR74_Resize(object sender, EventArgs e)
         {
             CentrarPanel();
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            PdfAyuda.Abrir(this.Name);
         }
     }
 }

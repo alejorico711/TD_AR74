@@ -34,6 +34,7 @@ namespace ProyectoIS_64PR
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvTareas = new System.Windows.Forms.DataGridView();
             this.btnMarcarCompletada = new System.Windows.Forms.Button();
+            this.btnAyuda = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTareas)).BeginInit();
             this.SuspendLayout();
@@ -43,6 +44,7 @@ namespace ProyectoIS_64PR
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btnMarcarCompletada);
+            this.panel1.Controls.Add(this.btnAyuda);
             this.panel1.Controls.Add(this.dgvTareas);
             this.panel1.Location = new System.Drawing.Point(30, 25);
             this.panel1.Name = "panel1";
@@ -107,6 +109,21 @@ namespace ProyectoIS_64PR
             this.btnMarcarCompletada.UseVisualStyleBackColor = false;
             this.btnMarcarCompletada.Click += new System.EventHandler(this.btnMarcarCompletada_Click);
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnAyuda.FlatAppearance.BorderSize = 1;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAyuda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnAyuda.Location = new System.Drawing.Point(20, 378);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(110, 28);
+            this.btnAyuda.TabIndex = 2;
+            this.btnAyuda.Text = "? Ayuda";
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            // 
             // FrmTareasPendientes_AR74
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -129,5 +146,6 @@ namespace ProyectoIS_64PR
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgvTareas;
         private System.Windows.Forms.Button btnMarcarCompletada;
+        private System.Windows.Forms.Button btnAyuda;
     }
 }

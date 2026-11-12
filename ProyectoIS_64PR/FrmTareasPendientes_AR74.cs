@@ -87,5 +87,10 @@ namespace ProyectoIS_64PR
             if (dgvTareas.CurrentRow == null) return;
             tareaSeleccionada = (TareaPendiente)dgvTareas.CurrentRow.DataBoundItem;
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            PdfAyuda.Abrir(this.Name);
+        }
     }
 }

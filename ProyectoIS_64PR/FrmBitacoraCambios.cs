@@ -136,5 +136,10 @@ namespace ProyectoIS_64PR
                 e.Handled = true; // Cancela el evento
             }
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            PdfAyuda.Abrir(this.Name);
+        }
     }
 }

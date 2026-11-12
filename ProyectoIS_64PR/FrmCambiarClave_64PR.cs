@@ -104,5 +104,10 @@ namespace ProyectoIS_64PR
         {
             Idioma.GestorIdioma_64PR.GetInstance.Desuscribir(this);
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            PdfAyuda.Abrir(this.Name);
+        }
     }
 }

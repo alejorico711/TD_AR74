@@ -174,5 +174,10 @@ namespace ProyectoIS_64PR
             nupCapacidad.Value = t.Capacidad;
             nupPrecio.Value = t.PrecioPorNoche;
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            PdfAyuda.Abrir(this.Name);
+        }
     }
 }

@@ -37,6 +37,7 @@ namespace ProyectoIS_64PR
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnAyuda = new System.Windows.Forms.Button();
             this.rbCrear = new System.Windows.Forms.RadioButton();
             this.rbModificar = new System.Windows.Forms.RadioButton();
             this.rbEliminar = new System.Windows.Forms.RadioButton();
@@ -51,6 +52,7 @@ namespace ProyectoIS_64PR
             this.panel1.Controls.Add(this.rbModificar);
             this.panel1.Controls.Add(this.rbCrear);
             this.panel1.Controls.Add(this.btnEliminar);
+            this.panel1.Controls.Add(this.btnAyuda);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtNombre);
             this.panel1.Controls.Add(this.btnAplicar);
@@ -163,6 +165,21 @@ namespace ProyectoIS_64PR
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnAyuda.FlatAppearance.BorderSize = 1;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAyuda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnAyuda.Location = new System.Drawing.Point(280, 310);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(100, 32);
+            this.btnAyuda.TabIndex = 12;
+            this.btnAyuda.Text = "? Ayuda";
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            // 
             // rbCrear
             // 
             this.rbCrear.AutoSize = true;
@@ -238,5 +255,6 @@ namespace ProyectoIS_64PR
         private System.Windows.Forms.RadioButton rbCrear;
         private System.Windows.Forms.RadioButton rbModificar;
         private System.Windows.Forms.RadioButton rbEliminar;
+        private System.Windows.Forms.Button btnAyuda;
     }
 }

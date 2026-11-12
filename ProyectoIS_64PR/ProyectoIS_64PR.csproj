@@ -141,6 +141,12 @@
     <Compile Include="FrmRegistrarHuespedEnReserva.Designer.cs">
       <DependentUpon>FrmRegistrarHuespedEnReserva.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmReporteInteligente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteInteligente.Designer.cs">
+      <DependentUpon>FrmReporteInteligente.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmReservaPaso1_AR74.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -285,6 +291,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRegistrarHuespedEnReserva.resx">
       <DependentUpon>FrmRegistrarHuespedEnReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteInteligente.resx">
+      <DependentUpon>FrmReporteInteligente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReservaPaso1_AR74.resx">
       <DependentUpon>FrmReservaPaso1_AR74.cs</DependentUpon>

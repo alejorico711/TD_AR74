@@ -349,5 +349,10 @@ namespace ProyectoIS_64PR
             }
             treeView2.ExpandAll();
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            PdfAyuda.Abrir(this.Name);
+        }
     }
 }

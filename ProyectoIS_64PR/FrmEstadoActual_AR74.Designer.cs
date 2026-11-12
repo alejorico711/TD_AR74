@@ -29,6 +29,7 @@ namespace ProyectoIS_64PR
         private void InitializeComponent()
         {
             this.flowLayoutPanelHabitaciones = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnAyuda = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // flowLayoutPanelHabitaciones
@@ -39,6 +40,22 @@ namespace ProyectoIS_64PR
             this.flowLayoutPanelHabitaciones.Size = new System.Drawing.Size(800, 450);
             this.flowLayoutPanelHabitaciones.TabIndex = 1;
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAyuda.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnAyuda.FlatAppearance.BorderSize = 1;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAyuda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnAyuda.Location = new System.Drawing.Point(670, 10);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(110, 28);
+            this.btnAyuda.TabIndex = 2;
+            this.btnAyuda.Text = "? Ayuda";
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            // 
             // FrmEstadoActual_AR74
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -46,6 +63,7 @@ namespace ProyectoIS_64PR
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.flowLayoutPanelHabitaciones);
             this.Name = "FrmEstadoActual_AR74";
             this.Text = "FrmEstadoActual_AR74";
@@ -56,5 +74,6 @@ namespace ProyectoIS_64PR
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelHabitaciones;
+        private System.Windows.Forms.Button btnAyuda;
     }
 }

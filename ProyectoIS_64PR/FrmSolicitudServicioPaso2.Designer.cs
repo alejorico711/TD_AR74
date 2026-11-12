@@ -35,6 +35,7 @@ namespace ProyectoIS_64PR
             this.btnPagar = new System.Windows.Forms.Button();
             this.cmbMetodoDePago = new System.Windows.Forms.ComboBox();
             this.btnConfirmar = new System.Windows.Forms.Button();
+            this.btnAyuda = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,6 +45,7 @@ namespace ProyectoIS_64PR
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.cmbMetodoDePago);
             this.panel1.Controls.Add(this.btnConfirmar);
+            this.panel1.Controls.Add(this.btnAyuda);
             this.panel1.Controls.Add(this.btnPagar);
             this.panel1.Controls.Add(this.btnAgregarCuenta);
             this.panel1.Controls.Add(this.lblServicios);
@@ -140,6 +142,21 @@ namespace ProyectoIS_64PR
             this.btnConfirmar.UseVisualStyleBackColor = false;
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnAyuda.FlatAppearance.BorderSize = 1;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAyuda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnAyuda.Location = new System.Drawing.Point(475, 380);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(110, 28);
+            this.btnAyuda.TabIndex = 25;
+            this.btnAyuda.Text = "? Ayuda";
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            // 
             // FrmSolicitudServicioPaso2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -166,5 +183,6 @@ namespace ProyectoIS_64PR
         private System.Windows.Forms.Button btnPagar;
         private System.Windows.Forms.ComboBox cmbMetodoDePago;
         private System.Windows.Forms.Button btnConfirmar;
+        private System.Windows.Forms.Button btnAyuda;
     }
 }
