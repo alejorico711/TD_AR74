@@ -1,0 +1,13 @@
+C:\Users\Alejo\source\repos\TD_AR74\Sesion\bin\Release\Sesion.dll
+C:\Users\Alejo\source\repos\TD_AR74\Sesion\bin\Release\Sesion.pdb
+C:\Users\Alejo\source\repos\TD_AR74\Sesion\bin\Release\DAL_64PR.dll
+C:\Users\Alejo\source\repos\TD_AR74\Sesion\bin\Release\DV.dll
+C:\Users\Alejo\source\repos\TD_AR74\Sesion\bin\Release\Encriptacion.dll
+C:\Users\Alejo\source\repos\TD_AR74\Sesion\bin\Release\DAL_64PR.pdb
+C:\Users\Alejo\source\repos\TD_AR74\Sesion\bin\Release\DV.pdb
+C:\Users\Alejo\source\repos\TD_AR74\Sesion\bin\Release\Encriptacion.pdb
+C:\Users\Alejo\source\repos\TD_AR74\Sesion\obj\Release\Sesion.csproj.AssemblyReference.cache
+C:\Users\Alejo\source\repos\TD_AR74\Sesion\obj\Release\Sesion.csproj.CoreCompileInputs.cache
+C:\Users\Alejo\source\repos\TD_AR74\Sesion\obj\Release\Sesion.csproj.Up2Date
+C:\Users\Alejo\source\repos\TD_AR74\Sesion\obj\Release\Sesion.dll
+C:\Users\Alejo\source\repos\TD_AR74\Sesion\obj\Release\Sesion.pdb

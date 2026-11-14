@@ -29,21 +29,21 @@ namespace ProyectoIS_64PR
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAyuda = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.txtDni = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtApellido = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
-            this.lblDni = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblApellido = new System.Windows.Forms.Label();
-            this.lblFechaNacimiento = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
             this.lblTelefono = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblFechaNacimiento = new System.Windows.Forms.Label();
+            this.lblApellido = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblDni = new System.Windows.Forms.Label();
+            this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtDni = new System.Windows.Forms.TextBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnAyuda = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,74 +71,27 @@ namespace ProyectoIS_64PR
             this.panel1.Size = new System.Drawing.Size(460, 350);
             this.panel1.TabIndex = 0;
             // 
-            // lblDni
+            // lblTelefono
             // 
-            this.lblDni.AutoSize = true;
-            this.lblDni.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lblDni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.lblDni.Location = new System.Drawing.Point(30, 28);
-            this.lblDni.Name = "lblDni";
-            this.lblDni.Size = new System.Drawing.Size(38, 20);
-            this.lblDni.TabIndex = 8;
-            this.lblDni.Text = "DNI:";
+            this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.lblTelefono.Location = new System.Drawing.Point(30, 228);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(70, 20);
+            this.lblTelefono.TabIndex = 13;
+            this.lblTelefono.Text = "Teléfono:";
             // 
-            // txtDni
+            // lblEmail
             // 
-            this.txtDni.BackColor = System.Drawing.Color.White;
-            this.txtDni.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDni.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtDni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.txtDni.Location = new System.Drawing.Point(190, 25);
-            this.txtDni.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtDni.Name = "txtDni";
-            this.txtDni.Size = new System.Drawing.Size(230, 27);
-            this.txtDni.TabIndex = 2;
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.lblNombre.Location = new System.Drawing.Point(30, 68);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(67, 20);
-            this.lblNombre.TabIndex = 9;
-            this.lblNombre.Text = "Nombre:";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.BackColor = System.Drawing.Color.White;
-            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.txtNombre.Location = new System.Drawing.Point(190, 65);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(230, 27);
-            this.txtNombre.TabIndex = 3;
-            // 
-            // lblApellido
-            // 
-            this.lblApellido.AutoSize = true;
-            this.lblApellido.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lblApellido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.lblApellido.Location = new System.Drawing.Point(30, 108);
-            this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(69, 20);
-            this.lblApellido.TabIndex = 10;
-            this.lblApellido.Text = "Apellido:";
-            // 
-            // txtApellido
-            // 
-            this.txtApellido.BackColor = System.Drawing.Color.White;
-            this.txtApellido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtApellido.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtApellido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.txtApellido.Location = new System.Drawing.Point(190, 105);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(230, 27);
-            this.txtApellido.TabIndex = 4;
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.lblEmail.Location = new System.Drawing.Point(30, 188);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(49, 20);
+            this.lblEmail.TabIndex = 12;
+            this.lblEmail.Text = "Email:";
             // 
             // lblFechaNacimiento
             // 
@@ -151,6 +104,39 @@ namespace ProyectoIS_64PR
             this.lblFechaNacimiento.TabIndex = 11;
             this.lblFechaNacimiento.Text = "Fecha de Nacimiento:";
             // 
+            // lblApellido
+            // 
+            this.lblApellido.AutoSize = true;
+            this.lblApellido.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblApellido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.lblApellido.Location = new System.Drawing.Point(30, 108);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(69, 20);
+            this.lblApellido.TabIndex = 10;
+            this.lblApellido.Text = "Apellido:";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.lblNombre.Location = new System.Drawing.Point(30, 68);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(67, 20);
+            this.lblNombre.TabIndex = 9;
+            this.lblNombre.Text = "Nombre:";
+            // 
+            // lblDni
+            // 
+            this.lblDni.AutoSize = true;
+            this.lblDni.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblDni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.lblDni.Location = new System.Drawing.Point(30, 28);
+            this.lblDni.Name = "lblDni";
+            this.lblDni.Size = new System.Drawing.Size(38, 20);
+            this.lblDni.TabIndex = 8;
+            this.lblDni.Text = "DNI:";
+            // 
             // dtpFechaNacimiento
             // 
             this.dtpFechaNacimiento.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -161,16 +147,18 @@ namespace ProyectoIS_64PR
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(230, 27);
             this.dtpFechaNacimiento.TabIndex = 7;
             // 
-            // lblEmail
+            // txtTelefono
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.lblEmail.Location = new System.Drawing.Point(30, 188);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(49, 20);
-            this.lblEmail.TabIndex = 12;
-            this.lblEmail.Text = "Email:";
+            this.txtTelefono.BackColor = System.Drawing.Color.White;
+            this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTelefono.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.txtTelefono.Location = new System.Drawing.Point(190, 225);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(230, 27);
+            this.txtTelefono.TabIndex = 6;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // txtEmail
             // 
@@ -184,28 +172,41 @@ namespace ProyectoIS_64PR
             this.txtEmail.Size = new System.Drawing.Size(230, 27);
             this.txtEmail.TabIndex = 5;
             // 
-            // lblTelefono
+            // txtApellido
             // 
-            this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lblTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.lblTelefono.Location = new System.Drawing.Point(30, 228);
-            this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(70, 20);
-            this.lblTelefono.TabIndex = 13;
-            this.lblTelefono.Text = "Teléfono:";
+            this.txtApellido.BackColor = System.Drawing.Color.White;
+            this.txtApellido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtApellido.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtApellido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.txtApellido.Location = new System.Drawing.Point(190, 105);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(230, 27);
+            this.txtApellido.TabIndex = 4;
             // 
-            // txtTelefono
+            // txtNombre
             // 
-            this.txtTelefono.BackColor = System.Drawing.Color.White;
-            this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTelefono.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.txtTelefono.Location = new System.Drawing.Point(190, 225);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(230, 27);
-            this.txtTelefono.TabIndex = 6;
+            this.txtNombre.BackColor = System.Drawing.Color.White;
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.txtNombre.Location = new System.Drawing.Point(190, 65);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(230, 27);
+            this.txtNombre.TabIndex = 3;
+            // 
+            // txtDni
+            // 
+            this.txtDni.BackColor = System.Drawing.Color.White;
+            this.txtDni.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDni.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtDni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
+            this.txtDni.Location = new System.Drawing.Point(190, 25);
+            this.txtDni.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDni.Name = "txtDni";
+            this.txtDni.Size = new System.Drawing.Size(230, 27);
+            this.txtDni.TabIndex = 2;
             // 
             // btnCancelar
             // 
@@ -242,7 +243,6 @@ namespace ProyectoIS_64PR
             // btnAyuda
             // 
             this.btnAyuda.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
-            this.btnAyuda.FlatAppearance.BorderSize = 1;
             this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAyuda.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnAyuda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));

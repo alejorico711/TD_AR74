@@ -1,0 +1,9 @@
+C:\Users\Alejo\source\repos\TD_AR74\Bitacora\bin\Release\Bitacora.dll
+C:\Users\Alejo\source\repos\TD_AR74\Bitacora\bin\Release\Bitacora.pdb
+C:\Users\Alejo\source\repos\TD_AR74\Bitacora\bin\Release\DAL_64PR.dll
+C:\Users\Alejo\source\repos\TD_AR74\Bitacora\bin\Release\DAL_64PR.pdb
+C:\Users\Alejo\source\repos\TD_AR74\Bitacora\obj\Release\Bitacora.csproj.AssemblyReference.cache
+C:\Users\Alejo\source\repos\TD_AR74\Bitacora\obj\Release\Bitacora.csproj.CoreCompileInputs.cache
+C:\Users\Alejo\source\repos\TD_AR74\Bitacora\obj\Release\Bitacora.csproj.Up2Date
+C:\Users\Alejo\source\repos\TD_AR74\Bitacora\obj\Release\Bitacora.dll
+C:\Users\Alejo\source\repos\TD_AR74\Bitacora\obj\Release\Bitacora.pdb

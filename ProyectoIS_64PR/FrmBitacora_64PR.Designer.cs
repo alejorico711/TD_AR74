@@ -56,8 +56,8 @@ namespace ProyectoIS_64PR
             this.btnAplicar = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnAyuda = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEventos)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEventos)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -100,22 +100,22 @@ namespace ProyectoIS_64PR
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.label1.Location = new System.Drawing.Point(15, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 28);
+            this.label1.Size = new System.Drawing.Size(200, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "Bitacora de eventos";
             // 
             // dgvEventos
             // 
             this.dgvEventos.AllowUserToAddRows = false;
-            this.dgvEventos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(243)))), ((int)(((byte)(231)))));
             this.dgvEventos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvEventos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEventos.BackgroundColor = System.Drawing.Color.White;
             this.dgvEventos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvEventos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -188,7 +188,7 @@ namespace ProyectoIS_64PR
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.label5.Location = new System.Drawing.Point(268, 333);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 20);
+            this.label5.Size = new System.Drawing.Size(64, 20);
             this.label5.TabIndex = 6;
             this.label5.Text = "Modulo:";
             // 
@@ -217,7 +217,7 @@ namespace ProyectoIS_64PR
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
-            this.label6.Location = new System.Drawing.Point(508, 333);
+            this.label6.Location = new System.Drawing.Point(512, 335);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 20);
             this.label6.TabIndex = 9;
@@ -250,7 +250,7 @@ namespace ProyectoIS_64PR
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(42)))));
             this.label7.Location = new System.Drawing.Point(38, 378);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 20);
+            this.label7.Size = new System.Drawing.Size(76, 20);
             this.label7.TabIndex = 12;
             this.label7.Text = "Criticidad:";
             // 
@@ -378,7 +378,6 @@ namespace ProyectoIS_64PR
             // btnAyuda
             // 
             this.btnAyuda.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
-            this.btnAyuda.FlatAppearance.BorderSize = 1;
             this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAyuda.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnAyuda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
@@ -403,9 +402,9 @@ namespace ProyectoIS_64PR
             this.Text = "FrmBitacora_64PR";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmBitacora_64PR_FormClosed);
             this.Resize += new System.EventHandler(this.FrmBitacora_64PR_Resize);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEventos)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEventos)).EndInit();
             this.ResumeLayout(false);
 
         }

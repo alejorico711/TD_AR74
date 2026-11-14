@@ -92,5 +92,14 @@ namespace ProyectoIS_64PR
         {
             PdfAyuda.Abrir(this.Name);
         }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Si NO es un número y NO es la tecla de borrar (BackSpace)
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; // Cancela el evento
+            }
+        }
     }
 }
