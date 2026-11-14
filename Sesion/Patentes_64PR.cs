@@ -39,6 +39,7 @@ namespace Sesion
          RegistrarServiciosAdicionales = 27,
         BitacoraDeCambios = 28,
         ABMTipoServicios = 29,
-        VerReservas = 30
+        VerReservas = 30,
+        ReporteInteligente=31
     }
 }

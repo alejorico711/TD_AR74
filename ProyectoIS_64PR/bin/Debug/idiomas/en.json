@@ -343,5 +343,13 @@
     "FrmSolicitudServicioPaso2.btnAyuda": "FALTA TRADUCCION",
     "FrmOpcionesComprobante.btnAyuda": "FALTA TRADUCCION",
     "FrmCheck_outPaso2_AR74.btnAyuda": "FALTA TRADUCCION",
-    "FrmRegistrarHuespedEnReserva.btnAyuda": "FALTA TRADUCCION"
+    "FrmRegistrarHuespedEnReserva.btnAyuda": "FALTA TRADUCCION",
+    "FrmMenu.reporteInteligenteToolStripMenuItem": "FALTA TRADUCCION",
+    "FrmReporteInteligente.lblTotalPeriodo": "FALTA TRADUCCION",
+    "FrmReporteInteligente.lblTotalReservas": "FALTA TRADUCCION",
+    "FrmReporteInteligente.lblTotalPeriodoValor": "FALTA TRADUCCION",
+    "FrmReporteInteligente.lblTotalReservasValor": "FALTA TRADUCCION",
+    "FrmReporteInteligente.lblTitulo": "FALTA TRADUCCION",
+    "FrmReporteInteligente.btnBuscar": "FALTA TRADUCCION",
+    "FrmReporteInteligente.btnDescargar": "FALTA TRADUCCION"
 }

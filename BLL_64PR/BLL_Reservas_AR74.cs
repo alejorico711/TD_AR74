@@ -1,6 +1,7 @@
 using BE;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -51,6 +52,11 @@ namespace BLL_64PR
         public List<Reserva_AR74> ListarReservas()
         {
             return mpp.ListarReservas();
+        }
+
+        public DataTable ObtenerReporteIngresos(DateTime fechaInicio, DateTime fechaFin)
+        {
+            return mpp.ObtenerReporteIngresos(fechaInicio, fechaFin);
         }
     }
 }

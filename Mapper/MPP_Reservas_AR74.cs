@@ -179,5 +179,14 @@ namespace Mapper
             }
             return lista;
         }
+
+        public DataTable ObtenerReporteIngresos(DateTime fechaInicio, DateTime fechaFin)
+        {
+            SqlParameter[] p = new SqlParameter[2];
+            p[0] = new SqlParameter("@FechaInicio", SqlDbType.Date) { Value = fechaInicio.Date };
+            p[1] = new SqlParameter("@FechaFin", SqlDbType.Date) { Value = fechaFin.Date };
+
+            return DAL_64PR.Acceso.Instancia.leerSP("sp_ReporteIngresosReservas", p);
+        }
     }
 }

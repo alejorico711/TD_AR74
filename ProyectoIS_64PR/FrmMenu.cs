@@ -179,7 +179,7 @@ namespace ProyectoIS_64PR
 
             bitacoraDeCambiosToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.BitacoraDeCambios);
 
-            bool puedeAdministrar = puedeGestionarFamilias || puedeGestionarRoles || puedeGestionarUsuarios || rolUsuario.TienePermiso(Sesion.Patentes_64PR.Bitacora) || rolUsuario.TienePermiso(Sesion.Patentes_64PR.Respaldos) || rolUsuario.TienePermiso(Sesion.Patentes_64PR.Restauraciones) || rolUsuario.TienePermiso(Sesion.Patentes_64PR.BitacoraDeCambios);
+            bool puedeAdministrar = puedeGestionarFamilias || puedeGestionarRoles || puedeGestionarUsuarios || rolUsuario.TienePermiso(Sesion.Patentes_64PR.Bitacora) || rolUsuario.TienePermiso(Sesion.Patentes_64PR.Respaldos) || rolUsuario.TienePermiso(Sesion.Patentes_64PR.Restauraciones) || rolUsuario.TienePermiso(Sesion.Patentes_64PR.BitacoraDeCambios) || rolUsuario.TienePermiso(Sesion.Patentes_64PR.ReporteInteligente);
             adminToolStripMenuItem.Visible = puedeAdministrar;
 
             huespedesToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.ABMHuespedes);
@@ -218,6 +218,7 @@ namespace ProyectoIS_64PR
             tareasPendientesToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.TareasPendientes);
 
             serviciosAdicionalesToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.RegistrarServiciosAdicionales);
+            reporteInteligenteToolStripMenuItem.Visible = rolUsuario.TienePermiso(Sesion.Patentes_64PR.ReporteInteligente);
         }
 
         private void respaldoBaseDeDatosToolStripMenuItem1_Click(object sender, EventArgs e)
