@@ -352,6 +352,7 @@
     <EmbeddedResource Include="ucModificarUsuario.resx">
       <DependentUpon>ucModificarUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Ayuda\Manual_Ayuda_RoomIn.pdf" />
     <None Include="idiomas\en.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -415,9 +416,6 @@
     </Content>
     <Content Include="Imagenes\people.png" />
     <Content Include="Solo-logo.ico" />
-    <Content Include="Ayuda\Manual_Ayuda_RoomIn.pdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

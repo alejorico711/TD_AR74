@@ -380,5 +380,6 @@
     "FrmReporteInteligente.lblTitulo": "Reporte de ingresos por período",
     "FrmReporteInteligente.btnBuscar": "Buscar",
     "error_reporte": "La fecha de inicio no puede ser mayor a la fecha de fin.",
-    "FrmReporteInteligente.btnDescargar": "Descargar PDF"
+    "FrmReporteInteligente.btnDescargar": "Descargar PDF",
+    "FrmReporteInteligente.btnAyuda": "? Ayuda"
 }

@@ -304,5 +304,10 @@ namespace ProyectoIS_64PR
                 e.HasMorePages = false;
             }
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            PdfAyuda.Abrir(this.Name);
+        }
     }
 }

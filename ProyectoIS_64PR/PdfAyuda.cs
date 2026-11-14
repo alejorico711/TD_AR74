@@ -96,7 +96,7 @@ namespace ProyectoIS_64PR
 
     internal static class PdfAyuda
     {
-        private const string NombreArchivo = "Manual_Ayuda_RoomIn_editado.pdf";
+        private const string NombreArchivo = "Manual_Ayuda_RoomIn.pdf";
         private const string CarpetaAyuda = "Ayuda";
 
         /// Mapeo nombre-de-formulario → número de página exacto del PDF.
@@ -129,6 +129,8 @@ namespace ProyectoIS_64PR
         { "FrmBitacoraCambios",          17 },
         { "FrmRegistrarHuespedEnReserva",7  },
         { "FrmReparacionDV_64PR",        25 },
+        { "FrmReporteInteligente",       26 },
+
         };
 
         public static void Abrir(string nombreFormulario)
