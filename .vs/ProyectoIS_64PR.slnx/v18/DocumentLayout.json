@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E990023A-FD21-4606-8FBE-E91EE7E8FD96}|DAL_64PR\\DAL_64PR.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\dal_64pr\\acceso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E990023A-FD21-4606-8FBE-E91EE7E8FD96}|DAL_64PR\\DAL_64PR.csproj|solutionrelative:dal_64pr\\acceso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DBF9FEF3-464B-442A-98EA-3B7E38C51DE0}|Encriptacion\\Encriptacion.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\encriptacion\\encriptaci\u00F3n.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBF9FEF3-464B-442A-98EA-3B7E38C51DE0}|Encriptacion\\Encriptacion.csproj|solutionrelative:encriptacion\\encriptaci\u00F3n.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0FF1D5B-9F6B-406C-BC04-00D7E11061E5}|Sesion\\Sesion.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\sesion\\patentes_64pr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0FF1D5B-9F6B-406C-BC04-00D7E11061E5}|Sesion\\Sesion.csproj|solutionrelative:sesion\\patentes_64pr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5617D18D-5092-478A-B619-B3ADB88BBFC2}|BE\\BE_64PR.csproj|c:\\users\\alejo\\source\\repos\\td_ar74\\be\\estadopago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5617D18D-5092-478A-B619-B3ADB88BBFC2}|BE\\BE_64PR.csproj|solutionrelative:be\\estadopago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,14 +35,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Acceso.cs",
-              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\DAL_64PR\\Acceso.cs",
-              "RelativeDocumentMoniker": "DAL_64PR\\Acceso.cs",
-              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\DAL_64PR\\Acceso.cs",
-              "RelativeToolTip": "DAL_64PR\\Acceso.cs",
-              "ViewState": "AgIAABQBAAAAAAAAAAAAACEBAAAOAAAAAAAAAA==",
+              "Title": "Encriptaci\u00F3n.cs",
+              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\Encriptacion\\Encriptaci\u00F3n.cs",
+              "RelativeDocumentMoniker": "Encriptacion\\Encriptaci\u00F3n.cs",
+              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\Encriptacion\\Encriptaci\u00F3n.cs",
+              "RelativeToolTip": "Encriptacion\\Encriptaci\u00F3n.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAADwvwoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-14T20:12:17.037Z",
+              "WhenOpened": "2026-11-15T20:45:08.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Patentes_64PR.cs",
+              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\Sesion\\Patentes_64PR.cs",
+              "RelativeDocumentMoniker": "Sesion\\Patentes_64PR.cs",
+              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\Sesion\\Patentes_64PR.cs",
+              "RelativeToolTip": "Sesion\\Patentes_64PR.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-15T20:38:15.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EstadoPago.cs",
+              "DocumentMoniker": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\BE\\EstadoPago.cs",
+              "RelativeDocumentMoniker": "BE\\EstadoPago.cs",
+              "ToolTip": "C:\\Users\\Alejo\\source\\repos\\TD_AR74\\BE\\EstadoPago.cs",
+              "RelativeToolTip": "BE\\EstadoPago.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-15T20:25:00.759Z",
               "EditorCaption": ""
             }
           ]
