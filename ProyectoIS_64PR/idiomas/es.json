@@ -381,5 +381,18 @@
   "FrmReporteInteligente.btnBuscar": "Buscar",
   "error_reporte": "La fecha de inicio no puede ser mayor a la fecha de fin.",
   "FrmReporteInteligente.btnDescargar": "Descargar PDF",
-  "FrmReporteInteligente.btnAyuda": "? Ayuda"
+  "FrmReporteInteligente.btnAyuda": "? Ayuda",
+  "FrmReporteInteligente.lblTituloPrediccion": "Análisis Predictivo (Tendencia)",
+  "FrmReporteInteligente.lblTendenciaValor": "FALTA TRADUCCION",
+  "FrmReporteInteligente.lblTendencia": "Tendencia esperada:",
+  "FrmReporteInteligente.lblProyeccionReservasValor": "FALTA TRADUCCION",
+  "FrmReporteInteligente.lblProyeccionReservas": "Reservas estimadas:",
+  "FrmReporteInteligente.lblProyeccionIngresosValor": "FALTA TRADUCCION",
+  "FrmReporteInteligente.lblProyeccionIngresos": "Ingreso estimado (próx. mes):",
+  "FrmReporteInteligente.dgvReservas.NroReserva": "Nro. Reserva",
+  "FrmReporteInteligente.dgvReservas.FechaCheckIn": "Fecha Check-in",
+  "FrmReporteInteligente.dgvReservas.FechaCheckOut": "Fecha Check-out",
+  "FrmReporteInteligente.dgvReservas.NumeroHabitacion": "Nro.Habitacion",
+  "FrmReporteInteligente.dgvReservas.Huesped": "Huesped",
+  "FrmReporteInteligente.dgvReservas.Total": "Total"
 }

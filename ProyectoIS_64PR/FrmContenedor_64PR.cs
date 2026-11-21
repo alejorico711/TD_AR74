@@ -58,5 +58,41 @@ namespace ProyectoIS_64PR
                 Sesion.SessionManager.GetInstance.Logout();
             }
         }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.F1)
+            {
+                AbrirAyudaActual();
+                return true; // Indicamos que la tecla fue procesada
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void AbrirAyudaActual()
+        {
+            foreach (Control c in pnlContenido.Controls)
+            {
+                if (c is FrmMenu menu)
+                {
+                    // Si hay un formulario hijo abierto en el menú (Habitaciones, Huéspedes, etc.)
+                    if (menu.formularioactual != null)
+                    {
+                        PdfAyuda.Abrir(menu.formularioactual.Name);
+                    }
+                    else
+                    {
+                        // Si está en el menú principal sin nada abierto
+                        PdfAyuda.Abrir(menu.Name);
+                    }
+                    return;
+                }
+                else if (c is Form f)
+                {
+                    // Por ejemplo cuando está en la pantalla de FrmLogin_64PR
+                    PdfAyuda.Abrir(f.Name);
+                    return;
+                }
+            }
+        }
     }
 }

@@ -1,4 +1,4 @@
-{
+﻿{
   "ucCrear_Nombre": "Name: ",
   "ucCrear_Apellido": "Last name: ",
   "usuario_creado": "User created successfully. The assigned username is: ",
@@ -381,5 +381,18 @@
   "FrmReporteInteligente.btnBuscar": "Search",
   "error_reporte": "The start date cannot be later than the end date.",
   "FrmReporteInteligente.btnDescargar": "Download PDF",
-  "FrmReporteInteligente.btnAyuda": "? Help"
+  "FrmReporteInteligente.btnAyuda": "? Help",
+  "FrmReporteInteligente.lblTituloPrediccion": "Predictive Analysis (Trend)",
+  "FrmReporteInteligente.lblTendenciaValor": "TRANSLATION MISSING",
+  "FrmReporteInteligente.lblTendencia": "Expected trend:",
+  "FrmReporteInteligente.lblProyeccionReservasValor": "TRANSLATION MISSING",
+  "FrmReporteInteligente.lblProyeccionReservas": "Estimated bookings:",
+  "FrmReporteInteligente.lblProyeccionIngresosValor": "TRANSLATION MISSING",
+  "FrmReporteInteligente.lblProyeccionIngresos": "Estimated revenue (next month):",
+  "FrmReporteInteligente.dgvReservas.NroReserva": "Booking No.",
+  "FrmReporteInteligente.dgvReservas.FechaCheckIn": "Check-in Date",
+  "FrmReporteInteligente.dgvReservas.FechaCheckOut": "Check-out Date",
+  "FrmReporteInteligente.dgvReservas.NumeroHabitacion": "Room No.",
+  "FrmReporteInteligente.dgvReservas.Huesped": "Guest",
+  "FrmReporteInteligente.dgvReservas.Total": "Total"
 }

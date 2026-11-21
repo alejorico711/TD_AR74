@@ -65,21 +65,6 @@ namespace ProyectoIS_64PR
             this.btnIniciarSesion.UseVisualStyleBackColor = false;
             this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
             // 
-            // btnAyuda
-            // 
-            this.btnAyuda.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
-            this.btnAyuda.FlatAppearance.BorderSize = 1;
-            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAyuda.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAyuda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
-            this.btnAyuda.Location = new System.Drawing.Point(183, 210);
-            this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(200, 28);
-            this.btnAyuda.TabIndex = 3;
-            this.btnAyuda.Text = "? Ayuda";
-            this.btnAyuda.UseVisualStyleBackColor = true;
-            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
-            // 
             // txtContra
             // 
             this.txtContra.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -114,7 +99,7 @@ namespace ProyectoIS_64PR
             // 
             this.lblMensaje.AutoSize = true;
             this.lblMensaje.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lblMensaje.Location = new System.Drawing.Point(294, 273);
+            this.lblMensaje.Location = new System.Drawing.Point(94, 210);
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(0, 20);
             this.lblMensaje.TabIndex = 5;
@@ -140,6 +125,7 @@ namespace ProyectoIS_64PR
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lblMensaje);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.cmbIdioma);
             this.panel1.Controls.Add(this.txtLogin);
@@ -153,13 +139,26 @@ namespace ProyectoIS_64PR
             this.panel1.Size = new System.Drawing.Size(388, 248);
             this.panel1.TabIndex = 8;
             // 
+            // btnAyuda
+            // 
+            this.btnAyuda.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAyuda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(110)))), ((int)(((byte)(78)))));
+            this.btnAyuda.Location = new System.Drawing.Point(183, 210);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(200, 28);
+            this.btnAyuda.TabIndex = 3;
+            this.btnAyuda.Text = "? Ayuda";
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            // 
             // FrmLogin_64PR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(243)))), ((int)(((byte)(231)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Name = "FrmLogin_64PR";
@@ -171,7 +170,6 @@ namespace ProyectoIS_64PR
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
